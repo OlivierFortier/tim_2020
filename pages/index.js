@@ -9,6 +9,7 @@ export default function Home() {
       </main>
       <aside>
         <img width="451" height="684" src="https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></img>
+        <button>EXPLOREZ</button>
       </aside>
 
     {/*il est préférable que vous utlisiez du css "local" et non "global"
