@@ -8,13 +8,12 @@ export default function Layout({ children }) {
         {children}
       </div>
 
-    <style jsx>{`
+      <style jsx>{`
         div {
-            background-color: #110C12;
-            height: 100vh;
-        }    
-    `}</style>
-
+          background-color: #110c12;
+          height: 100vh;
+        }
+      `}</style>
     </>
   );
 }

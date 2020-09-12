@@ -6,23 +6,31 @@ export default function EnTete() {
     <>
       <header>
         <div>
-            <SelecteurTheme />
-            Techniques d'intégration multimédia
+          <SelecteurTheme />
+          <div id="titreProgramme">Techniques d'intégration multimédia</div>
+          <div id="nomCollege">Collège de Maisonneuve</div>
         </div>
         <Menu />
       </header>
 
       <style jsx>{`
         header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }      
-        div {
-            color : #FFFFFF;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
         }
-    `}</style>
+        div {
+          color: #ffffff;
+        }
+        #titreProgramme {
+          font-size: 23px;
+        }
+        #nomCollege {
+          font-size: 18px;
+          margin-left: 155px;
+        }
+      `}</style>
     </>
   );
 }

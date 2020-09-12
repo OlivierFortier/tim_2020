@@ -20,14 +20,14 @@ export default function Menu() {
       </div>
 
       <style jsx>{`
-            nav {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                right: 1vw;
-                color: white;
-            }
-    `}</style>
+        nav {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          right: 1vw;
+          color: white;
+        }
+      `}</style>
     </>
   );
 }
