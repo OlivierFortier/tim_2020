@@ -5,8 +5,8 @@ export default function EnTete() {
   return (
     <>
       <header>
-        <div>
-          <SelecteurTheme />
+        <SelecteurTheme />
+        <div id="titre">
           <div id="titreProgramme">Techniques d'intégration multimédia</div>
           <div id="nomCollege">Collège de Maisonneuve</div>
         </div>
@@ -22,6 +22,9 @@ export default function EnTete() {
         }
         div {
           color: #ffffff;
+        }
+        #titre {
+          margin-right: auto;
         }
         #titreProgramme {
           font-size: 23px;
