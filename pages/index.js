@@ -15,7 +15,7 @@ export default function Home() {
     {/*il est préférable que vous utlisiez du css "local" et non "global"
       Cela fait que le css n'affecte rien d'autre que cette page, ce composant ou ce fichier, ce qui évite les erreurs.
       Cela se fait facilement à même le fichier js en utilisant la balise style jsx
-      comme ci-dessous */}
+      comme ci-dessous. */}
       <style jsx>{`
         .conteneur-page {
           display: flex;
