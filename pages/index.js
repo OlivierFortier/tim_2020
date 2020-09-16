@@ -10,15 +10,13 @@ export default function Home() {
           <strong>logique</strong> et du<br></br>
           <strong>créatif</strong> +
         </h1>
-        <h2 id="nomCollege">Collège de Maisonneuve</h2>
+        <h2 id="nom-college">Collège de Maisonneuve</h2>
       </main>
       <aside>
-        <img
-          width="451"
-          height="684"
-          src="https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-        ></img>
-        <button className="boutonExplorez">EXPLOREZ</button>
+        <img src="https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></img>
+        <div className="conteneur-bouton">
+          <button className="bouton-explorer">EXPLOREZ</button>
+        </div>
       </aside>
 
       {/*il est préférable que vous utlisiez du css "local" et non "global"
@@ -31,47 +29,59 @@ export default function Home() {
           flex-direction: row;
           justify-content: center;
           align-items: center;
+          padding-top: 5%;
         }
 
         main {
           height: 70vh;
-          width: 50vw;
-          padding-top: 8vh;
-          padding-bottom: 8vh;
           border-left: 3px solid white;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-end;
         }
 
         .titre-intro {
           color: #ffffff;
           font-size: 4em;
           padding-left: 25px;
-          padding-top: 28vh;
         }
 
-        #nomCollege {
+        #nom-college {
           color: #ffffff;
           font-size: 30px;
           padding-left: 25px;
         }
 
-        aside > img {
-          z-index: 1;
+        aside {
+          height: 70vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
         }
 
-        .boutonExplorez {
+        aside > img {
+          z-index: 1;
+          width: auto;
+          height: 100%;
+        }
+
+        .conteneur-bouton {
+          position: relative;
+          height: 0 px;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .bouton-explorer {
           position: absolute;
-          bottom: -48px;
-          transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
+          top: -2rem;
           background-color: #fff;
           border-radius: 50%;
-          padding-top: 5vh;
-          padding-bottom: 5vh;
-          margin-top: auto;
-          margin-right: 15px;
+          height: 8rem;
+          width: 8rem;
+          z-index: 2;
         }
       `}</style>
     </div>

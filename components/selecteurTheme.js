@@ -6,8 +6,8 @@ export default function SelecteurTheme() {
         button {
           margin-left: 30px;
           margin-right: 15px;
-          padding-top: 1vh;
-          padding-bottom: 1vh;
+          height: 1rem;
+          width: 1rem;
           background-color: #fff;
           border-radius: 50%;
         }
