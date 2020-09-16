@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/layout";
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <main>
         <h1 className="titre-intro">
           <Link href="/produits">
-          <a>les produits</a>
+            <a>les produits</a>
           </Link>
           La<br></br> juxtaposition du <br></br>
           <strong>logique</strong> et du<br></br>
@@ -45,6 +45,7 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
+
         }
 
         .titre-intro {
@@ -65,6 +66,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: flex-end;
+          
         }
 
         aside > img {
@@ -79,6 +81,8 @@ export default function Home() {
           width: 100%;
           display: flex;
           justify-content: flex-end;
+
+
         }
 
         .bouton-explorer {
