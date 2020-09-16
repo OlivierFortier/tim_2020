@@ -10,6 +10,18 @@ export default function Home() {
           <Link href="/produits">
             <a>les produits</a>
           </Link>
+          <br></br>
+          <Link href="/personnage">
+            <a>les personnages</a>
+          </Link>
+          <br></br>
+          <Link href="/vitalite">
+            <a>vitalité</a>
+          </Link>
+          <br></br>
+          <Link href="/collection">
+            <a>nos collections</a>
+          </Link>
           La<br></br> juxtaposition du <br></br>
           <strong>logique</strong> et du<br></br>
           <strong>créatif</strong> +
@@ -46,6 +58,14 @@ export default function Home() {
           flex-direction: column;
           justify-content: flex-end;
 
+        }
+
+        h1 {
+          a {
+            &:link , &:visited, &:hover, &:active {
+              color : green;
+            }
+          }
         }
 
         .titre-intro {

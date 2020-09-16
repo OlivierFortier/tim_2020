@@ -1,6 +1,6 @@
 export default function Personnages() {
     return (
-        <div>
+        <div style={{color: 'white'}}>
             <h1>Toute une créature !</h1>
             <a>Tous les personnages sont tous unique</a>
             <ul>

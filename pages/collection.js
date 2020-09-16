@@ -1,6 +1,6 @@
 export default function Collection() {
   return (
-    <div style={{ color: "black" }}>
+    <div style={{color: 'white'}}>
       <h1>voici nos collections</h1>
       <ul>
         <li>collection 1</li>
