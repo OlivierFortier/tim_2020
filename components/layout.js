@@ -5,7 +5,9 @@ export default function Layout({ children }) {
     <>
       <div>
         <EnTete></EnTete>
-        {children}
+        <div id="conteneur-application">
+          {children}
+        </div>
       </div>
 
       <style jsx>{`
@@ -13,6 +15,13 @@ export default function Layout({ children }) {
           background-color: #110c12;
           height: 100vh;
         }
+
+        #conteneur-application {
+          display: flex;
+          justify-content: center;
+          height: auto;
+        }
+
       `}</style>
     </>
   );

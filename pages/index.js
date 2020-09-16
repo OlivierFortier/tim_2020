@@ -27,9 +27,11 @@ export default function Home() {
         .conteneur-page {
           display: flex;
           flex-direction: row;
-          justify-content: center;
+          justify-content: space-around;
           align-items: center;
-          padding-top: 5%;
+          width: 100%;
+          max-width: 1500px;
+          margin-top: 2rem;
         }
 
         main {
@@ -42,7 +44,7 @@ export default function Home() {
 
         .titre-intro {
           color: #ffffff;
-          font-size: 4em;
+          font-size: 5rem;
           padding-left: 25px;
         }
 
