@@ -5,7 +5,9 @@
 capture d'écran de l'historique des commits
 -------------
 
-![image](https://user-images.githubusercontent.com/40731627/93359831-07f74700-f811-11ea-9537-0fa9ecfdcff2.png "title")
+![image](https://user-images.githubusercontent.com/40731627/93401803-0f3e4500-f851-11ea-916d-ddf635724548.png?raw=true "title")
+
+![image](https://user-images.githubusercontent.com/40731627/93401804-11080880-f851-11ea-9585-c5094e66fcdc.png?raw=true "title")
 
 captures d'écran des environnements local de tout le monde:
 ------
