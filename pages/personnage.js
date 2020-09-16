@@ -3,9 +3,12 @@ export default function Personnages() {
         <div>
             <h1>Toute une créature !</h1>
             <a>Tous les personnages sont tous unique</a>
-            <MyButton color="blue" shadowSize={2}>
-                Générer votre personnage ici
-            </MyButton>
+            <ul>
+                <li>Tanesha</li>
+                <li>Vanessa</li>
+                <li>Brutus</li>
+                <li>Zeus</li>
+            </ul>
         </div>
     )
 }
