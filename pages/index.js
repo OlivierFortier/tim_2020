@@ -31,7 +31,8 @@ export default function Home() {
           align-items: center;
           width: 100%;
           max-width: 1500px;
-          margin-top: 2rem;
+          margin-top: 3rem;
+          padding-top: 3rem;
         }
 
         main {
@@ -44,7 +45,7 @@ export default function Home() {
 
         .titre-intro {
           color: #ffffff;
-          font-size: 5rem;
+          font-size: 4.5rem;
           padding-left: 25px;
         }
 
