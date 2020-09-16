@@ -1,11 +1,15 @@
 import Head from "next/head";
 import Layout from "../components/layout";
+import Link from "next/link"
 
 export default function Home() {
   return (
     <div className="conteneur-page">
       <main>
         <h1 className="titre-intro">
+          <Link href="/produits">
+          <a>les produits</a>
+          </Link>
           La<br></br> juxtaposition du <br></br>
           <strong>logique</strong> et du<br></br>
           <strong>créatif</strong> +
