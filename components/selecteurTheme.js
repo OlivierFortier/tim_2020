@@ -1,7 +1,7 @@
 export default function SelecteurTheme() {
   return (
     <>
-      <button></button>;
+      <button aria-label="Changer theme"></button>;
       <style jsx>{`
         button {
           margin-left: 30px;

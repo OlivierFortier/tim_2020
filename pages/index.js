@@ -5,6 +5,14 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="conteneur-page">
+
+      <Head>
+        <title>TIM | Accueil</title>
+        <meta name="Description" content="Page d'acceuil des Techniques d'Intégration Multimédia du collège Maisonneuve"></meta>
+        <link rel="canonical" href="https://tim-2020.vercel.app/"></link>
+      </Head>
+
+
       <main>
         <h1 className="titre-intro">
           La<br></br> juxtaposition du <br></br>
@@ -14,9 +22,9 @@ export default function Home() {
         <h2 id="nom-college">Collège de Maisonneuve</h2>
       </main>
       <aside>
-        <img src="https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></img>
+        <img alt="image du theme" src="https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></img>
         <div className="conteneur-bouton">
-          <button className="bouton-explorer">EXPLOREZ</button>
+          <button className="bouton-explorer" aria-label="explorer">EXPLOREZ</button>
         </div>
       </aside>
 
