@@ -7,6 +7,10 @@ export default function Home() {
     <div className="conteneur-page">
       <main>
         <h1 className="titre-intro">
+        <Link href="/exemplecontentful">
+            <a>EXEMPLE CMS CONTENTFUL</a>
+          </Link>
+          <br></br>
           <Link href="/produits">
             <a>les produits</a>
           </Link>
@@ -73,7 +77,7 @@ export default function Home() {
 
         .titre-intro {
           color: #ffffff;
-          font-size: 4.5rem;
+          font-size: 3rem;
           padding-left: 25px;
         }
 
