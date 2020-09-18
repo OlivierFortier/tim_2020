@@ -7,25 +7,6 @@ export default function Home() {
     <div className="conteneur-page">
       <main>
         <h1 className="titre-intro">
-        <Link href="/exemplecontentful">
-            <a>EXEMPLE CMS CONTENTFUL</a>
-          </Link>
-          <br></br>
-          <Link href="/produits">
-            <a>les produits</a>
-          </Link>
-          <br></br>
-          <Link href="/personnage">
-            <a>les personnages</a>
-          </Link>
-          <br></br>
-          <Link href="/vitalite">
-            <a>vitalité</a>
-          </Link>
-          <br></br>
-          <Link href="/collection">
-            <a>nos collections</a>
-          </Link>
           La<br></br> juxtaposition du <br></br>
           <strong>logique</strong> et du<br></br>
           <strong>créatif</strong> +
@@ -77,7 +58,7 @@ export default function Home() {
 
         .titre-intro {
           color: #ffffff;
-          font-size: 3rem;
+          font-size: 4.5rem;
           padding-left: 25px;
         }
 
