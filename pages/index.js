@@ -40,6 +40,7 @@ export default function Home() {
       Cela se fait facilement à même le fichier js en utilisant la balise style jsx
       comme ci-dessous. .*/}
       <style jsx>{`
+        
         .conteneur-page {
           display: flex;
           flex-direction: row;
@@ -57,13 +58,15 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-
         }
 
         h1 {
           a {
-            &:link , &:visited, &:hover, &:active {
-              color : green;
+            &:link,
+            &:visited,
+            &:hover,
+            &:active {
+              color: green;
             }
           }
         }
@@ -86,13 +89,13 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: flex-end;
-          
-        }
 
-        aside > img {
+          img {
           z-index: 1;
           width: auto;
           height: 100%;
+          }
+
         }
 
         .conteneur-bouton {
@@ -101,8 +104,6 @@ export default function Home() {
           width: 100%;
           display: flex;
           justify-content: flex-end;
-
-
         }
 
         .bouton-explorer {
