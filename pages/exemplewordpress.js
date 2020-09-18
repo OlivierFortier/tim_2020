@@ -8,7 +8,7 @@ export default function ExempleWordPress() {
   const { data } = useSWR( "http://tim2020.local/wp-json/wp/v2/pages/8", fetcher );
 
   //si on a aucune données , afficher le loading
-  if (!data) return <div style={{ color: "white" }}>Loading...</div>;
+  if (!data) return <div style={{ color: "white" }}>Loading...Vous n'etes peut-être pas connecté au wordpress</div>;
 
   //si on a des données, afficher les données
   return (
