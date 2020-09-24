@@ -1,4 +1,4 @@
-
+// j'importe le composant head qui me permet d'ajouter les méta données de la page
 import Head from "next/head"
 
 //j'importe ma fonction pour faire des requêtes GraphQl par AJAX
