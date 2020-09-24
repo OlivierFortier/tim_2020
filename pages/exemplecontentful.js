@@ -1,4 +1,4 @@
-
+// feed
 import Head from "next/head"
 
 //j'importe ma fonction pour faire des requêtes GraphQl par AJAX
