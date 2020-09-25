@@ -9,6 +9,7 @@ export default function Prof({ slug: leSlug }) {
 
   const router = useRouter();
   const slug = router.query.slug;
+  //il faut vraiment faire pareil avec les variables pour les requetes si on utilise useSWR, sinon ca chie
   const { data: result, error : eaps } = useSWR([requeteGql, slug], (requete,slug)=> graphQLClient.request(requete, {slug: slug}));
 
   if(eaps) return <div>Error...</div>
