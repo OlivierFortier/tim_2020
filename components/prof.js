@@ -1,25 +1,15 @@
 import { gql } from "graphql-request";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { faireRequeteGql } from "../libs/requetesDonnes";
+import { faireRequeteGql, graphQLClient } from "../libs/requetesDonnes";
 import useSWR from "swr";
 
-export default function Prof({ slug }) {
+export default function Prof({ slug: leSlug }) {
 
 
   const router = useRouter();
-  const { data: result, error : eaps } = useSWR([requeteGql, { slug: router.query.slug }], faireRequeteGql, {
-    revalidateOnFocus: true,
-    revalidateOnMount:false,
-    revalidateOnReconnect: false,
-    refreshWhenOffline: false,
-    refreshWhenHidden: false,
-    refreshInterval: 0
-  });
-
-  useState(()=> {
-      //FINIR LE CRISSE DE PROBLEME
-  })
+  const slug = router.query.slug;
+  const { data: result, error : eaps } = useSWR([requeteGql, slug], (requete,slug)=> graphQLClient.request(requete, {slug: slug}));
 
   if(eaps) return <div>Error...</div>
 
