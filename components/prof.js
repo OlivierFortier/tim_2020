@@ -1,49 +1,26 @@
-import { gql } from "graphql-request";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { faireRequeteGql, graphQLClient } from "../libs/requetesDonnes";
-import useSWR from "swr";
+//avec le composant markdown, je peux correctement afficher ce que les profs mettent dans le CMS (images, texte en italique, gras, etc)
+import Markdown from "markdown-to-jsx";
 
-export default function Prof({ slug: leSlug }) {
+//un simple composant qui ne contient aucune logique.
+//j'affiche simplement ce que j'ai recu en props,
 
 
-  const router = useRouter();
-  const slug = router.query.slug;
-  //il faut vraiment faire pareil avec les variables pour les requetes si on utilise useSWR, sinon ca chie
-  const { data: result, error : eaps } = useSWR([requeteGql, slug], (requete,slug)=> graphQLClient.request(requete, {slug: slug}));
-
-  if(eaps) return <div>Error...</div>
-
-  if(!result) return <div>Loading...</div>
+//en l'occurence, unProf
+export default function Prof({ unProf }) {
 
   return (
     <>
       <div>
-          
-        bonjour je m'affiche
-        {result && <h1>{result.professeurCollection.items[0].nom}</h1>}
-        {/* <p>{unProf.description}</p> */}
+        {unProf && <h1>{unProf.professeurCollection.items[0].nom}</h1>}
+        {unProf && <Markdown>{unProf.professeurCollection.items[0].description}</Markdown>}  
       </div>
 
       <style jsx>{`
         div {
-          background-color: black;
+          background-color: #110c12;
           color: white;
         }
       `}</style>
     </>
   );
 }
-
-//je prépare une requete gql afin d'avoir les données d'un professeurs selon l'url. ex : /professeurs/camille
-const requeteGql = gql`
-  query Professeurs($slug: String!) {
-    professeurCollection(where: { slug: $slug }) {
-      items {
-        nom
-        description
-        slug
-      }
-    }
-  }
-`;
