@@ -13,6 +13,7 @@ export default function Menu() {
             <ul>
               <li><Link href="/" as="/"><a>Accueil</a></Link></li>
               <li><Link href="/exemplecontentful" as="/exemplecontentful"><a>CMS contentful</a></Link></li>
+              <li><Link href="/professeurs" as="/professeurs"><a>Les Professeurs</a></Link></li>
               <li><Link href="/collection" as="/collection"><a>Collections</a></Link></li>
               <li><Link href="/personnage" as="/personnage"><a>Personnages</a></Link></li>
               <li><Link href="/produits" as="/produits"><a>Produits</a></Link></li>
