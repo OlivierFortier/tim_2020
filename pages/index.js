@@ -39,8 +39,6 @@ export default function Home() {
           align-items: center;
           width: 100%;
           max-width: 1500px;
-          margin-top: 3rem;
-          padding-top: 3rem;
         }
 
         main {

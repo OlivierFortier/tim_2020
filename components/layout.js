@@ -19,7 +19,7 @@ export default function Layout({ children }) {
         #conteneur-application {
           display: flex;
           justify-content: center;
-          height: auto;
+          height: 100%;
         }
 
       `}</style>

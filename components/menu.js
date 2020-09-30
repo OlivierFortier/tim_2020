@@ -6,7 +6,7 @@ export default function Menu() {
 
   return (
     <>
-      <div style={{ color: "white" }}>
+      <div className="conteneur-menu" style={{ color: "white" }}>
         <button
           aria-label="ouvrir ou fermer menu"
           onClick={() => setMenuOuvert(!menuOuvert)}
@@ -22,8 +22,8 @@ export default function Menu() {
                 </Link>
               </li>
               <li>
-                <Link href="/exemplecontentful" as="/exemplecontentful">
-                  <a>CMS contentful</a>
+                <Link href="/professeurs" as="/professeurs">
+                  <a>Les Professeurs</a>
                 </Link>
               </li>
               <li>
@@ -52,18 +52,28 @@ export default function Menu() {
       </div>
 
       <style jsx>{`
+        button {
+          position: relative;
+          z-index: 4;
+        }
+
         nav {
           display: flex;
           flex-direction: column;
           position: absolute;
-          right: 1vw;
+          right: 0vw;
+          top: 0vh;
           color: white;
           font-size: 2em;
-          z-index: 5;
+          z-index: 3;
+          height: calc(100% + 26px);
+          background-color: #110c12;
+          box-shadow: 5px 5px 20px #F18163;
         }
         ul {
           list-style-type: none;
-          background-color: aqua;
+          padding-inline-start: 1rem;
+          padding-inline-end: 1rem;
         }
 
         a {
@@ -71,8 +81,11 @@ export default function Menu() {
           &:visited,
           &:hover,
           &:active {
-            color: green;
+            color: white;
             text-decoration: none;
+          }
+          &:hover {
+            color: #F18163;
           }
         }
       `}</style>
