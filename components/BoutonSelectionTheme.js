@@ -1,4 +1,4 @@
-export default function SelecteurTheme() {
+export default function BoutonSelectionTheme() {
   return (
     <>
       <button aria-label="Changer theme"></button>;

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Accueil from "../components/accueil";
 import Intro from "../components/intro";
+import SelectionProfil from "../components/selectionProfil";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
         <link rel="canonical" href="https://tim-2020.vercel.app/"></link>
       </Head>
 
-      <Intro/>
+      {/* <Intro/> */}
+      <SelectionProfil />
         {/* <Accueil /> */}
       
 
