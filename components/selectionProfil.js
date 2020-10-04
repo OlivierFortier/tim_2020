@@ -1,9 +1,12 @@
 import { useListeThemes, useThemeMiseAJour } from "../hooks/contexteTheme";
 
 export default function SelectionProfil({ changerEtape }) {
+
+  //aller chercher les valeurs du thème et pour mettre à jour le thème dans les contextes
   const changerTheme = useThemeMiseAJour();
   const listeThemes = useListeThemes();
 
+  //changer le thème et passer à la prochaine étape
   function choisirTheme(choix) {
     changerTheme(choix);
     changerEtape("accueil");

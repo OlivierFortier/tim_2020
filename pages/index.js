@@ -5,6 +5,8 @@ import Intro from "../components/intro";
 import SelectionProfil from "../components/selectionProfil";
 
 export default function Home() {
+
+  //définir l'état de l'étape actuelle , commencant par l'intro
   const [etapePage, setEtapePage] = useState("intro");
 
   return (
@@ -18,6 +20,7 @@ export default function Home() {
         <link rel="canonical" href="https://tim-2020.vercel.app/"></link>
       </Head>
 
+    {/* afficher l'intro, le profil et l'acceuil selon l'étape ou l'utilisateur est */}
       {etapePage === "intro" && <Intro changerEtape={setEtapePage} />}
       {etapePage === "profil" && <SelectionProfil changerEtape={setEtapePage} />}
       {etapePage === "accueil" && <Accueil changerEtape={setEtapePage} />}
