@@ -1,11 +1,11 @@
 import Menu from "./menu";
-import SelecteurTheme from "./selecteurTheme";
+import BoutonSelectionTheme from "./boutonSelectionTheme";
 
 export default function EnTete() {
   return (
     <>
       <header>
-        <SelecteurTheme />
+        <BoutonSelectionTheme />
         <div id="titre">
           <div>Techniques d'intégration multimédia</div>
         </div>

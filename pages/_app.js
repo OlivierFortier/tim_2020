@@ -1,11 +1,14 @@
 import "normalize.css";
 import Layout from "../components/layout";
+import { FournisseurTheme } from "../hooks/contexteTheme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <FournisseurTheme>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </FournisseurTheme>
   );
 }
 
