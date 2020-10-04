@@ -15,6 +15,7 @@ export default function SelectionProfil() {
           <span id="parent">
             <h2>Parent</h2>
           </span>
+          <h2 id="rapide">Accéder au site directement</h2>
         </div>
       </div>
       <style jsx>{`
@@ -28,6 +29,7 @@ export default function SelectionProfil() {
           grid-template:
             "art . code" 200px
             ". parent ." 200px
+            ". . rapide" auto
             / 200px 200px 200px;
         }
 
@@ -55,6 +57,10 @@ export default function SelectionProfil() {
         #parent {
           grid-area: parent;
           border-color: #c4c4c4;
+        }
+
+        #rapide {
+            grid-area: rapide;
         }
       `}</style>
     </>
