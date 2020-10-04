@@ -27,23 +27,13 @@ export default function Menu() {
                 </Link>
               </li>
               <li>
-                <Link href="/collection" as="/collection">
-                  <a>Collections</a>
+                <Link href="/etudiants" as="/etudiants">
+                  <a>Vie Étudiante</a>
                 </Link>
               </li>
               <li>
-                <Link href="/personnage" as="/personnage">
-                  <a>Personnages</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/produits" as="/produits">
-                  <a>Produits</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/vitalite" as="/vitalite">
-                  <a>Vitalité</a>
+                <Link href="/exemplecontentful" as="/exemplecontentful">
+                  <a>CMS Contentful</a>
                 </Link>
               </li>
             </ul>
@@ -68,7 +58,7 @@ export default function Menu() {
           z-index: 3;
           height: calc(100% + 26px);
           background-color: #110c12;
-          box-shadow: 5px 5px 20px #F18163;
+          box-shadow: 5px 5px 20px #f18163;
         }
         ul {
           list-style-type: none;
@@ -85,7 +75,7 @@ export default function Menu() {
             text-decoration: none;
           }
           &:hover {
-            color: #F18163;
+            color: #f18163;
           }
         }
       `}</style>

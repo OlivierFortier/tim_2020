@@ -1,13 +1,9 @@
-import { useState } from "react";
-import { useListeThemes, useTheme, useThemeMiseAJour } from "../hooks/contexteTheme";
+import { useListeThemes, useThemeMiseAJour } from "../hooks/contexteTheme";
 
 export default function BoutonSelectionTheme() {
 
-  const theme = useTheme();
   const changerTheme = useThemeMiseAJour()
   const listeThemes = useListeThemes()
-
-  console.log(theme)
 
   return (
     <>

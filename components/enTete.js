@@ -1,5 +1,5 @@
 import Menu from "./menu";
-import BoutonSelectionTheme from "./BoutonSelectionTheme";
+import BoutonSelectionTheme from "./boutonSelectionTheme";
 
 export default function EnTete() {
   return (
