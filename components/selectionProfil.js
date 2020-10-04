@@ -1,18 +1,28 @@
-export default function SelectionProfil() {
+import { useListeThemes, useThemeMiseAJour } from "../hooks/contexteTheme";
+
+export default function SelectionProfil({ changerEtape }) {
+  const changerTheme = useThemeMiseAJour();
+  const listeThemes = useListeThemes();
+
+  function choisirTheme(choix) {
+    changerTheme(choix);
+    changerEtape("accueil");
+  }
+
   return (
     <>
       <div className="conteneur-profils">
         <h1>Sélectionnez votre profil</h1>
         <div className="grille-profils">
-          <span id="art">
+          <span onClick={() => choisirTheme(listeThemes.art)} id="art">
             <h2>Artiste Digital</h2>
           </span>
-          <span id="code">
+          <span onClick={() => choisirTheme(listeThemes.code)} id="code">
             <h2>
               Pirate <br /> Informatique
             </h2>
           </span>
-          <span id="parent">
+          <span onClick={() => choisirTheme(listeThemes.parent)} id="parent">
             <h2>Parent</h2>
           </span>
           <h2 id="rapide">Accéder au site directement</h2>
@@ -60,7 +70,7 @@ export default function SelectionProfil() {
         }
 
         #rapide {
-            grid-area: rapide;
+          grid-area: rapide;
         }
       `}</style>
     </>
