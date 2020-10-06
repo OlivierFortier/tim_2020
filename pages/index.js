@@ -1,16 +1,19 @@
 import Head from "next/head";
 import { useState } from "react";
+import { useCookies } from "react-cookie";
 import Accueil from "../components/accueil";
 import Intro from "../components/intro";
 import SelectionProfil from "../components/selectionProfil";
 
 export default function Home() {
 
+  const [ cookies, setCookie, removeCookie ] = useCookies(['profil']);
+
   //définir l'état de l'étape actuelle , commencant par l'intro
-  const [etapePage, setEtapePage] = useState("intro");
+  const [etapePage, setEtapePage] = useState(cookies.profil ? 'accueil' : 'intro');
 
   return (
-    <div className="conteneur-page">
+    <div className="conteneur-page" suppressHydrationWarning={true}>
       <Head>
         <title>TIM | Accueil</title>
         <meta

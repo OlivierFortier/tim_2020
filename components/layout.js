@@ -1,32 +1,42 @@
+import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import EnTete from "./enTete";
 
 export default function Layout({ children }) {
-
   //grace au thème, on peut changer le css dynamiquement avec javascript selon le thème choisi
-  const theme = useTheme()
-  const listeThemes = useListeThemes()
+  const theme = useTheme();
+  const listeThemes = useListeThemes();
 
-  let styles = {}
+  const [styles, setStyles] = useState({ couleurBg: "#110c12" });
 
-  //selon le thème actif, on change la couleur du bg par exemple
-  if(theme === listeThemes.art) {
-    styles = {
-      couleurBg : '#110c12'
-    }
-  }
-  if(theme === listeThemes.code) {
-    styles = {
-      couleurBg : '#110c12'
-    }
-  }
+  useEffect(() => {
+    switch (theme) {
+      case listeThemes.art:
+        setStyles({
+          couleurBg: "#110c12",
+        });
+        break;
 
-  if(theme === listeThemes.parent) {
-    styles = {
-      couleurBg :'#F3F1F1'
+      case listeThemes.code:
+        setStyles({
+          couleurBg: "#110c12",
+        });
+        break;
+
+      case listeThemes.parent:
+        setStyles({
+          couleurBg: "#F3F1F1",
+        });
+        break;
+
+      default:
+        setStyles({
+          couleurBg: "#110c12",
+        });
+
+        break;
     }
-  }
-  
+  }, [theme]);
 
   return (
     <>
@@ -37,7 +47,7 @@ export default function Layout({ children }) {
 
       <style jsx>{`
         div {
-          background-color: ${ styles.couleurBg };
+          background-color: ${styles.couleurBg};
           height: 100vh;
         }
 

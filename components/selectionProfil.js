@@ -1,3 +1,4 @@
+import { useCookies } from "react-cookie";
 import { useListeThemes, useThemeMiseAJour } from "../hooks/contexteTheme";
 
 export default function SelectionProfil({ changerEtape }) {
@@ -6,9 +7,15 @@ export default function SelectionProfil({ changerEtape }) {
   const changerTheme = useThemeMiseAJour();
   const listeThemes = useListeThemes();
 
+  //utiliser le hook des cookies pour mettre le profil dans un cookie
+  const [ cookies, setCookie, removeCookie ] = useCookies(['profil']);
+
   //changer le thème et passer à la prochaine étape
   function choisirTheme(choix) {
     changerTheme(choix);
+    //créer le cookie avec le choix du profil
+    removeCookie('profil', { path: "/", maxAge: 2592000})
+    setCookie('profil', choix, { path: "/", maxAge: 2592000})
     changerEtape("accueil");
   }
 

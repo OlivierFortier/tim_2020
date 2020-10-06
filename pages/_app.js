@@ -4,11 +4,13 @@ import { FournisseurTheme } from "../hooks/contexteTheme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <FournisseurTheme>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </FournisseurTheme>
+    
+      <FournisseurTheme>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </FournisseurTheme>
+    
   );
 }
 
