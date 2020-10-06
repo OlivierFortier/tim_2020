@@ -1,11 +1,12 @@
 import { useCookies } from "react-cookie";
-import { useListeThemes, useThemeMiseAJour } from "../hooks/contexteTheme";
+import { useListeThemes, useTheme, useThemeMiseAJour } from "../hooks/contexteTheme";
 
 
 export default function BoutonSelectionTheme() {
 
   const changerTheme = useThemeMiseAJour()
   const listeThemes = useListeThemes()
+  const theme = useTheme()
 
   const [ cookies, setCookie, removeCookie ] = useCookies(['profil']);
 
@@ -17,7 +18,7 @@ export default function BoutonSelectionTheme() {
 
   return (
     <>
-      <select onChange={(e)=> mettreAjourTheme(e)} aria-label="Changer theme">
+      <select value={theme} onChange={(e)=> mettreAjourTheme(e)} aria-label="Changer theme">
         <option value={listeThemes.art}>artiste</option>
         <option value={listeThemes.code}>hacker</option>
         <option value={listeThemes.parent}>parent</option>

@@ -13,7 +13,7 @@ export default function Home() {
   const [etapePage, setEtapePage] = useState(cookies.profil ? 'accueil' : 'intro');
 
   return (
-    <div className="conteneur-page">
+    <div className="conteneur-page" suppressHydrationWarning={true}>
       <Head>
         <title>TIM | Accueil</title>
         <meta
