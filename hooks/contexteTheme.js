@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { useCookies } from "react-cookie";
 
 //liste des 3 profils
  const profils = {art: 'art', code: 'code', parent: 'parent'}
@@ -25,8 +26,14 @@ import { createContext, useContext, useState } from "react";
 
 export function FournisseurTheme({ children }) {
 
+    const [ cookies, setCookie, removeCookie ] = useCookies(['profil']);
+
+    console.log(cookies.profil)
+
+    const themeInitial = cookies.profil ? cookies.profil : profils.art
+
     //l'état global de l'application contient le thème. par défaut, le thème d'art
-    const [themeProfil, setThemeProfil] = useState(profils.art)
+    const [themeProfil, setThemeProfil] = useState(themeInitial)
 
     //la fonction qui change le thème
     function changerTheme(profil) {
