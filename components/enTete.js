@@ -13,6 +13,10 @@ export default function EnTete() {
       </header>
 
       <style jsx>{`
+
+      /** exemple d'importation des variables sass pour les utiliser */
+      @import "styles/variables";
+
         header {
           display: flex;
           flex-direction: row;

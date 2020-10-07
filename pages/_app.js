@@ -1,4 +1,5 @@
 import "normalize.css";
+import "../styles/styles.scss";
 import Layout from "../components/layout";
 import { FournisseurTheme } from "../hooks/contexteTheme";
 
