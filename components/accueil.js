@@ -48,8 +48,17 @@ export default function Accueil() {
 
         .titre-intro {
           color: #ffffff;
-          font-size: 4.5rem;
+          font-family: NeueMontreal;
+          font-size: 72px;
+          font-weight: 300;
+          text-transform: uppercase;
           padding-left: 25px;
+
+          strong {
+            font-weight: 700;
+            font-style: italic;
+          }
+
         }
 
         #nom-college {
