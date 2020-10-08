@@ -1,3 +1,6 @@
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import NomCours from "../components/cours/nomCours";
+
 export default function Cours() {
   return (
     <div>
@@ -13,6 +16,60 @@ export default function Cours() {
           <option>la vidéo</option>
         </select>
       </h2>
+      <Tabs>
+        <TabList>
+          <Tab>Session 1</Tab>
+          <Tab>Session 2</Tab>
+          <Tab>Session 3</Tab>
+          <Tab>Session 4</Tab>
+          <Tab>Session 5</Tab>
+          <Tab>Session 6</Tab>
+        </TabList>
+
+        <TabPanel>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
+        </TabPanel>
+        
+        <TabPanel>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
+        </TabPanel>
+
+        <TabPanel>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
+        </TabPanel>
+
+        <TabPanel>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
+        </TabPanel>
+
+        <TabPanel>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
+        </TabPanel>
+
+        <TabPanel>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
+        </TabPanel>
+      </Tabs>
+
+      <style jsx>{``}</style>
     </div>
   );
 }
