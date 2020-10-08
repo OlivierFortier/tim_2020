@@ -54,7 +54,7 @@ export default function Layout({ children }) {
         #conteneur-application {
           display: flex;
           justify-content: center;
-          height: 100%;
+          height: auto;
         }
       `}</style>
     </>
