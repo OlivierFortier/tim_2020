@@ -22,6 +22,8 @@ export default function EnTete() {
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
+          height: auto;
+          padding: 3rem;
         }
         div {
           color: #ffffff;
