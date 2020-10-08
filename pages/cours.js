@@ -1,4 +1,5 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import NomCours from "../components/cours/nomCours";
 
 export default function Cours() {
   return (
@@ -26,124 +27,49 @@ export default function Cours() {
         </TabList>
 
         <TabPanel>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
         </TabPanel>
+        
         <TabPanel>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
         </TabPanel>
+
         <TabPanel>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
         </TabPanel>
+
         <TabPanel>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
         </TabPanel>
+
         <TabPanel>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
         </TabPanel>
+
         <TabPanel>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
-          <div className="cours">
-            <h3>Mise en page web</h3>
-            <i>icone</i>
-          </div>
+          <NomCours />
+          <NomCours />
+          <NomCours />
+          <NomCours />
         </TabPanel>
       </Tabs>
 
-      <style jsx>{`
-          
-          .cours {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-          }
-
-          `}</style>
+      <style jsx>{``}</style>
     </div>
   );
 }
