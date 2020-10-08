@@ -26,12 +26,124 @@ export default function Cours() {
         </TabList>
 
         <TabPanel>
-          <h2>Any content 1</h2>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
         </TabPanel>
         <TabPanel>
-          <h2>Any content 2</h2>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+        </TabPanel>
+        <TabPanel>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
+          <div className="cours">
+            <h3>Mise en page web</h3>
+            <i>icone</i>
+          </div>
         </TabPanel>
       </Tabs>
+
+      <style jsx>{`
+          
+          .cours {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+          }
+
+          `}</style>
     </div>
   );
 }
