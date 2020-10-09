@@ -9,10 +9,12 @@ import { useState } from "react";
 resetIdCounter();
 
 export default function Cours({ listeCours }) {
+  
   //on extrait la liste des cours et on la sépare par session
   const coursSession1 = listeCours.filter((cours) => cours.session === 1);
   const coursSession2 = listeCours.filter((cours) => cours.session === 2);
   const coursSession3 = listeCours.filter((cours) => cours.session === 3);
+  const coursSession6 = listeCours.filter((cours) => cours.session === 6);
 
   //on trie les session qui ont des choix de cours
   const coursSession4 = listeCours.filter((cours) => cours.session === 4);
@@ -20,22 +22,28 @@ export default function Cours({ listeCours }) {
   const coursSession5 = listeCours.filter((cours) => cours.session === 5);
   const coursSession5Tries = [...coursSession5].sort( (a, b) => a.auChoix - b.auChoix );
 
-  const coursSession6 = listeCours.filter((cours) => cours.session === 6);
-
+  //on regroupe dans un array tous les cours de toutes les sessions
   const listeTousLesCours = [coursSession1, coursSession2, coursSession3, coursSession4Tries, coursSession5Tries, coursSession6]
 
-  //regrouper tous les sessions dans 1 array de l'état
+  //définir l'état de base avec tous les cours affichés
   const [tousLesCours, setTousLesCours] = useState(listeTousLesCours);
 
-  //TODO : trier les cours selon le select
-
-  function filtrerCours(e) {
+  /**
+   * Filtre les cours selon la valeur du select
+   * @param {object} evenement - l'objet d'événement
+   */
+  function filtrerCours(evenement) {
+    //on boucle sur toutes les sessions pour retourner une nouvelle liste des cours triés
     const coursFiltres = listeTousLesCours.map((session) => {
-      return session.filter((cours)=> {
-        return cours.types.some(t => t === e.target.value)
-      })
-    })
-    console.log(coursFiltres)
+      //on boucle avec la méthode filter pour prendre seulement les cours qui correspondent à notre filtre
+      return session.filter((cours) => {
+        //on retourne seulement les cours dont les types correspondent à la valeur du select
+        return cours.types.some((typeCours) =>
+          evenement.target.value !== "" ? typeCours === evenement.target.value : typeCours
+        );
+      });
+    });
+    //mettre à jour l'état pour effectuer un nouveau rendu
     setTousLesCours(coursFiltres)
   }
 
@@ -44,7 +52,7 @@ export default function Cours({ listeCours }) {
       <h1>La liste des cours</h1>
       <h2>
         J'aime bien
-        <select value="" onChange={(e)=> filtrerCours(e)}>
+        <select onChange={(evenement)=> filtrerCours(evenement)}>
           <option value="">de tout</option>
           <option value="Jeux">les jeux</option>
           <option value="Web">le web</option>
