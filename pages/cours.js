@@ -29,13 +29,10 @@ export default function Cours({ listeCours }) {
 
   //TODO : trier les cours selon le select
 
-  const [optionSelect, setOptionSelect] = useState("")
-
   function filtrerCours(e) {
-    setOptionSelect(e.target.value)
-    const coursFiltres = tousLesCours.filter((session) => {
+    const coursFiltres = listeTousLesCours.map((session) => {
       return session.filter((cours)=> {
-        return cours.type.includes(t => t === e.target.value)
+        return cours.types.some(t => t === e.target.value)
       })
     })
     console.log(coursFiltres)
@@ -47,7 +44,7 @@ export default function Cours({ listeCours }) {
       <h1>La liste des cours</h1>
       <h2>
         J'aime bien
-        <select value={optionSelect} onChange={(e)=> filtrerCours(e)}>
+        <select value="" onChange={(e)=> filtrerCours(e)}>
           <option value="">de tout</option>
           <option value="Jeux">les jeux</option>
           <option value="Web">le web</option>
@@ -101,7 +98,7 @@ export async function getStaticProps() {
           choixEntre {
             titre
           }
-          type
+          types
         }
       }
     }

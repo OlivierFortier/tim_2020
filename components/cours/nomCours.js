@@ -7,8 +7,8 @@ export default function NomCours({ infoCours }) {
       {infoCours.choixEntre && <i>choix entre {infoCours.choixEntre.titre}</i>}
       <span>
         <ul>
-          {infoCours.type &&
-            infoCours.type.map((type, index) => {
+          {infoCours.types &&
+            infoCours.types.map((type, index) => {
               return <li key={Math.random() * index}>{type}</li>;
             })}
         </ul>
