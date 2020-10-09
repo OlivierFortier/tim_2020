@@ -7,8 +7,8 @@ export default function NomCours({ infoCours }) {
       <span>
         <ul>
           {infoCours.type &&
-            infoCours.type.map((type) => {
-              return <li>{type}</li>;
+            infoCours.type.map((type, index) => {
+              return <li key={Math.random()*index}>{type}</li>;
             })}
         </ul>
       </span>

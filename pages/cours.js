@@ -25,6 +25,7 @@ export default function Cours({ listeCours }) {
     coursSession6,
   ];
 
+  //TODO : séparer les cours qui sont un choix de l'élève
   //TODO : trier les cours selon le select
 
   return (
