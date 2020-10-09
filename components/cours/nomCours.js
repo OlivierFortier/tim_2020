@@ -1,9 +1,9 @@
-export default function NomCours({ infoCours }) {
-  
+export default function NomCours({ infoCours, afficherCours }) {
+
   //TODO : gestion de l'icone selon le type du cours
 
   return (
-    <div className="cours">
+    <div onClick={afficherCours} className="cours">
       <h3>{infoCours.titre}</h3>
       {infoCours.choixEntre && <i>choix entre {infoCours.choixEntre.titre}</i>}
       <span>

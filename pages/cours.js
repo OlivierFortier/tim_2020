@@ -4,12 +4,12 @@ import { gql } from "graphql-request";
 import { faireRequeteGql, graphQLClient } from "../libs/requetesDonnes";
 import { resetIdCounter } from "react-tabs";
 import { useState } from "react";
+import DetailsCours from "../components/cours/detailsCours";
 
-//fonction à appeler pour le tab, puisqu'on utilise un framework react isomorphe (rendu serveur & client)
-resetIdCounter();
+
 
 export default function Cours({ listeCours }) {
-  
+
   //on extrait la liste des cours et on la sépare par session
   const coursSession1 = listeCours.filter((cours) => cours.session === 1);
   const coursSession2 = listeCours.filter((cours) => cours.session === 2);
@@ -28,10 +28,7 @@ export default function Cours({ listeCours }) {
   //définir l'état de base avec tous les cours affichés
   const [tousLesCours, setTousLesCours] = useState(listeTousLesCours);
 
-  /**
-   * Filtre les cours selon la valeur du select
-   * @param {object} evenement - l'objet d'événement
-   */
+  //filtrer les cours selon l'option select de l'utilisateur
   function filtrerCours(evenement) {
     //on boucle sur toutes les sessions pour retourner une nouvelle liste des cours triés
     const coursFiltres = listeTousLesCours.map((session) => {
@@ -46,6 +43,8 @@ export default function Cours({ listeCours }) {
     //mettre à jour l'état pour effectuer un nouveau rendu
     setTousLesCours(coursFiltres)
   }
+
+  const [coursAffiche, setCoursAffiche] = useState()
 
   return (
     <div>
@@ -75,14 +74,22 @@ export default function Cours({ listeCours }) {
         {tousLesCours.map((session, indexSession) => {
           return (
             <TabPanel key={Math.random() * indexSession}>
-              {session.map((coursFiltre, indexCours) => {
-                return (
-                  <NomCours
-                    key={Math.random() * indexCours}
-                    infoCours={coursFiltre}
-                  />
-                );
-              })}
+              {coursAffiche ? (
+                <DetailsCours
+                  infoCours={coursAffiche}
+                  afficherCours={() => setCoursAffiche(null)}
+                />
+              ) : (
+                session.map((coursFiltre, indexCours) => {
+                  return (
+                    <NomCours
+                      afficherCours={() => setCoursAffiche(coursFiltre)}
+                      key={Math.random() * indexCours}
+                      infoCours={coursFiltre}
+                    />
+                  );
+                })
+              )}
             </TabPanel>
           );
         })}
@@ -95,12 +102,20 @@ export default function Cours({ listeCours }) {
 
 //on va chercher nos données du CMS dans cette fonction pour les passer en props
 export async function getStaticProps() {
+
+  //fonction à appeler pour le tab, puisqu'on utilise un framework react isomorphe (rendu serveur & client)
+  resetIdCounter();
+
   //je prépare ma requete graphQl pour avoir la liste des noms et des slugs de tous les cours
   const requeteGqlTousLesCours = gql`
     {
       coursCollection {
         items {
+          sys {
+            id
+          }
           titre
+          description
           session
           auChoix
           choixEntre {
