@@ -33,7 +33,12 @@ export default function Cours({ listeCours }) {
 
   function filtrerCours(e) {
     setOptionSelect(e.target.value)
-    const coursFiltres = tousLesCours.filter((cours)=> cours.type.map(type=> type === optionSelect ))
+    const coursFiltres = tousLesCours.filter((session) => {
+      return session.filter((cours)=> {
+        return cours.type.includes(t => t === e.target.value)
+      })
+    })
+    console.log(coursFiltres)
     setTousLesCours(coursFiltres)
   }
 

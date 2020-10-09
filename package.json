@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "cross-env": "^7.0.2",
     "graphql": "^15.3.0",
     "graphql-request": "^3.1.0",
     "markdown-to-jsx": "^7.0.0",
