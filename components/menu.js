@@ -4,6 +4,10 @@ import { useState } from "react";
 export default function Menu() {
   const [menuOuvert, setMenuOuvert] = useState(false);
 
+  function fermerMenu() {
+    setMenuOuvert(false);
+  }
+
   return (
     <>
       <div className="conteneur-menu" style={{ color: "white" }}>
@@ -19,22 +23,27 @@ export default function Menu() {
               <ul className="liste-pages">
                 <li>
                   <Link href="/" as="/">
-                    <a>Accueil</a>
+                    <a onClick={fermerMenu}>Accueil</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/professeurs" as="/professeurs">
-                    <a>Les Professeurs</a>
+                    <a onClick={fermerMenu}>Professeurs</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/cours" as="/cours">
+                    <a onClick={fermerMenu}>Cours</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/etudiants" as="/etudiants">
-                    <a>Vie Étudiante</a>
+                    <a onClick={fermerMenu}>Vie Étudiante</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/exemplecontentful" as="/exemplecontentful">
-                    <a>CMS Contentful</a>
+                    <a onClick={fermerMenu}>CMS Contentful</a>
                   </Link>
                 </li>
               </ul>
