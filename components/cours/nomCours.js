@@ -1,4 +1,5 @@
 export default function NomCours({ infoCours }) {
+  
   //TODO : gestion de l'icone selon le type du cours
 
   return (
