@@ -11,8 +11,13 @@ export default function Cours({ listeCours }) {
   const coursSession1 = listeCours.filter((cours) => cours.session === 1);
   const coursSession2 = listeCours.filter((cours) => cours.session === 2);
   const coursSession3 = listeCours.filter((cours) => cours.session === 3);
+
+  //on trie les session qui ont des choix de cours
   const coursSession4 = listeCours.filter((cours) => cours.session === 4);
+  const coursSession4Tries = [...coursSession4].sort((a,b) => a.auChoix - b.auChoix);
   const coursSession5 = listeCours.filter((cours) => cours.session === 5);
+  const coursSession5Tries = [...coursSession5].sort((a,b) => a.auChoix - b.auChoix);
+
   const coursSession6 = listeCours.filter((cours) => cours.session === 6);
 
   //regrouper tous les sessions dans 1 array
@@ -20,8 +25,8 @@ export default function Cours({ listeCours }) {
     coursSession1,
     coursSession2,
     coursSession3,
-    coursSession4,
-    coursSession5,
+    coursSession4Tries,
+    coursSession5Tries,
     coursSession6,
   ];
 
@@ -52,19 +57,22 @@ export default function Cours({ listeCours }) {
           <Tab>Session 6</Tab>
         </TabList>
 
-      {/* double boucle sur les cours de toutes les sessions pour les afficher par session */}
-        {tousLesCours.map((session, index) => {
+        {/* double boucle sur les cours de toutes les sessions pour les afficher par session */}
+        {tousLesCours.map((session, indexSession) => {
           return (
-            <TabPanel key={Math.random() * index}>
-              {session.map((cours, index) => {
+            <TabPanel key={Math.random() * indexSession}>
+              { session.map((cours, indexCours) => {
+                
                 return (
-                  <NomCours key={Math.random() * index} infoCours={cours} />
+                  <NomCours
+                    key={Math.random() * indexCours}
+                    infoCours={cours}
+                  />
                 );
               })}
             </TabPanel>
           );
         })}
-
       </Tabs>
 
       <style jsx>{``}</style>
@@ -82,6 +90,9 @@ export async function getStaticProps() {
           titre
           session
           auChoix
+          choixEntre {
+            titre
+          }
           type
         }
       }

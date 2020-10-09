@@ -2,8 +2,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Menu() {
+
+  //gérer l'état du menu, ouvert - oui ou non ?
   const [menuOuvert, setMenuOuvert] = useState(false);
 
+  //fonction "wrapper" pour la passer au onClick pour fermer le menu lorsqu'on clique sur un bouton du menu
   function fermerMenu() {
     setMenuOuvert(false);
   }
@@ -51,20 +54,20 @@ export default function Menu() {
 
             <address id="contact">
               <Link href="/" as="/">
-                <a>3800 rue shrebrooke e, montréal, qc h1x 2a2</a>
+                <a onClick={fermerMenu}>3800 rue shrebrooke e, montréal, qc h1x 2a2</a>
               </Link>
               <ul className="liens-contact">
                 <Link href="/" as="/">
-                  <a>discord</a>
+                  <a onClick={fermerMenu}>discord</a>
                 </Link>
                 <Link href="/" as="/">
-                  <a>instagram</a>
+                  <a onClick={fermerMenu}>instagram</a>
                 </Link>
                 <Link href="/" as="/">
-                  <a>facebook</a>
+                  <a onClick={fermerMenu}>facebook</a>
                 </Link>
                 <Link href="/" as="/">
-                  <a>youtube</a>
+                  <a onClick={fermerMenu}>youtube</a>
                 </Link>
               </ul>
             </address>
@@ -83,7 +86,7 @@ export default function Menu() {
           grid-template:
             ". pages" auto
             "contact ." auto
-            / auto auto;
+            / 1fr 1fr;
           position: absolute;
           right: 0vw;
           top: 0vh;
@@ -99,7 +102,7 @@ export default function Menu() {
         .conteneur-liste-pages {
           grid-area: pages;
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
         }
 
         .liste-pages {
@@ -110,7 +113,8 @@ export default function Menu() {
           display: flex;
           flex-direction: column;
           justify-content: center;
-
+          align-items: flex-end;
+          padding-right: 10rem;
           li {
             margin: 1rem;
           }

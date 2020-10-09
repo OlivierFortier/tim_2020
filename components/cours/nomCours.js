@@ -4,11 +4,12 @@ export default function NomCours({ infoCours }) {
   return (
     <div className="cours">
       <h3>{infoCours.titre}</h3>
+      {infoCours.choixEntre && <i>choix entre {infoCours.choixEntre.titre}</i>}
       <span>
         <ul>
           {infoCours.type &&
             infoCours.type.map((type, index) => {
-              return <li key={Math.random()*index}>{type}</li>;
+              return <li key={Math.random() * index}>{type}</li>;
             })}
         </ul>
       </span>
@@ -17,6 +18,7 @@ export default function NomCours({ infoCours }) {
         .cours {
           display: flex;
           flex-direction: row;
+          align-items: center;
           justify-content: space-between;
         }
       `}</style>
