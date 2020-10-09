@@ -1,8 +1,17 @@
 export default function NomCours({ infoCours }) {
+  //TODO : gestion de l'icone selon le type du cours
+
   return (
     <div className="cours">
-      <h3>Mise en page web</h3>
-      <span>icone</span>
+      <h3>{infoCours.titre}</h3>
+      <span>
+        <ul>
+          {infoCours.type &&
+            infoCours.type.map((type) => {
+              return <li>{type}</li>;
+            })}
+        </ul>
+      </span>
 
       <style jsx>{`
         .cours {

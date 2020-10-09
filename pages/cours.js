@@ -1,7 +1,32 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import NomCours from "../components/cours/nomCours";
+import { gql } from "graphql-request";
+import { faireRequeteGql, graphQLClient } from "../libs/requetesDonnes";
+import { resetIdCounter } from "react-tabs";
 
-export default function Cours() {
+resetIdCounter();
+
+export default function Cours({ listeCours }) {
+  //on extrait la liste des cours et on la sépare par session
+  const coursSession1 = listeCours.filter((cours) => cours.session === 1);
+  const coursSession2 = listeCours.filter((cours) => cours.session === 2);
+  const coursSession3 = listeCours.filter((cours) => cours.session === 3);
+  const coursSession4 = listeCours.filter((cours) => cours.session === 4);
+  const coursSession5 = listeCours.filter((cours) => cours.session === 5);
+  const coursSession6 = listeCours.filter((cours) => cours.session === 6);
+
+  //regrouper tous les sessions dans 1 array
+  const tousLesCours = [
+    coursSession1,
+    coursSession2,
+    coursSession3,
+    coursSession4,
+    coursSession5,
+    coursSession6,
+  ];
+
+  //TODO : trier les cours selon le select
+
   return (
     <div>
       <h1>La liste des cours</h1>
@@ -26,50 +51,51 @@ export default function Cours() {
           <Tab>Session 6</Tab>
         </TabList>
 
-        <TabPanel>
-          <NomCours />
-          <NomCours />
-          <NomCours />
-          <NomCours />
-        </TabPanel>
-        
-        <TabPanel>
-          <NomCours />
-          <NomCours />
-          <NomCours />
-          <NomCours />
-        </TabPanel>
+      {/* double boucle sur les cours de toutes les sessions pour les afficher par session */}
+        {tousLesCours.map((session, index) => {
+          return (
+            <TabPanel key={Math.random() * index}>
+              {session.map((cours, index) => {
+                return (
+                  <NomCours key={Math.random() * index} infoCours={cours} />
+                );
+              })}
+            </TabPanel>
+          );
+        })}
 
-        <TabPanel>
-          <NomCours />
-          <NomCours />
-          <NomCours />
-          <NomCours />
-        </TabPanel>
-
-        <TabPanel>
-          <NomCours />
-          <NomCours />
-          <NomCours />
-          <NomCours />
-        </TabPanel>
-
-        <TabPanel>
-          <NomCours />
-          <NomCours />
-          <NomCours />
-          <NomCours />
-        </TabPanel>
-
-        <TabPanel>
-          <NomCours />
-          <NomCours />
-          <NomCours />
-          <NomCours />
-        </TabPanel>
       </Tabs>
 
       <style jsx>{``}</style>
     </div>
   );
+}
+
+//on va chercher nos données du CMS dans cette fonction pour les passer en props
+export async function getStaticProps() {
+  //je prépare ma requete graphQl pour avoir la liste des noms et des slugs de tous les cours
+  const requeteGqlTousLesCours = gql`
+    {
+      coursCollection {
+        items {
+          titre
+          session
+          auChoix
+          type
+        }
+      }
+    }
+  `;
+
+  //je fais ma requete
+  const res = await faireRequeteGql(requeteGqlTousLesCours);
+  const listeCours = res.coursCollection.items;
+
+  //je retourne la liste des cours, et je revalide à chaque seconde
+  return {
+    props: {
+      listeCours,
+    },
+    revalidate: 1,
+  };
 }
