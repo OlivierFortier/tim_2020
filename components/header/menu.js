@@ -95,7 +95,7 @@ export default function Menu() {
           right: 0vw;
           top: 0vh;
 
-          height: 85vh;
+          height: 88vh;
           width: 100vw;
 
           background-color: #110c12;
@@ -106,6 +106,7 @@ export default function Menu() {
         nav {
           height: 100%;
           width: 80%;
+          max-width: 1370px;
           display: grid;
           grid-template:
             ". pages" auto
@@ -131,7 +132,6 @@ export default function Menu() {
           flex-direction: column;
           justify-content: center;
           align-items: flex-end;
-          padding-right: 10rem;
           li {
             margin: 1rem;
           }

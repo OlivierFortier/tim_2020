@@ -40,21 +40,31 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <div>
-        <EnTete></EnTete>
-        <div id="conteneur-application">{children}</div>
+      <div id="racine">
+        <div className="conteneur-tout">
+        	<EnTete></EnTete>
+        	<div id="conteneur-application">{children}</div>
+        </div>
       </div>
 
       <style jsx>{`
-        div {
+        #racine {
           background-color: ${styles.couleurBg};
           height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+        }
+
+        .conteneur-tout {
+          width: 100%;
+          max-width: 1370px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
 
         #conteneur-application {
-          display: flex;
-          justify-content: center;
-          height: auto;
         }
       `}</style>
     </>

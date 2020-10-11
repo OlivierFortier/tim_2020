@@ -29,8 +29,8 @@ export default function EnTete() {
             : "flex-end"};
           align-items: center;
           height: auto;
-          padding: 3rem;
-          margin: 0 auto;
+          padding: 3rem 0;
+          margin-bottom: 3rem;
           max-width: 1370px;
         }
 
