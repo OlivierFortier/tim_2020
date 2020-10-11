@@ -94,13 +94,12 @@ export default function Accueil() {
           img {
             z-index: 1;
             width: auto;
-            height: 100%;
+            max-height: 100%;
           }
         }
 
         .conteneur-bouton {
           position: relative;
-          top: -2%;
           width: 100%;
           display: flex;
           justify-content: flex-end;
@@ -108,7 +107,7 @@ export default function Accueil() {
 
         .bouton-explorer {
           position: absolute;
-          top: -2rem;
+          top: -4rem;
           background-color: #fff;
           border-radius: 50%;
           height: 8rem;

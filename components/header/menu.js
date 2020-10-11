@@ -105,7 +105,7 @@ export default function Menu() {
 
         nav {
           height: 100%;
-          width: 80%;
+          /**À changer avec un media query pour les petits écrans */
           max-width: 1370px;
           display: grid;
           grid-template:
@@ -140,7 +140,6 @@ export default function Menu() {
         address {
           grid-area: contact;
           border-left: 2px solid white;
-          margin-left: 4rem;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
