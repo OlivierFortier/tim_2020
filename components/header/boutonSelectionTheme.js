@@ -28,8 +28,8 @@ export default function BoutonSelectionTheme() {
         select {
           appearance: none;
           margin-right: 15px;
-          height: 1rem;
-          width: 1rem;
+          height: 24px;
+          width: 24px;
           background-color: #fff;
           border-radius: 50%;
 

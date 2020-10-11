@@ -18,6 +18,8 @@ export default function SelectionProfil({ changerEtape }) {
     changerEtape("accueil");
   }
 
+  //TODO : animer les ronds
+
   return (
     <>
       <div className="conteneur-profils">
@@ -36,7 +38,7 @@ export default function SelectionProfil({ changerEtape }) {
           </span>
           
         </div>
-        <h2 id="rapide">Accéder au site directement</h2>
+        <h2 id="rapide" onClick={() => choisirTheme(listeThemes.parent)}>Accéder au site directement</h2>
       </div>
       <style jsx>{`
 
@@ -44,8 +46,8 @@ export default function SelectionProfil({ changerEtape }) {
 
         .conteneur-profils {
           color: white;
-          border-left: 3px solid white;
-
+          border-left: 5px solid white;
+          padding-left: 2rem;
           width: 100%;
           display: flex;
           flex-direction: column;
@@ -55,6 +57,10 @@ export default function SelectionProfil({ changerEtape }) {
           h1 {
             align-self: start;
             padding-left: 2%;
+            line-height: 44px;
+            font-size: 36px;
+            font-weight: bold;
+            font-style: normal;
           }
 
         }
@@ -79,11 +85,18 @@ export default function SelectionProfil({ changerEtape }) {
           width: $taille-cercle-accueil;
           height: $taille-cercle-accueil;
           position: relative;
+          cursor: pointer;
+
+          h2 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+          }
         }
 
         #art {
           grid-area: art;
-          border-color: #eb601c;
+          border-color: #E72A00;
           top: 25%;
         }
 
@@ -109,6 +122,7 @@ export default function SelectionProfil({ changerEtape }) {
           right: 1rem;
           height: 0;
           align-self: flex-end;
+          cursor: pointer;
         }
       `}</style>
     </>

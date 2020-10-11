@@ -43,7 +43,10 @@ export default function EnTete() {
         }
         #titre {
           margin-right: auto;
-          font-size: 23px;
+          font-size: 24px;
+          text-transform: uppercase;
+          font-style: normal;
+          font-weight: normal;
         }
       `}</style>
     </>
