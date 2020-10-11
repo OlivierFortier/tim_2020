@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
-import EnTete from "./enTete";
+import EnTete from "./header/enTete";
 
 export default function Layout({ children }) {
   //grace au thème, on peut changer le css dynamiquement avec javascript selon le thème choisi

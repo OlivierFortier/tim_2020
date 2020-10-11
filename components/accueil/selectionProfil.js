@@ -1,5 +1,5 @@
 import { useCookies } from "react-cookie";
-import { useListeThemes, useThemeMiseAJour } from "../hooks/contexteTheme";
+import { useListeThemes, useThemeMiseAJour } from "../../hooks/contexteTheme";
 
 export default function SelectionProfil({ changerEtape }) {
 

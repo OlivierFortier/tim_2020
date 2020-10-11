@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { useState } from "react";
 import { useCookies } from "react-cookie";
-import Accueil from "../components/accueil";
-import Intro from "../components/intro";
-import SelectionProfil from "../components/selectionProfil";
+import Accueil from "../components/accueil/accueil";
+import Intro from "../components/accueil/intro";
+import SelectionProfil from "../components/accueil/selectionProfil";
 
 export default function Home() {
 
