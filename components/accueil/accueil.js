@@ -1,9 +1,4 @@
-
-
 export default function Accueil() {
-
- 
-
   return (
     <>
       <main>
@@ -15,6 +10,9 @@ export default function Accueil() {
         <h2 id="nom-college">Collège de Maisonneuve</h2>
       </main>
       <aside>
+        <span>
+          <div className="cercle-interractif"></div>
+        </span>
         <img
           alt="image du theme"
           src="https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
@@ -27,6 +25,8 @@ export default function Accueil() {
       </aside>
 
       <style jsx>{`
+        @import "styles/variables";
+
         main {
           height: 70vh;
           border-left: 3px solid white;
@@ -58,7 +58,6 @@ export default function Accueil() {
             font-weight: 700;
             font-style: italic;
           }
-
         }
 
         #nom-college {
@@ -74,6 +73,24 @@ export default function Accueil() {
           justify-content: center;
           align-items: flex-end;
 
+          span {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+
+            .cercle-interractif {
+              position: absolute;
+              right: 70%;
+              top: -3rem;
+              height: $taille-cercle-accueil;
+              width: $taille-cercle-accueil;
+              border-radius: 50%;
+              border: 2px solid white;
+              z-index: 3;
+            }
+          }
+
           img {
             z-index: 1;
             width: auto;
@@ -83,7 +100,7 @@ export default function Accueil() {
 
         .conteneur-bouton {
           position: relative;
-          height: 0 px;
+          top: -2%;
           width: 100%;
           display: flex;
           justify-content: flex-end;
