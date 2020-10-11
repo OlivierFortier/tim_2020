@@ -27,7 +27,6 @@ export default function BoutonSelectionTheme() {
       <style jsx>{`
         select {
           appearance: none;
-          margin-left: 30px;
           margin-right: 15px;
           height: 1rem;
           width: 1rem;

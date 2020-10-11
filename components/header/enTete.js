@@ -1,30 +1,43 @@
 import Menu from "./menu";
 import BoutonSelectionTheme from "./boutonSelectionTheme";
+import { useRouter } from "next/router";
 
 export default function EnTete() {
+  const router = useRouter();
+
   return (
     <>
       <header>
-        <BoutonSelectionTheme />
-        <div id="titre">
-          <div>Techniques d'intégration multimédia</div>
-        </div>
+        {router.pathname === "/" && (
+          <span>
+            <BoutonSelectionTheme />
+            <div id="titre">Techniques d'intégration multimédia</div>
+          </span>
+        )}
         <Menu />
       </header>
 
       <style jsx>{`
-
-      /** exemple d'importation des variables sass pour les utiliser */
-      @import "styles/variables";
+        /** exemple d'importation des variables sass pour les utiliser */
+        @import "styles/variables";
 
         header {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: ${router.pathname === "/"
+            ? "space-between"
+            : "flex-end"};
           align-items: center;
           height: auto;
-          padding: 3rem;
+          padding: 3rem 0;
+          margin-bottom: 3rem;
+          max-width: 1370px;
         }
+
+        span {
+          display: flex;
+        }
+
         div {
           color: #ffffff;
         }

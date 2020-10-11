@@ -39,7 +39,6 @@ export default function Home() {
           justify-content: space-around;
           align-items: center;
           width: 100%;
-          max-width: 1500px;
         }
       `}</style>
     </div>
