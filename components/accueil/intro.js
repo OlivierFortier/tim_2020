@@ -31,6 +31,7 @@ export default function Intro({ changerEtape }) {
           justify-content: center;
           align-items: center;
           color: white;
+          margin-top: 5%;
         }
       `}</style>
     </>
