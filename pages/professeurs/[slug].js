@@ -1,5 +1,5 @@
 import { gql } from "graphql-request";
-import Prof from "../../components/prof";
+import Prof from "../../components/profs/prof";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Head from "next/head";
 
