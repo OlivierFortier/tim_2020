@@ -4,7 +4,7 @@ import Head from "next/head";
 import { gql } from "graphql-request";
 import Modal from "react-modal";
 import { useRouter } from "next/router";
-import Prof from "../../components/prof";
+import Prof from "../../components/profs/prof";
 import useSWR from "swr";
 
 //configuration de l'élément racine de l'application pour le modal

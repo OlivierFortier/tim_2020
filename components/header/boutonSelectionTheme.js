@@ -1,5 +1,5 @@
 import { useCookies } from "react-cookie";
-import { useListeThemes, useTheme, useThemeMiseAJour } from "../hooks/contexteTheme";
+import { useListeThemes, useTheme, useThemeMiseAJour } from "../../hooks/contexteTheme";
 
 
 export default function BoutonSelectionTheme() {
