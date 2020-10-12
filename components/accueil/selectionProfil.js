@@ -53,6 +53,7 @@ export default function SelectionProfil({ changerEtape }) {
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          margin-left: 4%;
 
           h1 {
             align-self: start;
