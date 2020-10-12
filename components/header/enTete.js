@@ -29,13 +29,14 @@ export default function EnTete() {
             : "flex-end"};
           align-items: center;
           height: auto;
-          padding: 3rem 0;
+          padding: 2rem 2rem 1rem;
           margin-bottom: 3rem;
           max-width: 1370px;
         }
 
         span {
           display: flex;
+          z-index: 7;
         }
 
         div {
@@ -43,7 +44,11 @@ export default function EnTete() {
         }
         #titre {
           margin-right: auto;
-          font-size: 23px;
+          font-size: 24px;
+          line-height: 29px;
+          text-transform: uppercase;
+          font-style: normal;
+          font-weight: normal;
         }
       `}</style>
     </>
