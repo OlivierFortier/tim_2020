@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
-import { ImCancelCircle } from "react-icons/im"
+import { ImCancelCircle } from "react-icons/im";
 
 export default function Menu() {
   //gérer l'état du menu, ouvert - oui ou non ?
@@ -14,14 +14,14 @@ export default function Menu() {
   }
 
   //changer le bouton du menu si il est ouvert ou non
-  const menuBouton = ( !menuOuvert ?
+  const menuBouton = !menuOuvert ? (
     <RiMenu3Line
       size="3.5rem"
       style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
       aria-label="ouvrir ou fermer menu"
       onClick={() => setMenuOuvert(!menuOuvert)}
     />
-    :
+  ) : (
     <ImCancelCircle
       size="3.5rem"
       style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
