@@ -9,8 +9,8 @@ export default function Menu() {
   const [menuOuvert, setMenuOuvert] = useState(false);
 
   //fonction "wrapper" pour la passer au onClick pour fermer le menu lorsqu'on clique sur un bouton du menu
-  function fermerMenu() {
-    setMenuOuvert(false);
+  function fermerOuvrirMenu() {
+    setMenuOuvert(menu => menu = !menu);
   }
 
   //changer le bouton du menu si il est ouvert ou non
@@ -19,14 +19,14 @@ export default function Menu() {
       size="3.5rem"
       style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
       aria-label="ouvrir ou fermer menu"
-      onClick={() => setMenuOuvert(!menuOuvert)}
+      onClick={fermerOuvrirMenu}
     />
   ) : (
     <ImCancelCircle
       size="3.5rem"
       style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
       aria-label="ouvrir ou fermer menu"
-      onClick={() => setMenuOuvert(!menuOuvert)}
+      onClick={fermerOuvrirMenu}
     />
   );
 
@@ -44,7 +44,7 @@ export default function Menu() {
                   <li>
                     <Link href="/" as="/">
                       <div className="wrap-lien">
-                        <a onClick={fermerMenu}>Accueil </a>
+                        <a onClick={fermerOuvrirMenu}>Accueil </a>
                         {router.pathname === "/" && (
                           <div className="wrap-pagination">
                             <span></span>
@@ -56,7 +56,7 @@ export default function Menu() {
                   <li>
                     <Link href="/professeurs" as="/professeurs">
                       <div className="wrap-lien">
-                        <a onClick={fermerMenu}>Professeurs </a>
+                        <a onClick={fermerOuvrirMenu}>Professeurs </a>
                         {router.pathname === "/professeurs" && (
                           <div className="wrap-pagination">
                             <span></span>
@@ -68,7 +68,7 @@ export default function Menu() {
                   <li>
                     <Link href="/cours" as="/cours">
                       <div className="wrap-lien">
-                        <a onClick={fermerMenu}>Cours </a>
+                        <a onClick={fermerOuvrirMenu}>Cours </a>
                         {router.pathname === "/cours" && (
                           <div className="wrap-pagination">
                             <span></span>
@@ -80,7 +80,7 @@ export default function Menu() {
                   <li>
                     <Link href="/etudiants" as="/etudiants">
                       <div className="wrap-lien">
-                        <a onClick={fermerMenu}>Vie Étudiante </a>
+                        <a onClick={fermerOuvrirMenu}>Vie Étudiante </a>
                         {router.pathname === "/etudiants" && (
                           <div className="wrap-pagination">
                             <span></span>
@@ -92,7 +92,7 @@ export default function Menu() {
                   <li>
                     <Link href="/exemplecontentful" as="/exemplecontentful">
                       <div className="wrap-lien">
-                        <a onClick={fermerMenu}>CMS Contentful </a>
+                        <a onClick={fermerOuvrirMenu}>CMS Contentful </a>
                         {router.pathname === "/exemplecontentful" && (
                           <div className="wrap-pagination">
                             <span></span>
@@ -106,22 +106,22 @@ export default function Menu() {
 
               <address id="contact">
                 <Link href="/" as="/">
-                  <a className="rue" onClick={fermerMenu}>
+                  <a className="rue" onClick={fermerOuvrirMenu}>
                     3800 rue shrebrooke e, montréal, qc h1x 2a2
                   </a>
                 </Link>
                 <ul className="liens-contact">
                   <Link href="/" as="/">
-                    <a onClick={fermerMenu}>discord</a>
+                    <a onClick={fermerOuvrirMenu}>discord</a>
                   </Link>
                   <Link href="/" as="/">
-                    <a onClick={fermerMenu}>instagram</a>
+                    <a onClick={fermerOuvrirMenu}>instagram</a>
                   </Link>
                   <Link href="/" as="/">
-                    <a onClick={fermerMenu}>facebook</a>
+                    <a onClick={fermerOuvrirMenu}>facebook</a>
                   </Link>
                   <Link href="/" as="/">
-                    <a onClick={fermerMenu}>youtube</a>
+                    <a onClick={fermerOuvrirMenu}>youtube</a>
                   </Link>
                 </ul>
               </address>

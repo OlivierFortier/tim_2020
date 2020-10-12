@@ -18,7 +18,7 @@ export default function Intro({ changerEtape }) {
     <>
       <div>
         <h1>TECHNIQUES D'INTÉGRATION MULTIMÉDIA</h1>
-        <img src="images/intro-logo-tim.svg" />
+        <img src="images/intro-logo-tim.png" />
         <h2 className="texte-intro">Votre expérience unique commence dès maintenant...</h2>
         {chargement !== 100 && <h2 className="texte-chargement">{chargement}%</h2>}
         {chargement === 100 && <h2 className="texte-chargement souligne" onClick={()=> changerEtape("profil")}>Entrez</h2>}
