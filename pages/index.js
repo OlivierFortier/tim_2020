@@ -40,7 +40,17 @@ export default function Home() {
           </motion.div>
         )}
         {etapePage === "profil" && (
-          <SelectionProfil changerEtape={setEtapePage} />
+          <motion.div
+            layout
+            initial={{
+              x: 1300,
+              opacity: 0
+            }}
+            style={{width: "100%",}}
+            animate={{ x:0, opacity: 1 }}
+          >
+            <SelectionProfil changerEtape={setEtapePage} />
+          </motion.div>
         )}
         {etapePage === "accueil" && <Accueil changerEtape={setEtapePage} />}
       </AnimateSharedLayout>

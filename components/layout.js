@@ -54,7 +54,7 @@ export default function Layout({ children }) {
           display: flex;
           justify-content: center;
           align-items: flex-start;
-          overflow: auto;
+          overflow: hidden;
         }
 
         .conteneur-tout {
