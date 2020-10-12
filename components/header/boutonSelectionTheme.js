@@ -30,7 +30,7 @@ export default function BoutonSelectionTheme() {
           margin-right: 15px;
           height: 24px;
           width: 24px;
-          background-color: #fff;
+          background-color: #EBEBEB;
           border-radius: 50%;
 
           font-size: 0;

@@ -1,4 +1,6 @@
+import { route } from "next/dist/next-server/server/router";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function Menu() {
@@ -9,6 +11,8 @@ export default function Menu() {
   function fermerMenu() {
     setMenuOuvert(false);
   }
+
+  const router = useRouter();
 
   return (
     <>
@@ -26,27 +30,62 @@ export default function Menu() {
                 <ul className="liste-pages">
                   <li>
                     <Link href="/" as="/">
-                      <a onClick={fermerMenu}>Accueil</a>
+                      <div className="wrap-lien">
+                        <a onClick={fermerMenu}>Accueil </a>
+                        {router.pathname === "/" && (
+                          <div className="wrap-pagination">
+                            <span></span>
+                          </div>
+                        )}
+                      </div>
                     </Link>
                   </li>
                   <li>
                     <Link href="/professeurs" as="/professeurs">
-                      <a onClick={fermerMenu}>Professeurs</a>
+                      <div className="wrap-lien">
+                        <a onClick={fermerMenu}>Professeurs </a>
+                        {router.pathname === "/professeurs" && (
+                          <div className="wrap-pagination">
+                            <span></span>
+                          </div>
+                        )}
+                      </div>
                     </Link>
                   </li>
                   <li>
                     <Link href="/cours" as="/cours">
-                      <a onClick={fermerMenu}>Cours</a>
+                      <div className="wrap-lien">
+                        <a onClick={fermerMenu}>Cours </a>
+                        {router.pathname === "/cours" && (
+                          <div className="wrap-pagination">
+                            <span></span>
+                          </div>
+                        )}
+                      </div>
                     </Link>
                   </li>
                   <li>
                     <Link href="/etudiants" as="/etudiants">
-                      <a onClick={fermerMenu}>Vie Étudiante</a>
+                      <div className="wrap-lien">
+                        <a onClick={fermerMenu}>Vie Étudiante </a>
+                        {router.pathname === "/etudiants" && (
+                          <div className="wrap-pagination">
+                            <span></span>
+                          </div>
+                        )}
+                      </div>
                     </Link>
                   </li>
                   <li>
                     <Link href="/exemplecontentful" as="/exemplecontentful">
-                      <a onClick={fermerMenu}>CMS Contentful</a>
+                      <div className="wrap-lien">
+                        <a onClick={fermerMenu}>CMS Contentful </a>
+                        {router.pathname === "/exemplecontentful" && (
+                          <div className="wrap-pagination">
+                            <span></span>
+                          </div>
+                        )}
+                      </div>
                     </Link>
                   </li>
                 </ul>
@@ -54,7 +93,7 @@ export default function Menu() {
 
               <address id="contact">
                 <Link href="/" as="/">
-                  <a onClick={fermerMenu}>
+                  <a className="rue" onClick={fermerMenu}>
                     3800 rue shrebrooke e, montréal, qc h1x 2a2
                   </a>
                 </Link>
@@ -132,8 +171,44 @@ export default function Menu() {
           flex-direction: column;
           justify-content: center;
           align-items: flex-end;
+          margin-right: 5%;
           li {
             margin: 1rem;
+
+            .wrap-lien {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+            }
+
+            a {
+              font-family: NeueMontreal;
+              font-style: normal;
+              font-weight: bold;
+              font-size: 48px;
+              line-height: 58px;
+              text-align: right;
+              cursor: pointer;
+            }
+
+            .wrap-pagination {
+              height: 0;
+              width: 0;
+              position: relative;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+
+              span {
+                width: 1rem;
+                height: 1rem;
+                border-radius: 50%;
+                border: 1px solid white;
+                display: inline-block;
+                position: absolute;
+                margin-left: 1rem;
+              }
+            }
           }
         }
 
@@ -143,6 +218,16 @@ export default function Menu() {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
+          padding-left: 3rem;
+
+          .rue {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weigth: normal;
+            font-size: 24px;
+            line-height: 29px;
+            text-transform: uppercase;
+          }
         }
 
         .liens-contact {
@@ -152,6 +237,15 @@ export default function Menu() {
           list-style-type: none;
           padding-inline-start: 0rem;
           padding-inline-end: 0rem;
+
+          a {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 29px;
+            text-transform: uppercase;
+          }
         }
 
         a {

@@ -39,6 +39,7 @@ export default function Home() {
           justify-content: space-around;
           align-items: center;
           width: 100%;
+          margin-top: 2%;
         }
       `}</style>
     </div>
