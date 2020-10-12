@@ -1,7 +1,8 @@
-import { route } from "next/dist/next-server/server/router";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { RiMenu3Line } from "react-icons/ri";
+import { ImCancelCircle } from "react-icons/im"
 
 export default function Menu() {
   //gérer l'état du menu, ouvert - oui ou non ?
@@ -12,17 +13,29 @@ export default function Menu() {
     setMenuOuvert(false);
   }
 
+  //changer le bouton du menu si il est ouvert ou non
+  const menuBouton = ( !menuOuvert ?
+    <RiMenu3Line
+      size="3.5rem"
+      style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
+      aria-label="ouvrir ou fermer menu"
+      onClick={() => setMenuOuvert(!menuOuvert)}
+    />
+    :
+    <ImCancelCircle
+      size="3.5rem"
+      style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
+      aria-label="ouvrir ou fermer menu"
+      onClick={() => setMenuOuvert(!menuOuvert)}
+    />
+  );
+
   const router = useRouter();
 
   return (
     <>
       <div className="conteneur-menu" style={{ color: "white" }}>
-        <button
-          aria-label="ouvrir ou fermer menu"
-          onClick={() => setMenuOuvert(!menuOuvert)}
-        >
-          menu
-        </button>
+        {menuBouton}
         {menuOuvert && (
           <div className="fond-nav">
             <nav>
@@ -120,11 +133,6 @@ export default function Menu() {
       <style jsx>{`
         .conteneur-menu {
           z-index: 6;
-        }
-
-        button {
-          position: relative;
-          z-index: 4;
         }
 
         .fond-nav {

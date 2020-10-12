@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Accueil() {
 
   const padding_left_texte = "55px";
@@ -21,9 +23,11 @@ export default function Accueil() {
           src="https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
         ></img>
         <div className="conteneur-bouton">
-          <button className="bouton-explorer" aria-label="explorer">
-            EXPLOREZ
-          </button>
+          <Link href="/cours" as="/cours">
+            <button className="bouton-explorer" aria-label="explorer">
+              EXPLOREZ
+            </button>
+          </Link>
         </div>
       </aside>
 
@@ -124,6 +128,7 @@ export default function Accueil() {
           font-weight: normal;
           font-size: 19px;
           line-height: 23px;
+          cursor: pointer;
         }
       `}</style>
     </>
