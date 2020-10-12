@@ -1,5 +1,6 @@
 import { useCookies } from "react-cookie";
 import { useListeThemes, useThemeMiseAJour } from "../../hooks/contexteTheme";
+import { motion } from "framer-motion";
 
 export default function SelectionProfil({ changerEtape }) {
   //aller chercher les valeurs du thème et pour mettre à jour le thème dans les contextes
@@ -22,7 +23,17 @@ export default function SelectionProfil({ changerEtape }) {
 
   return (
     <>
-      <div className="conteneur-profils">
+      <motion.div
+        key="profil"
+        layout
+        initial={{
+          x: 1300,
+          opacity: 0,
+        }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -1000, opacity: 0 }}
+        className="conteneur-profils"
+      >
         <h1>Sélectionnez votre profil</h1>
         <div className="grille-profils">
           <span onClick={() => choisirTheme(listeThemes.art)} id="art">
@@ -36,13 +47,13 @@ export default function SelectionProfil({ changerEtape }) {
           <span onClick={() => choisirTheme(listeThemes.parent)} id="parent">
             <h2>Parent</h2>
           </span>
-          
         </div>
-        <h2 id="rapide" onClick={() => choisirTheme(listeThemes.parent)}>Accéder au site directement</h2>
-      </div>
+        <h2 id="rapide" onClick={() => choisirTheme(listeThemes.parent)}>
+          Accéder au site directement
+        </h2>
+      </motion.div>
       <style jsx>{`
-
-      @import "styles/variables";
+        @import "styles/variables";
 
         .conteneur-profils {
           color: white;
@@ -63,7 +74,6 @@ export default function SelectionProfil({ changerEtape }) {
             font-weight: bold;
             font-style: normal;
           }
-
         }
 
         .grille-profils {
@@ -97,7 +107,7 @@ export default function SelectionProfil({ changerEtape }) {
 
         #art {
           grid-area: art;
-          border-color: #E72A00;
+          border-color: #e72a00;
           top: 25%;
         }
 
