@@ -10,11 +10,14 @@ export default function Home() {
   const [cookies, setCookie, removeCookie] = useCookies(["profil"]);
 
   //définir l'état de l'étape actuelle , commencant par l'intro
-  const [etapePage, setEtapePage] = useState("intro");
+  const [etapePage, setEtapePage] = useState("");
 
   useEffect(() => {
     if (cookies.profil != undefined) {
       setEtapePage("accueil");
+    }
+    else {
+      setEtapePage("intro");
     }
   }, [cookies.profil]);
 
