@@ -17,7 +17,7 @@ export default function Intro({ changerEtape }) {
 
   return (
     <>
-      <div className={styles.intro}>
+      <div className={styles.introConteneur}>
         <h1>TECHNIQUES D'INTÉGRATION MULTIMÉDIA</h1>
         <img src="images/intro-logo-tim.svg" />
         <h2 className={styles.texteIntro}>Votre expérience unique commence dès maintenant...</h2>

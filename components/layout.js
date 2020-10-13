@@ -1,36 +1,37 @@
 import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import EnTete from "./header/enTete";
+import styles from "./layout.module.scss"
 
 export default function Layout({ children }) {
   //grace au thème, on peut changer le css dynamiquement avec javascript selon le thème choisi
   const theme = useTheme();
   const listeThemes = useListeThemes();
 
-  const [styles, setStyles] = useState({ couleurBg: "#110c12" });
+  const [themeStyles, setThemeStyles] = useState({ couleurBg: "#110c12" });
 
   useEffect(() => {
     switch (theme) {
       case listeThemes.art:
-        setStyles({
+        setThemeStyles({
           couleurBg: "#110c12",
         });
         break;
 
       case listeThemes.code:
-        setStyles({
+        setThemeStyles({
           couleurBg: "#110c12",
         });
         break;
 
       case listeThemes.parent:
-        setStyles({
+        setThemeStyles({
           couleurBg: "#F3F1F1",
         });
         break;
 
       default:
-        setStyles({
+        setThemeStyles({
           couleurBg: "#110c12",
         });
 
@@ -40,31 +41,12 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <div id="racine">
-        <div className="conteneur-tout">
+      <div className={styles.racine} style={{backgroundColor: themeStyles.couleurBg}}>
+        <div className={styles.conteneurTout}>
         	<EnTete></EnTete>
         	<div id="conteneur-application">{children}</div>
         </div>
       </div>
-
-      <style jsx>{`
-        #racine {
-          background-color: ${styles.couleurBg};
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: flex-start;
-          overflow: auto;
-        }
-
-        .conteneur-tout {
-          width: 100%;
-          max-width: 1370px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-      `}</style>
     </>
   );
 }
