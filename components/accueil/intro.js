@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import styles from "./intro.module.scss"
+import styles from "./intro.module.scss";
+import { motion } from "framer-motion";
 
 export default function Intro({ changerEtape }) {
   //variables pour le faux chargement
@@ -17,13 +18,39 @@ export default function Intro({ changerEtape }) {
 
   return (
     <>
-      <div className={styles.introConteneur}>
+      <motion.div
+      layout
+        initial={{
+          x: 1000,
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+        }}
+        exit={{
+          x: -1000,
+          opacity: 0,
+        }}
+        className={styles.introConteneur}
+      >
         <h1>TECHNIQUES D'INTÉGRATION MULTIMÉDIA</h1>
         <img src="images/intro-logo-tim.svg" />
-        <h2 className={styles.texteIntro}>Votre expérience unique commence dès maintenant...</h2>
-        {chargement !== 100 && <h2 className={styles.texteChargement}>{chargement}%</h2>}
-        {chargement === 100 && <h2 className={`${styles.texteChargement} ${styles.souligne}`} onClick={()=> changerEtape("profil")}>Entrez</h2>}
-      </div>
+        <h2 className={styles.texteIntro}>
+          Votre expérience unique commence dès maintenant...
+        </h2>
+        {chargement !== 100 && (
+          <h2 className={styles.texteChargement}>{chargement}%</h2>
+        )}
+        {chargement === 100 && (
+          <h2
+            className={`${styles.texteChargement} ${styles.souligne}`}
+            onClick={() => changerEtape("profil")}
+          >
+            Entrez
+          </h2>
+        )}
+      </motion.div>
     </>
   );
 }

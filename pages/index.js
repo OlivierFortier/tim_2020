@@ -5,6 +5,7 @@ import Accueil from "../components/accueil/accueil";
 import Intro from "../components/accueil/intro";
 import SelectionProfil from "../components/accueil/selectionProfil";
 import styles from "./index.module.scss";
+import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 export default function Home() {
   const [cookies, setCookie, removeCookie] = useCookies(["profil"]);
@@ -15,8 +16,7 @@ export default function Home() {
   useEffect(() => {
     if (cookies.profil != undefined) {
       setEtapePage("accueil");
-    }
-    else {
+    } else {
       setEtapePage("intro");
     }
   }, [cookies.profil]);
@@ -32,11 +32,19 @@ export default function Home() {
         <link rel="canonical" href="https://tim-2020.vercel.app/"></link>
       </Head>
       <div style={{ all: "inherit" }}>
-        {etapePage === "intro" && <Intro changerEtape={setEtapePage} />}
-        {etapePage === "profil" && (
-          <SelectionProfil changerEtape={setEtapePage} />
-        )}
-        {etapePage === "accueil" && <Accueil changerEtape={setEtapePage} />}
+        <AnimateSharedLayout>
+          <AnimatePresence exitBeforeEnter>
+            {etapePage === "intro" && (
+              <Intro key="intro" changerEtape={setEtapePage} />
+            )}
+            {etapePage === "profil" && (
+              <SelectionProfil key="profil" changerEtape={setEtapePage} />
+            )}
+            {etapePage === "accueil" && (
+              <Accueil key="accueil" changerEtape={setEtapePage} />
+            )}
+          </AnimatePresence>
+        </AnimateSharedLayout>
       </div>
     </div>
   );
