@@ -43,7 +43,7 @@ export default function Layout({ children }) {
       <div id="racine">
         <div className="conteneur-tout">
         	<EnTete></EnTete>
-        	<div id="conteneur-application">{children}</div>
+        	<div >{children}</div>
         </div>
       </div>
 
@@ -63,9 +63,6 @@ export default function Layout({ children }) {
           display: flex;
           flex-direction: column;
           justify-content: center;
-        }
-
-        #conteneur-application {
         }
       `}</style>
     </>
