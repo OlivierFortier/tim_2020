@@ -1,3 +1,30 @@
 .detailCours {
-    color: brown;
+    display: flex;
+    flex-direction: column;
+
+    button {
+        max-width: 400px;
+        margin-top: 2%;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        border: 0px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .boutonFleche {
+        font-size: 1.3rem;
+        margin-bottom: -2px;
+        cursor: pointer;
+    }
+}
+
+.contenuDetailCours {
+    display: flex;
+    align-content: space-between;
+}
+
+.descriptionCours {
+    margin-left: 20%;
+    font-size: 1.25em;
 }
