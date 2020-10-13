@@ -43,7 +43,7 @@ export default function Layout({ children }) {
       <div id="racine">
         <div className="conteneur-tout">
         	<EnTete></EnTete>
-        	<div >{children}</div>
+        	<div id="conteneur-application">{children}</div>
         </div>
       </div>
 
