@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./intro.module.scss"
 
 export default function Intro({ changerEtape }) {
   //variables pour le faux chargement
@@ -16,50 +17,13 @@ export default function Intro({ changerEtape }) {
 
   return (
     <>
-      <div>
+      <div className={styles.intro}>
         <h1>TECHNIQUES D'INTÉGRATION MULTIMÉDIA</h1>
         <img src="images/intro-logo-tim.svg" />
-        <h2 className="texte-intro">Votre expérience unique commence dès maintenant...</h2>
-        {chargement !== 100 && <h2 className="texte-chargement">{chargement}%</h2>}
-        {chargement === 100 && <h2 className="texte-chargement souligne" onClick={()=> changerEtape("profil")}>Entrez</h2>}
+        <h2 className={styles.texteIntro}>Votre expérience unique commence dès maintenant...</h2>
+        {chargement !== 100 && <h2 className={styles.texteChargement}>{chargement}%</h2>}
+        {chargement === 100 && <h2 className={`${styles.texteChargement} ${styles.souligne}`} onClick={()=> changerEtape("profil")}>Entrez</h2>}
       </div>
-
-      <style jsx>{`
-        div {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          color: white;
-          margin-top: 5%;
-        }
-
-        h1 {
-          font-weight: normal;
-          font-size: 24px;
-        }
-
-        img {
-          margin: 10% 0;
-        }
-
-        .texte-intro {
-          font-weight: 500;
-          font-size: 18px;
-        }
-
-        .texte-chargement {
-          font-family: NeueMontreal;
-          font-weight: bold;
-          font-size: 18px;
-        }
-
-        .souligne {
-          text-decoration: underline;
-          cursor: pointer;
-        }
-
-      `}</style>
     </>
   );
 }
