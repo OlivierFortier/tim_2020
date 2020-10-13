@@ -1,97 +1,106 @@
 @import "styles/variables";
 
-.accueilMain {
-  height: 70vh;
-  border-left: 5px solid white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  h1 {
-    a {
-      &:link,
-      &:visited,
-      &:hover,
-      &:active {
-        color: green;
+.conteneurAccueil {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+  .accueilMain {
+    height: 70vh;
+    border-left: 5px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h1 {
+      a {
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+          color: green;
+        }
       }
     }
   }
-}
 
-.titreIntro {
-  color: #f3f1f1;
-  font-family: NeueMontreal;
-  font-size: 72px;
-  font-weight: 300;
-  text-transform: uppercase;
-  line-height: 86px;
-  margin: 0;
-  padding-left: 55px;
+  .titreIntro {
+    color: #f3f1f1;
+    font-family: NeueMontreal;
+    font-size: 72px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 86px;
+    margin: 0;
+    padding-left: 55px;
 
-  strong {
-    font-weight: 700;
-    font-style: italic;
-  }
-}
-
-.nomCollege {
-  color: #ffffff;
-  font-size: 36px;
-  font-family: Montserrat;
-  font-weight: normal;
-  padding-left: 55px;
-}
-
-.accueilAside {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-
-  span {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-
-    .cercleInterractif {
-      position: absolute;
-      right: 70%;
-      top: -3rem;
-      height: $taille-cercle-accueil;
-      width: $taille-cercle-accueil;
-      border-radius: 50%;
-      border: 2px solid white;
-      z-index: 3;
+    strong {
+      font-weight: 700;
+      font-style: italic;
     }
   }
 
-  img {
-    z-index: 1;
-    width: auto;
-    max-height: 100%;
+  .nomCollege {
+    color: #ffffff;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-weight: normal;
+    padding-left: 55px;
   }
-}
 
-.conteneurBouton {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
+  .accueilAside {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 
-.boutonExplorer {
-  position: absolute;
-  top: -4rem;
-  background-color: #fff;
-  border-radius: 50%;
-  height: 144px;
-  width: 144px;
-  z-index: 2;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 19px;
-  line-height: 23px;
-  cursor: pointer;
+    span {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+
+      .cercleInterractif {
+        position: absolute;
+        right: 70%;
+        top: -3rem;
+        height: $taille-cercle-accueil;
+        width: $taille-cercle-accueil;
+        border-radius: 50%;
+        border: 2px solid white;
+        z-index: 3;
+      }
+    }
+
+    img {
+      z-index: 1;
+      width: auto;
+      max-height: 100%;
+    }
+  }
+
+  .conteneurBouton {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .boutonExplorer {
+    position: absolute;
+    top: -4rem;
+    background-color: #fff;
+    border-radius: 50%;
+    height: 144px;
+    width: 144px;
+    z-index: 2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 23px;
+    cursor: pointer;
+  }
 }
