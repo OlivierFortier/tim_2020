@@ -1,9 +1,11 @@
+import styles from "./nomCours.module.scss"
+
 export default function NomCours({ infoCours, afficherCours }) {
 
   //TODO : gestion de l'icone selon le type du cours
 
   return (
-    <div onClick={afficherCours} className="cours">
+    <div onClick={afficherCours} className={styles.cours}>
       <h3>{infoCours.titre}</h3>
       {infoCours.choixEntre && <i>choix entre {infoCours.choixEntre.titre}</i>}
       <span>
@@ -14,15 +16,6 @@ export default function NomCours({ infoCours, afficherCours }) {
             })}
         </ul>
       </span>
-
-      <style jsx>{`
-        .cours {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-        }
-      `}</style>
     </div>
   );
 }

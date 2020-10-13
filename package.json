@@ -20,9 +20,9 @@
     "react-icons": "^3.11.0",
     "react-modal": "^3.11.2",
     "react-tabs": "^3.1.1",
-    "swr": "^0.3.2"
-  },
-  "devDependencies": {
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.3",
+    "swr": "^0.3.2",
     "node-sass": "^4.14.1",
     "styled-jsx-plugin-sass": "^1.0.0"
   }

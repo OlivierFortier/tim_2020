@@ -1,0 +1,137 @@
+.conteneurMenu {
+    z-index: 6;
+
+    .fondNav {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      right: 0vw;
+      top: 0vh;
+
+      height: 88vh;
+      width: 100vw;
+
+      background-color: #110c12;
+
+      box-shadow: 5px 5px 20px #f18163;
+    }
+
+    nav {
+      height: 100%;
+      /**À changer avec un media query pour les petits écrans */
+      max-width: 1370px;
+      display: grid;
+      grid-template:
+        ". pages" auto
+        "contact ." auto
+        / 1fr 1fr;
+      color: white;
+      font-size: 2em;
+      z-index: 3;
+    }
+
+    .conteneurListePages {
+      grid-area: pages;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .listePages {
+      list-style-type: none;
+      text-align: end;
+      padding-inline-start: 1rem;
+      padding-inline-end: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      margin-right: 5%;
+      li {
+        margin: 1rem;
+
+        .wrapLien {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        a {
+          font-family: NeueMontreal;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 48px;
+          line-height: 58px;
+          text-align: right;
+          cursor: pointer;
+        }
+
+        .wrapPagination {
+          height: 0;
+          width: 0;
+          position: relative;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          span {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            border: 1px solid white;
+            display: inline-block;
+            position: absolute;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+
+    address {
+      grid-area: contact;
+      border-left: 2px solid white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-left: 3rem;
+
+      .rue {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+      }
+    }
+
+    .liensContact {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      list-style-type: none;
+      padding-inline-start: 0rem;
+      padding-inline-end: 0rem;
+
+      a {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+      }
+    }
+
+    a {
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+        color: white;
+        text-decoration: none;
+      }
+      &:hover {
+        color: #f18163;
+      }
+    }
+  }

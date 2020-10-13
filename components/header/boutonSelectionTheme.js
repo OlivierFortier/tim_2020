@@ -1,5 +1,6 @@
 import { useCookies } from "react-cookie";
 import { useListeThemes, useTheme, useThemeMiseAJour } from "../../hooks/contexteTheme";
+import styles from "./boutonSelectionTheme.module.scss"
 
 
 export default function BoutonSelectionTheme() {
@@ -18,29 +19,12 @@ export default function BoutonSelectionTheme() {
 
   return (
     <>
-      <select value={theme} onChange={(e)=> mettreAjourTheme(e)} aria-label="Changer theme">
+      <select className={styles.boutonSelect} value={theme} onChange={(e)=> mettreAjourTheme(e)} aria-label="Changer theme">
         <option value={listeThemes.art}>artiste</option>
         <option value={listeThemes.code}>hacker</option>
         <option value={listeThemes.parent}>parent</option>
       </select>
     
-      <style jsx>{`
-        select {
-          appearance: none;
-          margin-right: 15px;
-          height: 24px;
-          width: 24px;
-          background-color: #EBEBEB;
-          border-radius: 50%;
-
-          font-size: 0;
-
-          option {
-            font-size: 1rem;
-          }
-
-        }
-      `}</style>
     </>
   );
 }
