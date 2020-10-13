@@ -1,0 +1,82 @@
+.conteneurCours {
+  max-width: 1300px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.conteneurTitre {
+
+  position: absolute;
+  top: 10%;
+  left: 14%;
+
+  .titreCours {
+    font-size: 5.5rem;
+    margin-bottom: 2%;
+    margin-top: 0px;
+  }
+
+  .titreChoix {
+    font-size: 1.7rem;
+    margin-left: 22%;
+    margin-bottom: 10%;
+  }
+}
+
+
+
+.selecteur {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 0px;
+  border-bottom: 1px solid white;
+  outline: none;
+
+  :hover {
+    border: 0px;
+    border-bottom: 1px solid white;
+    outline: none;
+  }
+
+  :focus {
+    border: 0px;
+    border-bottom: 1px solid white;
+    outline: none;
+  }
+
+
+
+  option {
+    color: black;
+  }
+}
+
+.lesTabs {
+  margin-top: 13%;
+}
+
+.leTabList {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid white;
+  margin: 0px;
+  padding-bottom: 1px;
+
+  .flecheBas {
+    display: none;
+  }
+}
+
+.leTabPanel {
+  border-bottom: 4px solid white;
+}
+
+.tabSelection {
+  .flecheBas {
+    margin-left: 38%;
+    display: block;
+  }
+}
