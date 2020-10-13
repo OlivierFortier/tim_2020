@@ -1,0 +1,16 @@
+.racine {
+    background-color: #110c12;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+
+  .conteneurTout {
+    width: 100%;
+    max-width: 1370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }

@@ -1,16 +1,31 @@
-import Link from "next/link"
-import styles from "./accueil.module.scss"
+import Link from "next/link";
+import styles from "./accueil.module.scss";
+import { motion } from "framer-motion";
 
 export default function Accueil() {
-
   return (
     <>
-      <div className={styles.conteneurAccueil}>
+      <motion.div
+      layout
+        initial={{
+          x: 1000,
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+        }}
+        exit={{
+          x: -1000,
+          opacity: 0,
+        }}
+        className={styles.conteneurAccueil}
+      >
         <main className={styles.accueilMain}>
           <h1 className={styles.titreIntro}>
             La<br></br> juxtaposition du <br></br>
             <strong>logique</strong> et du<br></br>
-            <strong>créatif +</strong> 
+            <strong>créatif +</strong>
           </h1>
           <h2 className={styles.nomCollege}>Collège de Maisonneuve</h2>
         </main>
@@ -30,7 +45,7 @@ export default function Accueil() {
             </Link>
           </div>
         </aside>
-      </div>
+      </motion.div>
     </>
   );
 }
