@@ -44,7 +44,7 @@ export default function Layout({ children }) {
       <div className={styles.racine} style={{backgroundColor: themeStyles.couleurBg}}>
         <div className={styles.conteneurTout}>
         	<EnTete></EnTete>
-        	<div id="conteneur-application">{children}</div>
+        	<div id="conteneur-application" className={styles.conteneurApplication}>{children}</div>
         </div>
       </div>
     </>
