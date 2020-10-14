@@ -7,6 +7,7 @@ import { useState } from "react";
 import DetailsCours from "../components/cours/detailsCours";
 import styles from "./cours.module.scss";
 import { MdArrowDropDown } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Cours({ listeCours }) {
   //on extrait la liste des cours et on la sépare par session
@@ -43,13 +44,24 @@ export default function Cours({ listeCours }) {
     //on boucle sur toutes les sessions pour retourner une nouvelle liste des cours triés
     const coursFiltres = listeTousLesCours.map((session) => {
       //on boucle avec la méthode filter pour prendre seulement les cours qui correspondent à notre filtre
-      return session.filter((cours) => {
-        //on retourne seulement les cours dont les types correspondent à la valeur du select
-        return cours.types.some((typeCours) =>
+      return [...session].filter((cours) => {
+        const sujetPrincipal = cours.sujetPrincipal.some((typeCours) =>
           evenement.target.value !== ""
             ? typeCours === evenement.target.value
             : typeCours
         );
+
+        const sujetsSecondaires = cours.sujetsSecondaires && cours.sujetsSecondaires.some((typeCours) =>
+          evenement.target.value !== ""
+            ? typeCours === evenement.target.value
+            : typeCours
+        );
+
+        if (sujetPrincipal) return sujetPrincipal;
+        else if (sujetsSecondaires) return sujetsSecondaires;
+
+        //on retourne seulement les cours dont les types correspondent à la valeur du select
+        return;
       });
     });
     //mettre à jour l'état pour effectuer un nouveau rendu
@@ -110,30 +122,35 @@ export default function Cours({ listeCours }) {
         </TabList>
 
         {/* double boucle sur les cours de toutes les sessions pour les afficher par session */}
-        <div className={styles.conteneurTabPanels}>
-          {tousLesCours.map((session, indexSession) => {
-            return (
-              <TabPanel key={Math.random() * indexSession} className={styles.unTabPanel}>
-                {coursAffiche ? (
-                  <DetailsCours
-                    infoCours={coursAffiche}
-                    afficherCours={() => setCoursAffiche(null)}
-                  />
-                ) : (
-                  session.map((coursFiltre, indexCours) => {
-                    return (
-                      <NomCours
-                        afficherCours={() => setCoursAffiche(coursFiltre)}
-                        key={Math.random() * indexCours}
-                        infoCours={coursFiltre}
-                      />
-                    );
-                  })
-                )}
-              </TabPanel>
-            );
-          })}
-        </div>
+        <AnimatePresence>
+          <div className={styles.conteneurTabPanels}>
+            {tousLesCours.map((session, indexSession) => {
+              return (
+                <TabPanel
+                  key={Math.random() * indexSession}
+                  className={styles.unTabPanel}
+                >
+                  {coursAffiche ? (
+                    <DetailsCours
+                      infoCours={coursAffiche}
+                      afficherCours={() => setCoursAffiche(null)}
+                    />
+                  ) : (
+                    session.map((coursFiltre, indexCours) => {
+                      return (
+                        <NomCours
+                          afficherCours={() => setCoursAffiche(coursFiltre)}
+                          key={Math.random() * indexCours}
+                          infoCours={coursFiltre}
+                        />
+                      );
+                    })
+                  )}
+                </TabPanel>
+              );
+            })}
+          </div>
+        </AnimatePresence>
       </Tabs>
     </div>
   );
@@ -156,7 +173,8 @@ export async function getStaticProps() {
           choixEntre {
             titre
           }
-          types
+          sujetPrincipal
+          sujetsSecondaires
         }
       }
     }

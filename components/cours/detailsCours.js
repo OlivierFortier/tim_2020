@@ -4,10 +4,11 @@ import {
   FaAddressCard,
   FaLongArrowAltLeft,
 } from "react-icons/fa";
+import {motion} from "framer-motion"
 
 export default function DetailsCours({ infoCours, afficherCours }) {
   return (
-    <div className={styles.detailCours}>
+    <motion.div layout initial={{x: 500, opacity:0}} animate={{x:0, opacity:1}} exit={{x:-500, opacity:0}} className={styles.detailCours}>
       <h2 onClick={afficherCours}>
         <FaLongArrowAltLeft
           onClick={afficherCours}
@@ -29,6 +30,6 @@ export default function DetailsCours({ infoCours, afficherCours }) {
           <p>{infoCours.description}</p>
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 }
