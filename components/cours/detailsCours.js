@@ -1,23 +1,33 @@
 import styles from "./detailsCours.module.scss";
-import { FaLongArrowAltLeft } from "react-icons/fa";
+import {
+  FaAddressBook,
+  FaAddressCard,
+  FaLongArrowAltLeft,
+} from "react-icons/fa";
 
 export default function DetailsCours({ infoCours, afficherCours }) {
   return (
     <div className={styles.detailCours}>
-      <div>
+      <h2 onClick={afficherCours}>
         <FaLongArrowAltLeft
           onClick={afficherCours}
           className={styles.boutonFleche}
-        ></FaLongArrowAltLeft>
-        <button onClick={afficherCours}>Retour aux autres cours</button>
-      </div>
+        />
+        Retour aux autres cours
+      </h2>
+
       <div className={styles.contenuDetailCours}>
-        <p>
-          blablabla Conception graphique et imagerie matricelle et les deux
-          logos...........................................
-          {infoCours.description}
-        </p>
-        <p className={styles.descriptionCours}>{infoCours.description}</p>
+        <div className={styles.conteneurTitre}>
+          <h3>{infoCours.titre}</h3>
+          <div className={styles.conteneurIcones}>
+            {/* ajouter les icones dynamiquement */}
+            <FaAddressBook fontSize="50"></FaAddressBook>
+            <FaAddressCard fontSize="50"></FaAddressCard>
+          </div>
+        </div>
+        <span className={styles.descriptionCours}>
+          <p>{infoCours.description}</p>
+        </span>
       </div>
     </div>
   );

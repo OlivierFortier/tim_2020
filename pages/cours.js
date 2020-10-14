@@ -80,6 +80,7 @@ export default function Cours({ listeCours }) {
       <Tabs
         className={styles.lesTabs}
         selectedTabClassName={styles.tabSelection}
+        selectedTabPanelClassName={styles.tabPanelSelection}
       >
         <TabList className={styles.leTabList}>
           <Tab>
@@ -109,10 +110,10 @@ export default function Cours({ listeCours }) {
         </TabList>
 
         {/* double boucle sur les cours de toutes les sessions pour les afficher par session */}
-        <div className={styles.leTabPanel}>
+        <div className={styles.conteneurTabPanels}>
           {tousLesCours.map((session, indexSession) => {
             return (
-              <TabPanel key={Math.random() * indexSession}>
+              <TabPanel key={Math.random() * indexSession} className={styles.unTabPanel}>
                 {coursAffiche ? (
                   <DetailsCours
                     infoCours={coursAffiche}
