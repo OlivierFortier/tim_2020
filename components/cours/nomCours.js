@@ -8,7 +8,7 @@ export default function NomCours({ infoCours, afficherCours }) {
       <h3 className={styles.titreCours}>{infoCours.titre}</h3>
       {infoCours.choixEntre && <i>choix entre {infoCours.choixEntre.titre}</i>}
       <span>
-        <ul>
+        <ul className={styles.listeTypes}>
           {infoCours.types &&
             infoCours.types.map((type, index) => {
               return <li key={Math.random() * index}>{type}</li>;

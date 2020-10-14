@@ -3,25 +3,32 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  font-family: NeueMontreal;
+  margin-top: 5%;
 }
 
 
 .conteneurTitre {
 
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 14%;
 
   .titreCours {
-    font-size: 5.5rem;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 86px;
     margin-bottom: 2%;
     margin-top: 0px;
   }
 
   .titreChoix {
-    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
     margin-left: 22%;
-    margin-bottom: 10%;
   }
 }
 
@@ -54,24 +61,41 @@
 }
 
 .lesTabs {
-  margin-top: 13%;
+  margin-top: 5%;
 }
 
 .leTabList {
-  font-size: 1.5rem;
+  font-size: 24px;
+  line-height: 29px;
   display: flex;
   justify-content: space-between;
   border-bottom: 5px solid white;
   margin: 0px;
   padding-bottom: 1px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
 
   .flecheBas {
     display: none;
   }
 }
 
-.leTabPanel {
+.conteneurTabPanels {
   border-bottom: 4px solid white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.unTabPanel {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabPanelSelection {
+  height: 520px;
 }
 
 .tabSelection {

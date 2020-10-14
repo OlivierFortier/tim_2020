@@ -1,30 +1,66 @@
 .detailCours {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    button {
-        max-width: 400px;
-        margin-top: 2%;
-        background-color: rgba(0, 0, 0, 0);
-        color: white;
-        border: 0px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        cursor: pointer;
-    }
+  font-size: 16px;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0px;
+    margin-top: 1%;
+
     .boutonFleche {
-        font-size: 1.3rem;
-        margin-bottom: -2px;
-        cursor: pointer;
+      font-size: 1.3rem;
+      cursor: pointer;
     }
+  }
 }
 
 .contenuDetailCours {
-    display: flex;
-    align-content: space-between;
-}
+  display: flex;
+  justify-content: space-around;
 
-.descriptionCours {
-    margin-left: 20%;
-    font-size: 1.25em;
+  .conteneurTitre {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 550px;
+
+    h3 {
+      align-self: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    .conteneurIcones {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .descriptionCours {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    width: 50%;
+    max-width: 550px;
+    overflow: auto;
+    max-height: 420px;
+    min-height: 420px;
+
+    p {
+    }
+  }
 }
