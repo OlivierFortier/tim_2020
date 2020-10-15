@@ -7,6 +7,9 @@
     border-bottom: 2px solid white;
     height: 100%;
     padding: 0 2rem;
+
+    
+
   }
 
 .titreCours{
@@ -17,4 +20,10 @@
 
   .listeTypes {
     display: flex;
+    flex-direction: row-reverse;
+
+    li {
+      margin-right: 10%;
+    }
+
   }
