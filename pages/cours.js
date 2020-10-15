@@ -116,7 +116,7 @@ export default function Cours({ listeCours }) {
             </Tab>
             <Tab>
               Session 2
-               <motion.div layout>
+              <motion.div layout>
                 {tabActuel === 1 && (
                   <motion.div layoutId="fleche">
                     <MdArrowDropDown
@@ -128,7 +128,7 @@ export default function Cours({ listeCours }) {
             </Tab>
             <Tab>
               Session 3
-               <motion.div layout>
+              <motion.div layout>
                 {tabActuel === 2 && (
                   <motion.div layoutId="fleche">
                     <MdArrowDropDown
@@ -140,7 +140,7 @@ export default function Cours({ listeCours }) {
             </Tab>
             <Tab>
               Session 4
-               <motion.div layout>
+              <motion.div layout>
                 {tabActuel === 3 && (
                   <motion.div layoutId="fleche">
                     <MdArrowDropDown
@@ -152,7 +152,7 @@ export default function Cours({ listeCours }) {
             </Tab>
             <Tab>
               Session 5
-               <motion.div layout>
+              <motion.div layout>
                 {tabActuel === 4 && (
                   <motion.div layoutId="fleche">
                     <MdArrowDropDown
@@ -164,7 +164,7 @@ export default function Cours({ listeCours }) {
             </Tab>
             <Tab>
               Session 6
-               <motion.div layout>
+              <motion.div layout>
                 {tabActuel === 5 && (
                   <motion.div layoutId="fleche">
                     <MdArrowDropDown
