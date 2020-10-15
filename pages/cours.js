@@ -7,7 +7,7 @@ import { useState } from "react";
 import DetailsCours from "../components/cours/detailsCours";
 import styles from "./cours.module.scss";
 import { MdArrowDropDown } from "react-icons/md";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 
 export default function Cours({ listeCours }) {
   //on extrait la liste des cours et on la sépare par session
@@ -51,24 +51,26 @@ export default function Cours({ listeCours }) {
             : typeCours
         );
 
-        const sujetsSecondaires = cours.sujetsSecondaires && cours.sujetsSecondaires.some((typeCours) =>
-          evenement.target.value !== ""
-            ? typeCours === evenement.target.value
-            : typeCours
-        );
+        const sujetsSecondaires =
+          cours.sujetsSecondaires &&
+          cours.sujetsSecondaires.some((typeCours) =>
+            evenement.target.value !== ""
+              ? typeCours === evenement.target.value
+              : typeCours
+          );
 
+        //on retourne seulement les cours dont les sujets correspondent à la valeur du select
         if (sujetPrincipal) return sujetPrincipal;
         else if (sujetsSecondaires) return sujetsSecondaires;
-
-        //on retourne seulement les cours dont les types correspondent à la valeur du select
-        return;
       });
     });
     //mettre à jour l'état pour effectuer un nouveau rendu
     setTousLesCours(coursFiltres);
   }
 
-  const [coursAffiche, setCoursAffiche] = useState();
+  const [coursAffiche, setCoursAffiche] = useState("");
+
+  const [tabActuel, setTabActuel] = useState(0);
 
   return (
     <div className={styles.conteneurCours}>
@@ -84,41 +86,95 @@ export default function Cours({ listeCours }) {
             <option value="Jeux">les jeux</option>
             <option value="Web">le web</option>
             <option value="Design">le design</option>
+            <option value="3D">la 3D</option>
             <option value="Programmation">la programmation</option>
             <option value="Vidéo et Audio">la vidéo</option>
+            <option value="Intégration">l'intégration</option>
+            <option value="Profession">la profession</option>
           </select>
         </h2>
       </div>
       <Tabs
+        onSelect={(index) => setTabActuel(index)}
         className={styles.lesTabs}
         selectedTabClassName={styles.tabSelection}
         selectedTabPanelClassName={styles.tabPanelSelection}
       >
         <TabList className={styles.leTabList}>
-          <Tab>
-            Session 1
-            <MdArrowDropDown className={styles.flecheBas}></MdArrowDropDown>
-          </Tab>
-          <Tab>
-            Session 2
-            <MdArrowDropDown className={styles.flecheBas}></MdArrowDropDown>
-          </Tab>
-          <Tab>
-            Session 3
-            <MdArrowDropDown className={styles.flecheBas}></MdArrowDropDown>
-          </Tab>
-          <Tab>
-            Session 4
-            <MdArrowDropDown className={styles.flecheBas}></MdArrowDropDown>
-          </Tab>
-          <Tab>
-            Session 5
-            <MdArrowDropDown className={styles.flecheBas}></MdArrowDropDown>
-          </Tab>
-          <Tab>
-            Session 6
-            <MdArrowDropDown className={styles.flecheBas}></MdArrowDropDown>
-          </Tab>
+          <AnimateSharedLayout>
+            <Tab>
+              Session 1
+              <motion.div layout>
+                {tabActuel === 0 && (
+                  <motion.div layoutId="fleche">
+                    <MdArrowDropDown
+                      className={styles.flecheBas}
+                    ></MdArrowDropDown>
+                  </motion.div>
+                )}
+              </motion.div>
+            </Tab>
+            <Tab>
+              Session 2
+               <motion.div layout>
+                {tabActuel === 1 && (
+                  <motion.div layoutId="fleche">
+                    <MdArrowDropDown
+                      className={styles.flecheBas}
+                    ></MdArrowDropDown>
+                  </motion.div>
+                )}
+              </motion.div>
+            </Tab>
+            <Tab>
+              Session 3
+               <motion.div layout>
+                {tabActuel === 2 && (
+                  <motion.div layoutId="fleche">
+                    <MdArrowDropDown
+                      className={styles.flecheBas}
+                    ></MdArrowDropDown>
+                  </motion.div>
+                )}
+              </motion.div>
+            </Tab>
+            <Tab>
+              Session 4
+               <motion.div layout>
+                {tabActuel === 3 && (
+                  <motion.div layoutId="fleche">
+                    <MdArrowDropDown
+                      className={styles.flecheBas}
+                    ></MdArrowDropDown>
+                  </motion.div>
+                )}
+              </motion.div>
+            </Tab>
+            <Tab>
+              Session 5
+               <motion.div layout>
+                {tabActuel === 4 && (
+                  <motion.div layoutId="fleche">
+                    <MdArrowDropDown
+                      className={styles.flecheBas}
+                    ></MdArrowDropDown>
+                  </motion.div>
+                )}
+              </motion.div>
+            </Tab>
+            <Tab>
+              Session 6
+               <motion.div layout>
+                {tabActuel === 5 && (
+                  <motion.div layoutId="fleche">
+                    <MdArrowDropDown
+                      className={styles.flecheBas}
+                    ></MdArrowDropDown>
+                  </motion.div>
+                )}
+              </motion.div>
+            </Tab>
+          </AnimateSharedLayout>
         </TabList>
 
         {/* double boucle sur les cours de toutes les sessions pour les afficher par session */}
