@@ -4,11 +4,22 @@ import {
   FaAddressCard,
   FaLongArrowAltLeft,
 } from "react-icons/fa";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
+import { useIconeTechnos } from "../../hooks/useIcone";
 
 export default function DetailsCours({ infoCours, afficherCours }) {
+  const Icones =
+    infoCours.logicielsEtTechnologies &&
+    useIconeTechnos(infoCours.logicielsEtTechnologies);
+
   return (
-    <motion.div layout initial={{x: 500, opacity:0}} animate={{x:0, opacity:1}} exit={{x:-500, opacity:0}} className={styles.detailCours}>
+    <motion.div
+      layout
+      initial={{ x: 500, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -500, opacity: 0 }}
+      className={styles.detailCours}
+    >
       <h2 onClick={afficherCours}>
         <FaLongArrowAltLeft
           onClick={afficherCours}
@@ -21,9 +32,14 @@ export default function DetailsCours({ infoCours, afficherCours }) {
         <div className={styles.conteneurTitre}>
           <h3>{infoCours.titre}</h3>
           <div className={styles.conteneurIcones}>
-            {/* ajouter les icones dynamiquement */}
-            <FaAddressBook fontSize="50"></FaAddressBook>
-            <FaAddressCard fontSize="50"></FaAddressCard>
+            {Icones &&
+              Icones.map((Icone, index) => (
+                <Icone
+                  key={index}
+                  style={{ color: "white" }}
+                  fontSize="30"
+                ></Icone>
+              ))}
           </div>
         </div>
         <span className={styles.descriptionCours}>

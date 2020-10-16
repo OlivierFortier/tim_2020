@@ -231,6 +231,7 @@ export async function getStaticProps() {
           }
           sujetPrincipal
           sujetsSecondaires
+          logicielsEtTechnologies
         }
       }
     }
