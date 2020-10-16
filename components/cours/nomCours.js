@@ -1,10 +1,10 @@
 import styles from "./nomCours.module.scss";
 import { motion } from "framer-motion";
-import { useIcone } from "../../hooks/useNomIcone";
+import { useIconeSujet } from "../../hooks/useIcone";
 
 export default function NomCours({ infoCours, afficherCours }) {
   //hook personnalisé pour afficher une icone selont le sujet du cours
-  const Icone = useIcone(infoCours.sujetPrincipal[0]);
+  const Icone = useIconeSujet(infoCours.sujetPrincipal[0]);
 
   return (
     <motion.div
