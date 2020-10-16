@@ -15,7 +15,7 @@
 
       background-color: #110c12;
 
-      box-shadow: 5px 5px 20px #f18163;
+      box-shadow: 1px -80px 100px #F3F1F1;
     }
 
     nav {
@@ -37,6 +37,7 @@
       grid-area: pages;
       display: flex;
       justify-content: flex-end;
+      padding-top: 5%;
     }
 
     .listePages {
