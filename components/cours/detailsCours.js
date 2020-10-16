@@ -1,9 +1,5 @@
 import styles from "./detailsCours.module.scss";
-import {
-  FaAddressBook,
-  FaAddressCard,
-  FaLongArrowAltLeft,
-} from "react-icons/fa";
+import { FaLongArrowAltLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useIconeTechnos } from "../../hooks/useIcone";
 
@@ -34,11 +30,7 @@ export default function DetailsCours({ infoCours, afficherCours }) {
           <div className={styles.conteneurIcones}>
             {Icones &&
               Icones.map((Icone, index) => (
-                <Icone
-                  key={index}
-                  style={{ color: "white" }}
-                  fontSize="30"
-                ></Icone>
+                <Icone key={index} style={{ color: "white" }} fontSize="30" />
               ))}
           </div>
         </div>
