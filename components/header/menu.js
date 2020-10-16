@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { ImCancelCircle } from "react-icons/im";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import styles from "./menu.module.scss";
 
 export default function Menu() {
@@ -37,98 +38,102 @@ export default function Menu() {
     <>
       <div className={styles.conteneurMenu} style={{ color: "white" }}>
         {menuBouton}
-        {menuOuvert && (
-          <div className={styles.fondNav}>
-            <nav>
-              <div className={styles.conteneurListePages}>
-                <ul className={styles.listePages}>
-                  <li>
+        <AnimateSharedLayout>
+          <AnimatePresence exitBeforeEnter>
+            {menuOuvert && (
+              <motion.div key="divMenu" layout className={styles.fondNav} initial={{height:0}} animate={{height: "88vh" }} exit={{height:0, transition: {type: "tween", duration: 0.3}}}>
+                <motion.nav  key="nav" layout initial={{height:0}} animate={{height: "100%" }} exit={{height:0}}>
+                  <motion.div key="liensPages" className={styles.conteneurListePages} initial={{x:"100%", opacity:0}} animate={{x:0, opacity:1, transition:{delay: 0.1}}}>
+                    <ul className={styles.listePages}>
+                      <li>
+                        <Link href="/" as="/">
+                          <div className={styles.wrapLien}>
+                            <a onClick={fermerMenu}>Accueil </a>
+                            {router.pathname === "/" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/professeurs" as="/professeurs">
+                          <div className={styles.wrapLien}>
+                            <a onClick={fermerMenu}>Professeurs </a>
+                            {router.pathname === "/professeurs" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/cours" as="/cours">
+                          <div className={styles.wrapLien}>
+                            <a onClick={fermerMenu}>Cours </a>
+                            {router.pathname === "/cours" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/etudiants" as="/etudiants">
+                          <div className={styles.wrapLien}>
+                            <a onClick={fermerMenu}>Vie Étudiante </a>
+                            {router.pathname === "/etudiants" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/exemplecontentful" as="/exemplecontentful">
+                          <div className={styles.wrapLien}>
+                            <a onClick={fermerMenu}>CMS Contentful </a>
+                            {router.pathname === "/exemplecontentful" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </li>
+                    </ul>
+                  </motion.div>
+    
+                  <motion.address key="contact" layout initial={{height: 0, opacity:0}} animate={{height: "100%", opacity:1, transition: {delay: 0.3}}}>
                     <Link href="/" as="/">
-                      <div className={styles.wrapLien}>
-                        <a onClick={fermerMenu}>Accueil </a>
-                        {router.pathname === "/" && (
-                          <div className={styles.wrapPagination}>
-                            <span></span>
-                          </div>
-                        )}
-                      </div>
+                      <a className={styles.rue} onClick={fermerMenu}>
+                        3800 rue shrebrooke e, montréal, qc h1x 2a2
+                      </a>
                     </Link>
-                  </li>
-                  <li>
-                    <Link href="/professeurs" as="/professeurs">
-                      <div className={styles.wrapLien}>
-                        <a onClick={fermerMenu}>Professeurs </a>
-                        {router.pathname === "/professeurs" && (
-                          <div className={styles.wrapPagination}>
-                            <span></span>
-                          </div>
-                        )}
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/cours" as="/cours">
-                      <div className={styles.wrapLien}>
-                        <a onClick={fermerMenu}>Cours </a>
-                        {router.pathname === "/cours" && (
-                          <div className={styles.wrapPagination}>
-                            <span></span>
-                          </div>
-                        )}
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/etudiants" as="/etudiants">
-                      <div className={styles.wrapLien}>
-                        <a onClick={fermerMenu}>Vie Étudiante </a>
-                        {router.pathname === "/etudiants" && (
-                          <div className={styles.wrapPagination}>
-                            <span></span>
-                          </div>
-                        )}
-                      </div>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/exemplecontentful" as="/exemplecontentful">
-                      <div className={styles.wrapLien}>
-                        <a onClick={fermerMenu}>CMS Contentful </a>
-                        {router.pathname === "/exemplecontentful" && (
-                          <div className={styles.wrapPagination}>
-                            <span></span>
-                          </div>
-                        )}
-                      </div>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <address>
-                <Link href="/" as="/">
-                  <a className={styles.rue} onClick={fermerMenu}>
-                    3800 rue shrebrooke e, montréal, qc h1x 2a2
-                  </a>
-                </Link>
-                <ul className={styles.liensContact}>
-                  <Link href="/" as="/">
-                    <a onClick={fermerMenu}>discord</a>
-                  </Link>
-                  <Link href="/" as="/">
-                    <a onClick={fermerMenu}>instagram</a>
-                  </Link>
-                  <Link href="/" as="/">
-                    <a onClick={fermerMenu}>facebook</a>
-                  </Link>
-                  <Link href="/" as="/">
-                    <a onClick={fermerMenu}>youtube</a>
-                  </Link>
-                </ul>
-              </address>
-            </nav>
-          </div>
-        )}
+                    <ul className={styles.liensContact}>
+                      <Link href="/" as="/">
+                        <a onClick={fermerMenu}>discord</a>
+                      </Link>
+                      <Link href="/" as="/">
+                        <a onClick={fermerMenu}>instagram</a>
+                      </Link>
+                      <Link href="/" as="/">
+                        <a onClick={fermerMenu}>facebook</a>
+                      </Link>
+                      <Link href="/" as="/">
+                        <a onClick={fermerMenu}>youtube</a>
+                      </Link>
+                    </ul>
+                  </motion.address>
+                </motion.nav>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </AnimateSharedLayout>
       </div>
     </>
   );

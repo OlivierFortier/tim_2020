@@ -9,7 +9,9 @@
       top: 0vh;
 
       height: 88vh;
+      max-height: 888px;
       width: 100vw;
+      overflow: hidden;
 
       background-color: #110c12;
 
@@ -26,6 +28,7 @@
         "contact ." auto
         / 1fr 1fr;
       color: white;
+      background-color: #110c12;
       font-size: 2em;
       z-index: 3;
     }
@@ -93,6 +96,7 @@
       flex-direction: column;
       justify-content: space-around;
       padding-left: 3rem;
+      margin-left: 3%;
 
       .rue {
         font-family: Montserrat;
