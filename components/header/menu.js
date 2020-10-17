@@ -96,18 +96,6 @@ export default function Menu() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/professeurs" as="/professeurs">
-                          <div className={styles.wrapLien}>
-                            <a onClick={fermerMenu}>Professeurs </a>
-                            {router.pathname === "/professeurs" && (
-                              <div className={styles.wrapPagination}>
-                                <span></span>
-                              </div>
-                            )}
-                          </div>
-                        </Link>
-                      </li>
-                      <li>
                         <Link href="/cours" as="/cours">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Cours </a>
@@ -119,6 +107,19 @@ export default function Menu() {
                           </div>
                         </Link>
                       </li>
+                      <li>
+                        <Link href="/professeurs" as="/professeurs">
+                          <div className={styles.wrapLien}>
+                            <a onClick={fermerMenu}>Professeurs </a>
+                            {router.pathname === "/professeurs" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </li>
+
                       <li>
                         <Link href="/etudiants" as="/etudiants">
                           <div className={styles.wrapLien}>
