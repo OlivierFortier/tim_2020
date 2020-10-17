@@ -34,15 +34,17 @@ export default function Home() {
       <div style={{ all: "inherit" }}>
         <AnimateSharedLayout>
           <AnimatePresence exitBeforeEnter>
-            {etapePage === "intro" && (
+            {/* {etapePage === "intro" && (
               <Intro key="intro" changerEtape={setEtapePage} />
             )}
+            
             {etapePage === "profil" && (
               <SelectionProfil key="profil" changerEtape={setEtapePage} />
             )}
             {etapePage === "accueil" && (
               <Accueil key="accueil" changerEtape={setEtapePage} />
-            )}
+            )} */}
+            <SelectionProfil key="profil"></SelectionProfil>
           </AnimatePresence>
         </AnimateSharedLayout>
       </div>

@@ -20,12 +20,16 @@ export default function SelectionProfil({ changerEtape }) {
     changerEtape("accueil");
   }
 
+  function getRandom(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
   //TODO : animer les ronds
 
   return (
     <>
       <motion.div
-      layout
+        layout
         initial={{
           x: 1000,
           opacity: 0,
@@ -42,26 +46,88 @@ export default function SelectionProfil({ changerEtape }) {
       >
         <h1>Sélectionnez votre profil</h1>
         <div className={styles.grilleProfils}>
-          <span
+          <motion.span
+            initial={{
+              filter: "hue-rotate(0deg)",
+            }}
+            animate={{
+              filter: [
+                `hue-rotate(${getRandom(1, 50)}deg)`,
+                `hue-rotate(${getRandom(50, 100)}deg)`,
+                `hue-rotate(${getRandom(100, 200)}deg)`,
+                `hue-rotate(${getRandom(200, 300)}deg)`,
+              ],
+              transition: {repeat: "Infinity",
+              repeatDelay: 0.1,
+              repeatType: "mirror",
+              duration: 15,
+              damping: 200,}
+            }}
+            whileHover={{scale: 1.5, transition: {type:"spring", duration:0.5}}}
+            
             onClick={() => choisirTheme(listeThemes.art)}
             className={styles.art}
           >
             <h2>Artiste Digital</h2>
-          </span>
-          <span
+          </motion.span>
+          <motion.span
+            initial={{
+              filter: "hue-rotate(0deg)",
+            }}
+            animate={{
+              filter: [
+                `hue-rotate(${getRandom(1, 50)}deg)`,
+                `hue-rotate(${getRandom(50, 100)}deg)`,
+                `hue-rotate(${getRandom(100, 200)}deg)`,
+                `hue-rotate(${getRandom(200, 300)}deg)`,
+              ]
+            }}
+            transition={{
+              repeat: "Infinity",
+              repeatDelay: 0.1,
+              repeatType: "mirror",
+              duration: 15,
+              damping: 200,
+            }}
             onClick={() => choisirTheme(listeThemes.code)}
             className={styles.code}
           >
             <h2>
               Pirate <br /> Informatique
             </h2>
-          </span>
-          <span
+          </motion.span>
+          <motion.span
+            initial={{
+              filter: "hue-rotate(0deg)",
+            }}
+            animate={{
+              filter: [
+                `hue-rotate(${getRandom(1, 50)}deg)`,
+                `hue-rotate(${getRandom(50, 100)}deg)`,
+                `hue-rotate(${getRandom(100, 200)}deg)`,
+                `hue-rotate(${getRandom(200, 300)}deg)`,
+              ],
+              transform: [
+                `translate(0%, 0%)`,
+                `translate(${getRandom(-5, 5)}%, ${getRandom(-5, 5)}%)`,
+                `translate(${getRandom(-5, 5)}%, ${getRandom(-5, 5)}%)`,
+                `translate(${getRandom(-5, 5)}%, ${getRandom(-5, 5)}%)`,
+                `translate(${getRandom(-5, 5)}%, ${getRandom(-5, 5)}%)`,
+                `translate(0%, 0%)`,
+              ],
+            }}
+            transition={{
+              repeat: "Infinity",
+              repeatDelay: 0.1,
+              repeatType: "mirror",
+              duration: 15,
+              damping: 200,
+            }}
             onClick={() => choisirTheme(listeThemes.parent)}
             className={styles.parent}
           >
             <h2>Parent</h2>
-          </span>
+          </motion.span>
         </div>
         <h2
           className={styles.rapide}
