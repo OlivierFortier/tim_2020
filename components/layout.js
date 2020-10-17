@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import EnTete from "./header/enTete";
-import styles from "./layout.module.scss"
+import styles from "./layout.module.scss";
 
 export default function Layout({ children }) {
   //grace au thème, on peut changer le css dynamiquement avec javascript selon le thème choisi
@@ -41,10 +41,18 @@ export default function Layout({ children }) {
 
   return (
     <>
-      <div className={styles.racine} style={{backgroundColor: themeStyles.couleurBg}}>
+      <div
+        className={styles.racine}
+        style={{ backgroundColor: themeStyles.couleurBg }}
+      >
         <div className={styles.conteneurTout}>
-        	<EnTete></EnTete>
-        	<div id="conteneur-application" className={styles.conteneurApplication}>{children}</div>
+          <EnTete></EnTete>
+          <div
+            id="conteneur-application"
+            className={styles.conteneurApplication}
+          >
+            {children}
+          </div>
         </div>
       </div>
     </>

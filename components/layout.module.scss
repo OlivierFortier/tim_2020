@@ -1,20 +1,34 @@
 .racine {
-    background-color: #110c12;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden;
-  }
+  background-color: #110c12;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  z-index: 1;
 
-  .conteneurTout {
-    width: 100%;
-    max-width: 1370px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  &::after {
+    content: "";
+    width: 300%;
+    height: 300%;
+    background-image: url("/images/grain.gif");
+    background-size: auto;
+    opacity: 0.125;
+    position: fixed;
+    z-index: 2;
   }
+}
 
-  .conteneurApplication {
-    margin: 0 auto;
-  }
+.conteneurTout {
+  width: 100%;
+  max-width: 1370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.conteneurApplication {
+  margin: 0 auto;
+}
