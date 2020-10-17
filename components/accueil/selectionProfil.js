@@ -20,7 +20,7 @@ export default function SelectionProfil({ changerEtape }) {
     changerEtape("accueil");
   }
 
-  function getRandom(min, max) {
+  function numAlea(min, max) {
     return Math.random() * (max - min) + min;
   }
 
@@ -52,16 +52,16 @@ export default function SelectionProfil({ changerEtape }) {
             }}
             animate={{
               filter: [
-                `hue-rotate(${getRandom(1, 50)}deg)`,
-                `hue-rotate(${getRandom(50, 100)}deg)`,
-                `hue-rotate(${getRandom(100, 200)}deg)`,
-                `hue-rotate(${getRandom(200, 300)}deg)`,
+                `hue-rotate(${numAlea(1, 50)}deg)`,
+                `hue-rotate(${numAlea(50, 100)}deg)`,
+                `hue-rotate(${numAlea(100, 200)}deg)`,
+                `hue-rotate(${numAlea(200, 300)}deg)`,
               ],
               transition: {
                 repeat: "Infinity",
                 repeatDelay: 0.1,
                 repeatType: "mirror",
-                duration: 5,
+                duration: 4,
                 damping: 200,
               },
             }}
@@ -79,16 +79,16 @@ export default function SelectionProfil({ changerEtape }) {
             }}
             animate={{
               filter: [
-                `hue-rotate(${getRandom(1, 50)}deg)`,
-                `hue-rotate(${getRandom(50, 100)}deg)`,
-                `hue-rotate(${getRandom(100, 200)}deg)`,
-                `hue-rotate(${getRandom(200, 300)}deg)`,
+                `hue-rotate(${numAlea(1, 50)}deg)`,
+                `hue-rotate(${numAlea(50, 100)}deg)`,
+                `hue-rotate(${numAlea(100, 200)}deg)`,
+                `hue-rotate(${numAlea(200, 300)}deg)`,
               ],
               transition: {
                 repeat: "Infinity",
                 repeatDelay: 0.1,
                 repeatType: "mirror",
-                duration: 5,
+                duration: 4,
                 damping: 200,
               },
             }}
@@ -108,16 +108,16 @@ export default function SelectionProfil({ changerEtape }) {
             }}
             animate={{
               filter: [
-                `hue-rotate(${getRandom(1, 50)}deg)`,
-                `hue-rotate(${getRandom(50, 100)}deg)`,
-                `hue-rotate(${getRandom(100, 200)}deg)`,
-                `hue-rotate(${getRandom(200, 300)}deg)`,
+                `hue-rotate(${numAlea(1, 50)}deg)`,
+                `hue-rotate(${numAlea(50, 100)}deg)`,
+                `hue-rotate(${numAlea(100, 200)}deg)`,
+                `hue-rotate(${numAlea(200, 300)}deg)`,
               ],
               transition: {
                 repeat: "Infinity",
                 repeatDelay: 0.1,
                 repeatType: "mirror",
-                duration: 5,
+                duration: 4,
                 damping: 200,
               },
             }}
