@@ -1,6 +1,13 @@
+import { motion } from "framer-motion";
+
 export default function Etudiants() {
   return (
-    <div style={{ color: "white" }}>
+    <motion.div
+      exit={{ opacity: 0 }}
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      style={{ color: "white" }}
+    >
       <h1>voici la page pour les nouveaux étudiants</h1>
       <ul>
         <li>Étudiant 1</li>
@@ -9,6 +16,6 @@ export default function Etudiants() {
         <li>Étudiant 4</li>
         <li>Étudiant 5</li>
       </ul>
-    </div>
+    </motion.div>
   );
 }

@@ -5,7 +5,7 @@ import Accueil from "../components/accueil/accueil";
 import Intro from "../components/accueil/intro";
 import SelectionProfil from "../components/accueil/selectionProfil";
 import styles from "./index.module.scss";
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
 export default function Home() {
   const [cookies, setCookie, removeCookie] = useCookies(["profil"]);
@@ -22,7 +22,7 @@ export default function Home() {
   }, [cookies.profil]);
 
   return (
-    <div className={styles.conteneurPage} suppressHydrationWarning={true}>
+    <motion.div exit={{x: "-50%", opacity: 0}} className={styles.conteneurPage} suppressHydrationWarning={true}>
       <Head>
         <title>TIM | Accueil</title>
         <meta
@@ -47,6 +47,6 @@ export default function Home() {
           </AnimatePresence>
         </AnimateSharedLayout>
       </div>
-    </div>
+    </motion.div>
   );
 }
