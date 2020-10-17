@@ -37,6 +37,7 @@ export default function Home() {
             {etapePage === "intro" && (
               <Intro key="intro" changerEtape={setEtapePage} />
             )}
+
             {etapePage === "profil" && (
               <SelectionProfil key="profil" changerEtape={setEtapePage} />
             )}
