@@ -6,7 +6,7 @@ export default function Accueil() {
   return (
     <>
       <motion.div
-      layout
+        layout
         initial={{
           x: 1000,
           opacity: 0,
@@ -31,7 +31,22 @@ export default function Accueil() {
         </main>
         <aside className={styles.accueilAside}>
           <span>
-            <div className={styles.cercleInterractif}></div>
+            <motion.div
+              initial={{
+                x: 0,
+                y: 0,
+              }}
+              animate={{
+                x: `${Math.random() * 20}px`,
+                y: `${Math.random() * 20}px`,
+                transition: {
+                  repeat: Infinity,
+                  duration: 5,
+                  repeatType: "mirror",
+                },
+              }}
+              className={styles.cercleInterractif}
+            ></motion.div>
           </span>
           <img
             alt="image du theme"
@@ -39,9 +54,15 @@ export default function Accueil() {
           ></img>
           <div className={styles.conteneurBouton}>
             <Link href="/cours" as="/cours">
-              <button className={styles.boutonExplorer} aria-label="explorer">
+              <motion.button
+                className={styles.boutonExplorer}
+                aria-label="explorer"
+                whileHover={{
+                  scale: 1.5,
+                }}
+              >
                 EXPLOREZ
-              </button>
+              </motion.button>
             </Link>
           </div>
         </aside>
