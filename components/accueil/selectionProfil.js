@@ -57,14 +57,17 @@ export default function SelectionProfil({ changerEtape }) {
                 `hue-rotate(${getRandom(100, 200)}deg)`,
                 `hue-rotate(${getRandom(200, 300)}deg)`,
               ],
-              transition: {repeat: "Infinity",
-              repeatDelay: 0.1,
-              repeatType: "mirror",
-              duration: 15,
-              damping: 200,}
+              transition: {
+                repeat: "Infinity",
+                repeatDelay: 0.1,
+                repeatType: "mirror",
+                duration: 5,
+                damping: 200,
+              },
             }}
-            whileHover={{scale: 1.5, transition: {type:"spring", duration:0.5}}}
-            
+            whileHover={{
+              scale: 1.5,
+            }}
             onClick={() => choisirTheme(listeThemes.art)}
             className={styles.art}
           >
@@ -80,14 +83,17 @@ export default function SelectionProfil({ changerEtape }) {
                 `hue-rotate(${getRandom(50, 100)}deg)`,
                 `hue-rotate(${getRandom(100, 200)}deg)`,
                 `hue-rotate(${getRandom(200, 300)}deg)`,
-              ]
+              ],
+              transition: {
+                repeat: "Infinity",
+                repeatDelay: 0.1,
+                repeatType: "mirror",
+                duration: 5,
+                damping: 200,
+              },
             }}
-            transition={{
-              repeat: "Infinity",
-              repeatDelay: 0.1,
-              repeatType: "mirror",
-              duration: 15,
-              damping: 200,
+            whileHover={{
+              scale: 1.5,
             }}
             onClick={() => choisirTheme(listeThemes.code)}
             className={styles.code}
@@ -107,21 +113,16 @@ export default function SelectionProfil({ changerEtape }) {
                 `hue-rotate(${getRandom(100, 200)}deg)`,
                 `hue-rotate(${getRandom(200, 300)}deg)`,
               ],
-              transform: [
-                `translate(0%, 0%)`,
-                `translate(${getRandom(-5, 5)}%, ${getRandom(-5, 5)}%)`,
-                `translate(${getRandom(-5, 5)}%, ${getRandom(-5, 5)}%)`,
-                `translate(${getRandom(-5, 5)}%, ${getRandom(-5, 5)}%)`,
-                `translate(${getRandom(-5, 5)}%, ${getRandom(-5, 5)}%)`,
-                `translate(0%, 0%)`,
-              ],
+              transition: {
+                repeat: "Infinity",
+                repeatDelay: 0.1,
+                repeatType: "mirror",
+                duration: 5,
+                damping: 200,
+              },
             }}
-            transition={{
-              repeat: "Infinity",
-              repeatDelay: 0.1,
-              repeatType: "mirror",
-              duration: 15,
-              damping: 200,
+            whileHover={{
+              scale: 1.5,
             }}
             onClick={() => choisirTheme(listeThemes.parent)}
             className={styles.parent}
