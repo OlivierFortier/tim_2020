@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, Suspense, lazy } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { ImCancelCircle } from "react-icons/im";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import styles from "./menu.module.scss";
+import { Box } from "../cube";
+import { Canvas } from "react-three-fiber";
+
+const LeLogo = lazy(()=> import("../Logo-tim"))
 
 export default function Menu() {
   //gérer l'état du menu, ouvert - oui ou non ?
@@ -51,6 +55,7 @@ export default function Menu() {
 
   const router = useRouter();
 
+
   return (
     <>
       <div className={styles.conteneurMenu} style={{ color: "white" }}>
@@ -76,6 +81,22 @@ export default function Menu() {
                   animate={{ height: "100%" }}
                   exit={{ height: 0 }}
                 >
+                  <div className={styles.conteneurCube}>
+                    <Canvas className={styles.canvas}>
+                      <Suspense fallback={null}>
+                        <ambientLight intensity={0.5} />
+                        <spotLight
+                          position={[10, 10, 10]}
+                          angle={0.15}
+                          penumbra={1}
+                        />
+                        <pointLight position={[-10, -10, -10]} />
+                        {/* <Box position={[-1.2, 0, 0]} />
+                        <Box position={[1.2, 0, 0]} /> */}
+                        <LeLogo />
+                      </Suspense>
+                    </Canvas>
+                  </div>
                   <motion.div
                     key="liensPages"
                     className={styles.conteneurListePages}
