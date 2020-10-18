@@ -24,7 +24,7 @@
       max-width: 1370px;
       display: grid;
       grid-template:
-        ". pages" auto
+        "cube pages" auto
         "contact ." auto
         / 1fr 1fr;
       color: white;
@@ -38,6 +38,17 @@
       display: flex;
       justify-content: flex-end;
       padding-top: 5%;
+    }
+
+    .conteneurCube {
+      grid-area: cube;
+      display: flex;
+
+      .canvas {
+        max-height: 300px;
+        margin: auto 0;
+      }
+
     }
 
     .listePages {
