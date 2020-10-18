@@ -19,7 +19,7 @@ export default function Model(props) {
         material={materials.ramp_Orange}
         geometry={nodes.Logo_Low.geometry}
         position={[0, 0, 0.02]}
-        scale={[20, 20, 20]}
+        scale={[25, 25, 25]}
       />
     </group>
   );

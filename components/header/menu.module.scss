@@ -43,10 +43,11 @@
     .conteneurCube {
       grid-area: cube;
       display: flex;
-
+      height: 500px;
+      margin: auto 0;
       .canvas {
-        max-height: 300px;
         margin: auto 0;
+        height: 500px;
       }
 
     }
