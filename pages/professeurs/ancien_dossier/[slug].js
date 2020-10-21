@@ -1,6 +1,6 @@
 import { gql } from "graphql-request";
-import Prof from "../../components/profs/prof";
-import { faireRequeteGql } from "../../libs/requetesDonnes";
+import Prof from "../../../components/profs/prof";
+import { faireRequeteGql } from "../../../libs/requetesDonnes";
 import Head from "next/head";
 
 //les pages qui contiennent des [] dans le nom signifient qu'elle servent à générer des pages
@@ -9,7 +9,7 @@ import Head from "next/head";
 //en l'occurence, on veut que chacune de ces pages aient un composant Prof
 export default function PageProfesseur(leProf) {
   return (
-    <>
+    <div style={{color: "white"}}>
       <Head>
         <title>TIM | {leProf.professeurCollection.items[0].nom}</title>
         <meta
@@ -23,13 +23,7 @@ export default function PageProfesseur(leProf) {
       </Head>
 
       <Prof unProf={leProf} />
-
-      <style jsx>{`
-        div {
-          color: white;
-        }
-      `}</style>
-    </>
+    </div>
   );
 }
 
