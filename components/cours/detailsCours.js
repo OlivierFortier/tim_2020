@@ -2,6 +2,7 @@ import styles from "./detailsCours.module.scss";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useIconeTechnos } from "../../hooks/useIcone";
+import Markdown from "markdown-to-jsx";
 
 export default function DetailsCours({ infoCours, afficherCours }) {
   const Icones =
@@ -17,10 +18,10 @@ export default function DetailsCours({ infoCours, afficherCours }) {
       className={styles.detailCours}
     >
       <h2 onClick={afficherCours}>
-        <FaLongArrowAltLeft
+        {/* <FaLongArrowAltLeft
           onClick={afficherCours}
           className={styles.boutonFleche}
-        />
+        /> */}
         Retour aux autres cours
       </h2>
 
@@ -35,7 +36,7 @@ export default function DetailsCours({ infoCours, afficherCours }) {
           </div>
         </div>
         <span className={styles.descriptionCours}>
-          <p>{infoCours.description}</p>
+          <Markdown>{infoCours.description}</Markdown>
         </span>
       </div>
     </motion.div>

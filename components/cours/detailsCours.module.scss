@@ -26,6 +26,7 @@
 .contenuDetailCours {
   display: flex;
   justify-content: space-around;
+  // align-items: center;
 
   .conteneurTitre {
     align-self: center;
@@ -50,6 +51,7 @@
   }
 
   .descriptionCours {
+
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -57,11 +59,12 @@
     line-height: 22px;
     width: 50%;
     max-width: 550px;
-    overflow: auto;
+    overflow-y: auto;
     max-height: 420px;
     min-height: 420px;
 
-    p {
-    }
+    height: 100%;
+
+    
   }
 }
