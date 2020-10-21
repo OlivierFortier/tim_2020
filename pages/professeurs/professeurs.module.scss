@@ -1,6 +1,12 @@
 .conteneur {
-    color: white;
-    :visited, :link {
-        color: green;
-    }
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  :visited,
+  :link {
+    color: green;
+  }
 }
