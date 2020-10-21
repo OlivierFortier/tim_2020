@@ -1,10 +1,10 @@
 .conteneurCours {
-  max-width: 1300px;
+  // max-width: 1300px;
   width: 100vw;
   display: flex;
   flex-direction: column;
   font-family: NeueMontreal;
-  margin-top: 2%;
+  // margin-top: 2%;
 }
 
 
@@ -12,7 +12,7 @@
 
   position: absolute;
   top: 5%;
-  left: 14%;
+  left: 1%;
 
   .titreCours {
     font-size: 72px;
@@ -88,6 +88,16 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
+  height: 55vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.tabPanelSelection {
+  height: 100%;
+  :last-child {
+    border-bottom: none;;
+  }
 }
 
 .unTabPanel {
@@ -95,9 +105,7 @@
   flex-direction: column;
 }
 
-.tabPanelSelection {
-  height: 520px;
-}
+
 
 .tabSelection {
   .flecheBas {

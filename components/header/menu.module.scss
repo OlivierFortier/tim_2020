@@ -20,8 +20,9 @@
 
     nav {
       height: 100%;
+      width: 100%;
       /**À changer avec un media query pour les petits écrans */
-      max-width: 1370px;
+      // max-width: 1370px;
       display: grid;
       grid-template:
         ". pages" auto
