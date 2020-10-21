@@ -25,6 +25,7 @@
     "sass": "^1.27.0",
     "sass-loader": "^10.0.3",
     "styled-jsx-plugin-sass": "^1.0.0",
+    "swiper": "^6.3.4",
     "swr": "^0.3.2"
   }
 }
