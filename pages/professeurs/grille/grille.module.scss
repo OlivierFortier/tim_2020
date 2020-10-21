@@ -1,3 +1,13 @@
 .conteneur {
-    color: white;
+    color: blueviolet;
+    background-color: greenyellow;
+}
+
+.imgProf {
+    max-height: 250px;
+}
+
+.unProf {
+    display: flex;
+    flex-direction: column;
 }
