@@ -1,0 +1,28 @@
+.imgProf {
+    max-width: 235px;
+}
+
+.unProf {
+    margin: 0 0 5% 0;
+    position: relative;
+    
+    img {
+        cursor: pointer;
+        width: 235px;
+        height: 215px;
+    }
+
+    h3 {
+        position: absolute;
+        top: 60%;
+        left: 2%;
+        cursor: pointer;
+    }
+
+    h4 {
+        position: absolute;
+        top: 70%;
+        left: 2%;
+        cursor: pointer;
+    }
+}

@@ -6,40 +6,6 @@
     margin: 0 auto;
 }
 
-.imgProf {
-    max-width: 235px;
-}
-
-.colonne {
-    display: flex;
-    flex-direction: column;
-    margin-left: 2vw;
-
-}
-
-.unProf {
-    margin: 0 0 5% 0;
-    position: relative;
-    
-    img {
-        cursor: pointer;
-    }
-
-    h3 {
-        position: absolute;
-        top: 60%;
-        left: 2%;
-        cursor: pointer;
-    }
-
-    h4 {
-        position: absolute;
-        top: 70%;
-        left: 2%;
-        cursor: pointer;
-    }
-}
-
 .points {
     margin-top: 1%;
     display: flex !important;

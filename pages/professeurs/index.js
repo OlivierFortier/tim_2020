@@ -10,10 +10,29 @@ export default function Professeurs() {
       exit={{ opacity: 0 }}
       className={styles.conteneur}
     >
-      <h1>bienvenue sur la page des profs en construction</h1>
-      <Link href="/professeurs/grille">
-        <a>voir la grille</a>
-      </Link>
+      <div className={styles.sectionLesProfs}>
+        <h1>LES PROFESSEURS</h1>
+        <h3>QUI SONT-ILS?</h3>
+      </div>
+      <div className={styles.sectionImages}>
+        <img src="/images/cam.jpg" alt=""/>
+        <img src="/images/cam.jpg" alt=""/>
+        <img src="/images/cam.jpg" alt=""/>
+        <img src="/images/cam.jpg" alt=""/>
+        <img src="/images/cam.jpg" alt=""/>
+        <img src="/images/cam.jpg" alt=""/>
+        <img src="/images/cam.jpg" alt=""/>
+        <img src="/images/cam.jpg" alt=""/>
+        <img src="/images/cam.jpg" alt=""/>
+      </div>
+      <div className={styles.sectionTexte}>
+        <h2>
+          PLUS++DE 25 ANS D'EXPÉRIENCE DANS LE DOMAINE POUR VOUS DONNER LA MEILLEURE ÉDUCATION
+        </h2>
+        <Link href="/professeurs/grille">
+          <a>voir la grille</a>
+        </Link>
+      </div>
     </motion.div>
   );
 }
