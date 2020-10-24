@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
 import styles from "./grille.module.scss";
-import SwiperCore, { Pagination } from "swiper";
+import SwiperCore, { Pagination, Virtual } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { gql } from "graphql-request";
+import { faireRequeteGql } from "../../../libs/requetesDonnes";
+import CarteProf from "../../../components/profs/CarteProf";
 
 SwiperCore.use([Pagination]);
 
-export default function Grille() {
+export default function Grille({ listeProfs }) {
+  
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,106 +24,16 @@ export default function Grille() {
         slidesPerView={4}
         slidesPerColumn={3}
         slidesPerColumnFill="row"
+        observer="true"
         style={{ paddingTop: "2%", paddingLeft: "1%" }}
       >
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className={styles.unProf}>
-            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-            <h3>God of TIM</h3>
-            <h4>BABA PROGRAMMATION</h4>
-          </div>
-        </SwiperSlide>
+        {listeProfs.map((infoProf) => {
+          return (
+            <SwiperSlide key={infoProf.nom}>
+              <CarteProf prof={infoProf}/>
+            </SwiperSlide>
+          );
+        })}
 
         {/* =============================== */}
 
@@ -126,4 +41,31 @@ export default function Grille() {
       </Swiper>
     </motion.div>
   );
+}
+
+export async function getStaticProps() {
+  const requeteListeProfs = gql`
+    {
+      professeurCollection {
+        items {
+          nom
+          specialisation
+          photo {
+            url
+          }
+        }
+      }
+    }
+  `;
+
+  //je fais ma requete
+  const res = await faireRequeteGql(requeteListeProfs);
+  const listeProfs = res.professeurCollection.items;
+
+  return {
+    props: {
+      listeProfs,
+    },
+    revalidate: 1,
+  };
 }
