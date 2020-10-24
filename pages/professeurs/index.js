@@ -18,82 +18,101 @@ export default function Professeurs() {
       </div>
       <div className={styles.sectionImages}>
         <span>
-          <motion.img
-            initial={{
-              opacity: 0,
-            }}
-            animate={{ opacity: 1, x: "-80%", y: "0%" }}
-            src="/images/cam.jpg"
-            alt=""
-          />
-          <motion.img
-            initial={{
-              opacity: 0,
-            }}
-            animate={{ opacity: 1, x: "150%", y: "-100%", scale: 1.4 }}
-            src="/images/cam.jpg"
-            alt=""
-          />
-          <motion.img
-            initial={{
-              opacity: 0,
-            }}
-            animate={{ opacity: 1, x: "100%", y: "140%" }}
-            src="/images/cam.jpg"
-            alt=""
-          />
+          <Link href="/professeurs/grille">
+            <motion.img
+              initial={{
+                opacity: 0,
+              }}
+              animate={{ opacity: 1, x: "-80%", y: "0%" }}
+              src="/images/cam.jpg"
+              alt=""
+            />
+          </Link>
+          <Link href="/professeurs/grille">
+            <motion.img
+              initial={{
+                opacity: 0,
+              }}
+              animate={{ opacity: 1, x: "150%", y: "-100%", scale: 1.4 }}
+              src="/images/cam.jpg"
+              alt=""
+            />
+          </Link>
+          <Link href="/professeurs/grille">
+            <motion.img
+              initial={{
+                opacity: 0,
+              }}
+              animate={{ opacity: 1, x: "100%", y: "140%" }}
+              src="/images/cam.jpg"
+              alt=""
+            />
+          </Link>
         </span>
         <span>
-          <motion.img
-            initial={{
-              opacity: 0,
-            }}
-            animate={{ opacity: 1, scale: 3 }}
-            src="/images/cam.jpg"
-            alt=""
-          />
+          <Link href="/professeurs/grille">
+            <motion.img
+              initial={{
+                opacity: 0,
+              }}
+              animate={{ opacity: 1, scale: 3, y: "50%" }}
+              src="/images/cam.jpg"
+              alt=""
+            />
+          </Link>
         </span>
         <span>
-          <motion.img
-            initial={{
-              opacity: 0,
-            }}
-            animate={{ opacity: 1, x: "-120%", y: "-200%", scale: 0.9 }}
-            src="/images/cam.jpg"
-            alt=""
-          />
-          <motion.img
-            initial={{
-              opacity: 0,
-            }}
-            animate={{ opacity: 1, x: "100%", y: "-140%" }}
-            src="/images/cam.jpg"
-            alt=""
-          />
-          <motion.img
-            initial={{
-              opacity: 0,
-            }}
-            animate={{ opacity: 1, x: "70%", y: "40%" }}
-            src="/images/cam.jpg"
-            alt=""
-          />
-          <motion.img
-            initial={{
-              opacity: 0,
-            }}
-            animate={{ opacity: 1, x: "-160%", y: "100%", scale: 1.4 }}
-            src="/images/cam.jpg"
-            alt=""
-          />
-          <motion.img
-            initial={{
-              opacity: 0,
-            }}
-            animate={{ opacity: 1, x: "50%", y: "340%", scale: 2.5 }}
-            src="/images/cam.jpg"
-            alt=""
-          />
+          <motion.div animate={{x: "-50%", y: "-20%"}} className={styles.cercle}></motion.div>
+          <Link href="/professeurs/grille">
+            <motion.img
+              initial={{
+                opacity: 0,
+              }}
+              animate={{ opacity: 1, x: "-120%", y: "-200%", scale: 0.9 }}
+              src="/images/cam.jpg"
+              alt=""
+            />
+          </Link>
+          <Link href="/professeurs/grille">
+            <motion.img
+              initial={{
+                opacity: 0,
+              }}
+              animate={{ opacity: 1, x: "100%", y: "-140%" }}
+              src="/images/cam.jpg"
+              alt=""
+            />
+          </Link>
+          <Link href="/professeurs/grille">
+            <motion.img
+              initial={{
+                opacity: 0,
+              }}
+              animate={{ opacity: 1, x: "70%", y: "40%" }}
+              src="/images/cam.jpg"
+              alt=""
+            />
+          </Link>
+          <Link href="/professeurs/grille">
+            <motion.img
+              initial={{
+                opacity: 0,
+              }}
+              animate={{ opacity: 1, x: "-160%", y: "100%", scale: 1.4 }}
+              src="/images/cam.jpg"
+              alt=""
+            />
+          </Link>
+          <Link href="/professeurs/grille">
+            <motion.img
+              initial={{
+                opacity: 0,
+              }}
+              animate={{ opacity: 1, x: "50%", y: "340%", scale: 2.5 }}
+              src="/images/cam.jpg"
+              alt=""
+            />
+          </Link>
         </span>
       </div>
       <div className={styles.sectionTexte}>
