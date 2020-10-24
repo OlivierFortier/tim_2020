@@ -9,8 +9,6 @@ import CarteProf from "../../../components/profs/CarteProf";
 SwiperCore.use([Pagination]);
 
 export default function Grille({ listeProfs }) {
-  
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,17 +23,15 @@ export default function Grille({ listeProfs }) {
         slidesPerColumn={3}
         slidesPerColumnFill="row"
         observer="true"
-        style={{ paddingTop: "2%", paddingLeft: "1%" }}
+        style={{ paddingTop: "2%", paddingLeft: "4%" }}
       >
         {listeProfs.map((infoProf) => {
           return (
-            <SwiperSlide key={infoProf.nom}>
-              <CarteProf prof={infoProf}/>
+            <SwiperSlide key={infoProf.nom} className={styles.nomProfs}>
+              <CarteProf prof={infoProf} />
             </SwiperSlide>
           );
         })}
-
-        {/* =============================== */}
 
         <div id="lesPoints" className={styles.points}></div>
       </Swiper>
