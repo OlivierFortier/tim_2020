@@ -17,6 +17,17 @@
   font-weight: bold;
   font-size: 72px;
   line-height: 86px;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  z-index: 3;
+  text-align: end;
+
+  .positionLesProfs {
+    position: absolute;
+    text-align: end;
+    top: 1%;
+  }
 
   h1,
   h3 {
@@ -35,9 +46,24 @@
 }
 
 .sectionImages {
-  img {
-    height: 200px;
-    width: 200px;
+  height: 45vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  span {
+    width: 33%;
+    height: 100%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      position: absolute;
+      width: 7vw;
+      height: auto;
+    }
   }
 }
 
@@ -47,8 +73,14 @@
   font-weight: 300;
   font-size: 36px;
   line-height: 43px;
+  z-index: 3;
+  width: 35vw;
+  align-self: flex-start;
+  margin-left: 5%;
+  margin-top: 2%;
   h2 {
     margin: 0;
     font-size: 36px;
+    font-weight: normal;
   }
 }
