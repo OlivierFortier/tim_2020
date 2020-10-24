@@ -17,96 +17,106 @@ export default function Grille() {
         pagination={{ clickable: true, el: "#lesPoints" }}
         spaceBetween={0}
         slidesPerView={4}
-        style={{ paddingTop: "2%" }}
+        slidesPerColumn={3}
+        slidesPerColumnFill="row"
+        style={{ paddingTop: "2%", paddingLeft: "1%" }}
       >
         <SwiperSlide>
-          <div className={styles.colonne}>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.colonne}>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.colonne}>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.colonne}>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className={styles.colonne}>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
-            <div className={styles.unProf}>
-              <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
-              <h3>God of TIM</h3>
-              <h4>BABA PROGRAMMATION</h4>
-            </div>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.unProf}>
+            <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
+            <h3>God of TIM</h3>
+            <h4>BABA PROGRAMMATION</h4>
           </div>
         </SwiperSlide>
 
