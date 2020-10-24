@@ -12,8 +12,12 @@ export default function Professeurs() {
     >
       <div className={styles.sectionLesProfs}>
         {/* <span className={styles.positionLesProfs}> */}
-        <h1>LES PROFESSEURS</h1>
-        <h3>QUI SONT-ILS?</h3>
+        <Link href="professeurs/grille">
+          <h1>LES PROFESSEURS</h1>
+        </Link>
+        <Link href="professeurs/grille">
+          <h3>QUI SONT-ILS?</h3>
+        </Link>
         {/* </span> */}
       </div>
       <div className={styles.sectionImages}>
@@ -62,7 +66,10 @@ export default function Professeurs() {
           </Link>
         </span>
         <span>
-          <motion.div animate={{x: "-50%", y: "-20%"}} className={styles.cercle}></motion.div>
+          <motion.div
+            animate={{ x: "-50%", y: "-20%" }}
+            className={styles.cercle}
+          ></motion.div>
           <Link href="/professeurs/grille">
             <motion.img
               initial={{
@@ -116,10 +123,12 @@ export default function Professeurs() {
         </span>
       </div>
       <div className={styles.sectionTexte}>
-        <h2>
-          PLUS<b>++</b>DE <b>25 ANS</b> D'EXPÉRIENCE DANS LE DOMAINE POUR VOUS
-          DONNER <b>LA MEILLEURE ÉDUCATION</b>
-        </h2>
+        <Link href="professeurs/grille">
+          <h2>
+            PLUS<b>++</b>DE <b>25 ANS</b> D'EXPÉRIENCE DANS LE DOMAINE POUR VOUS
+            DONNER <b>LA MEILLEURE ÉDUCATION</b>
+          </h2>
+        </Link>
         <Link href="/professeurs/grille">
           <a>voir la grille</a>
         </Link>
