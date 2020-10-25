@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Canvas } from "react-three-fiber";
+import CubeTransparent from "../components/3d/CubeTransparent";
 import styles from "./introduction.module.scss";
 
 export default function Introduction() {
@@ -8,7 +10,11 @@ export default function Introduction() {
         Envie d'étudier le <b>multimédia ?</b>
       </h1>
       <div className={styles.conteneurCube}>
-        <h3>un cube</h3>
+        <Canvas>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <CubeTransparent position={[0,0,0]}/>
+        </Canvas>
       </div>
 
       <p className={styles.textePage}>
