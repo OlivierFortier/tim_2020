@@ -11,14 +11,12 @@ export default function Professeurs() {
       className={styles.conteneur}
     >
       <div className={styles.sectionLesProfs}>
-        {/* <span className={styles.positionLesProfs}> */}
         <Link href="professeurs/grille">
           <h1>LES PROFESSEURS</h1>
         </Link>
         <Link href="professeurs/grille">
           <h3>QUI SONT-ILS?</h3>
         </Link>
-        {/* </span> */}
       </div>
       <div className={styles.sectionImages}>
         <span>
