@@ -1,5 +1,29 @@
 .conteneur {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  max-width: 85vw;
+  margin: 0 auto;
+
+  grid-template:
+    "header cube" 40vh
+    "texte ." 20vh
+    ". bouton" 1fr
+    / 1fr 1fr;
+}
+
+.headerPage {
+  grid-area: header;
+  align-self: end;
+}
+
+.conteneurCube {
+  grid-area: cube;
+  margin: auto auto;
+}
+
+.textePage {
+  grid-area: texte;
+}
+
+.boutonCours {
+  grid-area: bouton;
 }
