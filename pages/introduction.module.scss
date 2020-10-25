@@ -7,12 +7,22 @@
     "header cube" 40vh
     "texte ." 20vh
     ". bouton" 1fr
-    / 1fr 1fr;
+    / 50% 50%;
 }
 
 .headerPage {
   grid-area: header;
   align-self: end;
+  font-family: Neue Montreal;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 86px;
+  margin: 0;
+
+  b {
+    font-weight: 700;
+  }
 }
 
 .conteneurCube {
@@ -22,8 +32,25 @@
 
 .textePage {
   grid-area: texte;
+  width: 821px;
+  font-family: Neue Montreal;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 43px;
 }
 
 .boutonCours {
   grid-area: bouton;
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  justify-self: end;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 23px;
+  text-align: center;
 }
