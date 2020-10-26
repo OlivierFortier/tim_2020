@@ -10,17 +10,17 @@ export default function Introduction() {
         Envie d'étudier le <b>multimédia ?</b>
       </h1>
       <div className={styles.conteneurCube}>
-        <Canvas>
+        <Canvas style={{ width: "100%", height: "100%", overflow: "none" }}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-          <CubeTransparent position={[0,0,0]}/>
+          <CubeTransparent position={[0, 0, 0]} scale={[3, 3, 3]} />
         </Canvas>
       </div>
 
       <p className={styles.textePage}>
         Le TIM c’est l’endroit parfait pour étudier les nouvelles technologies
         de l’industrie. On fait de la programmation, des jeux, de la vidéo, de
-        la VR, de la photographie des sites internets, de l’animation et de la
+        la VR, de la photographie, des sites internets, de l’animation et de la
         3D.
       </p>
 

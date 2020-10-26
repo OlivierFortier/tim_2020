@@ -27,7 +27,10 @@
 
 .conteneurCube {
   grid-area: cube;
-  margin: auto auto;
+
+  width: 120%;
+  height: 120%;
+  justify-self: end;
 }
 
 .textePage {
