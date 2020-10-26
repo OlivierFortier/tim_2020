@@ -53,12 +53,12 @@ export default function Accueil() {
             src="https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
           ></img>
           <div className={styles.conteneurBouton}>
-            <Link href="/cours" as="/cours">
+            <Link href="/introduction">
               <motion.button
                 className={styles.boutonExplorer}
                 aria-label="explorer"
                 whileHover={{
-                  scale: 1.5,
+                  scale: 1.3,
                 }}
               >
                 EXPLOREZ

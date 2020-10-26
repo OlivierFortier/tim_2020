@@ -73,7 +73,7 @@ export default function Cours({ listeCours }) {
   const [tabActuel, setTabActuel] = useState(0);
 
   return (
-    <div className={styles.conteneurCours}>
+    <motion.div initial={{opacity:0}} animate={{opacity: 1}} exit={{x: "-100vw"}} className={styles.conteneurCours}>
       <div className={styles.conteneurTitre}>
         <h1 className={styles.titreCours}>LA LISTE DES COURS</h1>
         <h2 className={styles.titreChoix}>
@@ -208,7 +208,7 @@ export default function Cours({ listeCours }) {
           </div>
         </AnimatePresence>
       </Tabs>
-    </div>
+    </motion.div>
   );
 }
 
