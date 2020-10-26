@@ -35,7 +35,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "150%", y: "-100%", scale: 1.4 }}
+              animate={{ opacity: 1, x: "150%", y: "-60%", scale: 1.4 }}
               src="/images/cam.jpg"
               alt=""
             />
@@ -65,7 +65,7 @@ export default function Professeurs() {
         </span>
         <span>
           <motion.div
-            animate={{ x: "-50%", y: "-20%" }}
+            animate={{ x: "-40%", y: "-20%" }}
             className={styles.cercle}
           ></motion.div>
           <Link href="/professeurs/grille">
@@ -83,17 +83,18 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "100%", y: "-140%" }}
+              animate={{ opacity: 1, x: "75%", y: "-140%" }}
               src="/images/cam.jpg"
               alt=""
             />
           </Link>
           <Link href="/professeurs/grille">
             <motion.img
+            style={{zIndex: -1}}
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "70%", y: "40%" }}
+              animate={{ opacity: 1, x: "40%", y: "40%" }}
               src="/images/cam.jpg"
               alt=""
             />
@@ -113,7 +114,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "50%", y: "340%", scale: 2.5 }}
+              animate={{ opacity: 1, x: "-60%", y: "320%", scale: 2.5 }}
               src="/images/cam.jpg"
               alt=""
             />
