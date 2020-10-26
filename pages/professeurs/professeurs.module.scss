@@ -64,8 +64,8 @@
 }
 
 .cercle {
-  width: 440px;
-  height: 440px;
+  width: 26vw;
+  height: 26vw;
   border: 6px solid white;
   border-radius: 50%;
 }
@@ -77,7 +77,9 @@
   font-size: 36px;
   line-height: 43px;
   z-index: 3;
+  min-width: 535px;
   width: 35vw;
+  max-width: 535px;
   align-self: flex-start;
   margin-left: 5%;
   margin-top: 2%;
