@@ -1,28 +1,37 @@
 .imgProf {
-    max-width: 235px;
+    max-width: 500px;
 }
 
 .unProf {
     margin: 0 0 5% 0;
     position: relative;
+    width: fit-content;
     
     img {
         cursor: pointer;
-        width: 235px;
-        height: 215px;
+        width: 266px;
+        height: 251px;
     }
 
     h3 {
+        color:rgb(7, 0, 112);
+        background-color: white;
         position: absolute;
-        top: 60%;
-        left: 2%;
+        font-size: 1.3rem;
+        max-width: 85%;
+        top: 55%;
+        left: 5%;
         cursor: pointer;
     }
 
     h4 {
+        color:rgb(7, 0, 112);
+        background-color: white;
+        font-size: 0.9rem;
+        max-width: 75%;
         position: absolute;
-        top: 70%;
-        left: 2%;
+        top: 75%;
+        left: 5%;
         cursor: pointer;
     }
 }
