@@ -1,21 +1,17 @@
 .conteneur {
-    color:rgb(7, 0, 112);
-    background-color: red;
-    width: 67vw;
-    height: 80vh;
-    margin: 0 auto;
-}
-
-.nomProfs{
-    
-    font-size: 0.75rem;
-    h3,h4{
-        background-color: white;
-    }
+    //background-color: red;
+    margin-top: -5.5%;
 }
 
 .points {
     display: flex !important;
     justify-content: center !important;
+   
+    *  {
+        width: 100px;
+        padding-left: 1%;
+        height: 2px;
+        background-color: white;
+    }
     
 }

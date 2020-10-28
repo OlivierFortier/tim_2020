@@ -17,17 +17,20 @@ export default function Grille({ listeProfs }) {
       className={styles.conteneur}
     >
       <Swiper
-        pagination={{ clickable: true, el: "#lesPoints" }}
+        pagination={{
+          clickable: true,
+          el: "#lesPoints",
+        }}
         spaceBetween={0}
         slidesPerView={4}
         slidesPerColumn={3}
         slidesPerColumnFill="row"
         observer="true"
-        style={{ paddingTop: "2%", paddingLeft: "4%" }}
+        style={{ paddingTop: "2%", paddingLeft: "5%" }}
       >
         {listeProfs.map((infoProf) => {
           return (
-            <SwiperSlide key={infoProf.nom} className={styles.nomProfs}>
+            <SwiperSlide key={infoProf.nom}>
               <CarteProf prof={infoProf} />
             </SwiperSlide>
           );
