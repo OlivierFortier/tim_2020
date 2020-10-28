@@ -7,28 +7,30 @@
     position: relative;
     width: fit-content;
     
+    
     img {
         cursor: pointer;
         width: 266px;
         height: 251px;
+        filter: grayscale(100%) sepia(51%) brightness(91%) hue-rotate(243deg) saturate(684%) contrast(78%);
     }
 
     h3 {
         color:rgb(7, 0, 112);
-        background-color: white;
+        color: white;
         position: absolute;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         max-width: 85%;
-        top: 55%;
+        top: 60%;
         left: 5%;
         cursor: pointer;
     }
 
     h4 {
         color:rgb(7, 0, 112);
-        background-color: white;
+        color: white;
         font-size: 0.9rem;
-        max-width: 75%;
+        max-width: 80%;
         position: absolute;
         top: 75%;
         left: 5%;
