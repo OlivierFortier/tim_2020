@@ -50,9 +50,11 @@ export default function DetailsCours({ infoCours, afficherCours }) {
           <Markdown>{infoCours.description}</Markdown>
         </span>
       </div>
-      <MdArrowDropDown
+      {/* <MdArrowDropDown
         className={styles.flecheDescriptionCours}
-      ></MdArrowDropDown>
+      ></MdArrowDropDown> 
+      À revoir ------------------------------
+      */}
     </motion.div>
   );
 }
