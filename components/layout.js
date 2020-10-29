@@ -57,8 +57,10 @@ export default function Layout({ children }) {
           <ReactScrollWheelHandler
             style={{ all: "unset" }}
             disableSwipe
-            upHandler={(e) => router.push(listePages[anciennePage])}
-            downHandler={(e) => router.push(listePages[prochainePage])}
+            upHandler={() => router.push(listePages[anciennePage])}
+            rightHandler={() => router.push(listePages[anciennePage])}
+            downHandler={() => router.push(listePages[prochainePage])}
+            leftHandler={() => router.push(listePages[prochainePage])}
           >
             <div
               id="conteneur-application"
