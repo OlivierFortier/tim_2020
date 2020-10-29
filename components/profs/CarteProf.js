@@ -5,7 +5,7 @@ export default function CarteProf({ prof }) {
   return (
     <div className={styles.unProf}>
       {prof?.photo?.url ? (
-        <img src={prof?.photo?.url} className={styles.imgProf} alt="" />
+        <img src={prof?.photo?.url} className={styles.imgProf} alt={`photo de ${prof.nom}`} />
       ) : (
         <img src="/images/cam.jpg" className={styles.imgProf} alt="" />
       )}
