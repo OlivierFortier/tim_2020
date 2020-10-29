@@ -2,7 +2,6 @@ import styles from "./detailsCours.module.scss";
 import { motion } from "framer-motion";
 import { useIconeTechnos } from "../../hooks/useIcone";
 import Markdown from "markdown-to-jsx";
-import { MdArrowDropDown } from "react-icons/md";
 
 export default function DetailsCours({ infoCours, afficherCours }) {
   const Icones =
@@ -17,13 +16,7 @@ export default function DetailsCours({ infoCours, afficherCours }) {
       exit={{ x: -500, opacity: 0 }}
       className={styles.detailCours}
     >
-      <h2 onClick={afficherCours}>
-        {/* <FaLongArrowAltLeft
-          onClick={afficherCours}
-          className={styles.boutonFleche}
-        /> */}
-        Retour aux autres cours
-      </h2>
+      <h2 onClick={afficherCours}>Retour aux autres cours</h2>
 
       <div className={styles.contenuDetailCours}>
         <div className={styles.conteneurTitre}>

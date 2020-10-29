@@ -90,7 +90,7 @@ export default function Professeurs() {
           </Link>
           <Link href="/professeurs/grille">
             <motion.img
-            style={{zIndex: -1}}
+              style={{ zIndex: -1 }}
               initial={{
                 opacity: 0,
               }}
