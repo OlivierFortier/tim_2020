@@ -11,7 +11,6 @@ import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useOrdreListeCours } from "../hooks/useCours";
 
 export default function Cours({ listeCours }) {
-
   //on arrange la liste des cours
   const listeTousLesCours = useOrdreListeCours(listeCours);
 
@@ -86,7 +85,7 @@ export default function Cours({ listeCours }) {
       >
         <TabList className={styles.leTabList}>
           <AnimateSharedLayout>
-            <Tab>
+            <Tab onClick={() => setCoursAffiche(null)}>
               Session 1
               <motion.div layout>
                 {tabActuel === 0 && (
@@ -98,7 +97,7 @@ export default function Cours({ listeCours }) {
                 )}
               </motion.div>
             </Tab>
-            <Tab>
+            <Tab onClick={() => setCoursAffiche(null)}>
               Session 2
               <motion.div layout>
                 {tabActuel === 1 && (
@@ -110,7 +109,7 @@ export default function Cours({ listeCours }) {
                 )}
               </motion.div>
             </Tab>
-            <Tab>
+            <Tab onClick={() => setCoursAffiche(null)}>
               Session 3
               <motion.div layout>
                 {tabActuel === 2 && (
@@ -122,7 +121,7 @@ export default function Cours({ listeCours }) {
                 )}
               </motion.div>
             </Tab>
-            <Tab>
+            <Tab onClick={() => setCoursAffiche(null)}>
               Session 4
               <motion.div layout>
                 {tabActuel === 3 && (
@@ -134,7 +133,7 @@ export default function Cours({ listeCours }) {
                 )}
               </motion.div>
             </Tab>
-            <Tab>
+            <Tab onClick={() => setCoursAffiche(null)}>
               Session 5
               <motion.div layout>
                 {tabActuel === 4 && (
@@ -146,7 +145,7 @@ export default function Cours({ listeCours }) {
                 )}
               </motion.div>
             </Tab>
-            <Tab>
+            <Tab onClick={() => setCoursAffiche(null)}>
               Session 6
               <motion.div layout>
                 {tabActuel === 5 && (
