@@ -9,6 +9,7 @@ import styles from "./cours.module.scss";
 import { MdArrowDropDown } from "react-icons/md";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useOrdreListeCours } from "../hooks/useCours";
+import Head from "next/head";
 
 export default function Cours({ listeCours }) {
   //on arrange la liste des cours
@@ -51,12 +52,16 @@ export default function Cours({ listeCours }) {
   const [tabActuel, setTabActuel] = useState(0);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ x: "-100vw" }}
-      className={styles.conteneurCours}
-    >
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: "-100vw" }} className={styles.conteneurCours}>
+    <Head>
+      <title>TIM | Cours</title>
+      <meta charset="UTF-8"></meta>
+      <meta
+          name="Description"
+          content="Page des cours de la Technique d'Intégration Multimédia du collège Maisonneuve"
+      ></meta>
+      <link rel="canonical" href="https://tim-2020.vercel.app/cours"></link>
+    </Head>
       <div className={styles.conteneurTitre}>
         <h1 className={styles.titreCours}>LA LISTE DES COURS</h1>
         <h2 className={styles.titreChoix}>
