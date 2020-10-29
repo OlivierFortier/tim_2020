@@ -3,8 +3,12 @@ import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import EnTete from "./header/enTete";
 import styles from "./layout.module.scss";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import { useRouter } from "next/router";
+import { usePage } from "../hooks/usePage";
 
 export default function Layout({ children }) {
+  const router = useRouter();
+
   //grace au thème, on peut changer le css dynamiquement avec javascript selon le thème choisi
   const theme = useTheme();
   const listeThemes = useListeThemes();
@@ -40,6 +44,8 @@ export default function Layout({ children }) {
     }
   }, [theme]);
 
+  const { listePages, anciennePage, prochainePage } = usePage();
+
   return (
     <>
       <div
@@ -50,8 +56,9 @@ export default function Layout({ children }) {
           <EnTete></EnTete>
           <ReactScrollWheelHandler
             style={{ all: "unset" }}
-            upHandler={(e) => console.log("scroll up")}
-            downHandler={(e) => console.log("scroll down")}
+            disableSwipe
+            upHandler={(e) => router.push(listePages[anciennePage])}
+            downHandler={(e) => router.push(listePages[prochainePage])}
           >
             <div
               id="conteneur-application"
