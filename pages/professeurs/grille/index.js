@@ -5,17 +5,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../../libs/requetesDonnes";
 import CarteProf from "../../../components/profs/CarteProf";
+import Head from "next/head";
 
 SwiperCore.use([Pagination]);
 
 export default function Grille({ listeProfs }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className={styles.conteneur}
-    >
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={styles.conteneur}>
+      <Head>
+        <title>TIM | Grille des professeurs</title>
+        <meta
+          name="Description"
+          content="Grilles des proffesseurs de la Technique d'Intégration Multimédia du collège Maisonneuve"
+        ></meta>
+        <link rel="canonical" href="https://tim-2020.vercel.app/professeurs/grille"></link>
+      </Head>
       <Swiper
         pagination={{
           clickable: true,
