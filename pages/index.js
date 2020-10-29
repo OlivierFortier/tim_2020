@@ -7,6 +7,7 @@ import SelectionProfil from "../components/accueil/selectionProfil";
 import styles from "./index.module.scss";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
+
 export default function Home() {
   const [cookies, setCookie, removeCookie] = useCookies(["profil"]);
 
