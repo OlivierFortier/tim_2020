@@ -1,7 +1,6 @@
 .detailCours {
   display: flex;
   flex-direction: column;
-
   font-size: 16px;
 
   h2 {
@@ -21,19 +20,24 @@
       cursor: pointer;
     }
   }
+
+  .flecheDescriptionCours {
+    position: absolute;
+    right: 25%;
+    bottom: 14%;
+    font-size: 2rem;
+  }
 }
 
 .contenuDetailCours {
   display: flex;
   justify-content: space-around;
-  // align-items: center;
 
   .conteneurTitre {
-    align-self: center;
     display: flex;
+    align-self: center;
     flex-direction: column;
     width: 50%;
-    max-width: 550px;
 
     h3 {
       align-self: center;
@@ -51,7 +55,6 @@
   }
 
   .descriptionCours {
-
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
@@ -62,9 +65,17 @@
     overflow-y: auto;
     max-height: 420px;
     min-height: 420px;
-
     height: 100%;
-
-    
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+  }
+
+
+
+
 }
