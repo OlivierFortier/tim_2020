@@ -163,17 +163,38 @@ export default function Menu() {
                       </a>
                     </Link>
                     <ul className={styles.liensContact}>
-                      <Link href="/" as="/">
-                        <a onClick={fermerMenu}>discord</a>
+                      <Link
+                        href="https://ca.linkedin.com/in/tim-tim-9407b7131"
+                        as="/"
+                      >
+                        <a onClick={fermerMenu}>Linked</a>
                       </Link>
-                      <Link href="/" as="/">
+                      <Link
+                        href="https://www.instagram.com/maisonneuvetim/"
+                        as="/"
+                      >
                         <a onClick={fermerMenu}>instagram</a>
                       </Link>
-                      <Link href="/" as="/">
+                      <Link
+                        href="https://www.facebook.com/maisonneuvetim/"
+                        as="/"
+                      >
                         <a onClick={fermerMenu}>facebook</a>
                       </Link>
-                      <Link href="/" as="/">
+                      <Link
+                        href="https://www.youtube.com/user/TIMaisonneuve"
+                        as="/"
+                      >
                         <a onClick={fermerMenu}>youtube</a>
+                      </Link>
+                      <Link href="" as="/">
+                        <a onClick={fermerMenu}>discord</a>
+                      </Link>
+                      <Link
+                        href="https://www.youtube.com/user/TIMcreation3D"
+                        as="/"
+                      >
+                        <a onClick={fermerMenu}>youtube 3D</a>
                       </Link>
                     </ul>
                   </motion.address>
