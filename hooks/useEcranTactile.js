@@ -5,7 +5,6 @@ export function useEcranTactile() {
 
   useEffect(() => {
     if ("ontouchstart" in document.documentElement) {
-      console.log("yeet");
       setEcranTactile(true);
     } else {
       setEcranTactile(false);

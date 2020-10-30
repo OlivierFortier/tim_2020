@@ -7,6 +7,11 @@ import { useRouter } from "next/router";
 import { usePage } from "../hooks/usePage";
 import { useEcranTactile } from "../hooks/useEcranTactile";
 import { useEtatScroll } from "../hooks/contexteScroll";
+import { Lethargy } from "lethargy";
+
+import { useDrag, useScroll } from "react-use-gesture";
+
+const lethargy = new Lethargy(30, 120, 0.05);
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -52,8 +57,27 @@ export default function Layout({ children }) {
 
   //état pour dire si on peut scroll d'une page à l'autre ou pas
   // const [arreterScroll, setArreterScroll] = useState(true);
-  const arreterScroll = useEtatScroll()
+  const arreterScroll = useEtatScroll();
 
+  //gestion drag
+  const drag = useDrag(
+    ({ direction }) => {
+      // console.log(direction[0]);
+      if (direction[0] < 0) {
+        router.push(listePages[prochainePage]);
+      }
+      if (direction[0] > 0) {
+        router.push(listePages[anciennePage]);
+      }
+    },
+    {
+      threshold: 10,
+      filterTaps: true,
+      delay: 500,
+    }
+  );
+
+  //gestion scroll
 
   return (
     <>
@@ -65,14 +89,15 @@ export default function Layout({ children }) {
           <EnTete></EnTete>
           <ReactScrollWheelHandler
             style={{ all: "unset" }}
-            disableSwipe={!ecranTactile}
-            pauseListeners={arreterScroll}
-            upHandler={() => router.push(listePages[anciennePage])}
-            rightHandler={() => router.push(listePages[anciennePage])}
-            downHandler={() => router.push(listePages[prochainePage])}
-            leftHandler={() => router.push(listePages[prochainePage])}
+            // disableSwipe={!ecranTactile}
+            // pauseListeners={arreterScroll}
+            // upHandler={() => router.push(listePages[anciennePage])}
+            // rightHandler={() => router.push(listePages[anciennePage])}
+            // downHandler={() => router.push(listePages[prochainePage])}
+            // leftHandler={() => router.push(listePages[prochainePage])}
           >
             <div
+              {...drag()}
               id="conteneur-application"
               className={styles.conteneurApplication}
             >

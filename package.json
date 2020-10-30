@@ -12,6 +12,7 @@
     "framer-motion": "^2.9.1",
     "graphql": "^15.3.0",
     "graphql-request": "^3.1.0",
+    "lethargy": "^1.0.9",
     "markdown-to-jsx": "^7.0.0",
     "next": "^10.0.0",
     "node-sass": "^4.14.1",

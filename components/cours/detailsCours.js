@@ -2,15 +2,12 @@ import styles from "./detailsCours.module.scss";
 import { motion } from "framer-motion";
 import { useIconeTechnos } from "../../hooks/useIcone";
 import Markdown from "markdown-to-jsx";
-import { useGesture } from "react-use-gesture";
 import { useSetEtatScroll } from "../../hooks/contexteScroll";
 
 export default function DetailsCours({ infoCours, afficherCours }) {
   const setArreterScroll = useSetEtatScroll();
 
-  const gestes = useGesture({
-    onHover: () => setArreterScroll(true),
-  });
+ 
 
   const Icones =
     infoCours.logicielsEtTechnologies &&
