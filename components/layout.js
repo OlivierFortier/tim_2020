@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import EnTete from "./header/enTete";
 import styles from "./layout.module.scss";
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { useRouter } from "next/router";
 import { usePage } from "../hooks/usePage";
 import { useEcranTactile } from "../hooks/useEcranTactile";
@@ -55,6 +54,8 @@ export default function Layout({ children }) {
   // const [arreterScroll, setArreterScroll] = useState(true);
   const arreterScroll = useEtatScroll();
 
+  const [scrollAccumule, setScrollAccumule] = useState(0);
+
   //gestion drag
   const drag = useSwipeable({
     onSwipedLeft: () => router.push(listePages[prochainePage]),
@@ -65,8 +66,19 @@ export default function Layout({ children }) {
 
   //gestion scroll
   const roulette = (evenement) => {
-    console.log(evenement.deltaY);
-    //if (evenement.deltaY > 100) console.log(evenement.deltaY);
+    //on peut changer la valeur du scroll minimum nécéssaire afin de changer de page
+    if (scrollAccumule >= 1600) {
+      setScrollAccumule(0);
+
+      evenement.deltaY > 0 && router.push(listePages[prochainePage]);
+      evenement.deltaY < 0 && router.push(listePages[anciennePage]);
+
+      return;
+    }
+
+    setScrollAccumule(
+      (ancienScroll) => ancienScroll + Math.abs(evenement.deltaY)
+    );
   };
 
   //gestion clavier
