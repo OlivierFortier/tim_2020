@@ -45,9 +45,9 @@ export default function Layout({ children }) {
     }
   }, [theme]);
 
-  const { listePages, anciennePage, prochainePage } = usePage();
+  const { listePages, anciennePage, page, prochainePage } = usePage();
 
-  const {ecranTactile} = useEcranTactile();
+  const { ecranTactile } = useEcranTactile();
 
   return (
     <>
@@ -71,11 +71,13 @@ export default function Layout({ children }) {
             >
               {children}
             </div>
-            <footer>
-              <progress value={5} max={8}></progress>
-            </footer>
           </ReactScrollWheelHandler>
         </div>
+        <footer className={styles.conteneurProgres}>
+          <span>
+            <progress value={page} max={8}></progress>
+          </span>
+        </footer>
       </div>
     </>
   );
