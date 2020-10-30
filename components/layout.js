@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { usePage } from "../hooks/usePage";
 import { useEcranTactile } from "../hooks/useEcranTactile";
 import { useEtatScroll } from "../hooks/contexteScroll";
-import { useSwipeable, Swipeable } from "react-swipeable";
+import { useSwipeable } from "react-swipeable";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -60,9 +60,15 @@ export default function Layout({ children }) {
     onSwipedLeft: () => router.push(listePages[prochainePage]),
     onSwipedRight: () => router.push(listePages[anciennePage]),
     delta: 100,
+    preventDefaultTouchmoveEvent: true,
   });
 
   //gestion scroll
+  const roulette = (evenement) => {
+    if (evenement.deltaY > 100) console.log(evenement.deltaY);
+  };
+
+  //gestion clavier
 
   return (
     <>
@@ -70,24 +76,14 @@ export default function Layout({ children }) {
         className={styles.racine}
         style={{ backgroundColor: themeStyles.couleurBg }}
       >
-        <div className={styles.conteneurTout}>
+        <div onWheelCapture={(e) => roulette(e)} className={styles.conteneurTout}>
           <EnTete></EnTete>
-          <ReactScrollWheelHandler
-            style={{ all: "unset" }}
-            // disableSwipe={!ecranTactile}
-            // pauseListeners={arreterScroll}
-            // upHandler={() => router.push(listePages[anciennePage])}
-            // rightHandler={() => router.push(listePages[anciennePage])}
-            // downHandler={() => router.push(listePages[prochainePage])}
-            // leftHandler={() => router.push(listePages[prochainePage])}
+          <div
+            id="conteneur-application"
+            className={styles.conteneurApplication}
           >
-            <div
-              id="conteneur-application"
-              className={styles.conteneurApplication}
-            >
-              {children}
-            </div>
-          </ReactScrollWheelHandler>
+            {children}
+          </div>
         </div>
         <footer {...drag} className={styles.conteneurProgres}>
           <span>
