@@ -2,8 +2,13 @@ import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import EnTete from "./header/enTete";
 import styles from "./layout.module.scss";
+import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import { useRouter } from "next/router";
+import { usePage } from "../hooks/usePage";
 
 export default function Layout({ children }) {
+  const router = useRouter();
+
   //grace au thème, on peut changer le css dynamiquement avec javascript selon le thème choisi
   const theme = useTheme();
   const listeThemes = useListeThemes();
@@ -39,6 +44,8 @@ export default function Layout({ children }) {
     }
   }, [theme]);
 
+  const { listePages, anciennePage, prochainePage } = usePage();
+
   return (
     <>
       <div
@@ -47,12 +54,21 @@ export default function Layout({ children }) {
       >
         <div className={styles.conteneurTout}>
           <EnTete></EnTete>
-          <div
-            id="conteneur-application"
-            className={styles.conteneurApplication}
+          <ReactScrollWheelHandler
+            style={{ all: "unset" }}
+            disableSwipe
+            upHandler={() => router.push(listePages[anciennePage])}
+            rightHandler={() => router.push(listePages[anciennePage])}
+            downHandler={() => router.push(listePages[prochainePage])}
+            leftHandler={() => router.push(listePages[prochainePage])}
           >
-            {children}
-          </div>
+            <div
+              id="conteneur-application"
+              className={styles.conteneurApplication}
+            >
+              {children}
+            </div>
+          </ReactScrollWheelHandler>
         </div>
       </div>
     </>
