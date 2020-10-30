@@ -6,6 +6,7 @@ import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { useRouter } from "next/router";
 import { usePage } from "../hooks/usePage";
 import { useEcranTactile } from "../hooks/useEcranTactile";
+import { useEtatScroll } from "../hooks/contexteScroll";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -49,6 +50,11 @@ export default function Layout({ children }) {
 
   const { ecranTactile } = useEcranTactile();
 
+  //état pour dire si on peut scroll d'une page à l'autre ou pas
+  // const [arreterScroll, setArreterScroll] = useState(true);
+  const arreterScroll = useEtatScroll()
+
+
   return (
     <>
       <div
@@ -60,6 +66,7 @@ export default function Layout({ children }) {
           <ReactScrollWheelHandler
             style={{ all: "unset" }}
             disableSwipe={!ecranTactile}
+            pauseListeners={arreterScroll}
             upHandler={() => router.push(listePages[anciennePage])}
             rightHandler={() => router.push(listePages[anciennePage])}
             downHandler={() => router.push(listePages[prochainePage])}

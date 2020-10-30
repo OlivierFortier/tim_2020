@@ -6,18 +6,18 @@ import "swiper/components/pagination/pagination.scss";
 import Layout from "../components/layout";
 import { FournisseurTheme } from "../hooks/contexteTheme";
 import { AnimatePresence } from "framer-motion";
+import {FournisseurScroll} from "../hooks/contexteScroll"
 
 function MyApp({ Component, pageProps, router }) {
-
   return (
     <FournisseurTheme>
-     
-          <Layout>
-            <AnimatePresence exitBeforeEnter>
-              <Component {...pageProps} key={router.route} />
-            </AnimatePresence>
-          </Layout>
-      
+      <FournisseurScroll>
+        <Layout>
+          <AnimatePresence exitBeforeEnter>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </Layout>
+      </FournisseurScroll>
     </FournisseurTheme>
   );
 }
