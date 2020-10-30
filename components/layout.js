@@ -58,7 +58,8 @@ export default function Layout({ children }) {
   //gestion drag
   const drag = useSwipeable({
     onSwipedLeft: () => router.push(listePages[prochainePage]),
-    onSwipedRight: () => router.push(listePages[anciennePage])
+    onSwipedRight: () => router.push(listePages[anciennePage]),
+    delta: 100,
   });
 
   //gestion scroll
