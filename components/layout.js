@@ -5,6 +5,7 @@ import styles from "./layout.module.scss";
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { useRouter } from "next/router";
 import { usePage } from "../hooks/usePage";
+import { useEcranTactile } from "../hooks/useEcranTactile";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -46,6 +47,8 @@ export default function Layout({ children }) {
 
   const { listePages, anciennePage, prochainePage } = usePage();
 
+  const {ecranTactile} = useEcranTactile();
+
   return (
     <>
       <div
@@ -56,7 +59,7 @@ export default function Layout({ children }) {
           <EnTete></EnTete>
           <ReactScrollWheelHandler
             style={{ all: "unset" }}
-            disableSwipe
+            disableSwipe={!ecranTactile}
             upHandler={() => router.push(listePages[anciennePage])}
             rightHandler={() => router.push(listePages[anciennePage])}
             downHandler={() => router.push(listePages[prochainePage])}
