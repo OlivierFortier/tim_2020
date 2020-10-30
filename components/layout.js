@@ -65,7 +65,8 @@ export default function Layout({ children }) {
 
   //gestion scroll
   const roulette = (evenement) => {
-    if (evenement.deltaY > 100) console.log(evenement.deltaY);
+    console.log(evenement.deltaY);
+    //if (evenement.deltaY > 100) console.log(evenement.deltaY);
   };
 
   //gestion clavier
@@ -76,11 +77,12 @@ export default function Layout({ children }) {
         className={styles.racine}
         style={{ backgroundColor: themeStyles.couleurBg }}
       >
-        <div onWheelCapture={(e) => roulette(e)} className={styles.conteneurTout}>
+        <div className={styles.conteneurTout}>
           <EnTete></EnTete>
           <div
             id="conteneur-application"
             className={styles.conteneurApplication}
+            onWheel={(e) => roulette(e)}
           >
             {children}
           </div>
