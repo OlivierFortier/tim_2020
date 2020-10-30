@@ -33,7 +33,9 @@
 
 .conteneurProgres {
   position: absolute;
-  bottom: 1%;
+  padding: 2%;
+  bottom: 0;
+  z-index: 20;
 }
 
 // .conteneurApplication {

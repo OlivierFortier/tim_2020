@@ -7,11 +7,7 @@ import { useRouter } from "next/router";
 import { usePage } from "../hooks/usePage";
 import { useEcranTactile } from "../hooks/useEcranTactile";
 import { useEtatScroll } from "../hooks/contexteScroll";
-import { Lethargy } from "lethargy";
-
-import { useDrag, useScroll } from "react-use-gesture";
-
-const lethargy = new Lethargy(30, 120, 0.05);
+import { useSwipeable, Swipeable } from "react-swipeable";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -60,22 +56,10 @@ export default function Layout({ children }) {
   const arreterScroll = useEtatScroll();
 
   //gestion drag
-  const drag = useDrag(
-    ({ direction }) => {
-      // console.log(direction[0]);
-      if (direction[0] < 0) {
-        router.push(listePages[prochainePage]);
-      }
-      if (direction[0] > 0) {
-        router.push(listePages[anciennePage]);
-      }
-    },
-    {
-      threshold: 10,
-      filterTaps: true,
-      delay: 500,
-    }
-  );
+  const drag = useSwipeable({
+    onSwipedLeft: () => router.push(listePages[prochainePage]),
+    onSwipedRight: () => router.push(listePages[anciennePage])
+  });
 
   //gestion scroll
 
@@ -97,7 +81,6 @@ export default function Layout({ children }) {
             // leftHandler={() => router.push(listePages[prochainePage])}
           >
             <div
-              {...drag()}
               id="conteneur-application"
               className={styles.conteneurApplication}
             >
@@ -105,7 +88,7 @@ export default function Layout({ children }) {
             </div>
           </ReactScrollWheelHandler>
         </div>
-        <footer className={styles.conteneurProgres}>
+        <footer {...drag} className={styles.conteneurProgres}>
           <span>
             <progress value={page} max={8}></progress>
           </span>
