@@ -27,6 +27,16 @@
   justify-content: center;
   
   z-index: 3;
+
+
+  footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0.5%;
+  }
+
 }
 
 // .conteneurApplication {

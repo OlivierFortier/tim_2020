@@ -71,6 +71,7 @@ export default function Layout({ children }) {
             >
               {children}
             </div>
+            <footer><h3>ligne</h3></footer>
           </ReactScrollWheelHandler>
         </div>
       </div>
