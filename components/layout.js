@@ -71,7 +71,9 @@ export default function Layout({ children }) {
             >
               {children}
             </div>
-            <footer><h3>ligne</h3></footer>
+            <footer>
+              <progress value={5} max={8}></progress>
+            </footer>
           </ReactScrollWheelHandler>
         </div>
       </div>
