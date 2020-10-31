@@ -48,8 +48,6 @@ export default function Layout({ children }) {
 
   const { listePages, anciennePage, page, prochainePage } = usePage();
 
-  const { ecranTactile } = useEcranTactile();
-
   //état pour dire si on peut scroll d'une page à l'autre ou pas
   // const [arreterScroll, setArreterScroll] = useState(true);
   const arreterScroll = useEtatScroll();
@@ -65,7 +63,7 @@ export default function Layout({ children }) {
   });
 
   //gestion scroll
-  const roulette = (evenement) => {
+  function roulette(evenement) {
     //on peut changer la valeur du scroll minimum nécéssaire afin de changer de page
     if (scrollAccumule >= 1600) {
       setScrollAccumule(0);
@@ -79,9 +77,24 @@ export default function Layout({ children }) {
     setScrollAccumule(
       (ancienScroll) => ancienScroll + Math.abs(evenement.deltaY)
     );
-  };
+  }
 
   //gestion clavier
+  function clavier(evenement) {
+    switch (evenement.key) {
+      case "ArrowRight":
+        router.push(listePages[prochainePage]);
+        break;
+
+      case "ArrowLeft":
+        router.push(listePages[anciennePage]);
+        break;
+
+      default:
+        router.push(listePages[prochainePage]);
+        break;
+    }
+  }
 
   return (
     <>
@@ -95,6 +108,8 @@ export default function Layout({ children }) {
             id="conteneur-application"
             className={styles.conteneurApplication}
             onWheel={(e) => roulette(e)}
+            onKeyDown={(e) => clavier(e)}
+            tabIndex={0}
           >
             {children}
           </div>
