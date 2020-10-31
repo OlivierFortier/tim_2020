@@ -40,6 +40,8 @@ export async function getStaticProps() {
           specialisation
           photo {
             url
+            width
+            height
           }
         }
       }

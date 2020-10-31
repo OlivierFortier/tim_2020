@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./accueil.module.scss";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Accueil() {
   return (
@@ -48,10 +49,14 @@ export default function Accueil() {
               className={styles.cercleInterractif}
             ></motion.div>
           </span>
-          <img
+          <Image
             alt="image du theme"
-            src="https://images.unsplash.com/photo-1599666433232-2b222eb02b8c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-          ></img>
+            width={451}
+            height={684}
+            quality={75}
+            loading="eager"
+            src="/images/photo1.jpg"
+          />
           <div className={styles.conteneurBouton}>
             <Link href="/introduction">
               <motion.button
