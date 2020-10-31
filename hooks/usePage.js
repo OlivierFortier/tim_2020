@@ -13,7 +13,8 @@ export function usePage() {
     "/professeurs",
     "/professeurs/grille",
     "/etudiants",
-    "/exemplecontentful",
+    "/futur",
+    "/inscription"
   ];
 
   const [page, setPage] = useState(null);
@@ -61,8 +62,14 @@ export function usePage() {
       case listePages[6]:
         setAnciennePage(5);
         setPage(6);
-        setProchainePage(6);
+        setProchainePage(7);
         break;
+
+        case listePages[7]:
+          setAnciennePage(6);
+          setPage(7);
+          setProchainePage(7);
+          break;
     }
   }, [page, anciennePage, prochainePage, router.pathname]);
 

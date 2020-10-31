@@ -133,10 +133,22 @@ export default function Menu() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/exemplecontentful" as="/exemplecontentful">
+                        <Link href="/futur" as="/futur">
                           <div className={styles.wrapLien}>
-                            <a onClick={fermerMenu}>CMS Contentful </a>
-                            {router.pathname === "/exemplecontentful" && (
+                            <a onClick={fermerMenu}>Futur</a>
+                            {router.pathname === "/futur" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/inscription" as="/inscription">
+                          <div className={styles.wrapLien}>
+                            <a onClick={fermerMenu}>Inscription</a>
+                            {router.pathname === "/inscription" && (
                               <div className={styles.wrapPagination}>
                                 <span></span>
                               </div>
