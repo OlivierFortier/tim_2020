@@ -2,6 +2,7 @@ import styles from "./detailsCours.module.scss";
 import { motion } from "framer-motion";
 import { useIconeTechnos } from "../../hooks/useIcone";
 import Markdown from "markdown-to-jsx";
+import { MdArrowDropDown } from "react-icons/md";
 
 export default function DetailsCours({ infoCours, afficherCours }) {
   const Icones =
@@ -42,12 +43,14 @@ export default function DetailsCours({ infoCours, afficherCours }) {
         <span className={styles.descriptionCours}>
           <Markdown>{infoCours.description}</Markdown>
         </span>
+        <div className={styles.fleche}>
+          <MdArrowDropDown
+            className={styles.flecheDescriptionCours}
+          ></MdArrowDropDown>
+        </div>
       </div>
-      {/* <MdArrowDropDown
-        className={styles.flecheDescriptionCours}
-      ></MdArrowDropDown> 
-      À revoir ------------------------------
-      */}
+
+      {/* À revoir ------------------------------ */}
     </motion.div>
   );
 }

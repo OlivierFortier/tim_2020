@@ -76,7 +76,17 @@
     display: none;
   }
 
+.fleche {
+  position: relative;
+  // width: 100%;
 
+  .flecheDescriptionCours {
+    position: absolute;
+    top: 100%;
+    right: 17vw;
+    font-size: 2rem;
+  }
+}
 
 
 }

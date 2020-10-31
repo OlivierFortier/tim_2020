@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../../libs/requetesDonnes";
 import CarteProf from "../../../components/profs/CarteProf";
+import Link from "next/link";
 
 SwiperCore.use([Pagination]);
 
@@ -16,6 +17,9 @@ export default function Grille({ listeProfs }) {
       exit={{ opacity: 0 }}
       className={styles.conteneur}
     >
+      <Link href="/professeurs">
+        <a>retour vers les professeurs</a>
+      </Link>
       <Swiper
         pagination={{
           clickable: true,
