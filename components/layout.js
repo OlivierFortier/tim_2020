@@ -68,7 +68,7 @@ export default function Layout({ children }) {
     console.log(scrollAccumule)
     //TODO reset le compteur de scroll si l'utilisateur change de direction
     if(!arreterScroll)
-    {if (scrollAccumule >= 800) {
+    {if (scrollAccumule >= 600) {
       setScrollAccumule(0);
       
 
