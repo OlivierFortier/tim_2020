@@ -69,6 +69,7 @@ export function usePage() {
   return {
     listePages,
     anciennePage,
+    page,
     prochainePage,
   };
 }

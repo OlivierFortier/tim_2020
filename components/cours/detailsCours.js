@@ -2,8 +2,13 @@ import styles from "./detailsCours.module.scss";
 import { motion } from "framer-motion";
 import { useIconeTechnos } from "../../hooks/useIcone";
 import Markdown from "markdown-to-jsx";
+import { useSetEtatScroll } from "../../hooks/contexteScroll";
 
 export default function DetailsCours({ infoCours, afficherCours }) {
+  const setArreterScroll = useSetEtatScroll();
+
+ 
+
   const Icones =
     infoCours.logicielsEtTechnologies &&
     useIconeTechnos(infoCours.logicielsEtTechnologies);
@@ -39,7 +44,13 @@ export default function DetailsCours({ infoCours, afficherCours }) {
 
         {/* ================================================================ */}
 
-        <span className={styles.descriptionCours}>
+        <span
+        onTouchStart={() => setArreterScroll(true)}
+          onMouseEnter={() => setArreterScroll(true)}
+          onMouseLeave={() => setArreterScroll(false)}
+          onTouchEnd={() => setArreterScroll(false)}
+          className={styles.descriptionCours}
+        >
           <Markdown>{infoCours.description}</Markdown>
         </span>
       </div>

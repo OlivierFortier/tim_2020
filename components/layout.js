@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import EnTete from "./header/enTete";
 import styles from "./layout.module.scss";
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { useRouter } from "next/router";
 import { usePage } from "../hooks/usePage";
+import { useEcranTactile } from "../hooks/useEcranTactile";
+import { useEtatScroll } from "../hooks/contexteScroll";
+import { useSwipeable } from "react-swipeable";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -44,7 +46,58 @@ export default function Layout({ children }) {
     }
   }, [theme]);
 
-  const { listePages, anciennePage, prochainePage } = usePage();
+  const { listePages, anciennePage, page, prochainePage } = usePage();
+
+  //état pour dire si on peut scroll d'une page à l'autre ou pas
+  // const [arreterScroll, setArreterScroll] = useState(true);
+  const arreterScroll = useEtatScroll();
+
+  const [scrollAccumule, setScrollAccumule] = useState(0);
+
+  //gestion drag
+  const drag = useSwipeable({
+    onSwipedLeft: () => router.push(listePages[prochainePage]),
+    onSwipedRight: () => router.push(listePages[anciennePage]),
+    delta: 100,
+    preventDefaultTouchmoveEvent: true,
+  });
+
+  //gestion scroll
+  function roulette(evenement) {
+    //on peut changer la valeur du scroll minimum nécéssaire afin de changer de page
+
+    //TODO reset le compteur de scroll si l'utilisateur change de direction
+    if(!arreterScroll)
+    {if (scrollAccumule >= 1600) {
+      setScrollAccumule(0);
+
+      evenement.deltaY > 0 && router.push(listePages[prochainePage]);
+      evenement.deltaY < 0 && router.push(listePages[anciennePage]);
+
+      return;
+    }
+
+    setScrollAccumule(
+      (ancienScroll) => ancienScroll + Math.abs(evenement.deltaY)
+    );}
+  }
+
+  //gestion clavier
+  function clavier(evenement) {
+    switch (evenement.key) {
+      case "ArrowRight":
+        router.push(listePages[prochainePage]);
+        break;
+
+      case "ArrowLeft":
+        router.push(listePages[anciennePage]);
+        break;
+
+      default:
+        router.push(listePages[prochainePage]);
+        break;
+    }
+  }
 
   return (
     <>
@@ -54,22 +107,21 @@ export default function Layout({ children }) {
       >
         <div className={styles.conteneurTout}>
           <EnTete></EnTete>
-          <ReactScrollWheelHandler
-            style={{ all: "unset" }}
-            disableSwipe
-            upHandler={() => router.push(listePages[anciennePage])}
-            rightHandler={() => router.push(listePages[anciennePage])}
-            downHandler={() => router.push(listePages[prochainePage])}
-            leftHandler={() => router.push(listePages[prochainePage])}
+          <div
+            id="conteneur-application"
+            className={styles.conteneurApplication}
+            onWheel={(e) => roulette(e)}
+            onKeyDown={(e) => clavier(e)}
+            tabIndex={0}
           >
-            <div
-              id="conteneur-application"
-              className={styles.conteneurApplication}
-            >
-              {children}
-            </div>
-          </ReactScrollWheelHandler>
+            {children}
+          </div>
         </div>
+        <footer {...drag} className={styles.conteneurProgres}>
+          <span>
+            <progress value={page} max={8}></progress>
+          </span>
+        </footer>
       </div>
     </>
   );

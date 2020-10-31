@@ -2,11 +2,16 @@ import { motion } from "framer-motion";
 import { Canvas } from "react-three-fiber";
 import CubeTransparent from "../components/3d/CubeTransparent";
 import styles from "./introduction.module.scss";
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Introduction() {
   return (
-    <motion.div initial={{x: "100vw"}} animate={{x: 0}} exit={{ opacity: 0 }} className={styles.conteneur}>
+    <motion.div
+      initial={{ x: "100vw" }}
+      animate={{ x: 0 }}
+      exit={{ opacity: 0 }}
+      className={styles.conteneur}
+    >
       <h1 className={styles.headerPage}>
         Envie d'étudier le <b>multimédia ?</b>
       </h1>
@@ -26,7 +31,12 @@ export default function Introduction() {
       </p>
 
       <Link href="/cours">
-          <motion.button whileHover={{scale: 1.3}} className={styles.boutonCours}>LISTE DES COURS</motion.button>
+        <motion.button
+          whileHover={{ scale: 1.3 }}
+          className={styles.boutonCours}
+        >
+          LISTE DES COURS
+        </motion.button>
       </Link>
     </motion.div>
   );
