@@ -65,7 +65,10 @@ export default function Layout({ children }) {
   //gestion scroll
   function roulette(evenement) {
     //on peut changer la valeur du scroll minimum nécéssaire afin de changer de page
-    if (scrollAccumule >= 1600) {
+
+    //TODO reset le compteur de scroll si l'utilisateur change de direction
+    if(!arreterScroll)
+    {if (scrollAccumule >= 1600) {
       setScrollAccumule(0);
 
       evenement.deltaY > 0 && router.push(listePages[prochainePage]);
@@ -76,7 +79,7 @@ export default function Layout({ children }) {
 
     setScrollAccumule(
       (ancienScroll) => ancienScroll + Math.abs(evenement.deltaY)
-    );
+    );}
   }
 
   //gestion clavier
