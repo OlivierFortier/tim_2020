@@ -3,6 +3,10 @@ import styles from "./futur.module.scss";
 export default function Futur() {
   return (
     <main className={styles.conteneurPage}>
+      <div className={styles.fondTexte}>
+        <h6>ÉTUDIER DANS L’INDUSTRIE C’EST BIEN PLUS</h6>
+      </div>
+
       <section className={styles.sectionUni}>
         <h1>Perspective universitaire</h1>
         <h3>Poursuivre ses études et approfondir ses connaissances.</h3>
