@@ -1,4 +1,4 @@
-@import "styles/variables";
+// @import "styles/variables";
 
 .enTete {
   display: flex;
@@ -13,17 +13,19 @@
   span {
     display: flex;
     z-index: 7;
+    width: 100%;
+    // justify-content: space-between;
   }
-
-  div {
-    color: #ffffff;
-  }
+  color: #ffffff;
   .titre {
-    margin-right: auto;
-    font-size: 24px;
-    line-height: 29px;
-    text-transform: uppercase;
+    width: 100%;
+    margin: 0;
+    margin-left: 1%;
+    font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
   }
 }
