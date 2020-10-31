@@ -1,15 +1,20 @@
 import { motion } from "framer-motion";
 import styles from "./professeurs.module.scss";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function Professeurs() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className={styles.conteneur}
-    >
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={styles.conteneur}>
+      <Head>
+        <title>TIM | Professeurs</title>
+        <meta charset="UTF-8"></meta>
+        <meta
+          name="Description"
+          content="Page des proffesseurs de la Technique d'Intégration Multimédia du collège Maisonneuve"
+        ></meta>
+        <link rel="canonical" href="https://tim-2020.vercel.app/professeurs"></link>
+      </Head>
       <div className={styles.sectionLesProfs}>
         <Link href="professeurs/grille">
           <h1>LES PROFESSEURS</h1>

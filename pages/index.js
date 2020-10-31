@@ -7,6 +7,7 @@ import SelectionProfil from "../components/accueil/selectionProfil";
 import styles from "./index.module.scss";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
+
 export default function Home() {
   const [cookies, setCookie, removeCookie] = useCookies(["profil"]);
 
@@ -25,9 +26,10 @@ export default function Home() {
     <motion.div exit={{x: "-50%", opacity: 0}} className={styles.conteneurPage} suppressHydrationWarning={true}>
       <Head>
         <title>TIM | Accueil</title>
+        <meta charset="UTF-8"></meta>
         <meta
           name="Description"
-          content="Page d'acceuil des Techniques d'Intégration Multimédia du collège Maisonneuve"
+          content="Page d'acceuil des Technique d'Intégration Multimédia du collège Maisonneuve"
         ></meta>
         <link rel="canonical" href="https://tim-2020.vercel.app/"></link>
       </Head>
