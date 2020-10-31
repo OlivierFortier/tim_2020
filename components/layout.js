@@ -65,11 +65,12 @@ export default function Layout({ children }) {
   //gestion scroll
   function roulette(evenement) {
     //on peut changer la valeur du scroll minimum nécéssaire afin de changer de page
-
+    console.log(scrollAccumule)
     //TODO reset le compteur de scroll si l'utilisateur change de direction
     if(!arreterScroll)
-    {if (scrollAccumule >= 1600) {
+    {if (scrollAccumule >= 800) {
       setScrollAccumule(0);
+      
 
       evenement.deltaY > 0 && router.push(listePages[prochainePage]);
       evenement.deltaY < 0 && router.push(listePages[anciennePage]);
