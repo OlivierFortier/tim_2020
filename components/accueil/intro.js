@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./intro.module.scss";
 import { motion } from "framer-motion";
+import Image from "next/image"
 
 export default function Intro({ changerEtape }) {
   //variables pour le faux chargement
@@ -35,7 +36,7 @@ export default function Intro({ changerEtape }) {
         className={styles.introConteneur}
       >
         <h1>TECHNIQUES D'INTÉGRATION MULTIMÉDIA</h1>
-        <img src="images/intro-logo-tim.svg" />
+        <Image width={403} height={198} src="/images/intro-logo-tim.svg" className={styles.logo}/>
         <h2 className={styles.texteIntro}>
           Votre expérience unique commence dès maintenant...
         </h2>

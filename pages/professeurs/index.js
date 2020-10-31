@@ -2,10 +2,17 @@ import { motion } from "framer-motion";
 import styles from "./professeurs.module.scss";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
+import { ScalarLeafsRule } from "graphql";
 
 export default function Professeurs() {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={styles.conteneur}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.conteneur}
+    >
       <Head>
         <title>TIM | Professeurs</title>
         <meta charset="UTF-8"></meta>
@@ -13,7 +20,10 @@ export default function Professeurs() {
           name="Description"
           content="Page des proffesseurs de la Technique d'Intégration Multimédia du collège Maisonneuve"
         ></meta>
-        <link rel="canonical" href="https://tim-2020.vercel.app/professeurs"></link>
+        <link
+          rel="canonical"
+          href="https://tim-2020.vercel.app/professeurs"
+        ></link>
       </Head>
       <div className={styles.sectionLesProfs}>
         <Link href="professeurs/grille">
@@ -26,46 +36,46 @@ export default function Professeurs() {
       <div className={styles.sectionImages}>
         <span>
           <Link href="/professeurs/grille">
-            <motion.img
+            <motion.div
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "-80%", y: "0%" }}
-              src="/images/cam.jpg"
-              alt=""
-            />
+              animate={{ opacity: 1, x: "-20%", y: "0%", scale: 0.5 }}
+            >
+              <Image width={120} height={120} src="/images/cam.jpg" />
+            </motion.div>
           </Link>
           <Link href="/professeurs/grille">
-            <motion.img
+            <motion.div
               initial={{
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "150%", y: "-60%", scale: 1.4 }}
-              src="/images/cam.jpg"
-              alt=""
-            />
+            >
+              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+            </motion.div>
           </Link>
           <Link href="/professeurs/grille">
-            <motion.img
+            <motion.div
               initial={{
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "100%", y: "140%" }}
-              src="/images/cam.jpg"
-              alt=""
-            />
+            >
+              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+            </motion.div>
           </Link>
         </span>
         <span>
           <Link href="/professeurs/grille">
-            <motion.img
+            <motion.div
               initial={{
                 opacity: 0,
               }}
               animate={{ opacity: 1, scale: 3, y: "50%" }}
-              src="/images/cam.jpg"
-              alt=""
-            />
+            >
+              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+            </motion.div>
           </Link>
         </span>
         <span>
@@ -74,55 +84,55 @@ export default function Professeurs() {
             className={styles.cercle}
           ></motion.div>
           <Link href="/professeurs/grille">
-            <motion.img
+            <motion.div
               initial={{
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "-120%", y: "-200%", scale: 0.9 }}
-              src="/images/cam.jpg"
-              alt=""
-            />
+            >
+              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+            </motion.div>
           </Link>
           <Link href="/professeurs/grille">
-            <motion.img
+            <motion.div
               initial={{
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "75%", y: "-140%" }}
-              src="/images/cam.jpg"
-              alt=""
-            />
+            >
+              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+            </motion.div>
           </Link>
           <Link href="/professeurs/grille">
-            <motion.img
-            style={{zIndex: -1}}
+            <motion.div
+              style={{ zIndex: -1 }}
               initial={{
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "40%", y: "40%" }}
-              src="/images/cam.jpg"
-              alt=""
-            />
+            >
+              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+            </motion.div>
           </Link>
           <Link href="/professeurs/grille">
-            <motion.img
+            <motion.div
               initial={{
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "-160%", y: "100%", scale: 1.4 }}
-              src="/images/cam.jpg"
-              alt=""
-            />
+            >
+              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+            </motion.div>
           </Link>
           <Link href="/professeurs/grille">
-            <motion.img
+            <motion.div
               initial={{
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "-60%", y: "320%", scale: 2.5 }}
-              src="/images/cam.jpg"
-              alt=""
-            />
+            >
+              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+            </motion.div>
           </Link>
         </span>
       </div>

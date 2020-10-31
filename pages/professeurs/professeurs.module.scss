@@ -12,7 +12,7 @@
 }
 
 .sectionLesProfs {
-  font-family: Neue Montreal;
+  font-family: "NeueMontreal";
   font-style: normal;
   font-weight: bold;
   font-size: 72px;
@@ -54,16 +54,16 @@
     justify-content: center;
     align-items: center;
 
-    img {
+    div {
       cursor: pointer;
-      position: absolute;
-      width: 7vw;
-      height: auto;
+      // position: absolute;
+      
     }
   }
 }
 
 .cercle {
+  position: absolute;
   width: 26vw;
   height: 26vw;
   border: 6px solid white;
@@ -71,7 +71,7 @@
 }
 
 .sectionTexte {
-  font-family: Neue Montreal;
+  font-family: "NeueMontreal";
   font-style: normal;
   font-weight: 300;
   font-size: 36px;

@@ -1,4 +1,13 @@
 /*=================== styles globaux ===================*/
+:root {
+  --base:              #dc8cb9;
+  --bg-blend:          multiply;
+  --blur:              0px;
+  --fg-blend:          lighten;
+  --foreground:        #24587f;
+  --opacity:           1;
+  --spacing:           0px;
+}
 
 body {
   font-family: Montserrat;

@@ -7,8 +7,13 @@ import Head from "next/head";
 
 export default function Introduction() {
   return (
-    <motion.div initial={{x: "100vw"}} animate={{x: 0}} exit={{ opacity: 0 }} className={styles.conteneur}>
-      <Head>
+    <motion.div
+      initial={{ x: "100vw" }}
+      animate={{ x: 0 }}
+      exit={{ opacity: 0 }}
+      className={styles.conteneur}
+    >
+     <Head>
         <title>TIM | Introduction</title>
         <meta charset="UTF-8"></meta>
         <meta name="Description"
@@ -16,6 +21,7 @@ export default function Introduction() {
         ></meta>
         <link rel="canonical" href="https://tim-2020.vercel.app/introduction"></link>
       </Head>
+
       <h1 className={styles.headerPage}>
         Envie d'étudier le <b>multimédia ?</b>
       </h1>
@@ -35,7 +41,12 @@ export default function Introduction() {
       </p>
 
       <Link href="/cours">
-          <motion.button whileHover={{scale: 1.3}} className={styles.boutonCours}>LISTE DES COURS</motion.button>
+        <motion.button
+          whileHover={{ scale: 1.3 }}
+          className={styles.boutonCours}
+        >
+          LISTE DES COURS
+        </motion.button>
       </Link>
     </motion.div>
   );
