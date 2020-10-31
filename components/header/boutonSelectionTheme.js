@@ -46,7 +46,7 @@ export default function BoutonSelectionTheme() {
           src="/images/Logo_TIM.png"
           width={57}
           height={26}
-          className={styles.logo , theme != "parent" && styles.inverser}
+          className={`${styles.logo}  ${theme != "parent" && styles.inverser}`}
         />
       </motion.div>
     </>
