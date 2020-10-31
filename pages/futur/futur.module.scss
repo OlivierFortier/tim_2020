@@ -3,30 +3,49 @@
   grid-template:
     "uni . stage"
     " . emploi ." / 1fr 1fr 1fr;
-    height: 70vh;
-    padding: 0 5%;
+  height: 70vh;
+  padding: 0 5%;
 }
 
-.sectionUni, .sectionStage, .sectionEmploi {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
+.sectionUni,
+.sectionStage,
+.sectionEmploi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  width: 100%;
 
-    h1 , h3 {
-        margin: 0;
-    }
+  h1,
+  h3 {
+    margin: 0;
+    font-family: "NeueMontreal";
+    font-style: normal;
+    white-space: nowrap;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  h3 {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 .sectionUni {
-    grid-area: uni;
+  grid-area: uni;
 }
 
 .sectionStage {
-    grid-area: stage;
+  grid-area: stage;
 }
 
 .sectionEmploi {
-    grid-area: emploi;
+  grid-area: emploi;
 }
