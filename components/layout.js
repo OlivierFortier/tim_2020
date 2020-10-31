@@ -4,7 +4,6 @@ import EnTete from "./header/enTete";
 import styles from "./layout.module.scss";
 import { useRouter } from "next/router";
 import { usePage } from "../hooks/usePage";
-import { useEcranTactile } from "../hooks/useEcranTactile";
 import { useEtatScroll } from "../hooks/contexteScroll";
 import { useSwipeable } from "react-swipeable";
 
