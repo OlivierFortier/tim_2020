@@ -1,6 +1,30 @@
 .conteneurPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+
+  color: white;
+  font-family: "NeueMontreal";
+  font-style: normal;
+
+  h1 {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 86px;
+    margin-bottom: 7%;
+  }
+
+  a {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 48px;
+
+    &:visited,
+    &:link,
+    &:active {
+      color: white;
+    }
+  }
 }
