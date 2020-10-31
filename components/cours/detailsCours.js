@@ -2,12 +2,13 @@ import styles from "./detailsCours.module.scss";
 import { motion } from "framer-motion";
 import { useIconeTechnos } from "../../hooks/useIcone";
 import Markdown from "markdown-to-jsx";
+
+import { MdArrowDropDown } from "react-icons/md";
+
 import { useSetEtatScroll } from "../../hooks/contexteScroll";
 
 export default function DetailsCours({ infoCours, afficherCours }) {
   const setArreterScroll = useSetEtatScroll();
-
- 
 
   const Icones =
     infoCours.logicielsEtTechnologies &&
@@ -45,7 +46,7 @@ export default function DetailsCours({ infoCours, afficherCours }) {
         {/* ================================================================ */}
 
         <span
-        onTouchStart={() => setArreterScroll(true)}
+          onTouchStart={() => setArreterScroll(true)}
           onMouseEnter={() => setArreterScroll(true)}
           onMouseLeave={() => setArreterScroll(false)}
           onTouchEnd={() => setArreterScroll(false)}
@@ -53,12 +54,14 @@ export default function DetailsCours({ infoCours, afficherCours }) {
         >
           <Markdown>{infoCours.description}</Markdown>
         </span>
+        <div className={styles.fleche}>
+          <MdArrowDropDown
+            className={styles.flecheDescriptionCours}
+          ></MdArrowDropDown>
+        </div>
       </div>
-      {/* <MdArrowDropDown
-        className={styles.flecheDescriptionCours}
-      ></MdArrowDropDown> 
-      À revoir ------------------------------
-      */}
+
+      {/* À revoir ------------------------------ */}
     </motion.div>
   );
 }
