@@ -18,7 +18,7 @@ export default function SwiperProfs({ listeProfs }) {
       slidesPerView={4}
       slidesPerColumn={3}
       slidesPerColumnFill="row"
-      observer="true"
+      observer={true}
       style={{ paddingTop: "2%", paddingLeft: "5%" }}
     >
       {listeProfs.map((infoProf) => {
