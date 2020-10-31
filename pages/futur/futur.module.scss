@@ -1,0 +1,32 @@
+.conteneurPage {
+  display: grid;
+  grid-template:
+    "uni . stage"
+    " . emploi ." / 1fr 1fr 1fr;
+    height: 70vh;
+    padding: 0 5%;
+}
+
+.sectionUni, .sectionStage, .sectionEmploi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+
+    h1 , h3 {
+        margin: 0;
+    }
+}
+
+.sectionUni {
+    grid-area: uni;
+}
+
+.sectionStage {
+    grid-area: stage;
+}
+
+.sectionEmploi {
+    grid-area: emploi;
+}
