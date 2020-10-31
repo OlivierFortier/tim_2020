@@ -3,10 +3,19 @@ import { Canvas } from "react-three-fiber";
 import CubeTransparent from "../components/3d/CubeTransparent";
 import styles from "./introduction.module.scss";
 import Link from "next/link"
+import Head from "next/head";
 
 export default function Introduction() {
   return (
     <motion.div initial={{x: "100vw"}} animate={{x: 0}} exit={{ opacity: 0 }} className={styles.conteneur}>
+      <Head>
+        <title>TIM | Introduction</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="Description"
+              content="Page d'introduction de la technique d'Intégration Multimédia du collège Maisonneuve"
+        ></meta>
+        <link rel="canonical" href="https://tim-2020.vercel.app/introduction"></link>
+      </Head>
       <h1 className={styles.headerPage}>
         Envie d'étudier le <b>multimédia ?</b>
       </h1>
