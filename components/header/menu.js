@@ -144,6 +144,18 @@ export default function Menu() {
                           </div>
                         </Link>
                       </li>
+                      <li>
+                        <Link href="/inscription" as="/inscription">
+                          <div className={styles.wrapLien}>
+                            <a onClick={fermerMenu}>Inscription</a>
+                            {router.pathname === "/inscription" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
+                          </div>
+                        </Link>
+                      </li>
                     </ul>
                   </motion.div>
 
