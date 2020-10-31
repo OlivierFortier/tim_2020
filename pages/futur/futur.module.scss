@@ -2,8 +2,9 @@
   display: grid;
   grid-template:
     "uni . stage"
-    " . emploi ." / 1fr 1fr 1fr;
+    " . emploi ." / 33% 33% 33%;
   height: 70vh;
+//   width: 100%;
   padding: 0 5%;
 }
 
@@ -15,7 +16,7 @@
   justify-content: center;
   align-items: center;
   overflow: visible;
-  width: 100%;
+//   width: 100%;
 
   h1,
   h3 {
@@ -29,6 +30,7 @@
     font-weight: bold;
     font-size: 48px;
     line-height: 58px;
+    margin-bottom: 1%;
   }
 
   h3 {
