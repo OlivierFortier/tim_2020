@@ -25,7 +25,7 @@ export default function Menu() {
       animate={{ opacity: 1 }}
     >
       <RiMenu3Line
-        size="3.5rem"
+        className={styles.barresMenu}
         style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
         aria-label="ouvrir ou fermer menu"
         onClick={() => setMenuOuvert(!menuOuvert)}
@@ -41,7 +41,7 @@ export default function Menu() {
       exit={{ opacity: 0 }}
     >
       <ImCancelCircle
-        size="3.5rem"
+        className={styles.cancel}
         style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
         aria-label="ouvrir ou fermer menu"
         onClick={() => setMenuOuvert(!menuOuvert)}
@@ -175,9 +175,10 @@ export default function Menu() {
                       </a>
                     </Link>
                     <ul className={styles.liensContact}>
-                      <Link href="https://ca.linkedin.com/in/tim-tim-9407b7131">
-                        <a onClick={fermerMenu}>Linked</a>
+                      <Link href="">
+                        <a onClick={fermerMenu}>discord</a>
                       </Link>
+
                       <Link href="https://www.instagram.com/maisonneuvetim/">
                         <a onClick={fermerMenu}>instagram</a>
                       </Link>
@@ -186,12 +187,6 @@ export default function Menu() {
                       </Link>
                       <Link href="https://www.youtube.com/user/TIMaisonneuve">
                         <a onClick={fermerMenu}>youtube</a>
-                      </Link>
-                      <Link href="">
-                        <a onClick={fermerMenu}>discord</a>
-                      </Link>
-                      <Link href="https://www.youtube.com/user/TIMcreation3D">
-                        <a onClick={fermerMenu}>youtube 3D</a>
                       </Link>
                     </ul>
                   </motion.address>
