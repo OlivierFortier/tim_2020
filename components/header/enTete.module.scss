@@ -8,13 +8,11 @@
   height: auto;
   padding: 2rem 2rem 1rem;
   margin-bottom: 3rem;
-  // max-width: 1370px;
 
   span {
     display: flex;
     z-index: 7;
     width: 100%;
-    // justify-content: space-between;
   }
   color: #ffffff;
   .titre {
@@ -27,5 +25,49 @@
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
+  }
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 320px) and (max-width: 424px) {
+  .enTete {
+    padding: 2%;
+    height: 75px;
+
+    span {
+      height: 45px;
+      flex-direction: column;
+      overflow: visible;
+      margin-top: 5%;
+    }
+
+    .titre {
+      margin-top: 5%;
+      font-size: 13px;
+      line-height: 16px;
+      max-width: 75%;
+    }
+  }
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px) {
+  .enTete {
+    padding: 2%;
+    height: 75px;
+
+    span {
+      height: 45px;
+      flex-direction: column;
+      overflow: visible;
+      margin-top: 5%;
+    }
+
+    .titre {
+      margin-top: 5%;
+      font-size: 13px;
+      line-height: 16px;
+      max-width: 75%;
+    }
   }
 }
