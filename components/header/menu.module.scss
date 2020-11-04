@@ -151,7 +151,7 @@
 }
 
 /*==================MOBILE==================*/
-@media (min-width: 320px) and (max-width: 424px) {
+@media (min-width: 310px) and (max-width: 424px) {
   .barresMenu {
     font-size: 3rem;
   }
@@ -165,10 +165,14 @@
     }
 
     nav {
+      grid-template:
+      ". pages" auto
+      "contact pages" auto
+      / 50% 50%;
     }
 
     .conteneurListePages {
-      align-items: flex-end;
+      // align-items: flex-end;
     }
 
     .listePages {
