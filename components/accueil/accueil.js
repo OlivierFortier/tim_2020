@@ -55,6 +55,8 @@ export default function Accueil() {
             height={684}
             quality={75}
             loading="eager"
+            priority
+            layout="responsive"
             src="/images/photo1.jpg"
           />
           <div className={styles.conteneurBouton}>
