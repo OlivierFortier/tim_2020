@@ -162,9 +162,8 @@ export default function Menu() {
                   <motion.address
                     key="contact"
                     layout
-                    initial={{ height: 0, opacity: 0 }}
+                    initial={{  opacity: 0 }}
                     animate={{
-                      height: "100%",
                       opacity: 1,
                       transition: { delay: 0.3 },
                     }}
@@ -183,10 +182,10 @@ export default function Menu() {
                         <a onClick={fermerMenu}>instagram</a>
                       </Link>
                       <Link href="https://www.facebook.com/maisonneuvetim/">
-                        <a onClick={fermerMenu}>facebook</a>
+                        <a target="_blank" onClick={fermerMenu}>facebook</a>
                       </Link>
                       <Link href="https://www.youtube.com/user/TIMaisonneuve">
-                        <a onClick={fermerMenu}>youtube</a>
+                        <a target="_blank" onClick={fermerMenu}>youtube</a>
                       </Link>
                     </ul>
                   </motion.address>

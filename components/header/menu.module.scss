@@ -34,6 +34,7 @@
     display: grid;
     grid-template:
       ". pages" auto
+      "contact pages" auto
       "contact ." auto
       / 50% 50%;
     color: white;
@@ -58,7 +59,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    margin-right: 5%;
+    margin-right: 15%;
     li {
       margin: 1rem;
 
@@ -107,6 +108,9 @@
     justify-content: space-around;
     padding-left: 3rem;
     margin-left: 3%;
+
+    height: 80%;
+    align-self: flex-end;
 
     .rue {
       font-family: Montserrat;
@@ -249,6 +253,10 @@
     }
 
     nav {
+      grid-template:
+      ". pages" auto
+      "contact contact" auto
+      / 50% 50%;
     }
 
     .conteneurListePages {
@@ -266,7 +274,172 @@
         }
 
         a {
-          font-size: 30px;
+          font-size: 35px;
+          line-height: 36px;
+          width: max-content;
+        }
+
+        .wrapPagination {
+          justify-content: flex-end;
+          span {
+            margin: 0;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+
+    address {
+      justify-content: center;
+      border-left: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 70vw;
+      .rue {
+        // display: none;
+        margin-left: 5%;
+      }
+    }
+
+    .liensContact {
+      justify-content: space-between;
+      margin-left: 5%;
+      margin-right: 5%;
+      a {
+      }
+    }
+
+    a {
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+        font-size: 12px;
+        line-height: 15px;
+      }
+      &:hover {
+      }
+    }
+  }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .barresMenu {
+    font-size: 3rem;
+  }
+
+  .cancel {
+    font-size: 3rem;
+  }
+
+  .conteneurMenu {
+    .fondNav {
+    }
+
+    nav {
+      grid-template:
+      ". pages" auto
+      "contact ." auto
+      / 50% 50%;
+    }
+
+    .conteneurListePages {
+      align-items: flex-end;
+    }
+
+    .listePages {
+      margin-right: 0;
+      padding-right: 15%;
+      margin-top: 5rem;
+      
+      li {
+        .wrapLien {
+          flex-direction: row-reverse;
+          overflow: visible;
+        }
+
+        a {
+          font-size: 45px;
+          line-height: 36px;
+          width: max-content;
+        }
+
+        .wrapPagination {
+          justify-content: flex-end;
+          span {
+            margin: 0;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+
+    address {
+      justify-content: space-around;
+      padding-left: 10%;
+     
+   
+    }
+
+    
+
+    a {
+      &:link,
+      &:visited,
+      &:hover,
+      &:active {
+        font-size: 15px;
+        line-height: 15px;
+      }
+      &:hover {
+      }
+    }
+  }
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
+  
+  .barresMenu {
+    font-size: 3rem;
+  }
+
+  .cancel {
+    font-size: 3rem;
+  }
+
+  .conteneurMenu {
+    font-size: 1rem;
+    .fondNav {
+    }
+
+    nav {
+      grid-template:
+      ". pages" auto
+      "contact ." auto
+      / 50% 50%;
+    }
+
+    .conteneurListePages {
+      align-items: flex-end;
+    }
+
+    .listePages {
+      margin-right: 0;
+      padding-right: 10%;
+      margin-top: 3rem;
+      
+      li {
+        margin: 1.4rem;
+        .wrapLien {
+          flex-direction: row-reverse;
+          overflow: visible;
+        }
+
+        a {
+          font-size: 45px;
           line-height: 36px;
           width: max-content;
         }
@@ -284,18 +457,21 @@
     address {
       justify-content: center;
       padding-left: 10%;
-      border-left: none;
+      font-size: 5rem;
+
+      height: 20vh;
+
       .rue {
-        display: none;
+        // display: none;
       }
     }
 
     .liensContact {
-      height: 100%;
-      padding: 0;
-      margin: 0;
-      flex-direction: column;
-      justify-content: space-around;
+      // height: 100%;
+      // padding: 0;
+      // margin: 0;
+      // flex-direction: column;
+      // justify-content: space-around;
       a {
       }
     }
@@ -305,11 +481,12 @@
       &:visited,
       &:hover,
       &:active {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 15px;
       }
       &:hover {
       }
     }
   }
+
 }
