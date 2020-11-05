@@ -31,7 +31,7 @@
 /*==================MOBILE==================*/
 @media (min-width: 320px) and (max-width: 424px) {
   .enTete {
-    padding: 2%;
+    padding: 2% 6%;
     height: 75px;
 
     span {
@@ -57,17 +57,14 @@
     height: 75px;
 
     span {
-      height: 45px;
-      flex-direction: column;
-      overflow: visible;
-      margin-top: 5%;
+      // overflow: visible;
     }
 
     .titre {
-      margin-top: 5%;
       font-size: 13px;
       line-height: 16px;
-      max-width: 75%;
+      margin: auto 0;
+      margin-left: 1%;
     }
   }
 }
