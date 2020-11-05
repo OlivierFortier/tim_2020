@@ -1,0 +1,59 @@
+.conteneurPage {
+  height: auto;
+  margin: 0 15%;
+
+  section {
+    display: flex;
+
+    .imgProf {
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+
+      width: 50%;
+
+      .conteneurTitres {
+
+        margin-left: 10%;
+
+        h1 {
+          font-family: Neue Montreal;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 64px;
+          line-height: 77px;
+          margin-bottom: 0;
+        }
+        h5 {
+          font-family: Neue Montreal;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 29px;
+
+          margin: 0;
+        }
+      }
+
+      .contenuTexte {
+        font-family: Neue Montreal;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 43px;
+
+        width: 120%;
+        margin-top: 15%;
+        position: relative;
+
+        p {
+          position: absolute;
+          left: -10%;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
