@@ -165,24 +165,17 @@
   }
 
   .conteneurMenu {
-    .fondNav {
-    }
-
     nav {
       grid-template:
-      ". pages" auto
-      "contact pages" auto
-      / 50% 50%;
-    }
-
-    .conteneurListePages {
-      // align-items: flex-end;
+        ". pages" auto
+        "contact pages" auto
+        / 50% 50%;
     }
 
     .listePages {
       margin-right: 0;
       padding-right: 10%;
-      
+
       li {
         .wrapLien {
           flex-direction: row-reverse;
@@ -220,8 +213,6 @@
       margin: 0;
       flex-direction: column;
       justify-content: space-around;
-      a {
-      }
     }
 
     a {
@@ -231,8 +222,6 @@
       &:active {
         font-size: 12px;
         line-height: 15px;
-      }
-      &:hover {
       }
     }
   }
@@ -249,14 +238,11 @@
   }
 
   .conteneurMenu {
-    .fondNav {
-    }
-
     nav {
       grid-template:
-      ". pages" auto
-      "contact contact" auto
-      / 50% 50%;
+        ". pages" auto
+        "contact contact" auto
+        / 50% 50%;
     }
 
     .conteneurListePages {
@@ -266,7 +252,7 @@
     .listePages {
       margin-right: 0;
       padding-right: 10%;
-      
+
       li {
         .wrapLien {
           flex-direction: row-reverse;
@@ -297,7 +283,6 @@
       width: 100%;
       max-width: 70vw;
       .rue {
-        // display: none;
         margin-left: 5%;
       }
     }
@@ -306,8 +291,6 @@
       justify-content: space-between;
       margin-left: 5%;
       margin-right: 5%;
-      a {
-      }
     }
 
     a {
@@ -317,8 +300,6 @@
       &:active {
         font-size: 12px;
         line-height: 15px;
-      }
-      &:hover {
       }
     }
   }
@@ -335,14 +316,11 @@
   }
 
   .conteneurMenu {
-    .fondNav {
-    }
-
     nav {
       grid-template:
-      ". pages" auto
-      "contact ." auto
-      / 50% 50%;
+        ". pages" auto
+        "contact ." auto
+        / 50% 50%;
     }
 
     .conteneurListePages {
@@ -353,7 +331,7 @@
       margin-right: 0;
       padding-right: 15%;
       margin-top: 5rem;
-      
+
       li {
         .wrapLien {
           flex-direction: row-reverse;
@@ -379,11 +357,7 @@
     address {
       justify-content: space-around;
       padding-left: 10%;
-     
-   
     }
-
-    
 
     a {
       &:link,
@@ -393,15 +367,12 @@
         font-size: 15px;
         line-height: 15px;
       }
-      &:hover {
-      }
     }
   }
 }
 
 /*==================LAPTOP==========================*/
 @media (min-width: 1025px) and (max-width: 1439px) {
-  
   .barresMenu {
     font-size: 3rem;
   }
@@ -412,14 +383,12 @@
 
   .conteneurMenu {
     font-size: 1rem;
-    .fondNav {
-    }
 
     nav {
       grid-template:
-      ". pages" auto
-      "contact ." auto
-      / 50% 50%;
+        ". pages" auto
+        "contact ." auto
+        / 50% 50%;
     }
 
     .conteneurListePages {
@@ -430,7 +399,7 @@
       margin-right: 0;
       padding-right: 10%;
       margin-top: 3rem;
-      
+
       li {
         margin: 1.4rem;
         .wrapLien {
@@ -460,20 +429,6 @@
       font-size: 5rem;
 
       height: 20vh;
-
-      .rue {
-        // display: none;
-      }
-    }
-
-    .liensContact {
-      // height: 100%;
-      // padding: 0;
-      // margin: 0;
-      // flex-direction: column;
-      // justify-content: space-around;
-      a {
-      }
     }
 
     a {
@@ -484,9 +439,6 @@
         font-size: 15px;
         line-height: 15px;
       }
-      &:hover {
-      }
     }
   }
-
 }
