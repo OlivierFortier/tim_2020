@@ -1,4 +1,4 @@
-import styles from "./perspectives.module.scss";
+import styles from "./pageUnFutur.module.scss";
 import Image from "next/image";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
@@ -14,18 +14,8 @@ export default function unFutur(leFutur) {
         <article>
           {/* si il y a un titre, afficher */}
           <h2>{leFutur.enTte}</h2>
-
           
-          {/* <p className={styles.contenu}>
-            Nos étudiants peuvent devenir : Spécialiste en expérience
-            utilisateur (UX) Intégrateur multimédia Concepteur de niveau de jeux
-            vidéos Développeur d’applications mobiles Animateur 2D/3D Chargé de
-            projets numériques Designer graphique et infographiste Monteur vidéo
-            Développeur Front-end Programmeur de jeux videos Artiste 3D
-          </p> */}
-          <Markdown className={styles.contenu}>
-            {leFutur.contenu}
-          </Markdown>
+          <Markdown className={styles.contenu}>{leFutur.contenu}</Markdown>
         </article>
       </section>
     </main>
