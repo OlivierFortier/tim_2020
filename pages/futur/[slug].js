@@ -7,18 +7,22 @@ import { motion } from "framer-motion";
 
 export default function unFutur(leFutur) {
   return (
-    <main className={styles.conteneurPage}>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.conteneurPage}
+    >
       <h1>{leFutur.titre}</h1>
       <section className={styles.conteneurSection}>
         <Image src={leFutur.image.url} width={625} height={464} />
         <article>
-          {/* si il y a un titre, afficher */}
           <h2>{leFutur.enTte}</h2>
-          
+
           <Markdown className={styles.contenu}>{leFutur.contenu}</Markdown>
         </article>
       </section>
-    </main>
+    </motion.main>
   );
 }
 
