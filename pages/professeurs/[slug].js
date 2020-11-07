@@ -1,4 +1,4 @@
-import styles from "./unprof.module.scss";
+import styles from "./pageUnProf.module.scss";
 import Image from "next/image";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
@@ -16,16 +16,12 @@ export default function PageUnProfesseur(leProf) {
         />
         <article>
           <span className={styles.conteneurTitres}>
-            <h1>Denis Pellerin</h1>
-            <h5>Professeur de design et de vidéo</h5>
+            <h1>{leProf.nom}</h1>
+            <h5>{leProf.specialisation}</h5>
           </span>
 
-          {/* markdown plus tard */}
           <div className={styles.contenuTexte}>
-            <Markdown>
-              {leProf.description}
-            </Markdown>
-          
+            <Markdown>{leProf.description}</Markdown>
           </div>
         </article>
       </section>
@@ -39,6 +35,7 @@ export async function getStaticProps({ params }) {
       professeurCollection(where: { slug: $slug }) {
         items {
           nom
+          specialisation
           description
           slug
           photo {
