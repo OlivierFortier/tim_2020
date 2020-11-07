@@ -1,11 +1,11 @@
-import styles from "./pageUnProf.module.scss";
+import styles from "./pageUnFutur.module.scss";
 import Image from "next/image";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Markdown from "markdown-to-jsx";
 import { motion } from "framer-motion";
 
-export default function PageUnProfesseur(leProf) {
+export default function unFutur(leFutur) {
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -13,22 +13,13 @@ export default function PageUnProfesseur(leProf) {
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
     >
-      <section>
-        <Image
-          className={styles.imgProf}
-          src={leProf?.photo?.url ? leProf.photo.url : "/images/cam.jpg"}
-          width={453}
-          height={620}
-        />
+      <h1>{leFutur.titre}</h1>
+      <section className={styles.conteneurSection}>
+        <Image src={leFutur.image.url} width={625} height={464} />
         <article>
-          <span className={styles.conteneurTitres}>
-            <h1>{leProf.nom}</h1>
-            <h5>{leProf.specialisation}</h5>
-          </span>
+          <h2>{leFutur.enTte}</h2>
 
-          <div className={styles.contenuTexte}>
-            <Markdown>{leProf.description}</Markdown>
-          </div>
+          <Markdown className={styles.contenu}>{leFutur.contenu}</Markdown>
         </article>
       </section>
     </motion.main>
@@ -37,14 +28,13 @@ export default function PageUnProfesseur(leProf) {
 
 export async function getStaticProps({ params }) {
   const requeteGql = gql`
-    query Professeurs($slug: String!) {
-      professeurCollection(where: { slug: $slug }) {
+    query Futurs($slug: String!) {
+      futurCollection(where: { slug: $slug }) {
         items {
-          nom
-          specialisation
-          description
-          slug
-          photo {
+          titre
+          enTte
+          contenu
+          image {
             url
           }
         }
@@ -56,15 +46,15 @@ export async function getStaticProps({ params }) {
 
   const json = await faireRequeteGql(requeteGql, lesVariables);
 
-  const leProf = json.professeurCollection.items[0];
+  const leFutur = json.futurCollection.items[0];
 
-  return { props: leProf, revalidate: 1 };
+  return { props: leFutur, revalidate: 1 };
 }
 
 export async function getStaticPaths() {
   const requeteGqlSlug = gql`
     {
-      professeurCollection {
+      futurCollection {
         items {
           slug
         }
@@ -74,15 +64,14 @@ export async function getStaticPaths() {
 
   const donnees = await faireRequeteGql(requeteGqlSlug);
 
-  const listeProfs = donnees.professeurCollection.items;
+  const listeFuturs = donnees.futurCollection.items;
 
-  const slugs = listeProfs.map((prof) => prof.slug);
+  const slugs = listeFuturs.map((futur) => futur.slug);
 
   const paths = slugs.map((slug) => ({ params: { slug } }));
 
   return {
     paths,
-
     fallback: false,
   };
 }
