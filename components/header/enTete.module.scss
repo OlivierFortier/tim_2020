@@ -33,6 +33,7 @@
   .enTete {
     padding: 2% 6%;
     height: 75px;
+    margin-bottom: 5%;
 
     span {
       height: 45px;
@@ -55,6 +56,7 @@
   .enTete {
     padding: 2%;
     height: 75px;
+    margin-bottom: 0;
 
     span {
       // overflow: visible;
@@ -66,5 +68,11 @@
       margin: auto 0;
       margin-left: 1%;
     }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .enTete {
+    margin-bottom: 0;
   }
 }
