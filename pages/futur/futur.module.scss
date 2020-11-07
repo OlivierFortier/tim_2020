@@ -6,7 +6,6 @@
     "uni . stage"
     " . emploi ." / 33% 33% 33%;
   height: 70vh;
-  //   width: 100%;
   padding: 0 5%;
 
   font-family: Neue Montreal;
@@ -79,4 +78,117 @@
 
 .sectionEmploi {
   grid-area: emploi;
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px) {
+  .conteneurPage {
+    grid-template:
+      "uni"
+      "stage"
+      "emploi" / 100%;
+  }
+
+  .sectionUni,
+  .sectionStage,
+  .sectionEmploi {
+    h1 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #e9e9e9;
+    }
+  }
+
+  .fondTexte {
+    line-height: 50px;
+  }
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px) {
+  .conteneurPage {
+    grid-template:
+      "uni"
+      "stage"
+      "emploi" / 100%;
+  }
+
+  .sectionUni,
+  .sectionStage,
+  .sectionEmploi {
+    h1 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: #e9e9e9;
+    }
+  }
+
+  .fondTexte {
+    line-height: 80px;
+  }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .conteneurPage {
+    grid-template:
+      "uni"
+      "stage"
+      "emploi" / 100%;
+  }
+
+  .sectionUni,
+  .sectionStage,
+  .sectionEmploi {
+    h1 {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 30px;
+      color: #e9e9e9;
+    }
+  }
+
+  .fondTexte {
+    line-height: 100px;
+  }
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .sectionUni,
+  .sectionStage,
+  .sectionEmploi {
+    h1 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 30px;
+      color: #e9e9e9;
+    }
+  }
+
+  .fondTexte {
+    line-height: 120px;
+  }
 }
