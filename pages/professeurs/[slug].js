@@ -58,8 +58,6 @@ export async function getStaticProps({ params }) {
 
   const leProf = json.professeurCollection.items[0];
 
-  console.log(leProf);
-
   return { props: leProf, revalidate: 1 };
 }
 
