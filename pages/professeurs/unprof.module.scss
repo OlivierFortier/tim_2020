@@ -1,9 +1,10 @@
 .conteneurPage {
-  height: auto;
+  height: 70vh;
   margin: 0 15%;
 
   section {
     display: flex;
+    height: inherit;
 
     .imgProf {
     }
@@ -44,15 +45,26 @@
         font-size: 36px;
         line-height: 43px;
 
-        width: 120%;
-        margin-top: 15%;
-        position: relative;
+        height: 55%;
 
-        p {
-          position: absolute;
-          left: -10%;
-          margin: 0;
+        width: 120%;
+        margin-top: 10%;
+        z-index: 3;
+
+          margin-left: -10%;
+
+          overflow-y: scroll;
+
+        div > * {
+          
+          
         }
+
+        // p {
+        //   position: absolute;
+        //   left: -10%;
+        //   margin: 0;
+        // }
       }
     }
   }
