@@ -3,14 +3,20 @@ import Image from "next/image";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Markdown from "markdown-to-jsx";
+import { motion } from "framer-motion";
 
 export default function PageUnProfesseur(leProf) {
   return (
-    <main className={styles.conteneurPage}>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.conteneurPage}
+    >
       <section>
         <Image
           className={styles.imgProf}
-          src={leProf.photo.url}
+          src={leProf?.photo?.url ? leProf.photo.url : "/images/cam.jpg"}
           width={453}
           height={620}
         />
@@ -25,7 +31,7 @@ export default function PageUnProfesseur(leProf) {
           </div>
         </article>
       </section>
-    </main>
+    </motion.main>
   );
 }
 
