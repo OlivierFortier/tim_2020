@@ -15,7 +15,14 @@ export default function unFutur(leFutur) {
     >
       <h1>{leFutur.titre}</h1>
       <section className={styles.conteneurSection}>
-        <Image className={styles.image} layout="responsive" src={leFutur.image.url} width={625} height={464} />
+        <Image
+          className={styles.image}
+          layout="fill"
+          src={leFutur.image.url}
+          unsized="true"
+          // width={625}
+          // height={464}
+        />
         <article>
           {leFutur.enTte && <h2>{leFutur.enTte}</h2>}
 
