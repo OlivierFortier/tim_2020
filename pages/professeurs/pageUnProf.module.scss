@@ -7,6 +7,38 @@
     height: inherit;
 
     .imgProf {
+      // height: 85% !important;
+    }
+
+    .unProf {
+      background-color: var(--base);
+      height: max-content;
+      padding: var(--spacing);
+      position: relative;
+      
+
+      img {
+        filter: grayscale(100%) contrast(1) blur(var(--blur));
+        mix-blend-mode: var(--bg-blend);
+        object-fit: fill;
+        opacity: var(--opacity);
+        position: relative;
+      }
+
+      ::before {
+        background-color: var(--foreground);
+        bottom: 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        mix-blend-mode: var(--fg-blend);
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        filter: opacity(0.5) contrast(0.5) saturate(3) brightness(1);
+      }
     }
 
     article {
@@ -16,7 +48,6 @@
       width: 50%;
 
       .conteneurTitres {
-
         margin-left: 10%;
 
         h1 {
@@ -51,13 +82,11 @@
         margin-top: 10%;
         z-index: 3;
 
-          margin-left: -10%;
+        margin-left: -10%;
 
-          overflow-y: scroll;
+        overflow-y: scroll;
 
         div > * {
-          
-          
         }
 
         // p {

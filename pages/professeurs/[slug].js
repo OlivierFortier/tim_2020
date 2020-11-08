@@ -14,12 +14,15 @@ export default function PageUnProfesseur(leProf) {
       className={styles.conteneurPage}
     >
       <section>
-        <Image
-          className={styles.imgProf}
-          src={leProf?.photo?.url ? leProf.photo.url : "/images/cam.jpg"}
-          width={453}
-          height={620}
-        />
+        <div className={styles.unProf}>
+          <Image
+            className={styles.imgProf}
+            src={leProf?.photo?.url ? leProf.photo.url : "/images/cam.jpg"}
+            layout="responsive"
+            width={453}
+            height={620}
+          />
+        </div>
         <article>
           <span className={styles.conteneurTitres}>
             <h1>{leProf.nom}</h1>
