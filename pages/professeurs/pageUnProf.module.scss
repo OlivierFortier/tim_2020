@@ -7,12 +7,12 @@
     height: inherit;
 
     .imgProf {
-      height: auto;
+      // height: 85% !important;
     }
 
     .unProf {
       background-color: var(--base);
-      height: 100%;
+      height: max-content;
       padding: var(--spacing);
       position: relative;
       
