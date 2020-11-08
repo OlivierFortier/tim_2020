@@ -15,7 +15,7 @@
   img {
     filter: grayscale(100%) contrast(1) blur(var(--blur));
     mix-blend-mode: var(--bg-blend);
-    object-fit: fill;
+    object-fit: cover;
     opacity: var(--opacity);
     position: relative;
 

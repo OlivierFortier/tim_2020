@@ -18,9 +18,10 @@ export default function PageUnProfesseur(leProf) {
           <Image
             className={styles.imgProf}
             src={leProf?.photo?.url ? leProf.photo.url : "/images/cam.jpg"}
-            layout="responsive"
-            width={453}
-            height={620}
+            layout="fill"
+            unsized
+            // width={453}
+            // height={620}
           />
         </div>
         <article>
