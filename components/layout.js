@@ -117,7 +117,7 @@ export default function Layout({ children }) {
             id="conteneur-application"
             className={styles.conteneurApplication}
             // onWheel={(e) => roulette(e)}
-            onKeyDown={(e) => clavier(e)}
+            // onKeyDown={(e) => clavier(e)}
             tabIndex={0}
           >
             {children}
