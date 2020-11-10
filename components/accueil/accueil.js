@@ -2,8 +2,14 @@ import Link from "next/link";
 import styles from "./accueil.module.scss";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import {useEffect} from "react"
 
 export default function Accueil() {
+
+  useEffect(() => {
+    document.querySelector("#header-site").style.display = "flex";
+  }, []);
+
   return (
     <>
       <motion.div
