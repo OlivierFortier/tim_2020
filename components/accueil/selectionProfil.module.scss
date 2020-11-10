@@ -131,6 +131,28 @@
         }
       }
     }
+
+    .art {
+      h2 {
+        animation: changerCouleurArt 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .code {
+      h2 {
+        animation: changerCouleurCode 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .parent {
+      h2 {
+        animation: changerCouleurParent 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
     .rapide {
       display: none;
     }
@@ -186,6 +208,28 @@
         }
       }
     }
+
+    .art {
+      h2 {
+        animation: changerCouleurArt 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .code {
+      h2 {
+        animation: changerCouleurCode 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .parent {
+      h2 {
+        animation: changerCouleurParent 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
     .rapide {
       display: none;
     }
