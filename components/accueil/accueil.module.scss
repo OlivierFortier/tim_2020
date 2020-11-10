@@ -57,6 +57,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  h2 {
+    display: none;
+  }
 
   span {
     position: relative;
@@ -101,32 +104,41 @@
 
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px) {
-
-  
+  .conteneurImage {
+    display: none;
+  }
 
   .imageHero {
     display: none;
   }
 
   .conteneurAccueil {
+    padding: 0;
+    width: 80%;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
   }
 
   .accueilMain {
+    height: 50vh;
+    justify-content: center;
+    border-left: 3px solid white;
+
     h1 {
-      a {
-        &:link,
-        &:visited,
-        &:hover,
-        &:active {
-          color: green;
-        }
+      padding-left: 10%;
+      width: 95%;
+       br {
+        
+          display: none;
+        
       }
     }
   }
 
   .titreIntro {
-    strong {
-    }
+    font-size: 36px;
+    line-height: 43px;
   }
 
   .nomCollege {
@@ -134,26 +146,153 @@
   }
 
   .accueilAside {
+    height: auto;
+    h2 {
+      display: block;
+      margin-top: 20%;
+      font-size: 12px;
+      line-height: 15px;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+    }
     span {
       display: none;
-      .cercleInterractif {
-      }
     }
   }
 
   .conteneurBouton {
-  }
-
-  .boutonExplorer {
+    display: none;
   }
 }
 
 /*==================TABLETTE==================*/
 @media (min-width: 425px) and (max-width: 767px) {
+  .conteneurImage {
+    display: none;
+  }
+
+  .imageHero {
+    display: none;
+  }
+
+  .conteneurAccueil {
+    padding: 0;
+    width: 80%;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+  }
+
+  .accueilMain {
+    height: 50vh;
+    justify-content: center;
+    border-left: 3px solid white;
+
+    h1 {
+      padding-left: 10%;
+      width: 95%;
+       br {
+        
+          display: none;
+        
+      }
+    }
+  }
+
+  .titreIntro {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  .nomCollege {
+    display: none;
+  }
+
+  .accueilAside {
+    height: auto;
+    h2 {
+      display: block;
+      margin-top: 20%;
+      font-size: 12px;
+      line-height: 15px;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+    }
+    span {
+      display: none;
+    }
+  }
+
+  .conteneurBouton {
+    display: none;
+  }
 }
 
 /**================GROSSE TABLETTE==================*/
 @media (min-width: 768px) and (max-width: 1024px) {
+  .conteneurImage {
+    display: none;
+  }
+
+  .imageHero {
+    display: none;
+  }
+
+  .conteneurAccueil {
+    padding: 0;
+    width: 80%;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+  }
+
+  .accueilMain {
+    height: 50vh;
+    justify-content: center;
+    border-left: 3px solid white;
+
+    h1 {
+      padding-left: 10%;
+      width: 95%;
+       br {
+        
+          // display: none;
+        
+      }
+    }
+  }
+
+  .titreIntro {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .nomCollege {
+    // display: none;
+    margin-top: 20%;
+  }
+
+  .accueilAside {
+    height: auto;
+    h2 {
+      display: block;
+      margin-top: 20%;
+      font-size: 12px;
+      line-height: 15px;
+      font-style: normal;
+      font-weight: normal;
+      text-align: center;
+    }
+    span {
+      display: none;
+    }
+  }
+
+  .conteneurBouton {
+    display: none;
+  }
 }
 
 /*==================LAPTOP==========================*/
