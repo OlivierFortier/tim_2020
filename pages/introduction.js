@@ -26,7 +26,7 @@ export default function Introduction() {
         Envie d'étudier le <b>multimédia ?</b>
       </h1>
       <div className={styles.conteneurCube}>
-        <Canvas style={{ width: "100%", height: "100%", overflow: "none" }}>
+        <Canvas className={styles.canvas3D}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
           <CubeTransparent position={[0, 0, 0]} scale={[3, 3, 3]} />
