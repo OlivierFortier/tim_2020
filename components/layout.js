@@ -13,6 +13,11 @@ export default function Layout({ children }) {
   //grace au thème, on peut changer le css dynamiquement avec javascript selon le thème choisi
   const theme = useTheme();
   const listeThemes = useListeThemes();
+  
+  useEffect(()=>{
+    if(router.pathname != "/")  document.documentElement.style.setProperty("--bgAcceuil", 'url("")')
+  },[router.pathname])
+
 
   const [themeStyles, setThemeStyles] = useState({ couleurBg: "#110c12" });
 
@@ -102,6 +107,7 @@ export default function Layout({ children }) {
   return (
     <>
       <div
+      id="racine"
         className={styles.racine}
         style={{ backgroundColor: themeStyles.couleurBg }}
       >

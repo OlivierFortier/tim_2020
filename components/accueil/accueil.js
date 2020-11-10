@@ -8,6 +8,7 @@ export default function Accueil() {
 
   useEffect(() => {
     document.querySelector("#header-site").style.display = "flex";
+    document.documentElement.style.setProperty("--bgAcceuil", 'url("/images/photo1.jpg")')
   }, []);
 
   return (
@@ -56,6 +57,7 @@ export default function Accueil() {
             ></motion.div>
           </span>
           <Image
+          className={styles.imageHero}
             alt="image du theme"
             width={451}
             height={684}

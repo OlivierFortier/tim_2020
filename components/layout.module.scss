@@ -17,6 +17,7 @@
     position: fixed;
     z-index: 2;
   }
+  
 }
 
 .conteneurTout {
@@ -40,6 +41,48 @@
   z-index: 20;
 }
 
-// .conteneurApplication {
 
-// }
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px){
+
+  .racine:global(#racine) {
+    &::before {
+      content: "";
+    width: 300%;
+    height: 300%;
+    background-image: var(--bgAcceuil);
+    background-size: auto;
+    opacity: 0.125;
+    position: fixed;
+    z-index: 1;
+    }
+  }
+
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px){
+
+  .racine {
+    &::before {
+      content: "";
+    width: 300%;
+    height: 300%;
+    // background-image: url("/images/photo1.jpg");
+    background-size: auto;
+    opacity: 0.125;
+    position: fixed;
+    z-index: 1;
+    }
+  }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
+  
+}
