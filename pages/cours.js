@@ -97,7 +97,7 @@ export default function Cours({ listeCours }) {
         <TabList className={styles.leTabList}>
           <AnimateSharedLayout>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 1
+              <span className={styles.conteneurNomNbSession}><h4 className={styles.motSession}>Session</h4> <h4 className={styles.nbSession}>1</h4></span>
               <motion.div layout>
                 {tabActuel === 0 && (
                   <motion.div layoutId="fleche">
@@ -109,7 +109,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 2
+              <span className={styles.conteneurNomNbSession}><h4 className={styles.motSession}>Session</h4> <h4 className={styles.nbSession}>2</h4></span>
               <motion.div layout>
                 {tabActuel === 1 && (
                   <motion.div layoutId="fleche">
@@ -121,7 +121,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 3
+              <span className={styles.conteneurNomNbSession}><h4 className={styles.motSession}>Session</h4> <h4 className={styles.nbSession}>3</h4></span>
               <motion.div layout>
                 {tabActuel === 2 && (
                   <motion.div layoutId="fleche">
@@ -133,7 +133,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 4
+              <span className={styles.conteneurNomNbSession}><h4 className={styles.motSession}>Session</h4> <h4 className={styles.nbSession}>4</h4></span>
               <motion.div layout>
                 {tabActuel === 3 && (
                   <motion.div layoutId="fleche">
@@ -145,7 +145,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 5
+              <span className={styles.conteneurNomNbSession}><h4 className={styles.motSession}>Session</h4> <h4 className={styles.nbSession}>5</h4></span>
               <motion.div layout>
                 {tabActuel === 4 && (
                   <motion.div layoutId="fleche">
@@ -157,7 +157,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 6
+              <span className={styles.conteneurNomNbSession}><h4 className={styles.motSession}>Session</h4> <h4 className={styles.nbSession}>6</h4></span>
               <motion.div layout>
                 {tabActuel === 5 && (
                   <motion.div layoutId="fleche">
