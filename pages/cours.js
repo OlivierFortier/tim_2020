@@ -52,16 +52,21 @@ export default function Cours({ listeCours }) {
   const [tabActuel, setTabActuel] = useState(0);
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: "-100vw" }} className={styles.conteneurCours}>
-    <Head>
-      <title>TIM | Cours</title>
-      <meta charset="UTF-8"></meta>
-      <meta
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ x: "-100vw" }}
+      className={styles.conteneurCours}
+    >
+      <Head>
+        <title>TIM | Cours</title>
+        <meta charset="UTF-8"></meta>
+        <meta
           name="Description"
           content="Page des cours de la Technique d'Intégration Multimédia du collège Maisonneuve"
-      ></meta>
-      <link rel="canonical" href="https://tim-2020.vercel.app/cours"></link>
-    </Head>
+        ></meta>
+        <link rel="canonical" href="https://tim-2020.vercel.app/cours"></link>
+      </Head>
       <div className={styles.conteneurTitre}>
         <h1 className={styles.titreCours}>LA LISTE DES COURS</h1>
         <h2 className={styles.titreChoix}>
@@ -69,6 +74,7 @@ export default function Cours({ listeCours }) {
           <select
             onChange={(evenement) => filtrerCours(evenement)}
             className={styles.selecteur}
+            onClick={() => setCoursAffiche(null)}
           >
             <option value="">de tout</option>
             <option value="Jeux">les jeux</option>

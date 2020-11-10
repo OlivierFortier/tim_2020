@@ -1,16 +1,15 @@
 import styles from "./CarteProf.module.scss";
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 
 export default function CarteProf({ prof }) {
   return (
-    <Link href={`/professeurs/${prof.slug}`}
-   >
-      <div className={styles.unProf} >
+    <Link href={`/professeurs/${prof.slug}`}>
+      <div className={styles.unProf}>
         {prof?.photo?.url ? (
           <Image
-            width={266}
-            height={254}
+            width={250}
+            height={250}
             src={prof?.photo?.url}
             loading="lazy"
             className={styles.imgProf}
@@ -18,8 +17,8 @@ export default function CarteProf({ prof }) {
           />
         ) : (
           <Image
-            width={266}
-            height={254}
+            width={250}
+            height={250}
             src="/images/cam.jpg"
             loading="lazy"
             className={styles.imgProf}
