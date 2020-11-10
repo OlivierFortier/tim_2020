@@ -87,6 +87,7 @@
     position: relative;
     opacity: 0.4;
     .canvas3D {
+      top: -10vh;
       position: absolute !important;
       width: 80vw !important;
       height: 40vh !important;
@@ -94,9 +95,10 @@
   }
 
   .textePage {
-    width: auto;
+    width: 90%;
+    justify-self: center;
     font-size: 24px;
-    line-height: 29px;
+    line-height: 35px;
     text-align: center;
     padding-top: 10%;
   }
@@ -108,12 +110,90 @@
 
 /*==================TABLETTE==================*/
 @media (min-width: 425px) and (max-width: 767px) {
+  .conteneur {
+    grid-template:
+      "header" 20vh
+      "cube"
+      "texte" 100%
+      / auto;
+  }
+
+  .headerPage {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  .conteneurCube {
+    all: unset;
+    position: relative;
+    opacity: 0.4;
+    .canvas3D {
+      top: -10vh;
+      position: absolute !important;
+      width: 80vw !important;
+      height: 40vh !important;
+    }
+  }
+
+  .textePage {
+    width: 90%;
+    justify-self: center;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    padding-top: 10%;
+  }
+
+  .boutonCours {
+    display: none;
+  }
 }
 
 /**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .conteneur {
+    grid-template:
+      "header" 30vh
+      "cube"
+      "texte" 100%
+      / auto;
+  }
+
+  .headerPage {
+    // font-size: 24px;
+    // line-height: 29px;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .conteneurCube {
+    all: unset;
+    position: relative;
+    opacity: 0.4;
+    .canvas3D {
+      position: absolute !important;
+      top: -20vh;
+      width: 80vw !important;
+      height: 60vh !important;
+    }
+  }
+
+  .textePage {
+    width: 90%;
+    justify-self: center;
+    // font-size: 24px;
+    // line-height: 35px;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .boutonCours {
+    display: none;
+  }
 }
 
 /*==================LAPTOP==========================*/
-@media (min-width: 1025px) and (max-width: 1439px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
 }
