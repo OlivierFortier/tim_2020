@@ -52,16 +52,21 @@ export default function Cours({ listeCours }) {
   const [tabActuel, setTabActuel] = useState(0);
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ x: "-100vw" }} className={styles.conteneurCours}>
-    <Head>
-      <title>TIM | Cours</title>
-      <meta charset="UTF-8"></meta>
-      <meta
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ x: "-100vw" }}
+      className={styles.conteneurCours}
+    >
+      <Head>
+        <title>TIM | Cours</title>
+        <meta charset="UTF-8"></meta>
+        <meta
           name="Description"
           content="Page des cours de la Technique d'Intégration Multimédia du collège Maisonneuve"
-      ></meta>
-      <link rel="canonical" href="https://tim-2020.vercel.app/cours"></link>
-    </Head>
+        ></meta>
+        <link rel="canonical" href="https://tim-2020.vercel.app/cours"></link>
+      </Head>
       <div className={styles.conteneurTitre}>
         <h1 className={styles.titreCours}>LA LISTE DES COURS</h1>
         <h2 className={styles.titreChoix}>
@@ -69,6 +74,7 @@ export default function Cours({ listeCours }) {
           <select
             onChange={(evenement) => filtrerCours(evenement)}
             className={styles.selecteur}
+            onClick={() => setCoursAffiche(null)}
           >
             <option value="">de tout</option>
             <option value="Jeux">les jeux</option>
@@ -81,6 +87,7 @@ export default function Cours({ listeCours }) {
             <option value="Profession">la profession</option>
           </select>
         </h2>
+        <h3>Sessions</h3>
       </div>
       <Tabs
         onSelect={(index) => setTabActuel(index)}
@@ -91,10 +98,13 @@ export default function Cours({ listeCours }) {
         <TabList className={styles.leTabList}>
           <AnimateSharedLayout>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 1
+              <span className={styles.conteneurNomNbSession}>
+                <h4 className={styles.motSession}>Session</h4>
+                <h4 className={styles.nbSession}>1</h4>
+              </span>
               <motion.div layout>
                 {tabActuel === 0 && (
-                  <motion.div layoutId="fleche">
+                  <motion.div className={styles.conteneurFleche} layoutId="fleche">
                     <MdArrowDropDown
                       className={styles.flecheBas}
                     ></MdArrowDropDown>
@@ -103,10 +113,13 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 2
+              <span className={styles.conteneurNomNbSession}>
+                <h4 className={styles.motSession}>Session</h4>
+                <h4 className={styles.nbSession}>2</h4>
+              </span>
               <motion.div layout>
                 {tabActuel === 1 && (
-                  <motion.div layoutId="fleche">
+                  <motion.div className={styles.conteneurFleche} layoutId="fleche">
                     <MdArrowDropDown
                       className={styles.flecheBas}
                     ></MdArrowDropDown>
@@ -115,10 +128,13 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 3
+              <span className={styles.conteneurNomNbSession}>
+                <h4 className={styles.motSession}>Session</h4>
+                <h4 className={styles.nbSession}>3</h4>
+              </span>
               <motion.div layout>
                 {tabActuel === 2 && (
-                  <motion.div layoutId="fleche">
+                  <motion.div className={styles.conteneurFleche} layoutId="fleche">
                     <MdArrowDropDown
                       className={styles.flecheBas}
                     ></MdArrowDropDown>
@@ -127,10 +143,13 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 4
+              <span className={styles.conteneurNomNbSession}>
+                <h4 className={styles.motSession}>Session</h4>
+                <h4 className={styles.nbSession}>4</h4>
+              </span>
               <motion.div layout>
                 {tabActuel === 3 && (
-                  <motion.div layoutId="fleche">
+                  <motion.div className={styles.conteneurFleche} layoutId="fleche">
                     <MdArrowDropDown
                       className={styles.flecheBas}
                     ></MdArrowDropDown>
@@ -139,10 +158,13 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 5
+              <span className={styles.conteneurNomNbSession}>
+                <h4 className={styles.motSession}>Session</h4>
+                <h4 className={styles.nbSession}>5</h4>
+              </span>
               <motion.div layout>
                 {tabActuel === 4 && (
-                  <motion.div layoutId="fleche">
+                  <motion.div className={styles.conteneurFleche} layoutId="fleche">
                     <MdArrowDropDown
                       className={styles.flecheBas}
                     ></MdArrowDropDown>
@@ -151,10 +173,13 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              Session 6
+              <span className={styles.conteneurNomNbSession}>
+                <h4 className={styles.motSession}>Session</h4>
+                <h4 className={styles.nbSession}>6</h4>
+              </span>
               <motion.div layout>
                 {tabActuel === 5 && (
-                  <motion.div layoutId="fleche">
+                  <motion.div className={styles.conteneurFleche} layoutId="fleche">
                     <MdArrowDropDown
                       className={styles.flecheBas}
                     ></MdArrowDropDown>

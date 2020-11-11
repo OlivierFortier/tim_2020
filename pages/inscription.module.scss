@@ -28,3 +28,57 @@
     }
   }
 }
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px) {
+  .conteneurPage {
+    h1 {
+      font-style: normal;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    a {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px) {
+  .conteneurPage {
+    h1 {
+      font-style: normal;
+      font-size: 30px;
+      line-height: 29px;
+    }
+
+    a {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .conteneurPage {
+    h1 {
+      font-style: normal;
+      font-size: 45px;
+      line-height: 29px;
+    }
+
+    a {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,189 @@
+.conteneurPage {
+  height: auto;
+  padding: 0 8%;
+
+  h1 {
+    font-family: "NeueMontreal";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    margin-top: 0;
+  }
+}
+
+.conteneurSection {
+  display: flex;
+  justify-content: space-between;
+
+  .image {
+    width: 100%;
+    height: 60vh;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 7%;
+
+    h2 {
+      align-self: flex-start;
+      margin-top: 0;
+
+      font-family: "NeueMontreal";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 43px;
+    }
+
+    .contenu {
+      max-width: 500px;
+      align-self: flex-start;
+      margin: 0;
+
+      font-family: "NeueMontreal";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px) {
+  .conteneurPage {
+    h1 {
+      font-size: 28px;
+      line-height: 36px;
+      white-space: nowrap;
+      margin-left: -4%;
+    }
+  }
+
+  .conteneurSection {
+    flex-direction: column;
+
+    .image {
+      width: 100%;
+      height: 35vh;
+    }
+
+    article {
+      width: 100%;
+      height: 35vh;
+      overflow-y: scroll;
+      margin-left: 0;
+
+      h2 {
+        margin-top: 3%;
+      }
+      
+      .contenu {
+        max-width: none;
+        font-family: "NeueMontreal";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px) {
+  .conteneurPage {
+    h1 {
+      font-size: 28px;
+      line-height: 36px;
+      white-space: nowrap;
+      margin-left: -4%;
+      margin-top: 0;
+    }
+  }
+
+  .conteneurSection {
+    flex-direction: column;
+
+    .image {
+      width: 100%;
+      height: 35vh;
+    }
+
+    article {
+      width: 100%;
+      height: 35vh;
+      overflow-y: scroll;
+      margin-left: 0;
+      h2 {
+        margin-top: 3%;
+      }
+      .contenu {
+        max-width: none;
+        font-family: "NeueMontreal";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .conteneurPage {
+    h1 {
+      font-size: 28px;
+      line-height: 36px;
+      white-space: nowrap;
+      margin-left: -4%;
+      
+    }
+  }
+  
+
+  .conteneurSection {
+    flex-direction: column;
+
+    //possible solution pour l'image en tablette
+    // > div > :first-child {
+    //   height: 30vh !important;
+    //   width: 70vw !important;
+    //   padding-bottom: 0 !important;
+    // }
+
+    .image {
+      padding: 0 12%;
+      width: 75%;
+      height: 35vh;
+    }
+
+    article {
+      width: 100%;
+      height: 35vh;
+      overflow-y: scroll;
+      margin-left: 0;
+
+      h2 {
+        margin-top: 3%;
+      }
+      .contenu {
+        max-width: none;
+        font-family: "NeueMontreal";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
+}

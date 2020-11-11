@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import styles from "./intro.module.scss";
 import { motion } from "framer-motion";
-import Image from "next/image"
+import Image from "next/image";
 
 export default function Intro({ changerEtape }) {
+  useEffect(() => {
+    document.querySelector("#header-site").style.display = "none";
+  }, []);
+
   //variables pour le faux chargement
   const [chargement, setChargement] = useState(0);
 
@@ -20,7 +24,7 @@ export default function Intro({ changerEtape }) {
   return (
     <>
       <motion.div
-      layout
+        layout
         initial={{
           x: 1000,
           opacity: 0,
@@ -36,7 +40,12 @@ export default function Intro({ changerEtape }) {
         className={styles.introConteneur}
       >
         <h1>TECHNIQUES D'INTÉGRATION MULTIMÉDIA</h1>
-        <Image width={403} height={198} src="/images/intro-logo-tim.svg" className={styles.logo}/>
+        <Image
+          width={403}
+          height={198}
+          src="/images/intro-logo-tim.svg"
+          className={styles.logo}
+        />
         <h2 className={styles.texteIntro}>
           Votre expérience unique commence dès maintenant...
         </h2>

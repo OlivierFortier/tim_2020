@@ -43,6 +43,7 @@ export async function getStaticProps() {
             width
             height
           }
+          slug
         }
       }
     }

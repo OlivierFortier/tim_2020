@@ -81,3 +81,294 @@
     cursor: pointer;
   }
 }
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px) {
+  .conteneurProfils {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 80vh;
+
+    h1 {
+      padding-left: 0;
+      align-self: center;
+      font-size: 18px;
+      line-height: 22px;
+      margin-top: 10%;
+    }
+
+    .grilleProfils {
+      grid-template:
+        "art" 1fr
+        "code" 1fr
+        "parent" 1fr
+        / 100%;
+
+      width: 100%;
+      height: 100%;
+
+      .art,
+      .code,
+      .parent {
+        width: 100%;
+        height: auto;
+        border: none;
+        top: auto;
+        right: auto;
+        left: auto;
+        bottom: auto;
+        // margin: 25% 0;
+        h2 {
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          text-decoration-line: underline;
+          width: 100%;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .art {
+      h2 {
+        animation: changerCouleurArt 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .code {
+      h2 {
+        animation: changerCouleurCode 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .parent {
+      h2 {
+        animation: changerCouleurParent 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .rapide {
+      display: none;
+    }
+  }
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px) {
+  .conteneurProfils {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 80vh;
+
+    h1 {
+      padding-left: 0;
+      align-self: center;
+      font-size: 18px;
+      line-height: 22px;
+      margin-top: 10%;
+    }
+
+    .grilleProfils {
+      grid-template:
+        "art" 1fr
+        "code" 1fr
+        "parent" 1fr
+        / 100%;
+
+      width: 100%;
+      height: 100%;
+
+      .art,
+      .code,
+      .parent {
+        width: 100%;
+        height: auto;
+        border: none;
+        top: auto;
+        right: auto;
+        left: auto;
+        bottom: auto;
+        // margin: 25% 0;
+        h2 {
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          text-decoration-line: underline;
+          width: 100%;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .art {
+      h2 {
+        animation: changerCouleurArt 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .code {
+      h2 {
+        animation: changerCouleurCode 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .parent {
+      h2 {
+        animation: changerCouleurParent 4s infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    .rapide {
+      display: none;
+    }
+  }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .conteneurProfils {
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 80vh;
+
+    h1 {
+      align-self: center;
+      font-size: 35px;
+      line-height: 22px;
+      margin-top: 10%;
+      padding-left: 0;
+    }
+
+    .grilleProfils {
+      grid-template:
+        "art" 1fr
+        "code" 1fr
+        "parent" 1fr
+        / 100%;
+
+      width: 100%;
+      height: 100%;
+
+      .art,
+      .code,
+      .parent {
+        width: 100%;
+        height: auto;
+        border: none;
+        border-radius: 0;
+        top: auto;
+        right: auto;
+        left: auto;
+        bottom: auto;
+        // margin: 25% 0;
+        h2 {
+          font-size: 30px;
+          line-height: 22px;
+          text-align: center;
+          text-decoration-line: underline;
+          width: 100%;
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .art {
+        h2 {
+          animation: changerCouleurArt 4s infinite;
+          animation-direction: alternate;
+        }
+      }
+
+      .code {
+        h2 {
+          animation: changerCouleurCode 4s infinite;
+          animation-direction: alternate;
+        }
+      }
+
+      .parent {
+        h2 {
+          animation: changerCouleurParent 4s infinite;
+          animation-direction: alternate;
+        }
+      }
+    }
+    .rapide {
+      display: none;
+    }
+  }
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
+}
+
+// ANIMATIONS
+
+@keyframes changerCouleurArt {
+  0% {
+    color: red;
+  }
+  25% {
+    color: rgb(218, 25, 83);
+  }
+  50% {
+    color: rgb(173, 18, 194);
+  }
+  75% {
+    color: rgb(113, 25, 165);
+  }
+  100% {
+    color: rgb(77, 23, 202);
+  }
+}
+
+@keyframes changerCouleurCode {
+  0% {
+    color: rgb(48, 109, 42);
+  }
+  25% {
+    color: rgb(78, 163, 39);
+  }
+  50% {
+    color: rgb(43, 146, 60);
+  }
+  75% {
+    color: rgb(141, 192, 24);
+  }
+  100% {
+    color: rgb(40, 73, 51);
+  }
+}
+
+@keyframes changerCouleurParent {
+  0% {
+    color: rgb(195, 172, 172);
+  }
+  25% {
+    color: rgb(177, 118, 136);
+  }
+  50% {
+    color: rgb(194, 135, 101);
+  }
+  75% {
+    color: rgb(134, 95, 85);
+  }
+  100% {
+    color: rgb(192, 160, 141);
+  }
+}

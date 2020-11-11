@@ -2,8 +2,15 @@ import { useCookies } from "react-cookie";
 import { useListeThemes, useThemeMiseAJour } from "../../hooks/contexteTheme";
 import styles from "./selectionProfil.module.scss";
 import { motion } from "framer-motion";
+import {useEffect} from "react"
 
 export default function SelectionProfil({ changerEtape }) {
+
+  useEffect(() => {
+    document.querySelector("#header-site").style.display = "flex";
+  }, []);
+
+
   //aller chercher les valeurs du thème et pour mettre à jour le thème dans les contextes
   const changerTheme = useThemeMiseAJour();
   const listeThemes = useListeThemes();

@@ -1,26 +1,8 @@
-/*=================== styles globaux ===================*/
-:root {
-  --base:              #dc8cb9;
-  --bg-blend:          multiply;
-  --blur:              0px;
-  --fg-blend:          lighten;
-  --foreground:        #24587f;
-  --opacity:           1;
-  --spacing:           0px;
-  --bgAcceuil: url("");
-}
 
-body {
-  font-family: Montserrat;
-  color: $couleur-texte;
-  background-color: $couleur-background;
-}
-
+// référence pour les médias query
 
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px){
-
-
 
 }
 

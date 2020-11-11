@@ -1,29 +1,83 @@
 .cours {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    border-bottom: 2px solid white;
-    height: 100%;
-    padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 2px solid white;
+  height: 100%;
+  padding: 0 2rem;
 
-    font-size: 1rem !important;
+  font-size: 1rem !important;
+}
 
+.titreCours {
+  font-size: 1.5rem;
+  margin-left: 2%;
+  margin: 0 0;
+}
+
+.listeTypes {
+  display: flex;
+  flex-direction: row-reverse;
+
+  li {
+    margin-right: 10%;
+  }
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px) {
+  .titreCours {
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
   }
 
-.titreCours{
-    font-size: 1.5rem;
-    margin-left: 2%;
-    margin: 0 0;
+  .iconeCours {
+    font-size: 20px;
   }
 
-  .listeTypes {
-    display: flex;
-    flex-direction: row-reverse;
-
-    li {
-      margin-right: 10%;
-    }
-
+  .choixEntre {
+    display: none;
   }
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px) {
+  .titreCours {
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+  }
+
+  .iconeCours {
+    font-size: 20px;
+  }
+
+  .choixEntre {
+    display: none;
+  }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .titreCours {
+    font-size: 20px;
+    line-height: 17px;
+    width: 100%;
+  }
+
+  .iconeCours {
+    font-size: 20px;
+  }
+
+  .choixEntre {
+    display: none;
+  }
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
+}
