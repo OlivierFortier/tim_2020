@@ -129,7 +129,7 @@
     h3 {
       display: flex;
       margin: 0;
-     
+
       margin: auto;
       margin-top: 5%;
       margin-bottom: 2%;
@@ -151,7 +151,7 @@
   }
 
   .conteneurTabPanels {
-    height: 45vh;
+    height: 50vh;
   }
 
   .leTabList {
@@ -192,12 +192,160 @@
 
 /*==================TABLETTE==================*/
 @media (min-width: 425px) and (max-width: 767px) {
+  .conteneurTitre {
+    margin-top: 2%;
+    flex-direction: column;
+
+    h3 {
+      display: flex;
+      margin: 0;
+
+      margin: auto;
+      margin-top: 5%;
+      margin-bottom: 2%;
+
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .titreCours {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    .titreChoix {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .conteneurTabPanels {
+    height: 50vh;
+  }
+
+  .leTabList {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    padding: 2%;
+  }
+
+  .motSession {
+    display: none;
+  }
+
+  .nbSession {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .conteneurFleche {
+    display: none;
+  }
+
+  .flecheBas {
+    display: none;
+  }
+
+  .tabSelection {
+    span {
+      h4 {
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 17px;
+      }
+    }
+  }
 }
 
 /**================GROSSE TABLETTE==================*/
 @media (min-width: 768px) and (max-width: 1024px) {
+  .conteneurTitre {
+    margin-top: 2%;
+    flex-direction: column;
+
+    h3 {
+      display: flex;
+      margin: 0;
+
+      margin: auto;
+      margin-top: 5%;
+      margin-bottom: 2%;
+
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 17px;
+    }
+    .titreCours {
+      font-size: 45px;
+      line-height: 36px;
+    }
+    .titreChoix {
+      font-size: 25px;
+      line-height: 22px;
+      text-align: end;
+    }
+  }
+
+  .conteneurTabPanels {
+    height: 50vh;
+  }
+
+  .leTabList {
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    padding: 2%;
+  }
+
+  .motSession {
+    display: none;
+  }
+
+  .nbSession {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 17px;
+  }
+
+  .conteneurFleche {
+    display: none;
+  }
+
+  .flecheBas {
+    display: none;
+  }
+
+  .tabSelection {
+    span {
+      h4 {
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 17px;
+      }
+    }
+  }
 }
 
 /*==================LAPTOP==========================*/
 @media (min-width: 1025px) and (max-width: 1439px) {
+
+  .conteneurTitre {
+    margin-top: 2%;
+    
+    .titreCours {
+      font-size: 45px;
+      line-height: 36px;
+    }
+    .titreChoix {
+      font-size: 25px;
+      line-height: 22px;
+      text-align: end;
+    }
+  }
+
 }
