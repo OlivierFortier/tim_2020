@@ -52,7 +52,7 @@ export default function Professeurs() {
               }}
               animate={{ opacity: 1, x: "150%", y: "-60%", scale: 1.4 }}
             >
-              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+              <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
           </Link>
           <Link href="/professeurs/grille">
@@ -62,7 +62,7 @@ export default function Professeurs() {
               }}
               animate={{ opacity: 1, x: "100%", y: "140%" }}
             >
-              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+              <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
           </Link>
         </span>
@@ -74,7 +74,7 @@ export default function Professeurs() {
               }}
               animate={{ opacity: 1, scale: 3, y: "50%" }}
             >
-              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+              <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
           </Link>
         </span>
@@ -90,7 +90,7 @@ export default function Professeurs() {
               }}
               animate={{ opacity: 1, x: "-120%", y: "-200%", scale: 0.9 }}
             >
-              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+              <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
           </Link>
           <Link href="/professeurs/grille">
@@ -100,7 +100,7 @@ export default function Professeurs() {
               }}
               animate={{ opacity: 1, x: "75%", y: "-140%" }}
             >
-              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+              <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
           </Link>
           <Link href="/professeurs/grille">
@@ -111,7 +111,7 @@ export default function Professeurs() {
               }}
               animate={{ opacity: 1, x: "40%", y: "40%" }}
             >
-              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+              <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
           </Link>
           <Link href="/professeurs/grille">
@@ -121,7 +121,7 @@ export default function Professeurs() {
               }}
               animate={{ opacity: 1, x: "-160%", y: "100%", scale: 1.4 }}
             >
-              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+              <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
           </Link>
           <Link href="/professeurs/grille">
@@ -131,7 +131,7 @@ export default function Professeurs() {
               }}
               animate={{ opacity: 1, x: "-60%", y: "320%", scale: 2.5 }}
             >
-              <Image width={120} height={120} src="/images/cam.jpg" alt="" />
+              <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
           </Link>
         </span>
