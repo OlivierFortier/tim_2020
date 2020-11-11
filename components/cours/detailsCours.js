@@ -22,7 +22,7 @@ export default function DetailsCours({ infoCours, afficherCours }) {
       exit={{ x: -500, opacity: 0 }}
       className={styles.detailCours}
     >
-      <h2 onClick={afficherCours}>Retour aux autres cours</h2>
+      <h2 onClick={afficherCours}>Retour</h2>
 
       <div className={styles.contenuDetailCours}>
         <div className={styles.conteneurTitre}>

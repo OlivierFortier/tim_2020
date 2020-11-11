@@ -94,7 +94,8 @@
   .detailCours { 
     height: 100%;
     h2 {
-      font-size: 12px;
+      font-size: 20px;
+      margin-top: 5%;
       line-height: 15px;
     }
   }
@@ -102,8 +103,8 @@
   .contenuDetailCours {
     flex-direction: column;
     align-items: center;
-    height: 90%;
-    justify-content: unset;
+    height: 80%;
+    // justify-content: unset;
     .conteneurTitre {
       width: 100%;
       h3 {
