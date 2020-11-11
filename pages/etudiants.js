@@ -10,7 +10,7 @@ export default function Etudiants() {
       style={{ color: "white" }}
     >
     <Head>
-      <title>TIM | Inscription</title>
+      <title>TIM | Vie Étudiante</title>
       <meta charset="UTF-8"></meta>
       <meta name="Description"
         content="Page de la vie étudiante de la technique d'Intégration Multimédia du collège Maisonneuve"
