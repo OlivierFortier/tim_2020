@@ -52,7 +52,7 @@ export default function DetailsCours({ infoCours, afficherCours }) {
           onTouchEnd={() => setArreterScroll(false)}
           className={styles.descriptionCours}
         >
-          <Markdown>{infoCours.description}</Markdown>
+          <Markdown className={styles.paragrapheCours}>{infoCours.description}</Markdown>
         </span>
         <div className={styles.fleche}>
           <MdArrowDropDown

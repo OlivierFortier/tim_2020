@@ -123,7 +123,9 @@ export default function Layout({ children }) {
             {children}
           </div>
         </div>
-        <footer {...drag} className={styles.conteneurProgres}>
+        <footer 
+        // {...drag}
+         className={styles.conteneurProgres}>
           <span>
             <progress value={page} max={8}></progress>
           </span>
