@@ -91,7 +91,7 @@
 
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px) {
-  .detailCours { 
+  .detailCours {
     height: 100%;
     h2 {
       font-size: 20px;
@@ -108,8 +108,9 @@
     .conteneurTitre {
       width: 100%;
       h3 {
-        font-size: 18px;
+        font-size: 15px;
         line-height: 22px;
+        margin-bottom: 0;
       }
     }
     .descriptionCours {
@@ -129,10 +130,80 @@
 
 /*==================TABLETTE==================*/
 @media (min-width: 425px) and (max-width: 767px) {
+  .detailCours {
+    height: 100%;
+    h2 {
+      font-size: 20px;
+      margin-top: 5%;
+      line-height: 15px;
+    }
+  }
+
+  .contenuDetailCours {
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    // justify-content: unset;
+    .conteneurTitre {
+      width: 100%;
+      h3 {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 0;
+      }
+    }
+    .descriptionCours {
+      width: 90%;
+      height: 60%;
+      max-height: unset;
+      min-height: unset;
+    }
+  }
+
+  .paragrapheCours {
+    height: 100%;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 /**================GROSSE TABLETTE==================*/
 @media (min-width: 768px) and (max-width: 1024px) {
+  .detailCours { 
+    height: 100%;
+    h2 {
+      font-size: 20px;
+      margin-top: 5%;
+      line-height: 15px;
+    }
+  }
+
+  .contenuDetailCours {
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    // justify-content: unset;
+    .conteneurTitre {
+      width: 100%;
+      h3 {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 0;
+      }
+    }
+    .descriptionCours {
+      width: 90%;
+      height: 60%;
+      max-height: unset;
+      min-height: unset;
+    }
+  }
+
+  .paragrapheCours {
+    height: 100%;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 /*==================LAPTOP==========================*/
