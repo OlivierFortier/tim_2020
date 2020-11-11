@@ -18,9 +18,9 @@ export default function NomCours({ infoCours, afficherCours }) {
       <motion.h3 layout className={styles.titreCours}>
         {infoCours.titre}
       </motion.h3>
-      {infoCours.choixEntre && <i>choix entre {infoCours.choixEntre.titre}</i>}
+      {infoCours.choixEntre && <i className={styles.choixEntre}>choix entre {infoCours.choixEntre.titre}</i>}
       <motion.span layout>
-        <Icone fontSize="30"></Icone>
+        <Icone fontSize="30" className={styles.iconeCours}></Icone>
       </motion.span>
     </motion.div>
   );
