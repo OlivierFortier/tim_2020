@@ -12,6 +12,10 @@
   display: flex;
   justify-content: space-between;
 
+  h3 {
+    display: none;
+  }
+
   .titreCours {
     font-size: 65px;
     font-style: normal;
@@ -106,19 +110,31 @@
     margin-left: 38%;
     display: block;
   }
-
 }
-.conteneurNomNbSession{
+.conteneurNomNbSession {
   display: flex;
 }
 
-.motSession, .nbSession {
+.motSession,
+.nbSession {
   margin: 0 4%;
 }
 
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px) {
   .conteneurTitre {
+    flex-direction: column;
+    border-bottom: 2px solid white;
+
+    h3 {
+      display: flex;
+      margin: 0;
+      // width: 100%;
+      margin: auto;
+      margin-bottom: 2%;
+      
+      text-align: center;
+    }
     .titreCours {
       font-size: 30px;
       line-height: 36px;
@@ -129,8 +145,37 @@
     }
   }
 
-  .tabSelection{
+  .leTabList {
+    border-bottom: 2px solid white;
+  }
 
+  .motSession {
+    display: none;
+  }
+
+  .nbSession {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .conteneurFleche {
+    display: none;
+  }
+
+  .flecheBas {
+    display: none;
+  }
+
+  .tabSelection {
+    span {
+      h4 {
+        font-weight: 800;
+        font-size: 25px;
+        line-height: 17px;
+      }
+    }
   }
 }
 
