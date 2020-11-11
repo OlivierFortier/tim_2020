@@ -123,17 +123,22 @@
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px) {
   .conteneurTitre {
+    margin-top: 2%;
     flex-direction: column;
-    border-bottom: 2px solid white;
 
     h3 {
       display: flex;
       margin: 0;
-      // width: 100%;
+     
       margin: auto;
+      margin-top: 5%;
       margin-bottom: 2%;
-      
+
       text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
     }
     .titreCours {
       font-size: 30px;
@@ -145,8 +150,14 @@
     }
   }
 
+  .conteneurTabPanels {
+    height: 45vh;
+  }
+
   .leTabList {
     border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    padding: 2%;
   }
 
   .motSession {
