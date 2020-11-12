@@ -3,7 +3,6 @@ import styles from "./professeurs.module.scss";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import { ScalarLeafsRule } from "graphql";
 
 export default function Professeurs() {
   return (
@@ -37,6 +36,7 @@ export default function Professeurs() {
         <span>
           <Link href="/professeurs/grille">
             <motion.div
+            className={styles.conteneurImg}
               initial={{
                 opacity: 0,
               }}
@@ -47,6 +47,7 @@ export default function Professeurs() {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
+            className={styles.conteneurImg}
               initial={{
                 opacity: 0,
               }}
@@ -57,6 +58,7 @@ export default function Professeurs() {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
+            className={styles.conteneurImg}
               initial={{
                 opacity: 0,
               }}
@@ -69,6 +71,7 @@ export default function Professeurs() {
         <span>
           <Link href="/professeurs/grille">
             <motion.div
+            className={styles.conteneurImg}
               initial={{
                 opacity: 0,
               }}
@@ -80,11 +83,13 @@ export default function Professeurs() {
         </span>
         <span>
           <motion.div
+          className={styles.conteneurImg}
             animate={{ x: "-40%", y: "-20%" }}
             className={styles.cercle}
           ></motion.div>
           <Link href="/professeurs/grille">
             <motion.div
+            className={styles.conteneurImg}
               initial={{
                 opacity: 0,
               }}
@@ -95,6 +100,7 @@ export default function Professeurs() {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
+            className={styles.conteneurImg}
               initial={{
                 opacity: 0,
               }}
@@ -105,6 +111,7 @@ export default function Professeurs() {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
+            className={styles.conteneurImg}
               style={{ zIndex: -1 }}
               initial={{
                 opacity: 0,
@@ -116,6 +123,7 @@ export default function Professeurs() {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
+            className={styles.conteneurImg}
               initial={{
                 opacity: 0,
               }}
@@ -126,6 +134,7 @@ export default function Professeurs() {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
+            className={styles.conteneurImg}
               initial={{
                 opacity: 0,
               }}
