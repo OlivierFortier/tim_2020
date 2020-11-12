@@ -40,7 +40,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "-20%", y: "0%", scale: 0.5 }}
+              animate={{ opacity: 1, x: "0%", y: "0%", scale: 0.8 }}
             >
               <Image width={120} height={120} src="/images/cam.jpg" />
             </motion.div>
@@ -51,7 +51,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "150%", y: "-60%", scale: 1.4 }}
+              animate={{ opacity: 1, x: "100%", y: "-10%", scale: 1.4 }}
             >
               <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
@@ -62,7 +62,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "100%", y: "140%" }}
+              animate={{ opacity: 1, x: "-10%", y: "140%" }}
             >
               <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
@@ -75,7 +75,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, scale: 3, y: "50%" }}
+              animate={{ opacity: 1, scale: 3.6, y: "70%" }}
             >
               <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
@@ -93,7 +93,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "-120%", y: "-200%", scale: 0.9 }}
+              animate={{ opacity: 1, x: "20%", y: "-90%", scale: 0.9 }}
             >
               <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
@@ -104,7 +104,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "75%", y: "-140%" }}
+              animate={{ opacity: 1, x: "145%", y: "-140%" }}
             >
               <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
@@ -116,7 +116,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "40%", y: "40%" }}
+              animate={{ opacity: 1, x: "10%", y: "40%" }}
             >
               <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
@@ -127,7 +127,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "-160%", y: "100%", scale: 1.4 }}
+              animate={{ opacity: 1, x: "-260%", y: "150%", scale: 1.4 }}
             >
               <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
@@ -138,7 +138,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "-60%", y: "320%", scale: 2.5 }}
+              animate={{ opacity: 1, x: "-300%", y: "340%", scale: 2 }}
             >
               <Image width={120} height={120} src="/images/cam.jpg" alt={`photo de ${"prof.nom"}`} />
             </motion.div>
