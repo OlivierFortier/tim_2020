@@ -9,6 +9,7 @@
     .imgProf {
       height: 70vh;
       width: 50vh;
+      
     }
 
     .unProf {
@@ -16,6 +17,7 @@
       height: max-content;
       padding: var(--spacing);
       position: relative;
+      margin-top: 2%;
 
       img {
         filter: grayscale(100%) contrast(1) blur(var(--blur));
@@ -44,7 +46,6 @@
     article {
       display: flex;
       flex-direction: column;
-
       width: 50%;
 
       .conteneurTitres {
@@ -86,14 +87,31 @@
 
         overflow-y: scroll;
 
-        div > * {
-        }
+        // div > * {
+        // }
 
         // p {
         //   position: absolute;
         //   left: -10%;
         //   margin: 0;
         // }
+        
+      }
+
+      ::-webkit-scrollbar {
+        width: 0px;
+        display: none;
+      }
+
+      .fleche {
+        position: relative;
+    
+        .flecheDescriptionCours {
+          position: absolute;
+          top: 100%;
+          right: 17vw;
+          font-size: 3rem;
+        }
       }
     }
   }
