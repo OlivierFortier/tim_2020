@@ -57,7 +57,6 @@
     div {
       cursor: pointer;
       // position: absolute;
-      
     }
   }
 }
@@ -93,54 +92,86 @@
 
 .conteneurImg {
   background-color: var(--base);
-      height: max-content;
-      padding: var(--spacing);
-      position: relative;
+  height: max-content;
+  padding: var(--spacing);
+  position: relative;
 
-      img {
-        filter: grayscale(100%) contrast(1) blur(var(--blur));
-        mix-blend-mode: var(--bg-blend);
-        object-fit: fill;
-        opacity: var(--opacity);
-        position: relative;
-      }
-
-      ::before {
-        background-color: var(--foreground);
-        bottom: 0;
-        content: "";
-        height: 100%;
-        left: 0;
-        mix-blend-mode: var(--fg-blend);
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
-        z-index: 1;
-        filter: opacity(0.5) contrast(0.5) saturate(3) brightness(1);
-      }
-}
-
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px){
-
-  .sectionLesProfs {
+  img {
+    filter: grayscale(100%) contrast(1) blur(var(--blur));
+    mix-blend-mode: var(--bg-blend);
+    object-fit: fill;
+    opacity: var(--opacity);
     position: relative;
   }
 
+  ::before {
+    background-color: var(--foreground);
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    mix-blend-mode: var(--fg-blend);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    filter: opacity(0.5) contrast(0.5) saturate(3) brightness(1);
+  }
+
+  .imgProf {
+    width: 120px;
+    height: auto;
+  }
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px) {
+  .sectionLesProfs {
+    position: relative;
+    h1 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    h3 {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .cercle {
+    display: none;
+  }
+
+  @for $i from 2 through 9 {
+    .conteneurImg:nth-child(#{$i}) {
+      // background-color: lighten($base-color, $i * 5%);
+      display: none;
+    }
+  }
+
+  .sectionTexte {
+    min-width: unset;
+    width: unset;
+    h2 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  .imgProf {
+    width: 50px !important;
+  }
 }
 
 /*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px){
-
+@media (min-width: 425px) and (max-width: 767px) {
 }
 
 /**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px){
-
+@media (min-width: 768px) and (max-width: 1024px) {
 }
 
 /*==================LAPTOP==========================*/
 @media (min-width: 1025px) and (max-width: 1439px) {
-  
 }
