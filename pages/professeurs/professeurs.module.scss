@@ -138,7 +138,7 @@
     left: unset;
     text-align: start;
     width: 90%;
-    
+
     h1 {
       font-size: 30px;
       line-height: 36px;
@@ -160,15 +160,11 @@
 
     @for $i from 2 to 3 {
       span:nth-child(#{$i}) {
-        
         display: none;
       }
-      
     }
 
     span:nth-child(1) {
-      // align-items: flex-start;
-      // height: 50%;
       flex-direction: column;
       justify-content: space-around;
       align-items: flex-start;
@@ -176,13 +172,10 @@
       .conteneurImg:nth-child(2) {
         transform: translate(-0%, 50%) scale(1.8) !important;
         .imgProf {
-          //  width: 100px !important;
         }
-       
       }
 
       .conteneurImg:nth-child(3) {
-        // display: none;
         img {
           display: none;
         }
@@ -190,6 +183,11 @@
     }
 
     span:nth-child(3) {
+
+      .conteneurImg:nth-child(2) {
+        transform: translate(0,-150%) scale(3) !important;
+      }
+
       .conteneurImg:nth-child(6) {
         display: none;
       }
@@ -199,11 +197,9 @@
   .sectionTexte {
     min-width: unset;
     width: unset;
-    // height: 100%;
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    // justify-content: flex-end;
     h2 {
       font-size: 24px;
       line-height: 29px;
@@ -217,6 +213,89 @@
 
 /*==================TABLETTE==================*/
 @media (min-width: 425px) and (max-width: 767px) {
+  .conteneur {
+    height: 80vh;
+    justify-content: space-evenly;
+  }
+
+  .sectionLesProfs {
+    position: relative;
+    top: unset;
+    left: unset;
+    text-align: start;
+    width: 90%;
+
+    h1 {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    h3 {
+      margin-top: 5%;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  .cercle {
+    display: none;
+  }
+
+  .sectionImages {
+    height: 30vh;
+    font-size: 0;
+
+    @for $i from 2 to 3 {
+      span:nth-child(#{$i}) {
+        display: none;
+      }
+    }
+
+    span:nth-child(1) {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+
+      .conteneurImg:nth-child(2) {
+        transform: translate(-0%, 50%) scale(1.8) !important;
+        .imgProf {
+        }
+      }
+
+      .conteneurImg:nth-child(3) {
+        img {
+          display: none;
+        }
+      }
+    }
+
+    span:nth-child(3) {
+      .conteneurImg:nth-child(2) {
+        transform: translate(0,-150%) scale(2) !important;
+      }
+
+     
+
+      .conteneurImg:nth-child(6) {
+        display: none;
+      }
+    }
+  }
+
+  .sectionTexte {
+    min-width: unset;
+    width: unset;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  .imgProf {
+    width: 70px !important;
+  }
 }
 
 /**================GROSSE TABLETTE==================*/
