@@ -1,0 +1,30 @@
+.conteneurPage {
+  display: flex;
+}
+
+.wrapperContenu {
+  position: relative;
+  width: 100%;
+}
+
+.conteneurImage {
+    z-index: -1;
+  position: absolute;
+//   transform-origin: center;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+//   transform: translate(25%, 25%);
+  img {
+      z-index: -1;
+    width: 561px;
+    height: 590px;
+  }
+}
+
+.contenu {
+    z-index: 5;
+    display: flex;
+    justify-content: space-evenly;
+}
