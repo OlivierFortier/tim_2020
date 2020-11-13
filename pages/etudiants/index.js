@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link"
 import styles from "./etudiants.module.scss";
 
 export default function index() {
@@ -27,9 +28,13 @@ export default function index() {
 
       <main className={styles.wrapperContenu}>
         <section className={styles.contenu}>
-          <h1 className={styles.projets}>Projets étudiants</h1>
+          <Link href="/etudiants/projets">
+              <h1 className={styles.projets}>Projets étudiants</h1>
+          </Link>
           <span className={styles.ligne}></span>
-          <h1 className={styles.vie}>Vie étudiante</h1>
+          <Link href="/etudiants/gallerie">
+              <h1 className={styles.vie}>Vie étudiante</h1>
+          </Link>
         </section>
         <div className={styles.conteneurImage}>
           <span className={styles.conteneurEffetImage}>
