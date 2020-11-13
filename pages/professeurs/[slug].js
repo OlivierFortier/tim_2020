@@ -4,6 +4,7 @@ import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Markdown from "markdown-to-jsx";
 import { motion } from "framer-motion";
+import { MdArrowDropDown } from "react-icons/md";
 
 export default function PageUnProfesseur(leProf) {
   return (
@@ -31,7 +32,14 @@ export default function PageUnProfesseur(leProf) {
           </span>
 
           <div className={styles.contenuTexte}>
-            <Markdown>{leProf.description}</Markdown>
+            <Markdown className={styles.descriptionProf}>
+              {leProf.description}
+            </Markdown>
+          </div>
+          <div className={styles.fleche}>
+            <MdArrowDropDown
+              className={styles.flecheDescriptionCours}
+            ></MdArrowDropDown>
           </div>
         </article>
       </section>
