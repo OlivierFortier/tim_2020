@@ -9,6 +9,7 @@
 }
 
 .conteneurImage {
+    font-size: 0;
     height: 100%;
     z-index: -1;
   position: absolute;
@@ -19,6 +20,41 @@
   justify-content: center;
   align-items: center;
 //   transform: translate(25%, 25%);
+
+    .conteneurEffetImage {
+        background-color: var(--base);
+        height: max-content;
+        padding: var(--spacing);
+        position: relative;
+        opacity: 0.9;
+        margin-top: 2%;
+  
+        img {
+          filter: grayscale(100%) contrast(1) blur(var(--blur));
+          mix-blend-mode: var(--bg-blend);
+          object-fit: fill;
+          opacity: var(--opacity);
+          position: relative;
+        }
+  
+        ::before {
+          background-color: var(--foreground);
+          bottom: 0;
+          content: "";
+          height: 100%;
+          left: 0;
+          mix-blend-mode: var(--fg-blend);
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+          filter: opacity(0.5) contrast(0.5) saturate(3) brightness(1);
+        }
+    }
+
+
+
   img {
       z-index: -1;
     width: 561px;
@@ -34,6 +70,11 @@
     width: 70%;
     margin: 0 auto;
     justify-content: center;
+   
+    h1 {
+        width: 40%;
+        text-align: center;
+    }
     span {
         border-bottom: 5px solid black;
         width: 20%;

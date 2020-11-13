@@ -27,12 +27,14 @@ export default function index() {
 
         <main className={styles.wrapperContenu}>
             <section className={styles.contenu}>
-                <h1>Projets étudiants</h1>
-                <span className={styles.ligne}></span>
-                <h1>Vie étudiante</h1>
+                
+                    <h1>Projets étudiants</h1>
+                    <span className={styles.ligne}></span>
+                    <h1>Vie étudiante</h1>
+               
             </section>
             <div className={styles.conteneurImage}>
-                <Image src={"/images/photo3.jpg"} loading="eager" layout="fill" unsized/>
+                <span className={styles.conteneurEffetImage}><Image src={"/images/photo3.jpg"} loading="eager" layout="fill" unsized/></span>
             </div>
         </main>
 
