@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CarteProf({ infoCarte }) {
   return (
-    <Link href={`/etudiants/${"yeet"}`}>
+    <Link href={`/etudiants/${infoCarte.slug}`}>
       <div className={styles.unInfo}>
         {infoCarte?.captureDcran?.url ? (
           <Image

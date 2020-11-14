@@ -51,6 +51,7 @@ export async function getStaticProps({ params }) {
           titreDuProjet
           typeDuProjet
           lienExterne
+          slug
           captureDcran {
             url
           }
