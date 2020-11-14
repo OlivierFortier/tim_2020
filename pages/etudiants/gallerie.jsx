@@ -4,14 +4,21 @@ import styles from "./gallerie.module.scss";
 import CarteEtudiant from "../../components/etudiants/CarteEtudiant";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
+import Modal from "react-modal";
+import ModalPhoto from "../../components/etudiants/ModalPhoto";
 
 SwiperCore.use([Pagination]);
 
+
 export default function gallerie(lesPhotos) {
+
+
   return (
     <div className={styles.conteneurPage}>
       <h1>Vie étudiante</h1>
+    {/* <ModalPhoto></ModalPhoto> */}
       <main className={styles.conteneurSwiper}>
+          
         <Swiper
           pagination={{
             clickable: true,
@@ -67,6 +74,9 @@ export default function gallerie(lesPhotos) {
 }
 
 export async function getStaticProps({ params }) {
+
+    Modal.setAppElement('__next')
+
   const requeteGql = gql`
     query PhotosEtudiants {
       photoTudianteCollection {
