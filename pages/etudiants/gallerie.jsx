@@ -6,19 +6,39 @@ import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Modal from "react-modal";
 import ModalPhoto from "../../components/etudiants/ModalPhoto";
+import { useState, useEffect } from "react";
 
 SwiperCore.use([Pagination]);
 
-
 export default function gallerie(lesPhotos) {
+  const [photoActuelle, setPhotoActuelle] = useState(null);
+  const [modalOuvert, setModalOuvert] = useState(false);
 
+  function ouvrirModalPhotoActuelle(photo) {
+    setPhotoActuelle(photo);
+    setModalOuvert(true);
+  }
+
+  function fermerModal() {
+    setModalOuvert(false);
+    setPhotoActuelle(null);
+  }
+
+  useEffect(() => {
+    Modal.setAppElement("#__next");
+    console.log(photoActuelle);
+  }, [photoActuelle]);
 
   return (
     <div className={styles.conteneurPage}>
+      <ModalPhoto
+        infoPhoto={photoActuelle}
+        ouvert={modalOuvert}
+        fermerModal={fermerModal}
+      ></ModalPhoto>
       <h1>Vie étudiante</h1>
-    {/* <ModalPhoto></ModalPhoto> */}
+
       <main className={styles.conteneurSwiper}>
-          
         <Swiper
           pagination={{
             clickable: true,
@@ -29,42 +49,16 @@ export default function gallerie(lesPhotos) {
           slidesPerColumn={2}
           slidesPerColumnFill="row"
         >
-          <SwiperSlide className={styles.uneSlide} key={0}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={1}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={2}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={3}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={4}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={5}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={6}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={7}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={8}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={9}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={10}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
-          <SwiperSlide className={styles.uneSlide} key={11}>
-            <CarteEtudiant></CarteEtudiant>
-          </SwiperSlide>
+          {lesPhotos.items.map((photo, index) => {
+            return (
+              <SwiperSlide className={styles.uneSlide} key={index}>
+                <CarteEtudiant
+                  infoCarte={photo}
+                  ouvrirModal={ouvrirModalPhotoActuelle}
+                />
+              </SwiperSlide>
+            );
+          })}
 
           <div id="lesPoints" className={styles.points}></div>
         </Swiper>
@@ -74,9 +68,6 @@ export default function gallerie(lesPhotos) {
 }
 
 export async function getStaticProps({ params }) {
-
-    Modal.setAppElement('__next')
-
   const requeteGql = gql`
     query PhotosEtudiants {
       photoTudianteCollection {

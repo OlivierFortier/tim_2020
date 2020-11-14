@@ -1,7 +1,8 @@
 import Modal from "react-modal";
+import Image from "next/image";
+import styles from "./ModalPhoto.module.scss";
 
-export default function ModalPhoto() {
-
+export default function ModalPhoto({ infoPhoto, ouvert, fermerModal }) {
   return (
     <Modal
       style={{
@@ -9,9 +10,19 @@ export default function ModalPhoto() {
           zIndex: 10,
         },
       }}
-      isOpen="true"
+      isOpen={ouvert}
+      onRequestClose={fermerModal}
     >
-      <h1 style={{ color: "black" }}>femme</h1>
+      <div className={styles.conteneurImage}>
+        {infoPhoto && ouvert && (
+          <Image
+            src={infoPhoto.photo.url}
+            layout="fill"
+            unsized
+            className={styles.image}
+          />
+        )}
+      </div>
     </Modal>
   );
 }
