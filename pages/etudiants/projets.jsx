@@ -4,7 +4,6 @@ import styles from "./gallerie.module.scss";
 import CarteProjet from "../../components/etudiants/CarteProjet";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 SwiperCore.use([Pagination]);
