@@ -7,6 +7,7 @@ import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Modal from "react-modal";
 import ModalPhoto from "../../components/etudiants/ModalPhoto";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 SwiperCore.use([Pagination]);
 
@@ -29,7 +30,12 @@ export default function gallerie(lesPhotos) {
   }, [photoActuelle]);
 
   return (
-    <div className={styles.conteneurPage}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={styles.conteneurPage}
+    >
       <ModalPhoto
         infoPhoto={photoActuelle}
         ouvert={modalOuvert}
@@ -62,7 +68,7 @@ export default function gallerie(lesPhotos) {
           <div id="lesPoints" className={styles.points}></div>
         </Swiper>
       </main>
-    </div>
+    </motion.div>
   );
 }
 
