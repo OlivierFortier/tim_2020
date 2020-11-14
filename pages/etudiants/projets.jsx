@@ -1,34 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from "swiper";
 import styles from "./gallerie.module.scss";
-import CarteEtudiant from "../../components/etudiants/CarteEtudiant";
+import CarteProjet from "../../components/etudiants/CarteProjet";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
-import Modal from "react-modal";
-import ModalPhoto from "../../components/etudiants/ModalPhoto";
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 SwiperCore.use([Pagination]);
 
-export default function gallerie(lesPhotos) {
-  const [photoActuelle, setPhotoActuelle] = useState(null);
-  const [modalOuvert, setModalOuvert] = useState(false);
-
-  function ouvrirModalPhotoActuelle(photo) {
-    setPhotoActuelle(photo);
-    setModalOuvert(true);
-  }
-
-  function fermerModal() {
-    setModalOuvert(false);
-    setPhotoActuelle(null);
-  }
-
-  useEffect(() => {
-    Modal.setAppElement("#__next");
-  }, [photoActuelle]);
-
+export default function projets(lesProjets) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -36,13 +16,7 @@ export default function gallerie(lesPhotos) {
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
     >
-      <ModalPhoto
-        infoPhoto={photoActuelle}
-        ouvert={modalOuvert}
-        fermerModal={fermerModal}
-      ></ModalPhoto>
-      <h1>Vie étudiante</h1>
-
+      <h1>Projets étudiants</h1>
       <main className={styles.conteneurSwiper}>
         <Swiper
           pagination={{
@@ -54,13 +28,10 @@ export default function gallerie(lesPhotos) {
           slidesPerColumn={2}
           slidesPerColumnFill="row"
         >
-          {lesPhotos.items.map((photo, index) => {
+          {lesProjets.items.map((projet, index) => {
             return (
               <SwiperSlide className={styles.uneSlide} key={index}>
-                <CarteEtudiant
-                  infoCarte={photo}
-                  ouvrirModal={ouvrirModalPhotoActuelle}
-                />
+                <CarteProjet infoCarte={projet} />
               </SwiperSlide>
             );
           })}
@@ -74,12 +45,14 @@ export default function gallerie(lesPhotos) {
 
 export async function getStaticProps({ params }) {
   const requeteGql = gql`
-    query PhotosEtudiants {
-      photoTudianteCollection {
+    query {
+      projetTudiantCollection {
         items {
-          titredescriptionDeLaPhoto
+          titreDuProjet
+          typeDuProjet
+          lienExterne
           slug
-          photo {
+          captureDcran {
             url
           }
         }
@@ -89,7 +62,7 @@ export async function getStaticProps({ params }) {
 
   const json = await faireRequeteGql(requeteGql);
 
-  const lesPhotos = json.photoTudianteCollection;
+  const lesProjets = json.projetTudiantCollection;
 
-  return { props: lesPhotos, revalidate: 1 };
+  return { props: lesProjets, revalidate: 1 };
 }

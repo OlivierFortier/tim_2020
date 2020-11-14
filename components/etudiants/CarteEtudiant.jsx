@@ -1,4 +1,4 @@
-import styles from "./CarteEtudiant.module.scss";
+import styles from "./Carte.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,8 +26,6 @@ export default function CarteProf({ infoCarte, ouvrirModal }) {
           />
         </span>
       )}
-      {infoCarte && <h3>{infoCarte.nom}</h3>}
-      {infoCarte && <h4>{infoCarte.specialisation}</h4>}
     </div>
     // <Link href={`/etudiants/${"yeet"}`}>
     // </Link>

@@ -79,6 +79,11 @@
   }
 }
 
+.projets,
+.vie {
+  cursor: pointer;
+}
+
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px) {
   .conteneurImage {
