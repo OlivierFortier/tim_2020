@@ -26,7 +26,6 @@ export default function gallerie(lesPhotos) {
 
   useEffect(() => {
     Modal.setAppElement("#__next");
-    console.log(photoActuelle);
   }, [photoActuelle]);
 
   return (
