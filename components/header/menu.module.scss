@@ -16,13 +16,11 @@
     right: 0vw;
     top: 0vh;
 
-    height: 88vh;
+    height: 100vh !important;
     max-height: 888px;
     width: 100vw;
     overflow: hidden;
-
     background-color: #110c12;
-
     box-shadow: 1px -80px 100px #f3f1f1;
   }
 
@@ -116,7 +114,7 @@
       font-family: Montserrat;
       font-style: normal;
       font-weight: normal;
-      font-size: 24px;
+      font-size: 29px;
       line-height: 29px;
       text-transform: uppercase;
     }
