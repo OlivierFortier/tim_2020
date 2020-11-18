@@ -9,8 +9,13 @@
   width: 100%;
 }
 
+.conteneurImage {
+  height: 100%;
+}
+
 .imageHero {
   object-fit: fill;
+  height: 100% !important;
 }
 
 .accueilMain {

@@ -98,6 +98,7 @@ export default function Accueil() {
             /> */}
             {videoSource && (
               <video
+              
               key={videoSource}
                 loop={true}
                 className={styles.imageHero}
