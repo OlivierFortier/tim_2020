@@ -21,6 +21,7 @@ export default function PageUnProfesseur(leProf) {
             src={leProf?.photo?.url ? leProf.photo.url : "/images/cam.jpg"}
             layout="fill"
             unsized
+            quality={1}
             // width={453}
             // height={620}
           />
