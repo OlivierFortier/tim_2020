@@ -62,10 +62,11 @@ export default function Menu() {
                 key="divMenu"
                 layout
                 className={styles.fondNav}
-                initial={{ height: 0 }}
-                animate={{ height: "88vh" }}
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "100vh", opacity: 1 }}
                 exit={{
                   height: 0,
+                  opacity: 0,
                   transition: { type: "tween", duration: 0.3 },
                 }}
               >
@@ -81,6 +82,7 @@ export default function Menu() {
                     className={styles.conteneurListePages}
                     initial={{ x: "100%", opacity: 0 }}
                     animate={{ x: 0, opacity: 1, transition: { delay: 0.1 } }}
+                    exit={{opacity: 0}}
                   >
                     <ul className={styles.listePages}>
                       <li>
@@ -167,6 +169,7 @@ export default function Menu() {
                       opacity: 1,
                       transition: { delay: 0.3 },
                     }}
+                    exit={{opacity: 0}}
                   >
                     <Link href="https://goo.gl/maps/jrFz5KmhQqqW3YQS9">
                       <a

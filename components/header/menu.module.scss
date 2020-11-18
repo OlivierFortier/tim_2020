@@ -13,11 +13,10 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    right: 0vw;
-    top: 0vh;
+    right: 0;
+    top: 0;
 
     height: 100vh !important;
-    max-height: 888px;
     width: 100vw;
     overflow: hidden;
     background-color: #110c12;
@@ -27,8 +26,6 @@
   nav {
     height: 100%;
     width: 100%;
-    /**À changer avec un media query pour les petits écrans */
-    // max-width: 1370px;
     display: grid;
     grid-template:
       ". pages" auto
