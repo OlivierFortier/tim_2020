@@ -126,6 +126,12 @@
     font-size: 12px;
     line-height: 15px;
   }
+
+  .fleche {
+    .flecheDescriptionCours {
+      right: 0vw !important;
+    }
+  }
 }
 
 /*==================TABLETTE==================*/
@@ -164,6 +170,12 @@
     height: 100%;
     font-size: 12px;
     line-height: 15px;
+  }
+
+  .fleche {
+    .flecheDescriptionCours {
+      right: 0vw !important;
+    }
   }
 }
 

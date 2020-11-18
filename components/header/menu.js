@@ -162,30 +162,42 @@ export default function Menu() {
                   <motion.address
                     key="contact"
                     layout
-                    initial={{  opacity: 0 }}
+                    initial={{ opacity: 0 }}
                     animate={{
                       opacity: 1,
                       transition: { delay: 0.3 },
                     }}
                   >
-                    <Link href="/" as="/">
-                      <a className={styles.rue} onClick={fermerMenu}>
+                    <Link href="https://goo.gl/maps/jrFz5KmhQqqW3YQS9">
+                      <a
+                        target="_blank"
+                        className={styles.rue}
+                        onClick={fermerMenu}
+                      >
                         3800 rue shrebrooke e, montréal, qc h1x 2a2
                       </a>
                     </Link>
                     <ul className={styles.liensContact}>
                       <Link href="">
-                        <a onClick={fermerMenu}>discord</a>
+                        <a target="_blank" onClick={fermerMenu}>
+                          discord
+                        </a>
                       </Link>
 
                       <Link href="https://www.instagram.com/maisonneuvetim/">
-                        <a onClick={fermerMenu}>instagram</a>
+                        <a target="_blank" onClick={fermerMenu}>
+                          instagram
+                        </a>
                       </Link>
                       <Link href="https://www.facebook.com/maisonneuvetim/">
-                        <a target="_blank" onClick={fermerMenu}>facebook</a>
+                        <a target="_blank" onClick={fermerMenu}>
+                          facebook
+                        </a>
                       </Link>
                       <Link href="https://www.youtube.com/user/TIMaisonneuve">
-                        <a target="_blank" onClick={fermerMenu}>youtube</a>
+                        <a target="_blank" onClick={fermerMenu}>
+                          youtube
+                        </a>
                       </Link>
                     </ul>
                   </motion.address>
