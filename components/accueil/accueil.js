@@ -43,27 +43,29 @@ export default function Accueil() {
       <motion.div
         layout
         initial={{
-          x: 1000,
           opacity: 0,
         }}
         animate={{
-          x: 0,
           opacity: 1,
+          transition:{ duration: 0.7}
         }}
         exit={{
-          x: -1000,
+          x: -100,
           opacity: 0,
         }}
         className={styles.conteneurAccueil}
       >
-        <main className={styles.accueilMain}>
+        <motion.main 
+        initial = {{ opacity : 0, x: -100}}
+        animate = {{ opacity : 1, x: 0, transition:{ duration: 0.7}}}
+        className={styles.accueilMain}>
           <h1 className={styles.titreIntro}>
             La<br></br> juxtaposition du <br></br>
             <strong>logique</strong> et du <br></br>
             <strong>créatif +</strong>
           </h1>
           <h2 className={styles.nomCollege}>Collège de Maisonneuve</h2>
-        </main>
+        </motion.main>
         <aside className={styles.accueilAside}>
           <h2>DÉROULEZ LA BARRE POUR CONTINUER</h2>
           <span>
@@ -96,10 +98,13 @@ export default function Accueil() {
               layout="responsive"
               src="/images/photo1.jpg"
             /> */}
+
             {videoSource && (
-              <video
-              
-              key={videoSource}
+              <motion.video
+                initial={{ opacity : 0, x: 1000}}
+                animate={{ opacity : 1, x: 0, transition:{ duration: 1, delay : 0.2}}}
+                whileHover={{scaleX: 2, x: -200, transition: { duration: 0.5 }}}
+                key={videoSource}
                 loop={true}
                 className={styles.imageHero}
                 width={451}
@@ -109,7 +114,7 @@ export default function Accueil() {
                 playsInline
               >
                 <source src={videoSource} type="video/webm" />
-              </video>
+              </motion.video>
             )}
           </div>
           <div className={styles.conteneurBouton}>
@@ -118,7 +123,7 @@ export default function Accueil() {
                 className={styles.boutonExplorer}
                 aria-label="explorer"
                 whileHover={{
-                  scale: 1.3,
+                  scale: 1.05,
                 }}
               >
                 EXPLOREZ
