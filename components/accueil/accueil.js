@@ -1,8 +1,8 @@
 import Link from "next/link";
 import styles from "./accueil.module.scss";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useTheme, useListeThemes } from "../../hooks/contexteTheme";
 
 export default function Accueil() {
   useEffect(() => {
@@ -12,6 +12,31 @@ export default function Accueil() {
       'url("/images/photo1.jpg")'
     );
   }, []);
+
+  const theme = useTheme();
+  const listeThemes = useListeThemes();
+
+  const [videoSource, setVideoSource] = useState("");
+
+  useEffect(() => {
+    switch (theme) {
+      case listeThemes.art:
+        setVideoSource(ancienneVideo => "/images/art.webm");
+        break;
+
+      case listeThemes.code:
+        setVideoSource(ancienneVideo => "/images/code.webm");
+        break;
+
+      case listeThemes.parent:
+        setVideoSource(ancienneVideo => "");
+        break;
+
+      default:
+        setVideoSource(ancienneVideo => "/images/art.webm");
+        break;
+    }
+  }, [videoSource]);
 
   return (
     <>
@@ -60,7 +85,7 @@ export default function Accueil() {
             ></motion.div>
           </span>
           <div className={styles.conteneurImage}>
-            <Image
+            {/* <Image
               className={styles.imageHero}
               alt="image du theme"
               width={451}
@@ -70,7 +95,21 @@ export default function Accueil() {
               priority
               layout="responsive"
               src="/images/photo1.jpg"
-            />
+            /> */}
+            {videoSource && (
+              <video
+              key={videoSource}
+                loop={true}
+                className={styles.imageHero}
+                width={451}
+                height={684}
+                autoPlay={true}
+                muted
+                playsInline
+              >
+                <source src={videoSource} type="video/webm" />
+              </video>
+            )}
           </div>
           <div className={styles.conteneurBouton}>
             <Link href="/introduction">
