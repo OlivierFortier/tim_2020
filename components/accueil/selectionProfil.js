@@ -73,7 +73,10 @@ export default function SelectionProfil({ changerEtape }) {
               },
             }}
             whileHover={{
-              scale: 1.5,
+              scale: 1.05,
+              x: 5,
+              y: 5,
+              transition: {duration: 0.2},
             }}
             onClick={() => choisirTheme(listeThemes.art)}
             className={styles.art}
@@ -100,7 +103,10 @@ export default function SelectionProfil({ changerEtape }) {
               },
             }}
             whileHover={{
-              scale: 1.5,
+              scale: 1.05,
+              x: 5,
+              y: 5,
+              transition: {duration: 0.2},
             }}
             onClick={() => choisirTheme(listeThemes.code)}
             className={styles.code}
@@ -122,14 +128,17 @@ export default function SelectionProfil({ changerEtape }) {
               ],
               transition: {
                 repeat: "Infinity",
-                repeatDelay: 0.1,
+                repeatDelay: 0.05,
                 repeatType: "mirror",
                 duration: 4,
                 damping: 200,
               },
             }}
             whileHover={{
-              scale: 1.5,
+              scale: 1.05,
+              x: 5,
+              y: 5,
+              transition: {duration: 0.2},
             }}
             onClick={() => choisirTheme(listeThemes.parent)}
             className={styles.parent}
