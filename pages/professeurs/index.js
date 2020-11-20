@@ -8,8 +8,8 @@ export default function Professeurs() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: {duration: 0.5, stiffness: 90}}}
+      exit={{y: -1000, opacity: 0, transition: {duration: 0.7}}}
       className={styles.conteneur}
     >
       <Head>
@@ -17,7 +17,7 @@ export default function Professeurs() {
         <meta charset="UTF-8"></meta>
         <meta
           name="Description"
-          content="Page des proffesseurs de la Technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page des professeurs de la Technique d'Intégration Multimédia du collège Maisonneuve"
         ></meta>
         <link
           rel="canonical"
@@ -40,7 +40,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "0%", y: "0%", scale: 0.8 }}
+              animate={{ opacity: 1, x: "0%", y: "0%", scale: 0.8}}
             >
               <Image
               className={styles.imgProf}
@@ -101,7 +101,7 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, scale: 3.6, y: "70%" }}
+              animate={{ opacity: 1, scale: 3.6, y: "70%"}}
             >
               <Image
               className={styles.imgProf}

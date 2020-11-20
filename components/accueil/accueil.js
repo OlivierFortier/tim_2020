@@ -59,9 +59,8 @@ export default function Accueil() {
           transition:{ duration: 0.7}
         }}
         exit={{
-          x: 100,
           opacity: 0,
-          // transition: { duration: 0.4, ease: "linear"}
+          transition: { duration: 1, ease: "easeIn"}
         }}
         className={styles.conteneurAccueil}
       >
