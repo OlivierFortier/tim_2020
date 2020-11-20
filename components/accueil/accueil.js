@@ -17,6 +17,15 @@ export default function Accueil() {
   const listeThemes = useListeThemes();
 
   const [videoSource, setVideoSource] = useState("");
+  const [videoIsHovered, setVideoIsHovered] = useState(false);
+
+  const setHoverState = (value) => {
+    setVideoIsHovered(currentValue => value);
+  }
+  const animationVideo = {
+    open: {scaleX:4, opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut"}},
+    closed: {scaleX: 1, opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut"}}
+  }
 
   useEffect(() => {
     switch (theme) {
@@ -101,9 +110,11 @@ export default function Accueil() {
 
             {videoSource && (
               <motion.video
-                initial={{ opacity : 0, x: 1000}}
-                animate={{ opacity : 1, x: 0, transition:{ duration: 1, delay : 0.2}}}
-                whileHover={{scaleX: 2, x: -200, transition: { duration: 0.5 }}}
+                initial={{ opacity : 1, x: 100}}
+                animate={videoIsHovered ? "open" : "closed"}
+                onHoverStart={e => {setHoverState(true)}}
+                onHoverEnd={e => {setHoverState(false)}}
+                variants = {animationVideo}
                 key={videoSource}
                 loop={true}
                 className={styles.imageHero}

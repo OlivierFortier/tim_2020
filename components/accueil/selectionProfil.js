@@ -38,16 +38,19 @@ export default function SelectionProfil({ changerEtape }) {
       <motion.div
         layout
         initial={{
-          x: 1000,
+          x: 200,
           opacity: 0,
+          transition:{ ease: "easeIn"}
         }}
         animate={{
           x: 0,
           opacity: 1,
+          transition:{ duration: 0.5, ease: "easeInOut"}
         }}
         exit={{
-          x: -1000,
           opacity: 0,
+          x: -20,
+          transition: { duration: 0.4, ease: "linear"}
         }}
         className={styles.conteneurProfils}
       >
