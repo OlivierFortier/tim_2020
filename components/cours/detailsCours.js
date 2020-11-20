@@ -17,7 +17,7 @@ export default function DetailsCours({ infoCours, afficherCours }) {
   return (
     <motion.div
       layout
-      initial={{ x: 500, opacity: 0 }}
+      initial={{opacity: 0, transition:{ ease: "easeInOut"}}}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: -500, opacity: 0 }}
       className={styles.detailCours}

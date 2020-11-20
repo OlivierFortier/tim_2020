@@ -53,9 +53,9 @@ export default function Cours({ listeCours }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ x: "-100vw" }}
+      initial={{ x: 5, opacity: 0, transition:{ ease: "easeInOut"}}}
+      animate={{ x: 0, opacity: 1}}
+      exit={{ x: -40, opacity: 0,  transition: {ease: "linear"}}}
       className={styles.conteneurCours}
     >
       <Head>

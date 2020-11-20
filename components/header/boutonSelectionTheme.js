@@ -41,7 +41,7 @@ export default function BoutonSelectionTheme() {
         <option value={listeThemes.code}>hacker</option>
         <option value={listeThemes.parent}>parent</option>
       </select> */}
-      <motion.div whileHover={{rotate : 360, scale: 1.2}} onClick={() => mettreAjourTheme()} >
+      <motion.div whileHover={{scale: 1.1}} onClick={() => mettreAjourTheme()} >
         <Image
           src="/images/Logo_TIM.png"
           width={57}

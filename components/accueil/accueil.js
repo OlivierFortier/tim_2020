@@ -23,8 +23,8 @@ export default function Accueil() {
     setVideoIsHovered(currentValue => value);
   }
   const animationVideo = {
-    open: {scaleX:4, opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut"}},
-    closed: {scaleX: 1, opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut"}}
+    open: {scaleX: 4, opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut"}},
+    closed: {scaleX: 2, opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut"}}
   }
 
   useEffect(() => {
@@ -59,8 +59,9 @@ export default function Accueil() {
           transition:{ duration: 0.7}
         }}
         exit={{
-          x: -100,
+          x: 100,
           opacity: 0,
+          // transition: { duration: 0.4, ease: "linear"}
         }}
         className={styles.conteneurAccueil}
       >

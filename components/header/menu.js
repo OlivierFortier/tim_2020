@@ -177,7 +177,7 @@ export default function Menu() {
                         className={styles.rue}
                         onClick={fermerMenu}
                       >
-                        3800 rue shrebrooke e, montréal, qc h1x 2a2
+                        3800, rue Sherbrooke Est, Montréal, QC H1X 2A2
                       </a>
                     </Link>
                     <ul className={styles.liensContact}>
