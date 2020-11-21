@@ -6,6 +6,7 @@
   padding-left: 2rem;
   width: 100vw;
   // max-width: 1300px;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,10 +23,11 @@
   }
 
   .grilleProfils {
+    height: 100%;
     display: grid;
     grid-template:
-      "art . code" 280px
-      ". parent ." 280px
+      "art . code" 1fr
+      ". parent ." 1fr
       / auto auto auto;
   }
 
@@ -38,8 +40,8 @@
     border-radius: 50%;
     border: 2px solid red;
     text-align: center;
-    width: $taille-cercle-accueil;
-    height: $taille-cercle-accueil;
+    width: 20vw;
+    height: auto;
     position: relative;
     cursor: pointer;
 

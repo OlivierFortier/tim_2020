@@ -6,6 +6,7 @@ import Image from "next/image";
 export default function Intro({ changerEtape }) {
   useEffect(() => {
     document.querySelector("#header-site").style.display = "none";
+    document.querySelector("#racine").style.overflow = "hidden";
   }, []);
 
   //variables pour le faux chargement
@@ -30,7 +31,7 @@ export default function Intro({ changerEtape }) {
           opacity: 0,
         }}
         animate={{
-          x: 0,
+          // x: 0,
           y: 0,
           opacity: 1,
           transition: {duration: 0.5, stiffness: 90}
