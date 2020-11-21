@@ -8,6 +8,7 @@ export default function SelectionProfil({ changerEtape }) {
 
   useEffect(() => {
     document.querySelector("#header-site").style.display = "flex";
+    document.querySelector("#racine").style.overflowY = "auto";
   }, []);
 
 

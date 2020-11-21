@@ -5,6 +5,8 @@
   align-items: center;
   color: white;
   margin-top: 5%;
+  height: 100vh;
+  margin: auto;
 
   h1 {
     font-weight: normal;
@@ -39,7 +41,7 @@
 @media (min-width: 310px) and (max-width: 424px) {
   .introConteneur {
     width: 85%;
-    margin-top: 30%;
+    // margin-top: 30%;
     h1,
     h2 {
       text-align: center;
@@ -59,7 +61,7 @@
 @media (min-width: 425px) and (max-width: 767px) {
   .introConteneur {
     width: 85%;
-    margin-top: 30%;
+    // margin-top: 30%;
     h1,
     h2 {
       text-align: center;
@@ -78,7 +80,7 @@
 /**================GROSSE TABLETTE==================*/
 @media (min-width: 768px) and (max-width: 1024px) {
   .introConteneur {
-    margin-top: 18%;
+    // margin-top: 18%;
   }
 }
 
