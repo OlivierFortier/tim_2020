@@ -31,6 +31,7 @@ export default function Intro({ changerEtape }) {
         }}
         animate={{
           x: 0,
+          y: 0,
           opacity: 1,
           transition: {duration: 0.5, stiffness: 90}
         }}
