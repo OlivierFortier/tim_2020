@@ -7,8 +7,8 @@ export default function CarteProf({ infoCarte, ouvrirModal }) {
     <div className={styles.unInfo} onClick={() => ouvrirModal(infoCarte)}>
       {infoCarte?.photo?.url ? (
         <Image
-          width={250}
-          height={250}
+          unsized
+          layout="fill"
           src={infoCarte?.photo?.url}
           loading="lazy"
           className={styles.imgInfo}

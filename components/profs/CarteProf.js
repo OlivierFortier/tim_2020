@@ -8,8 +8,8 @@ export default function CarteProf({ prof }) {
       <div className={styles.unProf}>
         {prof?.photo?.url ? (
           <Image
-            width={250}
-            height={250}
+            unsized
+            layout="fill"
             src={prof?.photo?.url}
             loading="eager"
             quality={1}
@@ -18,8 +18,6 @@ export default function CarteProf({ prof }) {
           />
         ) : (
           <Image
-            width={250}
-            height={250}
             quality={1}
             src="/images/cam.jpg"
             loading="eager"

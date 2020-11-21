@@ -8,8 +8,8 @@ export default function CarteProf({ infoCarte }) {
       <div className={styles.unInfo}>
         {infoCarte?.captureDcran?.url ? (
           <Image
-            width={250}
-            height={250}
+            layout="fill"
+            unsized
             src={infoCarte?.captureDcran?.url}
             loading="lazy"
             className={styles.imgInfo}

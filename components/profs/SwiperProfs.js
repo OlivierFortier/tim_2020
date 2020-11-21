@@ -9,7 +9,7 @@ SwiperCore.use([Pagination]);
 
 export default function SwiperProfs({ listeProfs }) {
   return (
-    <main>
+    <main className={styles.conteneurSwiper}>
       <Swiper
         pagination={{
           clickable: true,
@@ -20,7 +20,6 @@ export default function SwiperProfs({ listeProfs }) {
         slidesPerColumn={3}
         slidesPerColumnFill="row"
         observer
-        // style={{ paddingTop: "2%", paddingLeft: "5%" }}
       >
         {listeProfs.map((infoProf) => {
           return (
@@ -29,7 +28,7 @@ export default function SwiperProfs({ listeProfs }) {
             </SwiperSlide>
           );
         })}
-  
+
         <div id="lesPoints" className={styles.points}></div>
       </Swiper>
     </main>
