@@ -94,7 +94,9 @@ export default function Accueil() {
           <h2 className={styles.nomCollege}>Collège de Maisonneuve</h2>
         </motion.main>
         <aside className={styles.accueilAside}>
-          <h2>DÉROULEZ LA BARRE POUR CONTINUER</h2>
+          <Link href="/introduction">
+            <motion.h2 whileTap={{scale: 1.5}}>CONTINUER</motion.h2>
+          </Link>
           <span>
             <motion.div
               initial={{
