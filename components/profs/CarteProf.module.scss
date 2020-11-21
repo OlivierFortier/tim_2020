@@ -1,8 +1,12 @@
 .imgProf {
-  max-width: 500px;
+
+  width: 14vw;
+  height: 25vh;
+  object-position:  0 20%;
 }
 
 .unProf {
+  font-size: 0;
   background-color: var(--base);
   overflow: hidden;
   position: relative;

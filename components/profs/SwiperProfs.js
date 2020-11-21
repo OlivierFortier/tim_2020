@@ -9,27 +9,28 @@ SwiperCore.use([Pagination]);
 
 export default function SwiperProfs({ listeProfs }) {
   return (
-    <Swiper
-      pagination={{
-        clickable: true,
-        el: "#lesPoints",
-      }}
-      spaceBetween={0}
-      slidesPerView={4}
-      slidesPerColumn={3}
-      slidesPerColumnFill="row"
-      observer={true}
-      style={{ paddingTop: "2%", paddingLeft: "5%" }}
-    >
-      {listeProfs.map((infoProf) => {
-        return (
-          <SwiperSlide key={infoProf.nom}>
-            <CarteProf prof={infoProf} />
-          </SwiperSlide>
-        );
-      })}
+    <main className={styles.conteneurSwiper}>
+      <Swiper
+        pagination={{
+          clickable: true,
+          el: "#lesPoints",
+        }}
+        spaceBetween={0}
+        slidesPerView={4}
+        slidesPerColumn={3}
+        slidesPerColumnFill="row"
+        observer
+      >
+        {listeProfs.map((infoProf) => {
+          return (
+            <SwiperSlide className={styles.uneSlide} key={infoProf.nom}>
+              <CarteProf prof={infoProf} />
+            </SwiperSlide>
+          );
+        })}
 
-      <div id="lesPoints" className={styles.points}></div>
-    </Swiper>
+        <div id="lesPoints" className={styles.points}></div>
+      </Swiper>
+    </main>
   );
 }

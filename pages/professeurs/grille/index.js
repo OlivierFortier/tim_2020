@@ -13,7 +13,7 @@ export default function Grille({ listeProfs }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className={styles.conteneur}
+      className={styles.conteneurPage}
     >
       <Head>
         <title>TIM | Grille des professeurs</title>

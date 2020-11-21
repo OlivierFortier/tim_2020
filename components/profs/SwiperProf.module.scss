@@ -1,10 +1,31 @@
 .points {
-    display: flex !important;
-    justify-content: center !important;
-   
-    *  {
-        width: 100px;
-        padding-left: 1%;
-        height: 2px;
-        background-color: white;
-    }}
+  display: flex !important;
+  justify-content: center !important;
+//   margin-top: 7%;
+
+  :global(.swiper-pagination-bullet) {
+    padding: 2%;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    border-top: 1px solid grey;
+  }
+
+  * {
+    width: 100px;
+    padding-left: 1%;
+    height: 2px;
+    background-color: white;
+  }
+}
+
+.conteneurSwiper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.uneSlide {
+  display: flex;
+  justify-content: center;
+  
+}
