@@ -19,6 +19,7 @@
   height: 100% !important;
   position: relative;
   z-index: 1;
+  overflow: hidden !important;
 }
 
 .accueilMain {
@@ -249,11 +250,16 @@
 /**================GROSSE TABLETTE==================*/
 @media (min-width: 768px) and (max-width: 1024px) {
   .conteneurImage {
-    display: none;
+    // display: none;
   }
 
   .imageHero {
-    display: none;
+    // display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh !important;
   }
 
   .conteneurAccueil {
