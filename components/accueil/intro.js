@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Intro({ changerEtape }) {
   useEffect(() => {
     document.querySelector("#header-site").style.display = "none";
-    document.querySelector("#racine").style.overflow = "hidden";
+    document.querySelector("#racine").style.overflowY = "hidden";
   }, []);
 
   //variables pour le faux chargement
