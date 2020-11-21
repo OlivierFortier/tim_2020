@@ -5,14 +5,6 @@ import { useEffect, useState } from "react";
 import { useTheme, useListeThemes } from "../../hooks/contexteTheme";
 
 export default function Accueil() {
-  useEffect(() => {
-    document.querySelector("#header-site").style.display = "flex";
-    document.documentElement.style.setProperty(
-      "--bgAcceuil",
-      'url("/images/photo1.jpg")'
-    );
-  }, []);
-
   const theme = useTheme();
   const listeThemes = useListeThemes();
 
@@ -20,32 +12,57 @@ export default function Accueil() {
   const [videoIsHovered, setVideoIsHovered] = useState(false);
 
   const setHoverState = (value) => {
-    setVideoIsHovered(currentValue => value);
-  }
+    setVideoIsHovered((currentValue) => value);
+  };
   const animationVideo = {
-    open: {scaleX: 4, opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut"}},
-    closed: {scaleX: 2, opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut"}}
-  }
+    open: {
+      scaleX: 4,
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1, ease: "easeInOut" },
+    },
+    closed: {
+      scaleX: 1,
+      opacity: 1,
+      x: 0,
+      transition: { duration: 1, ease: "easeInOut" },
+    },
+  };
 
   useEffect(() => {
+    document.querySelector("#header-site").style.display = "flex";
+
     switch (theme) {
       case listeThemes.art:
-        setVideoSource(ancienneVideo => "/images/art.webm");
+        setVideoSource((ancienneVideo) => "/images/art.webm");
+        document.documentElement.style.setProperty(
+          "--bgAcceuil",
+          'url("/images/art_Moment.jpg")'
+        );
         break;
 
       case listeThemes.code:
-        setVideoSource(ancienneVideo => "/images/code.webm");
+        setVideoSource((ancienneVideo) => "/images/code.webm");
+        document.documentElement.style.setProperty(
+          "--bgAcceuil",
+          'url("/images/code_Moment.jpg")'
+        );
         break;
 
       case listeThemes.parent:
-        setVideoSource(ancienneVideo => "");
+        setVideoSource((ancienneVideo) => "");
+        document.documentElement.style.setProperty("--bgAcceuil", "#110c12");
         break;
 
       default:
-        setVideoSource(ancienneVideo => "/images/art.webm");
+        setVideoSource((ancienneVideo) => "/images/art.webm");
+        document.documentElement.style.setProperty(
+          "--bgAcceuil",
+          'url("/images/art_Moment.jpg")'
+        );
         break;
     }
-  }, [videoSource]);
+  }, [videoSource, theme]);
 
   return (
     <>
@@ -56,18 +73,19 @@ export default function Accueil() {
         }}
         animate={{
           opacity: 1,
-          transition:{ duration: 0.7}
+          transition: { duration: 0.7 },
         }}
         exit={{
           opacity: 0,
-          transition: { duration: 1, ease: "easeIn"}
+          transition: { duration: 1, ease: "easeIn" },
         }}
         className={styles.conteneurAccueil}
       >
-        <motion.main 
-        initial = {{ opacity : 0, x: -100}}
-        animate = {{ opacity : 1, x: 0, transition:{ duration: 0.7}}}
-        className={styles.accueilMain}>
+        <motion.main
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
+          className={styles.accueilMain}
+        >
           <h1 className={styles.titreIntro}>
             La<br></br> juxtaposition du <br></br>
             <strong>logique</strong> et du <br></br>
@@ -96,25 +114,18 @@ export default function Accueil() {
             ></motion.div>
           </span>
           <div className={styles.conteneurImage}>
-            {/* <Image
-              className={styles.imageHero}
-              alt="image du theme"
-              width={451}
-              height={684}
-              quality={75}
-              loading="eager"
-              priority
-              layout="responsive"
-              src="/images/photo1.jpg"
-            /> */}
 
             {videoSource && (
               <motion.video
-                initial={{ opacity : 1, x: 100}}
+                initial={{ opacity: 1,  }}
                 animate={videoIsHovered ? "open" : "closed"}
-                onHoverStart={e => {setHoverState(true)}}
-                onHoverEnd={e => {setHoverState(false)}}
-                variants = {animationVideo}
+                onHoverStart={(e) => {
+                  setHoverState(true);
+                }}
+                onHoverEnd={(e) => {
+                  setHoverState(false);
+                }}
+                variants={animationVideo}
                 key={videoSource}
                 loop={true}
                 className={styles.imageHero}
