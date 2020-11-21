@@ -75,14 +75,14 @@ export default function Menu() {
                   layout
                   initial={{ height: 0 }}
                   animate={{ height: "100%" }}
-                  exit={{ height: 0 }}
+                  exit={{ height: 0, transition: { duration: 1, ease: "easeInOut"}}}
                 >
                   <motion.div
                     key="liensPages"
                     className={styles.conteneurListePages}
-                    initial={{ x: "100%", opacity: 0 }}
-                    animate={{ x: 0, opacity: 1, transition: { delay: 0.1 } }}
-                    exit={{opacity: 0}}
+                    initial={{ y: "10%", opacity: 0 }}
+                    animate={{ y: 0, opacity: 1, transition: { duration : 0.6, delay: 0.3}}}
+                    exit={{opacity: 0, transition: { duration : 1}}}
                   >
                     <ul className={styles.listePages}>
                       <li>
@@ -167,7 +167,7 @@ export default function Menu() {
                     initial={{ opacity: 0 }}
                     animate={{
                       opacity: 1,
-                      transition: { delay: 0.3 },
+                      transition: { delay: 0.6, ease: "easeInOut"},
                     }}
                     exit={{opacity: 0}}
                   >
@@ -177,7 +177,7 @@ export default function Menu() {
                         className={styles.rue}
                         onClick={fermerMenu}
                       >
-                        3800 rue shrebrooke e, montréal, qc h1x 2a2
+                        3800, rue Sherbrooke Est, Montréal, QC H1X 2A2
                       </a>
                     </Link>
                     <ul className={styles.liensContact}>

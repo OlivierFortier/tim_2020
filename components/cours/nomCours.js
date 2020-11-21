@@ -9,9 +9,9 @@ export default function NomCours({ infoCours, afficherCours }) {
   return (
     <motion.div
       layout
-      initial={{ x: -500, opacity: 0 }}
+      initial={{ x: 7, opacity: 0, transition:{ ease: "linear"}}}
       animate={{ x: 0, opacity: 1 }}
-      exit={{ x: 500, opacity: 0 }}
+      exit={{ x: -0.5, opacity: 0 }}
       onClick={afficherCours}
       className={styles.cours}
     >
