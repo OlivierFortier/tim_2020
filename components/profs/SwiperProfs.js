@@ -20,6 +20,7 @@ export default function SwiperProfs({ listeProfs }) {
         slidesPerColumn={3}
         breakpoints={{
           310: {
+            spaceBetween: 30,
             slidesPerColumn: 3,
             slidesPerView: 2,
           },
