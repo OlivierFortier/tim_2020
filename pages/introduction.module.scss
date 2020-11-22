@@ -64,13 +64,18 @@
   cursor: pointer;
 }
 
+.lienCours {
+  display: none;
+}
+
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px) {
   .conteneur {
     grid-template:
-      "header" 20vh
+      "header" 15vh
       "cube"
-      "texte" 100%
+      "texte"
+      "lienCours"
       / auto;
   }
 
@@ -103,6 +108,19 @@
 
   .boutonCours {
     display: none;
+  }
+
+  .lienCours {
+    grid-area: lienCours;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    &:visited, &:link, &:focus, &:active {
+      color: white;
+      text-decoration: underline;
+      
+    }
   }
 }
 
@@ -112,7 +130,8 @@
     grid-template:
       "header" 20vh
       "cube"
-      "texte" 100%
+      "texte" 
+      "lienCours"
       / auto;
   }
 
@@ -145,6 +164,18 @@
 
   .boutonCours {
     display: none;
+  }
+
+  .lienCours {
+    grid-area: lienCours;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    &:visited, &:link, &:focus, &:active {
+      color: white;
+      text-decoration: underline;
+      
+    }
   }
 }
 
@@ -155,7 +186,8 @@
     grid-template:
       "header" 30vh
       "cube"
-      "texte" 100%
+      "texte" auto
+      "lienCours"
       / auto;
   }
 
@@ -189,6 +221,18 @@
 
   .boutonCours {
     display: none;
+  }
+
+  .lienCours {
+    grid-area: lienCours;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    &:visited, &:link, &:focus, &:active {
+      color: white;
+      text-decoration: underline;
+      
+    }
   }
 }
 
