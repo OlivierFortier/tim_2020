@@ -95,7 +95,7 @@ export default function Accueil() {
         </motion.main>
         <aside className={styles.accueilAside}>
           <Link href="/introduction">
-            <motion.h2 whileTap={{scale: 1.5}}>CONTINUER</motion.h2>
+            <motion.h2 whileTap={{scale: 1.5}} className={styles.continuer}>CONTINUER</motion.h2>
           </Link>
           <span>
             <motion.div
