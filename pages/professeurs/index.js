@@ -1,15 +1,33 @@
 import { motion } from "framer-motion";
+import { gql } from "graphql-request";
+import { faireRequeteGql } from "../../libs/requetesDonnes";
 import styles from "./professeurs.module.scss";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
-export default function Professeurs() {
+export default function Professeurs({ items }) {
+
+  // choisir des profs aléatoires à afficher
+  const melangerProfs = (liste) =>
+    liste
+      .map((a) => [Math.random(), a])
+      .sort((a, b) => a[0] - b[0])
+      .map((a) => a[1]);
+
+  const [profsAlea, setProfAlea] = useState(items);
+
+  useEffect(() => {
+    const melanger = melangerProfs(items);
+    setProfAlea((ancienOrdre) => melanger);
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: {duration: 0.5, stiffness: 90}}}
-      exit={{y: -1000, opacity: 0, transition: {duration: 0.7}}}
+      animate={{ opacity: 1, transition: { duration: 0.5, stiffness: 90 } }}
+      exit={{ y: -1000, opacity: 0, transition: { duration: 0.7 } }}
       className={styles.conteneur}
     >
       <Head>
@@ -40,16 +58,16 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "0%", y: "0%", scale: 0.8}}
+              animate={{ opacity: 1, x: "0%", y: "0%", scale: 0.8 }}
             >
               <Image
-              className={styles.imgProf}
-                // width={120}
-                // height={120}
+                className={styles.imgProf}
+                quality={25}
                 loading="eager"
                 layout="fill"
-                unsized="true"
-                src="/images/cam.jpg"
+                unsized
+                src={profsAlea[0].photo.url}
+                alt={profsAlea[0].nom}
               />
             </motion.div>
           </Link>
@@ -62,14 +80,13 @@ export default function Professeurs() {
               animate={{ opacity: 1, x: "100%", y: "-10%", scale: 1.4 }}
             >
               <Image
-              className={styles.imgProf}
-                // width={120}
-                // height={120}
+                className={styles.imgProf}
+                quality={25}
                 loading="eager"
                 layout="fill"
-                unsized="true"
-                src="/images/cam.jpg"
-                alt={`photo de ${"prof.nom"}`}
+                unsized
+                src={profsAlea[1].photo.url}
+                alt={profsAlea[1].nom}
               />
             </motion.div>
           </Link>
@@ -82,14 +99,13 @@ export default function Professeurs() {
               animate={{ opacity: 1, x: "-10%", y: "140%" }}
             >
               <Image
-              className={styles.imgProf}
-                // width={120}
-                // height={120}
+                className={styles.imgProf}
+                quality={25}
                 loading="eager"
                 layout="fill"
-                unsized="true"
-                src="/images/cam.jpg"
-                alt={`photo de ${"prof.nom"}`}
+                unsized
+                src={profsAlea[2].photo.url}
+                alt={profsAlea[2].nom}
               />
             </motion.div>
           </Link>
@@ -101,17 +117,16 @@ export default function Professeurs() {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, scale: 3.6, y: "70%"}}
+              animate={{ opacity: 1, scale: 3.6, y: "70%" }}
             >
               <Image
-              className={styles.imgProf}
-                // width={120}
-                // height={120}
+                className={styles.imgProf}
+                quality={25}
                 loading="eager"
                 layout="fill"
-                unsized="true"
-                src="/images/cam.jpg"
-                alt={`photo de ${"prof.nom"}`}
+                unsized
+                src={profsAlea[3].photo.url}
+                alt={profsAlea[3].nom}
               />
             </motion.div>
           </Link>
@@ -131,14 +146,13 @@ export default function Professeurs() {
               animate={{ opacity: 1, x: "20%", y: "-90%", scale: 0.9 }}
             >
               <Image
-              className={styles.imgProf}
-                // width={120}
-                // height={120}
+                className={styles.imgProf}
+               quality={25}
                 loading="eager"
                 layout="fill"
-                unsized="true"
-                src="/images/cam.jpg"
-                alt={`photo de ${"prof.nom"}`}
+                unsized
+                src={profsAlea[4].photo.url}
+                alt={profsAlea[4].nom}
               />
             </motion.div>
           </Link>
@@ -151,14 +165,13 @@ export default function Professeurs() {
               animate={{ opacity: 1, x: "145%", y: "-140%" }}
             >
               <Image
-              className={styles.imgProf}
-                // width={120}
-                // height={120}
+                className={styles.imgProf}
+               quality={25}
                 loading="eager"
                 layout="fill"
-                unsized="true"
-                src="/images/cam.jpg"
-                alt={`photo de ${"prof.nom"}`}
+                unsized
+                src={profsAlea[5].photo.url}
+                alt={profsAlea[5].nom}
               />
             </motion.div>
           </Link>
@@ -172,14 +185,13 @@ export default function Professeurs() {
               animate={{ opacity: 1, x: "10%", y: "40%" }}
             >
               <Image
-              className={styles.imgProf}
-                // width={120}
-                // height={120}
+                className={styles.imgProf}
+               quality={25}
                 loading="eager"
                 layout="fill"
-                unsized="true"
-                src="/images/cam.jpg"
-                alt={`photo de ${"prof.nom"}`}
+                unsized
+                src={profsAlea[6].photo.url}
+                alt={profsAlea[6].nom}
               />
             </motion.div>
           </Link>
@@ -192,14 +204,13 @@ export default function Professeurs() {
               animate={{ opacity: 1, x: "-260%", y: "150%", scale: 1.4 }}
             >
               <Image
-              className={styles.imgProf}
-                // width={120}
-                // height={120}
+                className={styles.imgProf}
+               quality={25}
                 loading="eager"
                 layout="fill"
-                unsized="true"
-                src="/images/cam.jpg"
-                alt={`photo de ${"prof.nom"}`}
+                unsized
+                src={profsAlea[7].photo.url}
+                alt={profsAlea[7].nom}
               />
             </motion.div>
           </Link>
@@ -212,14 +223,13 @@ export default function Professeurs() {
               animate={{ opacity: 1, x: "-300%", y: "340%", scale: 2 }}
             >
               <Image
-              className={styles.imgProf}
-                // width={120}
-                // height={120}
+                className={styles.imgProf}
+                quality={25}
                 loading="eager"
                 layout="fill"
-                unsized="true"
-                src="/images/cam.jpg"
-                alt={`photo de ${"prof.nom"}`}
+                unsized
+                src={profsAlea[8].photo.url}
+                alt={profsAlea[8].nom}
               />
             </motion.div>
           </Link>
@@ -232,10 +242,28 @@ export default function Professeurs() {
             DONNER <b>LA MEILLEURE ÉDUCATION</b>
           </h2>
         </Link>
-        <Link href="/professeurs/grille">
-          <a>voir la grille</a>
-        </Link>
       </div>
     </motion.div>
   );
+}
+
+export async function getStaticProps({ params }) {
+  const requeteGql = gql`
+    query Professeurs {
+      professeurCollection {
+        items {
+          nom
+          photo {
+            url
+          }
+        }
+      }
+    }
+  `;
+
+  const json = await faireRequeteGql(requeteGql);
+
+  const lesProf = json.professeurCollection;
+
+  return { props: lesProf, revalidate: 1 };
 }

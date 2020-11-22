@@ -18,10 +18,10 @@
   font-size: 72px;
   line-height: 86px;
   position: absolute;
-  top: 7%;
+  top: 10%;
   left: 5%;
   z-index: 3;
-  text-align: end;
+  text-align: start;
 
   h1,
   h3 {
@@ -30,11 +30,11 @@
   }
 
   h1 {
-    font-size: 72px;
+    font-size: 3rem;
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 29px;
     text-decoration-line: underline;
   }
@@ -120,8 +120,10 @@
   }
 
   .imgProf {
-    width: 120px;
-    height: auto;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    object-position: top;
   }
 }
 
@@ -207,6 +209,7 @@
 
   .imgProf {
     width: 50px !important;
+    height: 50px !important;
   }
 }
 
@@ -292,6 +295,7 @@
 
   .imgProf {
     width: 70px !important;
+    height: 70px !important;
   }
 }
 
@@ -380,6 +384,7 @@
 
   .imgProf {
     width: 100px !important;
+    width: 100px !important;
   }
 }
 
@@ -387,5 +392,6 @@
 @media (min-width: 1025px) and (max-width: 1439px) {
   .imgProf {
     width: 110px !important;
+    height: 110px !important;
   }
 }
