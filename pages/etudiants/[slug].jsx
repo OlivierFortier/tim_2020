@@ -12,9 +12,23 @@ export default function PageUnProjet(leProjet) {
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
     >
-      <section>
-        <h1>{leProjet.titreDuProjet}</h1>
-        <h2>{leProjet.typeDuProjet}</h2>
+      <h1 className={styles.nomPage}>Projets étudiants</h1>
+      <section className={styles.sectionPrincipale}>
+        <span className={styles.conteneurImage}>
+        <Image
+          unsized
+          layout="fill"
+          src={leProjet?.captureDcran?.url}
+          loading="eager"
+          quality={75}
+          className={styles.image}
+          alt={`photo de ${leProjet.titreDuProjet}`}
+        />
+        </span>
+        <span className={styles.infoProjet}>
+          <h1>{leProjet.titreDuProjet}</h1>
+          <h2>{leProjet.typeDuProjet}</h2>
+        </span>
       </section>
     </motion.main>
   );
