@@ -159,7 +159,12 @@
   }
 
   .nomCollege {
-    display: none;
+    // display: none;
+    
+    font-size: 1rem;
+    padding-left: 0;
+    margin: 0 auto;
+    margin-top: 5vh;
   }
 
   .accueilAside {
@@ -223,7 +228,9 @@
   }
 
   .nomCollege {
-    display: none;
+    // display: none;
+    margin-top: 20%;
+    font-size: 1rem;
   }
 
   .accueilAside {
@@ -260,6 +267,7 @@
     left: 0;
     width: 100vw;
     height: 100vh !important;
+    z-index: -1;
   }
 
   .conteneurAccueil {
@@ -275,15 +283,15 @@
     justify-content: center;
     border-left: 3px solid white;
 
+    
+
     h1 {
       padding-left: 10%;
       width: 95%;
-       br {
-        
-          // display: none;
-        
-      }
+
+     
     }
+
   }
 
   .titreIntro {

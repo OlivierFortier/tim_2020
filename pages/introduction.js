@@ -44,6 +44,10 @@ export default function Introduction() {
       </p>
 
       <Link href="/cours">
+       <a className={styles.lienCours}>LISTE DES COURS</a>
+      </Link>
+
+      <Link href="/cours">
         <motion.button
           whileHover={{ scale: 1.1 }}
           className={styles.boutonCours}
