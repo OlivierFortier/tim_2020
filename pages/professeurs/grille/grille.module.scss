@@ -1,8 +1,38 @@
 .conteneurPage {
     margin: 0 auto;
-    margin-top: -2%;
     width: 100%;
+    margin-top: -2%;
     
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px){
+
+    .conteneurPage {
+        margin-top: 2%;
+    }
+
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px){
+    .conteneurPage {
+        margin-top: 2%;
+    }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px){
+    .conteneurPage {
+        margin-top: 2%;
+    }
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .conteneurPage {
+    //   margin-top: 0;
+  }
 }
 
 

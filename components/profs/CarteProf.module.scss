@@ -1,8 +1,7 @@
 .imgProf {
-
   width: 14vw;
   height: 25vh;
-  object-position:  0 20%;
+  object-position: 0 20%;
 }
 
 .unProf {
@@ -24,7 +23,7 @@
     position: relative;
   }
 
-  ::before {
+   div::before  {
     background-color: var(--foreground);
     bottom: 0;
     content: "";
@@ -38,25 +37,123 @@
     z-index: 1;
     filter: opacity(0.5) contrast(0.6) saturate(3) brightness(1);
   }
+}
+.nomProf, .specialisationProf {
+  margin: 0;
+  background-color: transparent;
+}
 
-  h3 {
-    color: white;
-    position: absolute;
-    font-size: 1.5rem;
-    max-width: 90%;
+.nomProf {
+  color: white;
+  position: absolute;
+  font-size: 1.2rem;
+  max-width: 90%;
+  width: 100%;
+  top: 75%;
+  left: 5%;
+  cursor: pointer;
+}
+
+.specialisationProf {
+  color: white;
+  font-weight: normal;
+  font-size: 0.8rem;
+  max-width: 90%;
+  position: absolute;
+  top: 87%;
+  left: 5%;
+  cursor: pointer;
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px) {
+  .imgProf {
+    width: 37vw;
+    height: 20vh;
+    object-position: 0 35%;
+  }
+
+  .unProf {
+   
+  }
+  .nomProf {
+    font-size: 0.8rem;
+    top: 70%;
+  }
+
+  .specialisationProf {
+    display: none;
+    font-size: 0.7rem;
+    top: 80%;
+  }
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px) {
+  .imgProf {
+    width: 37vw;
+    height: 20vh;
+    object-position: 0 35%;
+  }
+
+  .unProf {
+   
+  }
+  .nomProf {
+    font-size: 0.8rem;
+    top: 70%;
+  }
+
+  .specialisationProf {
+    display: none;
+    font-size: 0.7rem;
+    top: 80%;
+  }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .imgProf {
+    width: 25vw;
+    height: 22vh;
+    // object-position: -60px 30%;
+  }
+
+  .unProf {
+   
+  }
+  .nomProf {
+    font-size: 1.1rem;
     top: 64%;
-    left: 5%;
-    cursor: pointer;
   }
 
-  h4 {
-    color: white;
-    font-weight: normal;
-    font-size: 0.9rem;
-    max-width: 75%;
-    position: absolute;
-    top: 77%;
-    left: 5%;
-    cursor: pointer;
+  .specialisationProf {
+    // display: none;
+    font-size: 1rem;
+    top: 75%;
   }
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+  // .imgProf {
+  //   width: 25vw;
+  //   height: 22vh;
+  //   // object-position: -60px 30%;
+  // }
+
+  // .unProf {
+   
+  // }
+  // .nomProf {
+  //   font-size: 1.4rem;
+  //   top: 64%;
+  // }
+
+  // .specialisationProf {
+  //   // display: none;
+  //   font-size: 1.2rem;
+  //   top: 75%;
+  // }
 }

@@ -1,7 +1,7 @@
 .points {
   display: flex !important;
   justify-content: center !important;
-//   margin-top: 7%;
+  margin-top: 1%;
 
   :global(.swiper-pagination-bullet) {
     padding: 2%;
@@ -28,4 +28,34 @@
   display: flex;
   justify-content: center;
   
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px){
+
+  .points {
+    margin-top: 7%;
+  }
+
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px){
+  .points {
+    margin-top: 7%;
+  }
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1023px){
+  .points {
+    margin-top: 7%;
+  }
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .points {
+    margin-top: 5%;
+  }
 }
