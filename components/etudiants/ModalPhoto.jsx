@@ -8,20 +8,24 @@ export default function ModalPhoto({ infoPhoto, ouvert, fermerModal }) {
       style={{
         overlay: {
           zIndex: 10,
-        },
+        }
       }}
+      overlayClassName={styles.leModalFond}
+      className={styles.leModal}
       isOpen={ouvert}
       onRequestClose={fermerModal}
     >
-      <div className={styles.conteneurImage}>
-        {infoPhoto && ouvert && (
-          <Image
-            src={infoPhoto.photo.url}
-            layout="fill"
-            unsized
-            className={styles.image}
-          />
-        )}
+      <div className={styles.conteneurModal}>
+        <div className={styles.conteneurImage}>
+          {infoPhoto && ouvert && (
+            <Image
+              src={infoPhoto.photo.url}
+              layout="fill"
+              unsized
+              className={styles.image}
+            />
+          )}
+        </div>
       </div>
     </Modal>
   );

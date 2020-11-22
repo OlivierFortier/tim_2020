@@ -1,8 +1,75 @@
+.leModalFond {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    
+    z-index: 10;
+    background-color: rgba(171, 181, 190, 0.349);
+}
+
+.leModal {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+}
+
+.conteneurModal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .conteneurImage {
-    width: 60vw;
+    width: 80%;
     height: auto;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & div {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .image {
-    width: 60vw;
+    width: 100%;
     height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    // margin: auto;
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px){
+   
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px){
+
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
+  
 }
