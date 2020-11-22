@@ -16,7 +16,7 @@ export default function projets(lesProjets) {
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
     >
-      <h1>Projets étudiants</h1>
+      <h1 className={styles.nomPage}>Projets étudiants</h1>
       <main className={styles.conteneurSwiper}>
         <Swiper
           pagination={{
@@ -27,6 +27,30 @@ export default function projets(lesProjets) {
           slidesPerView={3}
           slidesPerColumn={2}
           slidesPerColumnFill="row"
+          breakpoints={{
+            310: {
+              spaceBetween: 30,
+              slidesPerColumn: 3,
+              slidesPerView: 2,
+            },
+  
+            425: {
+              spaceBetween: 30,
+              slidesPerColumn: 3,
+              slidesPerView: 2,
+            },
+            768: {
+              spaceBetween: 30,
+              slidesPerColumn: 3,
+              slidesPerView: 3,
+            },
+  
+            1025: {
+              spaceBetween: 30,
+              slidesPerColumn: 2,
+              slidesPerView: 3,
+            },
+          }}
         >
           {lesProjets.items.map((projet, index) => {
             return (
