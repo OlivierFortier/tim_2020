@@ -2,9 +2,15 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import styles from "./etudiants.module.scss";
 
 export default function index() {
+
+  const [imageSurvol, setImageSurvol] = useState("ETUDIANT.png");
+
+
+
   return (
     <motion.div
       className={styles.conteneurPage}
@@ -29,19 +35,24 @@ export default function index() {
       <main className={styles.wrapperContenu}>
         <section className={styles.contenu}>
           <Link href="/etudiants/projets">
-            <h1 className={styles.projets}>Projets étudiants</h1>
+            <motion.h1 className={styles.projets}
+            onHoverStart={()=> setImageSurvol("projet.png")}
+            >Projets étudiants</motion.h1>
           </Link>
           <span className={styles.ligne}></span>
           <Link href="/etudiants/gallerie">
-            <h1 className={styles.vie}>Vie étudiante</h1>
+            <motion.h1 className={styles.vie}
+            onHoverStart={()=> setImageSurvol("ETUDIANT.png")}
+            >Vie étudiante</motion.h1>
           </Link>
         </section>
         <div className={styles.conteneurImage}>
           <span className={styles.conteneurEffetImage}>
             <Image
-              src={"/images/photo3.jpg"}
+              src={`/images/${imageSurvol}`}
               loading="eager"
               layout="fill"
+              quality={50}
               unsized
             />
           </span>
