@@ -11,6 +11,7 @@ export default function CarteProf({ infoCarte, ouvrirModal }) {
           layout="fill"
           src={infoCarte?.photo?.url}
           loading="lazy"
+          quality={1}
           className={styles.imgInfo}
           alt={`photo de ${infoCarte.nom}`}
         />
@@ -21,6 +22,7 @@ export default function CarteProf({ infoCarte, ouvrirModal }) {
             unsized
             src="/images/cam.jpg"
             loading="lazy"
+            quality={1}
             className={styles.imgInfo}
             alt={`photo de ${"yeet"}`}
           />

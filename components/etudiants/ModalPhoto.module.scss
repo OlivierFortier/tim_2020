@@ -5,7 +5,7 @@
     right: 0px;
     bottom: 0px;
     
-    z-index: 10;
+    z-index: 15;
     background-color: rgba(171, 181, 190, 0.349);
 }
 
@@ -17,9 +17,7 @@
     bottom: 40px;
     
     overflow: auto;
-    border-radius: 4px;
     outline: none;
-    padding: 20px;
 }
 
 .conteneurModal {
@@ -31,7 +29,7 @@
 }
 
 .conteneurImage {
-    width: 80%;
+    // width: 80%;
     height: auto;
     max-width: 100%;
     margin: auto;
@@ -47,26 +45,31 @@
     }
 }
 .image {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 70vh;
     max-height: 100%;
     object-fit: contain;
-    // margin: auto;
 }
 
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px){
-   
+   .image {
+       height: 40vh;
+   }
 }
 
 /*==================TABLETTE==================*/
 @media (min-width: 425px) and (max-width: 767px){
-
+    .image {
+        height: 40vh;
+    }
 }
 
 /**================GROSSE TABLETTE==================*/
 @media (min-width: 768px) and (max-width: 1024px){
-
+    .image {
+        height: 50vh;
+    }
 }
 
 /*==================LAPTOP==========================*/
