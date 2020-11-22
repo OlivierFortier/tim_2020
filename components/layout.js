@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { usePage } from "../hooks/usePage";
 import { useEtatScroll } from "../hooks/contexteScroll";
 import { useSwipeable } from "react-swipeable";
+import Navigation from "./navigation";
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -123,13 +124,7 @@ export default function Layout({ children }) {
             {children}
           </div>
         </div>
-        {/* <footer 
-        // {...drag}
-         className={styles.conteneurProgres}>
-          <span>
-            <progress value={page} max={8}></progress>
-          </span>
-        </footer> */}
+        <Navigation/>
       </div>
     </>
   );
