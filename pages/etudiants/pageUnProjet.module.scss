@@ -8,7 +8,7 @@
   width: 80%;
   margin: 0;
   margin: 0 auto;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 .sectionPrincipale {
@@ -37,16 +37,101 @@
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px){
 
+    .conteneurPage {
+        margin-top: 5%;
+    }
+
+    .nomPage {
+        font-size: 1.5rem;
+        margin-bottom: 7%;
+    }
+
+    .sectionPrincipale {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 80vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+
+    .infoProjet {
+        align-self: flex-start;
+        width: 100%;
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
 }
 
 /*==================TABLETTE==================*/
 @media (min-width: 425px) and (max-width: 767px){
+    .conteneurPage {
+        margin-top: 5%;
+    }
 
+    .nomPage {
+        font-size: 1.5rem;
+        margin-bottom: 7%;
+    }
+
+    .sectionPrincipale {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 80vw;
+        height: 40vh;
+        object-fit: fill;
+    }
+
+    .infoProjet {
+        align-self: flex-start;
+        width: 100%;
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
 }
 
 /**================GROSSE TABLETTE==================*/
 @media (min-width: 768px) and (max-width: 1024px){
+    .conteneurPage {
+        margin-top: 5%;
+    }
 
+    .nomPage {
+        font-size: 1.5rem;
+        margin-bottom: 7%;
+    }
+
+    .sectionPrincipale {
+        flex-direction: column;
+    }
+
+    .image {
+        width: 80vw;
+        height: 45vh;
+        object-fit: cover;
+    }
+
+    .infoProjet {
+        align-self: flex-start;
+        width: 100%;
+        h1 {
+            font-size: 3rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 /*==================LAPTOP==========================*/
