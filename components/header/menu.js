@@ -89,7 +89,7 @@ export default function Menu() {
                         <Link href="/" as="/">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Accueil </a>
-                            {router.pathname === "/" && (
+                            {router.pathname === "/" || router.pathname === "/introduction" && (
                               <div className={styles.wrapPagination}>
                                 <span></span>
                               </div>
@@ -101,7 +101,7 @@ export default function Menu() {
                         <Link href="/cours" as="/cours">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Cours </a>
-                            {router.pathname === "/cours" && (
+                            {router.pathname.includes("/cours") && (
                               <div className={styles.wrapPagination}>
                                 <span></span>
                               </div>
@@ -113,7 +113,7 @@ export default function Menu() {
                         <Link href="/professeurs" as="/professeurs">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Professeurs </a>
-                            {router.pathname === "/professeurs" && (
+                            {router.pathname.includes("/professeurs") && (
                               <div className={styles.wrapPagination}>
                                 <span></span>
                               </div>
@@ -126,7 +126,7 @@ export default function Menu() {
                         <Link href="/etudiants" as="/etudiants">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Vie Étudiante </a>
-                            {router.pathname === "/etudiants" && (
+                            {router.pathname.includes("/etudiants") && (
                               <div className={styles.wrapPagination}>
                                 <span></span>
                               </div>
@@ -138,7 +138,7 @@ export default function Menu() {
                         <Link href="/futur" as="/futur">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Futur</a>
-                            {router.pathname === "/futur" && (
+                            {router.pathname.includes("/futur") && (
                               <div className={styles.wrapPagination}>
                                 <span></span>
                               </div>
