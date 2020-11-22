@@ -1,9 +1,45 @@
 .imgInfo {
-    width: 14vw;
-    height: 27vh;
-    cursor: pointer;
-  }
+  width: 20vw;
+  height: 30vh;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
 
-  .unInfo {
-      font-size: 0;
+.unInfo {
+//   font-size: 0;
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px) {
+    .imgInfo {
+      width: 37vw;
+      height: 18vh;
+    }
+  
+  
+  }
+  
+  /*==================TABLETTE==================*/
+  @media (min-width: 425px) and (max-width: 767px) {
+    .imgInfo {
+      width: 37vw;
+      height: 20vh;
+    }
+  
+  }
+  
+  /**================GROSSE TABLETTE==================*/
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .imgInfo {
+      width: 25vw;
+      height: 22vh;
+      
+    }
+  }
+  
+  /*==================LAPTOP==========================*/
+  @media (min-width: 1025px) and (max-width: 1439px) {
+  
+  
   }

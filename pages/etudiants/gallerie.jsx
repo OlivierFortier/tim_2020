@@ -41,7 +41,7 @@ export default function gallerie(lesPhotos) {
         ouvert={modalOuvert}
         fermerModal={fermerModal}
       ></ModalPhoto>
-      <h1>Vie étudiante</h1>
+      <h1 className={styles.nomPage}>Vie étudiante</h1>
 
       <main className={styles.conteneurSwiper}>
         <Swiper
@@ -53,6 +53,30 @@ export default function gallerie(lesPhotos) {
           slidesPerView={3}
           slidesPerColumn={2}
           slidesPerColumnFill="row"
+          breakpoints={{
+            310: {
+              spaceBetween: 30,
+              slidesPerColumn: 3,
+              slidesPerView: 2,
+            },
+  
+            425: {
+              spaceBetween: 30,
+              slidesPerColumn: 3,
+              slidesPerView: 2,
+            },
+            768: {
+              spaceBetween: 30,
+              slidesPerColumn: 3,
+              slidesPerView: 3,
+            },
+  
+            1025: {
+              spaceBetween: 30,
+              slidesPerColumn: 2,
+              slidesPerView: 3,
+            },
+          }}
         >
           {lesPhotos.items.map((photo, index) => {
             return (
