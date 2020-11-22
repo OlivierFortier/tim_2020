@@ -18,10 +18,10 @@
   font-size: 72px;
   line-height: 86px;
   position: absolute;
-  top: 7%;
+  top: 10%;
   left: 5%;
   z-index: 3;
-  text-align: end;
+  text-align: start;
 
   h1,
   h3 {
@@ -30,11 +30,11 @@
   }
 
   h1 {
-    font-size: 72px;
+    font-size: 3rem;
   }
 
   h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 29px;
     text-decoration-line: underline;
   }

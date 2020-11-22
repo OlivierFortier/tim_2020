@@ -232,9 +232,6 @@ export default function Professeurs() {
             DONNER <b>LA MEILLEURE ÉDUCATION</b>
           </h2>
         </Link>
-        <Link href="/professeurs/grille">
-          <a>voir la grille</a>
-        </Link>
       </div>
     </motion.div>
   );
