@@ -26,10 +26,12 @@ export default function SwiperProfs({ listeProfs }) {
           },
 
           425: {
+            spaceBetween: 30,
             slidesPerColumn: 3,
             slidesPerView: 2,
           },
           768: {
+            spaceBetween: 30,
             slidesPerColumn: 3,
             slidesPerView: 3,
           },
