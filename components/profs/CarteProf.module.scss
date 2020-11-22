@@ -46,9 +46,10 @@
 .nomProf {
   color: white;
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   max-width: 90%;
-  top: 70%;
+  width: 100%;
+  top: 75%;
   left: 5%;
   cursor: pointer;
 }
@@ -56,10 +57,10 @@
 .specialisationProf {
   color: white;
   font-weight: normal;
-  font-size: 0.9rem;
-  max-width: 75%;
+  font-size: 0.8rem;
+  max-width: 90%;
   position: absolute;
-  top: 83%;
+  top: 87%;
   left: 5%;
   cursor: pointer;
 }
@@ -73,13 +74,17 @@
   }
 
   .unProf {
-    .nomProf {
-      font-size: 0.8rem;
-    }
+   
+  }
+  .nomProf {
+    font-size: 0.8rem;
+    top: 70%;
+  }
 
-    .specialisationProf {
-      font-size: 0.7rem;
-    }
+  .specialisationProf {
+    display: none;
+    font-size: 0.7rem;
+    top: 80%;
   }
 }
 

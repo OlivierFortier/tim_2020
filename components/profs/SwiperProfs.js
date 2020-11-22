@@ -35,6 +35,7 @@ export default function SwiperProfs({ listeProfs }) {
           },
 
           1025: {
+            spaceBetween: 0,
             slidesPerColumn: 3,
             slidesPerView: 4,
           },
