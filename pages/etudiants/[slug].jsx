@@ -26,8 +26,9 @@ export default function PageUnProjet(leProjet) {
         />
         </span>
         <span className={styles.infoProjet}>
-          <h1>{leProjet.titreDuProjet}</h1>
-          <h2>{leProjet.typeDuProjet}</h2>
+          
+          <h1>{leProjet.typeDuProjet}</h1>
+          <h2>{leProjet.titreDuProjet}</h2>
         </span>
       </section>
     </motion.main>
