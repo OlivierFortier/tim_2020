@@ -13,23 +13,25 @@ export default function Navigation() {
   const [margesDessus, setMargeDessus] = useState("0");
 
   const ecranMobile = useMediaQuery({minWidth: 309, maxWidth: 766});
-  console.log(ecranMobile)
   const ecranTablette = useMediaQuery({ minWidth: 767, maxWidth: 1024 });
-  // console.log(ecranTablette)
 
   useEffect(()=>{
     if(router.pathname === "/") {
         setProgresBarre(ancienProgres => "0%");
         if(ecranMobile) setMargeDessus(ancienneMarge => "-10%");
-        // else setMargeDessu(ancienneMarge => "")
        if(ecranTablette) setMargeDessus(ancienneMarge => "-10%");
-      //  else setMargeDessu(ancienneMarge => "")
+     
     }
     else setMargeDessus(ancienneMarge => "")
     if(router.pathname === "/introduction") setProgresBarre(ancienProgres => "10%");
     if(router.pathname === "/cours") setProgresBarre(ancienProgres => "30%");
     if(router.pathname.includes("/professeurs")) setProgresBarre(ancienProgres => "50%");
-    if(router.pathname.includes("/etudiants")) setProgresBarre(ancienProgres => "70%");
+    if(router.pathname.includes("/etudiants")) {
+      setProgresBarre(ancienProgres => "70%");
+      setMargeDessus(ancienneMarge => "0");
+      if(ecranMobile) setMargeDessus(ancienneMarge => "-10%");
+     if(ecranTablette) setMargeDessus(ancienneMarge => "-10%");
+    }
     if(router.pathname.includes("/futur")) setProgresBarre(ancienProgres => "90%");
     if(router.pathname === "/inscription") setProgresBarre(ancienProgres => "100%");
   },[router.pathname])
