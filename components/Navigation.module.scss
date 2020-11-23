@@ -1,9 +1,9 @@
 .conteneurNavigation {
+    z-index: 3;
   flex-shrink: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  // margin-top: 5%;
   padding-top: 5%;
   padding-bottom: 2%;
 
@@ -40,6 +40,8 @@
 
 .boutonUneSection {
   color: white;
+//   z-index: 3;
+cursor: pointer;
 
   @for $i from 1 through 7 {
     &:nth-child(#{$i}) {
@@ -52,4 +54,5 @@
 grid-area: lg;
 width: auto;
 border-bottom: 1px solid white;
+margin-bottom: 4%;
 }
