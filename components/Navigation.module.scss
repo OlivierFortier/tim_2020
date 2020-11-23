@@ -1,11 +1,11 @@
 .conteneurNavigation {
-    z-index: 3;
+  z-index: 3;
   flex-shrink: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 5%;
   padding-bottom: 2%;
+  margin-top: 4%;
 
   button {
     background: transparent;
@@ -32,27 +32,47 @@
 }
 
 .barreNavigation {
-    display: grid;
-    grid-template: ". b2 b3 b4 b5 b6 ." auto
-                   "b1 lg lg lg lg lg b7" auto
-                / 1fr 20% 20% 20% 20% 20% 1fr;
+  display: grid;
+  grid-template:
+    ". b2 b3 b4 b5 b6 ." 4vh
+    "b1 lg lg lg lg lg b7" 4vh
+    / auto auto auto auto auto auto auto;
 }
 
 .boutonUneSection {
   color: white;
-//   z-index: 3;
-cursor: pointer;
+  //   z-index: 3;
+  cursor: pointer;
 
   @for $i from 1 through 7 {
     &:nth-child(#{$i}) {
-        grid-area: b + #{$i};
+      grid-area: b + #{$i};
     }
   }
 }
 
 .ligneProgres {
-grid-area: lg;
-width: auto;
-border-bottom: 1px solid white;
-margin-bottom: 4%;
+  grid-area: lg;
+  border-bottom: 1px solid white;
+  margin-bottom: 4%;
+}
+
+/*==================MOBILE==================*/
+@media (min-width: 310px) and (max-width: 424px) {
+  .conteneurNavigation {
+    margin-top: 10%;
+    // margin-bottom: 10%;
+  }
+}
+
+/*==================TABLETTE==================*/
+@media (min-width: 425px) and (max-width: 767px) {
+}
+
+/**================GROSSE TABLETTE==================*/
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*==================LAPTOP==========================*/
+@media (min-width: 1025px) and (max-width: 1439px) {
 }
