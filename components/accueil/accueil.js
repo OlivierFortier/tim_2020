@@ -38,7 +38,7 @@ export default function Accueil() {
         setVideoSource((ancienneVideo) => "/images/art.webm");
         document.documentElement.style.setProperty(
           "--bgAcceuil",
-          'url("/images/art_Moment.jpg")'
+          'url("/images/art_moment.webp")'
         );
         break;
 
@@ -46,7 +46,7 @@ export default function Accueil() {
         setVideoSource((ancienneVideo) => "/images/code.webm");
         document.documentElement.style.setProperty(
           "--bgAcceuil",
-          'url("/images/code_Moment.jpg")'
+          'url("/images/code_moment.webp")'
         );
         break;
 
@@ -59,7 +59,7 @@ export default function Accueil() {
         setVideoSource((ancienneVideo) => "/images/art.webm");
         document.documentElement.style.setProperty(
           "--bgAcceuil",
-          'url("/images/art_Moment.jpg")'
+          'url("/images/art_moment.webp")'
         );
         break;
     }
