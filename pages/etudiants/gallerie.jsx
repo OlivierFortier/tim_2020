@@ -8,6 +8,7 @@ import Modal from "react-modal";
 import ModalPhoto from "../../components/etudiants/ModalPhoto";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 SwiperCore.use([Pagination]);
 
@@ -36,6 +37,15 @@ export default function gallerie(lesPhotos) {
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
     >
+    <Head>
+    <title>TIM | Vie Étudiante</title>
+        <meta charset="UTF-8"></meta>
+        <meta
+          name="Description"
+          content="Page de la gallerie de photo qui montre les étudints de la Technique d'Intégration Multimédia du collège Maisonneuve"
+        ></meta>
+        <link rel="canonical" href="https://tim-2020.vercel.app/etudiants/gallerie"></link>
+    </Head>
       <ModalPhoto
         infoPhoto={photoActuelle}
         ouvert={modalOuvert}
