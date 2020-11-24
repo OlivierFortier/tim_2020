@@ -1,6 +1,5 @@
-
-
 module.exports = {
+  crossOrigin: 'anonymous',
   sassLoaderOptions: {
     sassOptions: {
       implementation: require('sass'),

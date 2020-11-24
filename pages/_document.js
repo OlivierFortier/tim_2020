@@ -14,10 +14,10 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="fr">
-        <Head crossOrigin="anonymous"></Head>
+        <Head ></Head>
         <body>
           <Main />
-          <NextScript crossOrigin="anonymous" />
+          <NextScript />
         </body>
       </Html>
     );
