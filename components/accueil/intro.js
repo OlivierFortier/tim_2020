@@ -6,6 +6,7 @@ import Image from "next/image";
 export default function Intro({ changerEtape }) {
   useEffect(() => {
     document.querySelector("#header-site").style.display = "none";
+    document.querySelector("#navSecondaire").style.display = "none";
     document.querySelector("#racine").style.overflowY = "hidden";
   }, []);
 

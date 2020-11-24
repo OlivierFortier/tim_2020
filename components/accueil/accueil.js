@@ -30,6 +30,7 @@ export default function Accueil() {
   };
 
   useEffect(() => {
+    document.querySelector("#navSecondaire").style.display = "flex";
     document.querySelector("#header-site").style.display = "flex";
 
     switch (theme) {
