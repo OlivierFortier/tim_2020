@@ -48,6 +48,7 @@ export default function Navigation() {
   return (
     !snapShot.menuEstOuvert && (
       <footer
+      id="navSecondaire"
         style={{ marginTop: margesDessus }}
         className={styles.conteneurNavigation}
       >
