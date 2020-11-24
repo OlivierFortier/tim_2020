@@ -11,7 +11,7 @@ export default function CarteProf({ prof }) {
             unsized
             layout="fill"
             src={prof?.photo?.url}
-            loading="eager"
+            loading="lazy"
             quality={1}
             className={styles.imgProf}
             alt={`photo de ${prof.nom}`}
@@ -20,7 +20,7 @@ export default function CarteProf({ prof }) {
           <Image
             quality={1}
             src="/images/cam.jpg"
-            loading="eager"
+            loading="lazy"
             className={styles.imgProf}
             alt={`photo de ${prof.nom}`}
           />
