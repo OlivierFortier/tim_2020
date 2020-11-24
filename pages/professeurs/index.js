@@ -62,8 +62,8 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={25}
-                loading="eager"
+                quality={10}
+                loading="lazy"
                 layout="fill"
                 unsized
                 src={profsAlea[0].photo.url}
@@ -81,8 +81,8 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={25}
-                loading="eager"
+                quality={10}
+                loading="lazy"
                 layout="fill"
                 unsized
                 src={profsAlea[1].photo.url}
@@ -100,8 +100,8 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={25}
-                loading="eager"
+                quality={10}
+                loading="lazy"
                 layout="fill"
                 unsized
                 src={profsAlea[2].photo.url}
@@ -121,8 +121,8 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={25}
-                loading="eager"
+                quality={10}
+                loading="lazy"
                 layout="fill"
                 unsized
                 src={profsAlea[3].photo.url}
@@ -147,8 +147,8 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-               quality={25}
-                loading="eager"
+               quality={10}
+                loading="lazy"
                 layout="fill"
                 unsized
                 src={profsAlea[4].photo.url}
@@ -166,8 +166,8 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-               quality={25}
-                loading="eager"
+               quality={10}
+                loading="lazy"
                 layout="fill"
                 unsized
                 src={profsAlea[5].photo.url}
@@ -186,8 +186,8 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-               quality={25}
-                loading="eager"
+               quality={10}
+                loading="lazy"
                 layout="fill"
                 unsized
                 src={profsAlea[6].photo.url}
@@ -205,8 +205,8 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-               quality={25}
-                loading="eager"
+               quality={10}
+                loading="lazy"
                 layout="fill"
                 unsized
                 src={profsAlea[7].photo.url}
@@ -224,8 +224,8 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={25}
-                loading="eager"
+                quality={10}
+                loading="lazy"
                 layout="fill"
                 unsized
                 src={profsAlea[8].photo.url}
