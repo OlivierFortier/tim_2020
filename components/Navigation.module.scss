@@ -34,8 +34,8 @@
 .barreNavigation {
   display: grid;
   grid-template:
-    ". b2 b3 b4 b5 b6 ." 4vh
-    "b1 lg lg lg lg lg b7" 4vh
+    ". b2 b3 b4 b5 b6 ." 2vh
+    "b1 lg lg lg lg lg b7" 3vh
     / auto auto auto auto auto auto auto;
 }
 
@@ -55,6 +55,7 @@
   grid-area: lg;
   border-bottom: 1px solid white;
   margin-bottom: 4%;
+  height: 50%;
 }
 
 /*==================MOBILE==================*/

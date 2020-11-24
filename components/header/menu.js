@@ -5,18 +5,25 @@ import { RiMenu3Line } from "react-icons/ri";
 import { ImCancelCircle } from "react-icons/im";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import styles from "./menu.module.scss";
+import { useProxy } from 'valtio';
+import {etatMenu} from "../etat_global/EtatMenu";
 
 export default function Menu() {
+
   //gérer l'état du menu, ouvert - oui ou non ?
-  const [menuOuvert, setMenuOuvert] = useState(false);
+  const snapShot = useProxy(etatMenu);
 
   //fonction "wrapper" pour la passer au onClick pour fermer le menu lorsqu'on clique sur un bouton du menu
   function fermerMenu() {
-    setMenuOuvert(false);
+    etatMenu.menuEstOuvert = false;
+  }
+  
+  function ouvrirFermerMenu() {
+    etatMenu.menuEstOuvert = !etatMenu.menuEstOuvert;
   }
 
   //changer le bouton du menu si il est ouvert ou non
-  const menuBouton = !menuOuvert ? (
+  const menuBouton = !snapShot.menuEstOuvert ? (
     <motion.div
       layout
       key="ouvrir"
@@ -28,7 +35,7 @@ export default function Menu() {
         className={styles.barresMenu}
         style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
         aria-label="ouvrir ou fermer menu"
-        onClick={() => setMenuOuvert(!menuOuvert)}
+        onClick={() =>  ouvrirFermerMenu() /*setMenuOuvert(!menuOuvert)*/}
       />
     </motion.div>
   ) : (
@@ -44,7 +51,7 @@ export default function Menu() {
         className={styles.cancel}
         style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
         aria-label="ouvrir ou fermer menu"
-        onClick={() => setMenuOuvert(!menuOuvert)}
+        onClick={() => ouvrirFermerMenu() /*setMenuOuvert(!menuOuvert)*/}
       />
     </motion.div>
   );
@@ -57,7 +64,7 @@ export default function Menu() {
         <AnimateSharedLayout type="crossfade">
           <AnimatePresence exitBeforeEnter>{menuBouton}</AnimatePresence>
           <AnimatePresence exitBeforeEnter>
-            {menuOuvert && (
+            {snapShot.menuEstOuvert && (
               <motion.div
                 key="divMenu"
                 layout
