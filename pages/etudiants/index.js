@@ -20,7 +20,7 @@ export default function index() {
       style={{ color: "white" }}
     >
       <Head>
-        <title>TIM | Vie Étudiante</title>
+        <title>TIM | Étudiants</title>
         <meta charset="UTF-8"></meta>
         <meta
           name="Description"
