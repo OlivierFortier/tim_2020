@@ -20,6 +20,7 @@ export default function unFutur(leFutur) {
           layout="fill"
           src={leFutur.image.url}
           unsized="true"
+          quality={25}
           // width={625}
           // height={464}
         />

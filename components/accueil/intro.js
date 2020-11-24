@@ -47,6 +47,7 @@ export default function Intro({ changerEtape }) {
         <Image
           width={403}
           height={198}
+          quality={5}
           src="/images/intro-logo-tim.svg"
           className={styles.logo}
         />

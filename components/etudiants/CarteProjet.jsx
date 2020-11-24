@@ -12,6 +12,7 @@ export default function CarteProf({ infoCarte }) {
             unsized
             src={infoCarte?.captureDcran?.url}
             loading="lazy"
+            quality={1}
             className={styles.imgInfo}
             alt={`photo de ${"infoCarte.nom"}`}
           />
@@ -20,6 +21,7 @@ export default function CarteProf({ infoCarte }) {
             <Image
               layout="fill"
               unsized
+              quality={1}
               src="/images/cam.jpg"
               loading="lazy"
               className={styles.imgInfo}
