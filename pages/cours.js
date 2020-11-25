@@ -115,7 +115,7 @@ export default function Cours({ listeCours }) {
             onChange={(evenement) => filtrerCours(evenement)}
             className={styles.selecteur}
             onClick={() => setCoursAffiche(null)}
-            style={{borderColor: lesStyles.couleurBorder}}
+            style={{borderColor: lesStyles.couleurBorder, color: lesStyles.couleurBorder}}
           >
             <option value="">de tout</option>
             <option value="Jeux">les jeux</option>
