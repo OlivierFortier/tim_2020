@@ -15,27 +15,29 @@ export default function Navigation() {
 
   // selon la section actuelle, changer le width de la barre
   const [progresBarre, setProgresBarre] = useState("0%");
-  const [margesDessus, setMargeDessus] = useState("0");
+  const [margesDessus, setMargeDessus] = useState("");
 
   const ecranMobile = useMediaQuery({ minWidth: 309, maxWidth: 766 });
   const ecranTablette = useMediaQuery({ minWidth: 767, maxWidth: 1024 });
 
   // ajuster le progres de la barre selon la page ou nous sommes + ajuster marge de la barre
   useEffect(() => {
+    setMargeDessus((ancienneMarge) => "");
     if (router.pathname === "/") {
       setProgresBarre((ancienProgres) => "0%");
       if (ecranMobile) setMargeDessus((ancienneMarge) => "-10%");
-      else if (ecranTablette) setMargeDessus((ancienneMarge) => "-10%");
-      else setMargeDessus((ancienneMarge) => "0");
-    } else setMargeDessus((ancienneMarge) => "");
+      if (ecranTablette) setMargeDessus((ancienneMarge) => "-10%");
+    }
     if (router.pathname === "/introduction")
-      setProgresBarre((ancienProgres) => "10%");
+      setMargeDessus((ancienneMarge) => "-25% !important");
+    setProgresBarre((ancienProgres) => "10%");
     if (router.pathname === "/cours") setProgresBarre((ancienProgres) => "30%");
     if (router.pathname.includes("/professeurs"))
       setProgresBarre((ancienProgres) => "50%");
+    setMargeDessus((ancienneMarge) => "-2%");
     if (router.pathname.includes("/etudiants")) {
       setProgresBarre((ancienProgres) => "70%");
-      setMargeDessus((ancienneMarge) => "0");
+      setMargeDessus((ancienneMarge) => "2%");
       if (ecranMobile) setMargeDessus((ancienneMarge) => "-10%");
       if (ecranTablette) setMargeDessus((ancienneMarge) => "-10%");
     }
@@ -48,7 +50,7 @@ export default function Navigation() {
   return (
     !snapShot.menuEstOuvert && (
       <footer
-      id="navSecondaire"
+        id="navSecondaire"
         style={{ marginTop: margesDessus }}
         className={styles.conteneurNavigation}
       >
