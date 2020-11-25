@@ -54,9 +54,27 @@
 
 .ligneProgres {
   grid-area: lg;
-  border-bottom: 1px solid white;
+  position: relative;
+  border-bottom: 2px solid white;
   margin-bottom: 4%;
   height: 50%;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    z-index: -1;
+    left: 0;
+    width: 330%;
+    border-bottom: 1px solid gray;
+  }
+  &::after {
+    top: 0;
+    left: 0;
+    content: "";
+    height: 1px;
+    padding: 100px;
+    width: 100%;
+  }
 }
 
 /*==================MOBILE==================*/
