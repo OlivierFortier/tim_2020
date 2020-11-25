@@ -2,14 +2,46 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 import styles from "./etudiants.module.scss";
 
 export default function index() {
-
   const [imageSurvol, setImageSurvol] = useState("ETUDIANT.png");
 
+  const theme = useTheme();
+  const listeThemes = useListeThemes();
+  const [lesStyles, setLesStyles] = useState({
+    couleurLigne: "#f3f1f1",
+  });
 
+  useEffect(() => {
+    switch (theme) {
+      case listeThemes.art:
+        setLesStyles({
+          couleurLigne: "#f3f1f1",
+        });
+        break;
+
+      case listeThemes.code:
+        setLesStyles({
+          couleurLigne: "#f3f1f1",
+        });
+        break;
+
+      case listeThemes.parent:
+        setLesStyles({
+          couleurLigne: "black",
+        });
+        break;
+
+      default:
+        setLesStyles({
+          couleurLigne: "#f3f1f1",
+        });
+        break;
+    }
+  }, [theme]);
 
   return (
     <motion.div
@@ -17,7 +49,6 @@ export default function index() {
       exit={{ opacity: 0 }}
       initial={{ x: "100vw", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
-      style={{ color: "white" }}
     >
       <Head>
         <title>TIM | Étudiants</title>
@@ -35,15 +66,21 @@ export default function index() {
       <main className={styles.wrapperContenu}>
         <section className={styles.contenu}>
           <Link href="/etudiants/projets">
-            <motion.h1 className={styles.projets}
-            onHoverStart={()=> setImageSurvol("projet.png")}
-            >Projets étudiants</motion.h1>
+            <motion.h1
+              className={styles.projets}
+              onHoverStart={() => setImageSurvol("projet.png")}
+            >
+              Projets étudiants
+            </motion.h1>
           </Link>
-          <span className={styles.ligne}></span>
+          <span className={styles.ligne} style={{borderColor: lesStyles.couleurLigne}}></span>
           <Link href="/etudiants/gallerie">
-            <motion.h1 className={styles.vie}
-            onHoverStart={()=> setImageSurvol("ETUDIANT.png")}
-            >Vie étudiante</motion.h1>
+            <motion.h1
+              className={styles.vie}
+              onHoverStart={() => setImageSurvol("ETUDIANT.png")}
+            >
+              Vie étudiante
+            </motion.h1>
           </Link>
         </section>
         <div className={styles.conteneurImage}>
