@@ -20,105 +20,53 @@ export default function Layout({ children }) {
       document.documentElement.style.setProperty("--bgAcceuil", 'url("")');
   }, [router.pathname]);
 
-  const [themeStyles, setThemeStyles] = useState({ couleurBg: "#110c12" });
+  const [themeStyles, setThemeStyles] = useState({ couleurBg: "#110c12", couleurTexte: "#f3f1f1" });
 
   useEffect(() => {
     switch (theme) {
       case listeThemes.art:
         setThemeStyles({
           couleurBg: "#110c12",
+          couleurTexte: "#f3f1f1"
         });
         break;
 
       case listeThemes.code:
         setThemeStyles({
           couleurBg: "#110c12",
+          couleurTexte: "#f3f1f1"
         });
         break;
 
       case listeThemes.parent:
         setThemeStyles({
           couleurBg: "#F3F1F1",
+          couleurTexte: "black"
         });
         break;
 
       default:
         setThemeStyles({
           couleurBg: "#110c12",
+          couleurTexte: "#f3f1f1"
         });
 
         break;
     }
   }, [theme]);
 
-  const { listePages, anciennePage, page, prochainePage } = usePage();
-
-  //état pour dire si on peut scroll d'une page à l'autre ou pas
-  // const [arreterScroll, setArreterScroll] = useState(true);
-  const arreterScroll = useEtatScroll();
-
-  const [scrollAccumule, setScrollAccumule] = useState(0);
-
-  //gestion drag
-  const drag = useSwipeable({
-    onSwipedLeft: () => router.push(listePages[prochainePage]),
-    onSwipedRight: () => router.push(listePages[anciennePage]),
-    delta: 100,
-    preventDefaultTouchmoveEvent: true,
-  });
-
-  //gestion scroll
-  function roulette(evenement) {
-    //on peut changer la valeur du scroll minimum nécéssaire afin de changer de page
-    console.log(scrollAccumule);
-    //TODO reset le compteur de scroll si l'utilisateur change de direction
-    if (!arreterScroll) {
-      if (scrollAccumule >= 600) {
-        setScrollAccumule(0);
-
-        evenement.deltaY > 0 && router.push(listePages[prochainePage]);
-        evenement.deltaY < 0 && router.push(listePages[anciennePage]);
-
-        return;
-      }
-
-      setScrollAccumule(
-        (ancienScroll) => ancienScroll + Math.abs(evenement.deltaY)
-      );
-    }
-  }
-
-  //gestion clavier
-  function clavier(evenement) {
-    switch (evenement.key) {
-      case "ArrowRight":
-        router.push(listePages[prochainePage]);
-        break;
-
-      case "ArrowLeft":
-        router.push(listePages[anciennePage]);
-        break;
-
-      default:
-        router.push(listePages[prochainePage]);
-        break;
-    }
-  }
-
   return (
     <>
       <div
         id="racine"
         className={styles.racine}
-        style={{ backgroundColor: themeStyles.couleurBg }}
+        style={{ backgroundColor: themeStyles.couleurBg, color: themeStyles.couleurTexte }}
       >
         <div className={styles.conteneurTout}>
           <EnTete></EnTete>
           <div
             id="conteneur-application"
             className={styles.conteneurApplication}
-            // onWheel={(e) => roulette(e)}
-            // onKeyDown={(e) => clavier(e)}
             tabIndex={0}
           >
             {children}

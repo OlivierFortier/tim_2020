@@ -29,6 +29,8 @@ export default function Accueil() {
     },
   };
 
+  const [stylesTheme, setStylesTheme] = useState({couleurBordure: "#f3f1f1", couleurBouton: "#f3f1f1", couleurTexteBouton: "black"})
+
   useEffect(() => {
     document.querySelector("#navSecondaire").style.display = "flex";
     document.querySelector("#header-site").style.display = "flex";
@@ -40,6 +42,11 @@ export default function Accueil() {
           "--bgAcceuil",
           'url("/images/art_moment.webp")'
         );
+        setStylesTheme({
+          couleurBordure: "#f3f1f1",
+          couleurBouton: "#f3f1f1",
+          couleurTexteBouton: "black"
+        });
         break;
 
       case listeThemes.code:
@@ -48,11 +55,21 @@ export default function Accueil() {
           "--bgAcceuil",
           'url("/images/code_moment.webp")'
         );
+        setStylesTheme({
+          couleurBordure: "#f3f1f1",
+          couleurBouton: "#f3f1f1",
+          couleurTexteBouton: "black"
+        });
         break;
 
       case listeThemes.parent:
         setVideoSource((ancienneVideo) => "");
         document.documentElement.style.setProperty("--bgAcceuil", "#110c12");
+        setStylesTheme({
+          couleurBordure: "black",
+          couleurBouton: "black",
+          couleurTexteBouton: "#f3f1f1"
+        })
         break;
 
       default:
@@ -86,6 +103,7 @@ export default function Accueil() {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
           className={styles.accueilMain}
+          style={{borderColor: stylesTheme.couleurBordure}}
         >
           <h1 className={styles.titreIntro}>
             La<br></br> juxtaposition du <br></br>
@@ -146,6 +164,7 @@ export default function Accueil() {
             <Link href="/introduction">
               <motion.button
                 className={styles.boutonExplorer}
+                style={{backgroundColor: stylesTheme.couleurBouton, color: stylesTheme.couleurTexteBouton}}
                 aria-label="explorer"
                 whileHover={{
                   scale: 1.05,
