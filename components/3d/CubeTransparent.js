@@ -1,10 +1,12 @@
 import { useFrame } from "react-three-fiber";
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useEffect, useState } from "react";
 import * as THREE from "three";
+import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 
 export default function CubeTransparent(props) {
+  
 
-    //créer une référence au mesh
+  //créer une référence au mesh
   const mesh = useRef();
 
   //avec ce hook, on anime le cube en dehors du cycle de vie de react, pour la performance
@@ -17,7 +19,7 @@ export default function CubeTransparent(props) {
     <mesh {...props} ref={mesh}>
       <lineSegments>
         <edgesGeometry attach="geometry" args={[cube]} />
-        <lineBasicMaterial color="white" attach="material" />
+        <lineBasicMaterial color={props.couleur3D} attach="material" />
       </lineSegments>
     </mesh>
   );

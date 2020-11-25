@@ -4,8 +4,36 @@ import CubeTransparent from "../components/3d/CubeTransparent";
 import styles from "./introduction.module.scss";
 import Link from "next/link"
 import Head from "next/head";
+import {useEffect, useState} from "react"
+import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 
 export default function Introduction() {
+
+  // changer couleur selon theme
+  const theme = useTheme();
+  const listeThemes = useListeThemes();
+  const [lesStyles, setLesStyles] = useState({ couleurCube: "#f3f1f1" });
+
+  useEffect(() => {
+    switch (theme) {
+      case listeThemes.art:
+        setLesStyles({ couleurCube: "#f3f1f1" });
+        break;
+
+      case listeThemes.code:
+        setLesStyles({ couleurCube: "#f3f1f1" });
+        break;
+
+      case listeThemes.parent:
+        setLesStyles({ couleurCube: "black" });
+        break;
+
+      default:
+        setLesStyles({ couleurCube: "#f3f1f1" });
+        break;
+    }
+  },[theme]);
+
   return (
     <motion.div
       initial={{ x: 5, opacity: 0, transition:{ ease: "easeInOut", duration: 0.5}}}
@@ -32,7 +60,7 @@ export default function Introduction() {
         <Canvas className={styles.canvas3D}>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
-          <CubeTransparent position={[0, 0, 0]} scale={[3, 3, 3]} />
+          <CubeTransparent couleur3D={lesStyles.couleurCube} position={[0, 0, 0]} scale={[3, 3, 3]} />
         </Canvas>
       </motion.div>
 
