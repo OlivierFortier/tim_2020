@@ -131,6 +131,7 @@ export default function Accueil() {
                   repeatType: "mirror",
                 },
               }}
+              style={{borderColor: stylesTheme.couleurBordure}}
               className={styles.cercleInterractif}
             ></motion.div>
           </span>

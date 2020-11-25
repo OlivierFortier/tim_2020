@@ -1,14 +1,48 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { ImCancelCircle } from "react-icons/im";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import styles from "./menu.module.scss";
-import { useProxy } from 'valtio';
-import {etatMenu} from "../etat_global/EtatMenu";
+import { useProxy } from "valtio";
+import { etatMenu } from "../etat_global/EtatMenu";
+import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 
 export default function Menu() {
+  const [lesStyles, setLesStyles] = useState({ couleurIconeMenu: "#f3f1f1" });
+
+  const theme = useTheme();
+  const listeThemes = useListeThemes();
+
+  //gestion du theme de couleurs
+  useEffect(() => {
+    switch (theme) {
+      case listeThemes.art:
+        setLesStyles({
+          couleurIconeMenu: "#f3f1f1",
+        });
+        break;
+
+      case listeThemes.code:
+        setLesStyles({
+          couleurIconeMenu: "#f3f1f1",
+        });
+        break;
+
+      case listeThemes.parent:
+        setLesStyles({
+          couleurIconeMenu: "black",
+        });
+        break;
+
+      default:
+        setLesStyles({
+          couleurIconeMenu: "#f3f1f1",
+        });
+        break;
+    }
+  }, [theme]);
 
   //gérer l'état du menu, ouvert - oui ou non ?
   const snapShot = useProxy(etatMenu);
@@ -17,7 +51,7 @@ export default function Menu() {
   function fermerMenu() {
     etatMenu.menuEstOuvert = false;
   }
-  
+
   function ouvrirFermerMenu() {
     etatMenu.menuEstOuvert = !etatMenu.menuEstOuvert;
   }
@@ -33,9 +67,14 @@ export default function Menu() {
     >
       <RiMenu3Line
         className={styles.barresMenu}
-        style={{ cursor: "pointer", position: "relative", zIndex: 4 }}
+        style={{
+          cursor: "pointer",
+          position: "relative",
+          zIndex: 4,
+          color: lesStyles.couleurIconeMenu,
+        }}
         aria-label="ouvrir ou fermer menu"
-        onClick={() =>  ouvrirFermerMenu() /*setMenuOuvert(!menuOuvert)*/}
+        onClick={() => ouvrirFermerMenu() /*setMenuOuvert(!menuOuvert)*/}
       />
     </motion.div>
   ) : (
@@ -82,25 +121,33 @@ export default function Menu() {
                   layout
                   initial={{ height: 0 }}
                   animate={{ height: "100%" }}
-                  exit={{ height: 0, transition: { duration: 1, ease: "easeInOut"}}}
+                  exit={{
+                    height: 0,
+                    transition: { duration: 1, ease: "easeInOut" },
+                  }}
                 >
                   <motion.div
                     key="liensPages"
                     className={styles.conteneurListePages}
                     initial={{ y: "10%", opacity: 0 }}
-                    animate={{ y: 0, opacity: 1, transition: { duration : 0.6, delay: 0.3}}}
-                    exit={{opacity: 0, transition: { duration : 1}}}
+                    animate={{
+                      y: 0,
+                      opacity: 1,
+                      transition: { duration: 0.6, delay: 0.3 },
+                    }}
+                    exit={{ opacity: 0, transition: { duration: 1 } }}
                   >
                     <ul className={styles.listePages}>
                       <li>
                         <Link href="/" as="/">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Accueil </a>
-                            {router.pathname === "/" || router.pathname === "/introduction" && (
-                              <div className={styles.wrapPagination}>
-                                <span></span>
-                              </div>
-                            )}
+                            {router.pathname === "/" ||
+                              (router.pathname === "/introduction" && (
+                                <div className={styles.wrapPagination}>
+                                  <span></span>
+                                </div>
+                              ))}
                           </div>
                         </Link>
                       </li>
@@ -174,9 +221,9 @@ export default function Menu() {
                     initial={{ opacity: 0 }}
                     animate={{
                       opacity: 1,
-                      transition: { delay: 0.6, ease: "easeInOut"},
+                      transition: { delay: 0.6, ease: "easeInOut" },
                     }}
-                    exit={{opacity: 0}}
+                    exit={{ opacity: 0 }}
                   >
                     <Link href="https://goo.gl/maps/jrFz5KmhQqqW3YQS9">
                       <a

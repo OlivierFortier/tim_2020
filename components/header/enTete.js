@@ -5,11 +5,6 @@ import styles from "./enTete.module.scss";
 
 export default function EnTete() {
 
-
-
-  
-  // if on est sur composant page intro
-
   return (
     <>
       <header id="header-site" className={styles.enTete}>

@@ -5,8 +5,36 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useProxy } from "valtio";
 import { etatMenu } from "./etat_global/EtatMenu";
+import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 
 export default function Navigation() {
+
+    // gestion du theme
+    const theme = useTheme()
+    const listeThemes = useListeThemes()
+    const [lesStyles, setLesStyles] = useState({couleurNav: "#f3f1f1"})
+
+    useEffect(()=>{
+      switch (theme) {
+        case listeThemes.art:
+         setLesStyles({couleurNav: "#f3f1f1"})
+          break;
+  
+        case listeThemes.code:
+          setLesStyles({couleurNav: "#f3f1f1"})
+          break;
+  
+        case listeThemes.parent:
+          setLesStyles({couleurNav: "black"})
+          break;
+  
+        default:
+          setLesStyles({couleurNav: "#f3f1f1"})
+          break;
+      }
+    },[theme])
+
+
   // obtenir l'état du menu pour faire apparaitre ou disparaitre la nav secondaire
   const snapShot = useProxy(etatMenu);
 
@@ -56,28 +84,28 @@ export default function Navigation() {
       >
         <span className={styles.barreNavigation}>
           <Link href="/">
-            <button className={styles.boutonUneSection}>01</button>
+            <button style={{color: lesStyles.couleurNav}} className={styles.boutonUneSection}>01</button>
           </Link>
           <Link href="/introduction">
-            <button className={styles.boutonUneSection}>02</button>
+            <button style={{color: lesStyles.couleurNav}} className={styles.boutonUneSection}>02</button>
           </Link>
           <Link href="/cours">
-            <button className={styles.boutonUneSection}>03</button>
+            <button style={{color: lesStyles.couleurNav}} className={styles.boutonUneSection}>03</button>
           </Link>
           <Link href="/professeurs">
-            <button className={styles.boutonUneSection}>04</button>
+            <button style={{color: lesStyles.couleurNav}} className={styles.boutonUneSection}>04</button>
           </Link>
           <Link href="/etudiants">
-            <button className={styles.boutonUneSection}>05</button>
+            <button style={{color: lesStyles.couleurNav}} className={styles.boutonUneSection}>05</button>
           </Link>
           <Link href="/futur">
-            <button className={styles.boutonUneSection}>06</button>
+            <button style={{color: lesStyles.couleurNav}} className={styles.boutonUneSection}>06</button>
           </Link>
           <Link href="/inscription">
-            <button className={styles.boutonUneSection}>07</button>
+            <button style={{color: lesStyles.couleurNav}} className={styles.boutonUneSection}>07</button>
           </Link>
           <span
-            style={{ width: progresBarre }}
+            style={{ width: progresBarre, borderColor: lesStyles.couleurNav }}
             className={styles.ligneProgres}
           ></span>
         </span>
