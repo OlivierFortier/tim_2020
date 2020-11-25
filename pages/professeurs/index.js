@@ -6,8 +6,43 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 
 export default function Professeurs({ items }) {
+  // gestion du theme de couleur
+  const theme = useTheme();
+  const listeTheme = useListeThemes();
+  const [lesStyles, setLesStyles] = useState({
+    couleurCercle: "#f3f1f1",
+  });
+
+  useEffect(() => {
+    switch (theme) {
+      case "art":
+        setLesStyles({
+          couleurCercle: "#f3f1f1",
+        });
+        break;
+
+      case "code":
+        setLesStyles({
+          couleurCercle: "#f3f1f1",
+        });
+        break;
+
+      case "parent":
+        setLesStyles({
+          couleurCercle: "black",
+        });
+        break;
+
+      default:
+        setLesStyles({
+          couleurCercle: "#f3f1f1",
+        });
+        break;
+    }
+  }, [theme]);
 
   // choisir des profs aléatoires à afficher
   const melangerProfs = (liste) =>
@@ -62,7 +97,7 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={10}
+                quality={1}
                 loading="lazy"
                 layout="fill"
                 unsized
@@ -81,7 +116,7 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={10}
+                quality={1}
                 loading="lazy"
                 layout="fill"
                 unsized
@@ -100,7 +135,7 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={10}
+                quality={1}
                 loading="lazy"
                 layout="fill"
                 unsized
@@ -121,7 +156,7 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={10}
+                quality={1}
                 loading="lazy"
                 layout="fill"
                 unsized
@@ -133,7 +168,7 @@ export default function Professeurs({ items }) {
         </span>
         <span>
           <motion.div
-            className={styles.conteneurImg}
+            style={{borderColor : lesStyles.couleurCercle}}
             animate={{ x: "-40%", y: "-20%" }}
             className={styles.cercle}
           ></motion.div>
@@ -147,7 +182,7 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-               quality={10}
+                quality={1}
                 loading="lazy"
                 layout="fill"
                 unsized
@@ -166,7 +201,7 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-               quality={10}
+                quality={1}
                 loading="lazy"
                 layout="fill"
                 unsized
@@ -186,7 +221,7 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-               quality={10}
+                quality={1}
                 loading="lazy"
                 layout="fill"
                 unsized
@@ -205,7 +240,7 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-               quality={10}
+                quality={1}
                 loading="lazy"
                 layout="fill"
                 unsized
@@ -224,7 +259,7 @@ export default function Professeurs({ items }) {
             >
               <Image
                 className={styles.imgProf}
-                quality={10}
+                quality={1}
                 loading="lazy"
                 layout="fill"
                 unsized
