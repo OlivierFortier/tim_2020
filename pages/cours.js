@@ -3,13 +3,14 @@ import NomCours from "../components/cours/nomCours";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../libs/requetesDonnes";
 import { resetIdCounter } from "react-tabs";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DetailsCours from "../components/cours/detailsCours";
 import styles from "./cours.module.scss";
 import { MdArrowDropDown } from "react-icons/md";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useOrdreListeCours } from "../hooks/useCours";
 import Head from "next/head";
+import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 
 export default function Cours({ listeCours }) {
   //on arrange la liste des cours
@@ -51,6 +52,46 @@ export default function Cours({ listeCours }) {
 
   const [tabActuel, setTabActuel] = useState(0);
 
+  // gestion du theme
+  const theme = useTheme()
+  const listeThemes = useListeThemes()
+  const [lesStyles, setLesStyles] = useState({
+    
+    couleurBorder: "#f3f1f1",
+  });
+
+  useEffect(() => {
+    switch (theme) {
+      case listeThemes.art:
+        setLesStyles({
+          
+          couleurBorder: "#f3f1f1",
+        });
+        break;
+
+      case listeThemes.code:
+        setLesStyles({
+         
+          couleurBorder: "#f3f1f1",
+        });
+        break;
+
+      case listeThemes.parent:
+        setLesStyles({
+          
+          couleurBorder: "black",
+        });
+        break;
+
+      default:
+        setLesStyles({
+         
+          couleurBorder: "#f3f1f1",
+        });
+        break;
+    }
+  }, [theme]);
+
   return (
     <motion.div
       // initial={{ x: 5, opacity: 0, transition:{ ease: "easeInOut", duration: 0.5}}}
@@ -74,6 +115,7 @@ export default function Cours({ listeCours }) {
             onChange={(evenement) => filtrerCours(evenement)}
             className={styles.selecteur}
             onClick={() => setCoursAffiche(null)}
+            style={{borderColor: lesStyles.couleurBorder}}
           >
             <option value="">de tout</option>
             <option value="Jeux">les jeux</option>
@@ -94,7 +136,7 @@ export default function Cours({ listeCours }) {
         selectedTabClassName={styles.tabSelection}
         selectedTabPanelClassName={styles.tabPanelSelection}
       >
-        <TabList className={styles.leTabList}>
+        <TabList className={styles.leTabList} style={{borderColor: lesStyles.couleurBorder}}>
           <AnimateSharedLayout>
             <Tab onClick={() => setCoursAffiche(null)}>
               <span className={styles.conteneurNomNbSession}>
@@ -191,7 +233,7 @@ export default function Cours({ listeCours }) {
 
         {/* double boucle sur les cours de toutes les sessions pour les afficher par session */}
         <AnimatePresence>
-          <div className={styles.conteneurTabPanels}>
+          <div className={styles.conteneurTabPanels} style={{borderColor: lesStyles.couleurBorder}}>
             {tousLesCours.map((session, indexSession) => {
               return (
                 <TabPanel
@@ -200,6 +242,7 @@ export default function Cours({ listeCours }) {
                 >
                   {coursAffiche ? (
                     <DetailsCours
+                    couleurIcones={lesStyles.couleurBorder}
                       infoCours={coursAffiche}
                       afficherCours={() => setCoursAffiche(null)}
                     />
@@ -207,6 +250,7 @@ export default function Cours({ listeCours }) {
                     session.map((coursFiltre, indexCours) => {
                       return (
                         <NomCours
+                        couleurBordure={lesStyles.couleurBorder}
                           afficherCours={() => setCoursAffiche(coursFiltre)}
                           key={Math.random() * indexCours}
                           infoCours={coursFiltre}

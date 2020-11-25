@@ -7,7 +7,7 @@ import { MdArrowDropDown } from "react-icons/md";
 
 import { useSetEtatScroll } from "../../hooks/contexteScroll";
 
-export default function DetailsCours({ infoCours, afficherCours }) {
+export default function DetailsCours({ infoCours, afficherCours, couleurIcones }) {
   const setArreterScroll = useSetEtatScroll();
 
   const Icones =
@@ -31,9 +31,10 @@ export default function DetailsCours({ infoCours, afficherCours }) {
             {Icones &&
               Icones.map((Icone, index) => (
                 <Icone
+                
                   key={index}
                   style={{
-                    color: "white",
+                    color: couleurIcones,
                     paddingLeft: "0.5%",
                     paddinRight: "0.5%",
                   }}

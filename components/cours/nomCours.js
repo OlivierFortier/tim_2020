@@ -2,7 +2,7 @@ import styles from "./nomCours.module.scss";
 import { motion } from "framer-motion";
 import { useIconeSujet } from "../../hooks/useIcone";
 
-export default function NomCours({ infoCours, afficherCours }) {
+export default function NomCours({ infoCours, afficherCours, couleurBordure }) {
   //hook personnalisé pour afficher une icone selont le sujet du cours
   const Icone = useIconeSujet(infoCours.sujetPrincipal[0]);
 
@@ -14,6 +14,7 @@ export default function NomCours({ infoCours, afficherCours }) {
       exit={{ x: -0.5, opacity: 0 }}
       onClick={afficherCours}
       className={styles.cours}
+      style={{borderColor: couleurBordure}}
     >
       <motion.h3 layout className={styles.titreCours}>
         {infoCours.titre}
