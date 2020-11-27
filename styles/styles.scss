@@ -8,4 +8,29 @@
 @import "global";
 
 // ordre css
-
+@import "/components/layout.module.scss";
+@import "/components/header/enTete.module.scss";
+@import "/components/header/boutonSelectionTheme.module.scss";
+@import "/components/header/menu.module.scss";
+@import "/components/Navigation.module.scss";
+@import "/pages/index.module.scss";
+@import "/components/accueil/intro.module.scss";
+@import "/components/accueil/selectionProfil.module.scss";
+@import "/components/accueil/accueil.module.scss";
+@import "/pages/introduction.module.scss";
+@import "/pages/cours.module.scss";
+@import "/components/cours/nomCours.module.scss";
+@import "/components/cours/detailsCours.module.scss";
+@import "/pages/professeurs/professeurs.module.scss";
+@import "/pages/professeurs/grille/grille.module.scss";
+@import "/components/profs/SwiperProf.module.scss";
+@import "/components/profs/CarteProf.module.scss";
+@import "/pages/professeurs/pageUnProf.module.scss";
+@import "/pages/etudiants/etudiants.module.scss";
+@import "/pages/etudiants/gallerie.module.scss";
+@import "/components/etudiants/Carte.module.scss";
+@import "/components/etudiants/ModalPhoto.module.scss";
+@import "/pages/etudiants/pageUnProjet.module.scss";
+@import "/pages/futur/futur.module.scss";
+@import "/pages/futur/pageUnFutur.module.scss";
+@import "/pages/inscription.module.scss";
