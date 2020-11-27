@@ -12,6 +12,7 @@ export default function unFutur(leFutur) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
+      key={Math.random()*100}
     >
       <h1>{leFutur.titre}</h1>
       <section className={styles.conteneurSection}>

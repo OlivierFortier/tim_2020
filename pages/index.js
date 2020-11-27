@@ -23,7 +23,7 @@ export default function Home() {
   }, [cookies.profil]);
 
   return (
-    <motion.div exit={{x: "-50%", opacity: 0}} className={styles.conteneurPage} suppressHydrationWarning={true}>
+    <motion.div exit={{x: "-50%", opacity: 0}} className={styles.conteneurPage} suppressHydrationWarning={true} key={Math.random()*100}>
       <Head>
         <title>TIM | Accueil</title>
         <meta charset="UTF-8"></meta>

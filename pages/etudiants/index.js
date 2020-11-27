@@ -49,6 +49,7 @@ export default function index() {
       exit={{ opacity: 0 }}
       initial={{ x: "100vw", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
+      key={Math.random()*100}
     >
       <Head>
         <title>TIM | Étudiants</title>

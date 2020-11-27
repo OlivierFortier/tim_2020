@@ -16,6 +16,7 @@ export default function projets(lesProjets) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
+      key={Math.random()*100}
     >
     <Head>
     <title>TIM | Projets étudiants</title>
