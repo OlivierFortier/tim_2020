@@ -11,6 +11,7 @@ export default function PageUnProjet(leProjet) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
+      key="pageUnProjet"
     >
       <h1 className={styles.nomPage}>Projets étudiants</h1>
       <section className={styles.sectionPrincipale}>

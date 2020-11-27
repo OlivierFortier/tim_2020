@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function Futur() {
   return (
-    <motion.main initial={{opacity: 0}} animate={{opacity:1}} exit={{opacity:0}} className={styles.conteneurPage}>
+    <motion.main initial={{opacity: 0}} animate={{opacity:1}} exit={{opacity:0}} key="lesFuturs" className={styles.conteneurPage}>
     <Head>
       <title>TIM | Futur</title>
       <meta charset="UTF-8"></meta>

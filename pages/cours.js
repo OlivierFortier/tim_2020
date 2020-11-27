@@ -97,6 +97,7 @@ export default function Cours({ listeCours }) {
       // initial={{ x: 5, opacity: 0, transition:{ ease: "easeInOut", duration: 0.5}}}
       // animate={{ x: 0, opacity: 1}}
       className={styles.conteneurCours}
+      key="cours"
     >
       <Head>
         <title>TIM | Cours</title>
