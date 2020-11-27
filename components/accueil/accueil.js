@@ -29,7 +29,11 @@ export default function Accueil() {
     },
   };
 
-  const [stylesTheme, setStylesTheme] = useState({couleurBordure: "#f3f1f1", couleurBouton: "#f3f1f1", couleurTexteBouton: "black"})
+  const [stylesTheme, setStylesTheme] = useState({
+    couleurBordure: "#f3f1f1",
+    couleurBouton: "#f3f1f1",
+    couleurTexteBouton: "black",
+  });
 
   useEffect(() => {
     document.querySelector("#navSecondaire").style.display = "flex";
@@ -45,7 +49,7 @@ export default function Accueil() {
         setStylesTheme({
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "black"
+          couleurTexteBouton: "black",
         });
         break;
 
@@ -58,7 +62,7 @@ export default function Accueil() {
         setStylesTheme({
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "black"
+          couleurTexteBouton: "black",
         });
         break;
 
@@ -68,8 +72,8 @@ export default function Accueil() {
         setStylesTheme({
           couleurBordure: "black",
           couleurBouton: "black",
-          couleurTexteBouton: "#f3f1f1"
-        })
+          couleurTexteBouton: "#f3f1f1",
+        });
         break;
 
       default:
@@ -103,7 +107,7 @@ export default function Accueil() {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
           className={styles.accueilMain}
-          style={{borderColor: stylesTheme.couleurBordure}}
+          style={{ borderColor: stylesTheme.couleurBordure }}
         >
           <h1 className={styles.titreIntro}>
             La<br></br> juxtaposition du <br></br>
@@ -114,7 +118,9 @@ export default function Accueil() {
         </motion.main>
         <aside className={styles.accueilAside}>
           <Link href="/introduction">
-            <motion.h2 whileTap={{scale: 1.5}} className={styles.continuer}>CONTINUER</motion.h2>
+            <motion.h2 whileTap={{ scale: 1.5 }} className={styles.continuer}>
+              CONTINUER
+            </motion.h2>
           </Link>
           <span>
             <motion.div
@@ -131,15 +137,14 @@ export default function Accueil() {
                   repeatType: "mirror",
                 },
               }}
-              style={{borderColor: stylesTheme.couleurBordure}}
+              style={{ borderColor: stylesTheme.couleurBordure }}
               className={styles.cercleInterractif}
             ></motion.div>
           </span>
           <div className={styles.conteneurImage}>
-
             {videoSource && (
               <motion.video
-                initial={{ opacity: 1,  }}
+                initial={{ opacity: 1 }}
                 animate={videoIsHovered ? "open" : "closed"}
                 onHoverStart={(e) => {
                   setHoverState(true);
@@ -165,7 +170,10 @@ export default function Accueil() {
             <Link href="/introduction">
               <motion.button
                 className={styles.boutonExplorer}
-                style={{backgroundColor: stylesTheme.couleurBouton, color: stylesTheme.couleurTexteBouton}}
+                style={{
+                  backgroundColor: stylesTheme.couleurBouton,
+                  color: stylesTheme.couleurTexteBouton,
+                }}
                 aria-label="explorer"
                 whileHover={{
                   scale: 1.05,
