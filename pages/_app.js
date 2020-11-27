@@ -6,19 +6,15 @@ import "swiper/components/pagination/pagination.scss";
 import Layout from "../components/layout";
 import { FournisseurTheme } from "../hooks/contexteTheme";
 import { AnimatePresence } from "framer-motion";
-import {FournisseurScroll} from "../hooks/contexteScroll"
-// allo
 
 function MyApp({ Component, pageProps, router }) {
   return (
     <FournisseurTheme>
-      <FournisseurScroll>
         <Layout>
           {/* <AnimatePresence > */}
             <Component {...pageProps} key={router.route + Math.random() * 100} />
           {/* </AnimatePresence> */}
         </Layout>
-      </FournisseurScroll>
     </FournisseurTheme>
   );
 }
