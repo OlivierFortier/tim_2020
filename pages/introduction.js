@@ -72,6 +72,7 @@ export default function Introduction() {
         transition: { ease: "linear", duration: 0.2 },
       }}
       className={styles.conteneur}
+      key="introduction"
     >
       <Head>
         <title>TIM | Introduction</title>
