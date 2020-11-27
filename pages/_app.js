@@ -12,13 +12,11 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <FournisseurTheme>
       <FournisseurScroll>
-        <AnimateSharedLayout>
           <Layout>
             <AnimatePresence exitBeforeEnter>
               <Component {...pageProps} key={router.route + Math.random()*100} />
             </AnimatePresence>
           </Layout>
-        </AnimateSharedLayout>
       </FournisseurScroll>
     </FournisseurTheme>
   );
