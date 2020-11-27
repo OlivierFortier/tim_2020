@@ -121,7 +121,7 @@ export default function Accueil() {
           <h2 className={styles.nomCollege}>Collège de Maisonneuve</h2>
         </motion.main>
         <aside className={styles.accueilAside}>
-          <Link href="/introduction">
+          <Link scroll={false} href="/introduction">
             <motion.h2 whileTap={{ scale: 1.5 }} className={styles.continuer}>
               CONTINUER
             </motion.h2>
@@ -171,7 +171,7 @@ export default function Accueil() {
             )}
           </div>
           <div className={styles.conteneurBouton}>
-            <Link href="/introduction">
+            <Link scroll={false} href="/introduction">
               <motion.button
                 className={styles.boutonExplorer}
                 style={{

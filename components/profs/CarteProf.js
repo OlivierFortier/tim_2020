@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CarteProf({ prof }) {
   return (
-    <Link href={`/professeurs/${prof.slug}`}>
+    <Link scroll={false} href={`/professeurs/${prof.slug}`}>
       <div className={styles.unProf}>
         {prof?.photo?.url ? (
           <Image

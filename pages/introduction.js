@@ -118,11 +118,11 @@ export default function Introduction() {
         3D.
       </p>
 
-      <Link href="/cours">
+      <Link scroll={false} scroll={false} href="/cours">
         <a style={{backgroundColor: lesStyles.couleurTexte}} className={styles.lienCours}>LISTE DES COURS</a>
       </Link>
 
-      <Link href="/cours">
+      <Link scroll={false} href="/cours">
         <motion.button
           whileHover={{ scale: 1.1 }}
           className={styles.boutonCours}

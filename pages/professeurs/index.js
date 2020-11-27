@@ -79,16 +79,16 @@ export default function Professeurs({ items }) {
         ></link>
       </Head>
       <div className={styles.sectionLesProfs}>
-        <Link href="professeurs/grille">
+        <Link scroll={false} href="professeurs/grille">
           <h1>LES PROFESSEURS</h1>
         </Link>
-        <Link href="professeurs/grille">
+        <Link scroll={false} href="professeurs/grille">
           <h3>QUI SONT-ILS?</h3>
         </Link>
       </div>
       <div className={styles.sectionImages}>
         <span>
-          <Link href="/professeurs/grille">
+          <Link scroll={false} href="/professeurs/grille">
             <motion.div
               className={styles.conteneurImg}
               initial={{
@@ -107,7 +107,7 @@ export default function Professeurs({ items }) {
               />
             </motion.div>
           </Link>
-          <Link href="/professeurs/grille">
+          <Link scroll={false} href="/professeurs/grille">
             <motion.div
               className={styles.conteneurImg}
               initial={{
@@ -126,7 +126,7 @@ export default function Professeurs({ items }) {
               />
             </motion.div>
           </Link>
-          <Link href="/professeurs/grille">
+          <Link scroll={false} href="/professeurs/grille">
             <motion.div
               className={styles.conteneurImg}
               initial={{
@@ -147,7 +147,7 @@ export default function Professeurs({ items }) {
           </Link>
         </span>
         <span>
-          <Link href="/professeurs/grille">
+          <Link scroll={false} href="/professeurs/grille">
             <motion.div
               className={styles.conteneurImg}
               initial={{
@@ -173,7 +173,7 @@ export default function Professeurs({ items }) {
             animate={{ x: "-40%", y: "-20%" }}
             className={styles.cercle}
           ></motion.div>
-          <Link href="/professeurs/grille">
+          <Link scroll={false}  href="/professeurs/grille">
             <motion.div
               className={styles.conteneurImg}
               initial={{
@@ -192,7 +192,7 @@ export default function Professeurs({ items }) {
               />
             </motion.div>
           </Link>
-          <Link href="/professeurs/grille">
+          <Link scroll={false} href="/professeurs/grille">
             <motion.div
               className={styles.conteneurImg}
               initial={{
@@ -211,7 +211,7 @@ export default function Professeurs({ items }) {
               />
             </motion.div>
           </Link>
-          <Link href="/professeurs/grille">
+          <Link scroll={false} href="/professeurs/grille">
             <motion.div
               className={styles.conteneurImg}
               style={{ zIndex: -1 }}
@@ -231,7 +231,7 @@ export default function Professeurs({ items }) {
               />
             </motion.div>
           </Link>
-          <Link href="/professeurs/grille">
+          <Link scroll={false} href="/professeurs/grille">
             <motion.div
               className={styles.conteneurImg}
               initial={{
@@ -250,7 +250,7 @@ export default function Professeurs({ items }) {
               />
             </motion.div>
           </Link>
-          <Link href="/professeurs/grille">
+          <Link scroll={false} href="/professeurs/grille">
             <motion.div
               className={styles.conteneurImg}
               initial={{
@@ -272,7 +272,7 @@ export default function Professeurs({ items }) {
         </span>
       </div>
       <div className={styles.sectionTexte}>
-        <Link href="professeurs/grille">
+        <Link scroll={false} href="professeurs/grille">
           <h2>
             PLUS<b>++</b>DE <b>25 ANS</b> D'EXPÉRIENCE DANS LE DOMAINE POUR VOUS
             DONNER <b>LA MEILLEURE ÉDUCATION</b>

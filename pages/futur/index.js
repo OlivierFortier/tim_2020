@@ -19,21 +19,21 @@ export default function Futur() {
         <h6>ÉTUDIER DANS L’INDUSTRIE C’EST BIEN PLUS</h6>
       </div>
 
-      <Link href="/futur/perspectives-universitaires">
+      <Link scroll={false} href="/futur/perspectives-universitaires">
         <section className={styles.sectionUni}>
           <h1>Perspective universitaire</h1>
           <h3>Poursuivre ses études et approfondir ses connaissances.</h3>
         </section>
       </Link>
 
-      <Link href="/futur/stages">
+      <Link scroll={false} href="/futur/stages">
         <section className={styles.sectionStage}>
           <h1>Stages</h1>
           <h3>Mettre en pratique ses apprentissages.</h3>
         </section>
       </Link>
 
-      <Link href="/futur/perspectives-demplois">
+      <Link scroll={false} href="/futur/perspectives-demplois">
         <section className={styles.sectionEmploi}>
           <h1>Perspectives d'emploi</h1>
           <h3>Devenir un professionnel dans le domaine.</h3>

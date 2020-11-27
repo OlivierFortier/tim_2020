@@ -15,7 +15,7 @@ export default function Inscription() {
                 <link rel="canonical" href="https://tim-2020.vercel.app/inscription"></link>
             </Head>
             <h1>Qu'est-ce que tu attends ?</h1>
-            <Link href="https://admission.sram.qc.ca/"><a>Soumettre ma demande d'admission.</a></Link>
+            <Link scroll={false} href="https://admission.sram.qc.ca/"><a>Soumettre ma demande d'admission.</a></Link>
         </motion.main>
     )
 }

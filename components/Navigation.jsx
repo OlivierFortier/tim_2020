@@ -81,7 +81,7 @@ export default function Navigation() {
         className={styles.conteneurNavigation}
       >
         <span className={styles.barreNavigation}>
-          <Link href="/">
+          <Link scroll={false} scroll={false} href="/">
             <button
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
@@ -89,7 +89,7 @@ export default function Navigation() {
               01
             </button>
           </Link>
-          <Link href="/introduction">
+          <Link scroll={false} href="/introduction">
             <button
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
@@ -97,7 +97,7 @@ export default function Navigation() {
               02
             </button>
           </Link>
-          <Link href="/cours">
+          <Link scroll={false} href="/cours">
             <button
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
@@ -105,7 +105,7 @@ export default function Navigation() {
               03
             </button>
           </Link>
-          <Link href="/professeurs">
+          <Link scroll={false} href="/professeurs">
             <button
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
@@ -113,7 +113,7 @@ export default function Navigation() {
               04
             </button>
           </Link>
-          <Link href="/etudiants">
+          <Link scroll={false} href="/etudiants">
             <button
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
@@ -121,7 +121,7 @@ export default function Navigation() {
               05
             </button>
           </Link>
-          <Link href="/futur">
+          <Link scroll={false} href="/futur">
             <button
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
@@ -129,7 +129,7 @@ export default function Navigation() {
               06
             </button>
           </Link>
-          <Link href="/inscription">
+          <Link scroll={false} href="/inscription">
             <button
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}

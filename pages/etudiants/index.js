@@ -66,7 +66,7 @@ export default function index() {
 
       <main className={styles.wrapperContenu}>
         <section className={styles.contenu}>
-          <Link href="/etudiants/projets">
+          <Link scroll={false} href="/etudiants/projets">
             <motion.h1
               className={styles.projets}
               onHoverStart={() => setImageSurvol("projet.png")}
@@ -75,7 +75,7 @@ export default function index() {
             </motion.h1>
           </Link>
           <span className={styles.ligne} style={{borderColor: lesStyles.couleurLigne}}></span>
-          <Link href="/etudiants/gallerie">
+          <Link scroll={false} href="/etudiants/gallerie">
             <motion.h1
               className={styles.vie}
               onHoverStart={() => setImageSurvol("ETUDIANT.png")}

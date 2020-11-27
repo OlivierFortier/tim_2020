@@ -139,7 +139,7 @@ export default function Menu() {
                   >
                     <ul className={styles.listePages}>
                       <li>
-                        <Link href="/" as="/">
+                        <Link scroll={false} href="/" as="/">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Accueil </a>
                             {router.pathname === "/" ||
@@ -152,7 +152,7 @@ export default function Menu() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/cours" as="/cours">
+                        <Link scroll={false} href="/cours" as="/cours">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Cours </a>
                             {router.pathname.includes("/cours") && (
@@ -164,7 +164,7 @@ export default function Menu() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/professeurs" as="/professeurs">
+                        <Link scroll={false} href="/professeurs" as="/professeurs">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Professeurs </a>
                             {router.pathname.includes("/professeurs") && (
@@ -177,7 +177,7 @@ export default function Menu() {
                       </li>
 
                       <li>
-                        <Link href="/etudiants" as="/etudiants">
+                        <Link scroll={false} href="/etudiants" as="/etudiants">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Vie Étudiante </a>
                             {router.pathname.includes("/etudiants") && (
@@ -189,7 +189,7 @@ export default function Menu() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/futur" as="/futur">
+                        <Link scroll={false} href="/futur" as="/futur">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Futur</a>
                             {router.pathname.includes("/futur") && (
@@ -201,7 +201,7 @@ export default function Menu() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/inscription" as="/inscription">
+                        <Link scroll={false} href="/inscription" as="/inscription">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Inscription</a>
                             {router.pathname === "/inscription" && (
@@ -225,7 +225,7 @@ export default function Menu() {
                     }}
                     exit={{ opacity: 0 }}
                   >
-                    <Link href="https://goo.gl/maps/jrFz5KmhQqqW3YQS9">
+                    <Link scroll={false} href="https://goo.gl/maps/jrFz5KmhQqqW3YQS9">
                       <a
                         target="_blank"
                         className={styles.rue}
@@ -235,23 +235,23 @@ export default function Menu() {
                       </a>
                     </Link>
                     <ul className={styles.liensContact}>
-                      <Link href="">
+                      <Link scroll={false} scroll={false} href="https://discord.com/invite/53vFvr9">
                         <a target="_blank" onClick={fermerMenu}>
                           discord
                         </a>
                       </Link>
 
-                      <Link href="https://www.instagram.com/maisonneuvetim/">
+                      <Link scroll={false} href="https://www.instagram.com/maisonneuvetim/">
                         <a target="_blank" onClick={fermerMenu}>
                           instagram
                         </a>
                       </Link>
-                      <Link href="https://www.facebook.com/maisonneuvetim/">
+                      <Link scroll={false} href="https://www.facebook.com/maisonneuvetim/">
                         <a target="_blank" onClick={fermerMenu}>
                           facebook
                         </a>
                       </Link>
-                      <Link href="https://www.youtube.com/user/TIMaisonneuve">
+                      <Link scroll={false} href="https://www.youtube.com/user/TIMaisonneuve">
                         <a target="_blank" onClick={fermerMenu}>
                           youtube
                         </a>
