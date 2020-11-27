@@ -14,9 +14,9 @@ function MyApp({ Component, pageProps, router }) {
     <FournisseurTheme>
       <FournisseurScroll>
         <Layout>
-          <AnimatePresence exitBeforeEnter>
+          {/* <AnimatePresence > */}
             <Component {...pageProps} key={router.route + Math.random() * 100} />
-          </AnimatePresence>
+          {/* </AnimatePresence> */}
         </Layout>
       </FournisseurScroll>
     </FournisseurTheme>
