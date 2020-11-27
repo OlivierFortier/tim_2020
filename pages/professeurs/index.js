@@ -65,6 +65,7 @@ export default function Professeurs({ items }) {
       exit={{ y: -1000, opacity: 0, transition: { duration: 0.7 } }}
       className={styles.conteneur}
       key={Math.random()*100}
+      layout
     >
       <Head>
         <title>TIM | Professeurs</title>

@@ -17,6 +17,7 @@ export default function projets(lesProjets) {
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
       key={Math.random()*100}
+      layout
     >
     <Head>
     <title>TIM | Projets étudiants</title>

@@ -98,6 +98,7 @@ export default function Cours({ listeCours }) {
       // animate={{ x: 0, opacity: 1}}
       className={styles.conteneurCours}
       key={Math.random()*100}
+      layout
     >
       <Head>
         <title>TIM | Cours</title>

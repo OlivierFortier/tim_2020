@@ -15,6 +15,7 @@ export default function Grille({ listeProfs }) {
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
       key={Math.random()*100}
+      layout
     >
       <Head>
         <title>TIM | Grille des professeurs</title>

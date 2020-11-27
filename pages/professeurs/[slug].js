@@ -14,6 +14,7 @@ export default function PageUnProfesseur(leProf) {
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
       key={Math.random()*100}
+      layout
     >
       <section>
         <div className={styles.unProf}>

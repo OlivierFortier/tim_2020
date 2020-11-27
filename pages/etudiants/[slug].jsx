@@ -12,6 +12,7 @@ export default function PageUnProjet(leProjet) {
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
       key={Math.random()*100}
+      layout
     >
       <h1 className={styles.nomPage}>Projets étudiants</h1>
       <section className={styles.sectionPrincipale}>

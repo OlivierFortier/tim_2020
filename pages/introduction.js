@@ -71,6 +71,8 @@ export default function Introduction() {
         opacity: 0,
         transition: { ease: "linear", duration: 0.2 },
       }}
+      layout
+      layoutId="page"
       className={styles.conteneur}
       key={Math.random()*100}
     >
