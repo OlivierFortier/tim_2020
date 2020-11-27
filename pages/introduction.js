@@ -65,11 +65,12 @@ export default function Introduction() {
         opacity: 0,
         transition: { ease: "easeInOut", duration: 0.5 },
       }}
+      transition={{duration: 0.75}}
       animate={{ x: 0, opacity: 1 }}
       exit={{
         x: -40,
         opacity: 0,
-        transition: { ease: "linear", duration: 0.2 },
+        transition: { ease: "linear", duration: 0.5 },
       }}
       className={styles.conteneur}
       key="introduction"

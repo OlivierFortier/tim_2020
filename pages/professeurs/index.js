@@ -63,6 +63,7 @@ export default function Professeurs({ items }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { duration: 0.5, stiffness: 90 } }}
       exit={{ y: -1000, opacity: 0, transition: { duration: 0.7 } }}
+      transition={{duration: 5.75}}
       className={styles.conteneur}
       key="professeurs"
     >

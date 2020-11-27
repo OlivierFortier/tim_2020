@@ -7,7 +7,6 @@ import SelectionProfil from "../components/accueil/selectionProfil";
 import styles from "./index.module.scss";
 import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
-
 export default function Home() {
   const [cookies, setCookie, removeCookie] = useCookies(["profil"]);
 
@@ -23,7 +22,13 @@ export default function Home() {
   }, [cookies.profil]);
 
   return (
-    <motion.div exit={{x: "-50%", opacity: 0}} className={styles.conteneurPage} key="accueil" suppressHydrationWarning={true}>
+    <motion.div
+      exit={{ x: "-50vw", transition: { duration: 0.75 }, opacity: 0 }}
+      className={styles.conteneurPage}
+      key="accueil"
+      transition={{duration: 0.75}}
+      suppressHydrationWarning={true}
+    >
       <Head>
         <title>TIM | Accueil</title>
         <meta charset="UTF-8"></meta>

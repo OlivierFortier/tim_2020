@@ -13,6 +13,7 @@ export default function PageUnProfesseur(leProf) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
+      transition={{duration: 0.75}}
       key="pageUnProf"
     >
       <section>

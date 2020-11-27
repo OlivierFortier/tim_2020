@@ -1,20 +1,28 @@
 import styles from "./futur.module.scss";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import Head from "next/head";
 
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Futur() {
   return (
-    <motion.main initial={{opacity: 0}} animate={{opacity:1}} exit={{opacity:0}} key="lesFuturs" className={styles.conteneurPage}>
-    <Head>
-      <title>TIM | Futur</title>
-      <meta charset="UTF-8"></meta>
-      <meta name="Description"
-        content="Page qui décrit les opportunités après le DEC: Les stages, les perspectives d'emplois et les universités."
-      ></meta>
-      <link rel="canonical" href="https://tim-2020.vercel.app/futur"></link>
-    </Head>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{duration: 0.75}}
+      key="lesFuturs"
+      className={styles.conteneurPage}
+    >
+      <Head>
+        <title>TIM | Futur</title>
+        <meta charset="UTF-8"></meta>
+        <meta
+          name="Description"
+          content="Page qui décrit les opportunités après le DEC: Les stages, les perspectives d'emplois et les universités."
+        ></meta>
+        <link rel="canonical" href="https://tim-2020.vercel.app/futur"></link>
+      </Head>
       <div className={styles.fondTexte}>
         <h6>ÉTUDIER DANS L’INDUSTRIE C’EST BIEN PLUS</h6>
       </div>

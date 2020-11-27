@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <FournisseurTheme>
         <Layout>
-          {/* <AnimatePresence > */}
+          <AnimatePresence exitBeforeEnter>
             <Component {...pageProps} key={router.route + Math.random() * 100} />
-          {/* </AnimatePresence> */}
+          </AnimatePresence>
         </Layout>
     </FournisseurTheme>
   );
