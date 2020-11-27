@@ -7,6 +7,7 @@ import Layout from "../components/layout";
 import { FournisseurTheme } from "../hooks/contexteTheme";
 import { AnimatePresence } from "framer-motion";
 import {FournisseurScroll} from "../hooks/contexteScroll"
+// e
 
 function MyApp({ Component, pageProps, router }) {
   return (
