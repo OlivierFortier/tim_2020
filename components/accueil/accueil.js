@@ -5,9 +5,11 @@ import { useEffect, useState } from "react";
 import { useTheme, useListeThemes } from "../../hooks/contexteTheme";
 
 export default function Accueil() {
+  // hook qui nous permet d'aller chercher le thème actuel utilisé
   const theme = useTheme();
   const listeThemes = useListeThemes();
 
+  // configurations des animations vidéos
   const [videoSource, setVideoSource] = useState("");
   const [videoIsHovered, setVideoIsHovered] = useState(false);
 
@@ -29,19 +31,21 @@ export default function Accueil() {
     },
   };
 
+  // définition des styles du thème de base
   const [stylesTheme, setStylesTheme] = useState({
     couleurBordure: "#f3f1f1",
     couleurBouton: "#f3f1f1",
     couleurTexteBouton: "black",
   });
 
+  // ajustement des styles selon le thème choisi
   useEffect(() => {
     document.querySelector("#navSecondaire").style.display = "flex";
     document.querySelector("#header-site").style.display = "flex";
 
     switch (theme) {
       case listeThemes.art:
-        setVideoSource((ancienneVideo) => "/images/art.webm");
+        setVideoSource("/images/art.webm");
         document.documentElement.style.setProperty(
           "--bgAcceuil",
           'url("/images/art_moment.webp")'
@@ -54,7 +58,7 @@ export default function Accueil() {
         break;
 
       case listeThemes.code:
-        setVideoSource((ancienneVideo) => "/images/code.webm");
+        setVideoSource("/images/code.webm");
         document.documentElement.style.setProperty(
           "--bgAcceuil",
           'url("/images/code_moment.webp")'
@@ -67,7 +71,7 @@ export default function Accueil() {
         break;
 
       case listeThemes.parent:
-        setVideoSource((ancienneVideo) => "");
+        setVideoSource("");
         document.documentElement.style.setProperty("--bgAcceuil", "#110c12");
         setStylesTheme({
           couleurBordure: "black",
@@ -77,7 +81,7 @@ export default function Accueil() {
         break;
 
       default:
-        setVideoSource((ancienneVideo) => "/images/art.webm");
+        setVideoSource("/images/art.webm");
         document.documentElement.style.setProperty(
           "--bgAcceuil",
           'url("/images/art_moment.webp")'
