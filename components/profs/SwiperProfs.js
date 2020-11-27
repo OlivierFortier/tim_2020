@@ -43,7 +43,7 @@ export default function SwiperProfs({ listeProfs }) {
           },
         }}
         slidesPerColumnFill="row"
-        observer
+        observer="true"
       >
         {listeProfs.map((infoProf) => {
           return (
