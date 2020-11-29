@@ -32,6 +32,7 @@ export default function Home() {
       <Head>
         <title>TIM | Accueil</title>
         <meta charset="UTF-8"></meta>
+        <meta name="google-site-verification" content="8wSuECvx0LPPYY0CdAZ4O9RjbK3j3qlzEB72E37TlW8" />
         <meta
           name="Description"
           content="Page d'acceuil des Technique d'Intégration Multimédia du collège Maisonneuve"
