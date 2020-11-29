@@ -4,7 +4,8 @@
   flex-shrink: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 2%;
   margin-top: 2%;
 
@@ -54,13 +55,18 @@
   }
 }
 
+.pageActuelle {
+  // display: block;
+  margin: 0.5%;
+}
+
 .ligneProgres {
   grid-area: lg;
   position: relative;
   border-bottom: 2px solid white;
   margin-bottom: 4%;
   height: 50%;
-  
+
   &::after {
     z-index: -1;
     top: 0;

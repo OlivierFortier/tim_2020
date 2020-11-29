@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 import { useProxy } from "valtio";
 import { etatMenu } from "./etat_global/EtatMenu";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import {usePage} from "../hooks/usePage";
 
 export default function Navigation() {
   // gestion du theme
@@ -74,6 +75,12 @@ export default function Navigation() {
     if (router.pathname === "/inscription") setProgresBarre("100%");
   }, [router]);
 
+
+  const { page } = usePage();
+
+  // gestion hover et click du menu secondaire
+  // const []
+
   return (
     !snapShot.menuEstOuvert && (
       <footer
@@ -81,6 +88,7 @@ export default function Navigation() {
         style={{ marginTop: margesDessus }}
         className={styles.conteneurNavigation}
       >
+        <h3 className={styles.pageActuelle}>{page}</h3>
         <span className={styles.barreNavigation}>
           <Link href="/">
             <button
@@ -139,11 +147,10 @@ export default function Navigation() {
             </button>
           </Link>
           <motion.span
-          layout
+            layout
             style={{ width: progresBarre, borderColor: lesStyles.couleurNav }}
             className={styles.ligneProgres}
-          >
-          </motion.span>
+          ></motion.span>
           <span className={styles.ligneFond}></span>
         </span>
       </footer>
