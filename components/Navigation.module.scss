@@ -49,6 +49,10 @@
   width: auto;
 }
 
+.pageInactif {
+  filter: brightness(0.5)
+}
+
 .pageAv {
   grid-area: av;
 }

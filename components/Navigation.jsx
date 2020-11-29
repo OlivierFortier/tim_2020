@@ -77,9 +77,26 @@ export default function Navigation() {
   }, [router]);
 
   const { page, pagePrecedente, pageSuivante } = usePage();
+
   console.log(page);
   console.log(pagePrecedente);
   console.log(pageSuivante);
+
+  const [flechesActives, setFlechesActives] = useState({
+    precedent: true,
+    suivant: true,
+  });
+
+  useEffect(() => {
+    setFlechesActives({ precedent: true, suivant: true });
+
+    if (pagePrecedente == page) {
+      setFlechesActives({ precedent: false, suivant: true });
+    }
+    if (pageSuivante == page) {
+      setFlechesActives({ precedent: true, suivant: false });
+    }
+  }, [page, router]);
 
   // gestion hover et click du menu secondaire
 
@@ -92,7 +109,11 @@ export default function Navigation() {
       >
         <span className={styles.barreNavigation}>
           <Link href={pagePrecedente}>
-            <a className={styles.pageAv}>
+            <a
+              className={`${styles.pageAv} ${
+                flechesActives.precedent ? "" : styles.pageInactif
+              }`}
+            >
               <MdNavigateBefore color={lesStyles.couleurNav} />
             </a>
           </Link>
@@ -154,7 +175,11 @@ export default function Navigation() {
             </button>
           </Link>
           <Link href={pageSuivante}>
-            <a className={styles.pageSuiv}>
+            <a
+              className={`${styles.pageSuiv} ${
+                flechesActives.suivant ? "" : styles.pageInactif
+              }`}
+            >
               <MdNavigateNext color={lesStyles.couleurNav} />
             </a>
           </Link>
