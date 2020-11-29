@@ -50,6 +50,7 @@ export default function Intro({ changerEtape }) {
           height={198}
           quality={5}
           src="/images/intro-logo-tim.svg"
+          alt="Logo des Techniques d'Intégration Multimédia du Collège Maisonneuve"
           className={styles.logo}
         />
         <h2 className={styles.texteIntro}>

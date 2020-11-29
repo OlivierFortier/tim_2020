@@ -47,6 +47,7 @@ export default function BoutonSelectionTheme() {
           width={57}
           height={26}
           quality={5}
+          alt="Logo des Techniques d'Intégration Multimédia du Collège Maisonneuve"
           className={`${styles.logo}  ${theme != "parent" && styles.inverser}`}
         />
       </motion.div>

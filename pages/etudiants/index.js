@@ -98,6 +98,7 @@ export default function index() {
               layout="fill"
               quality={50}
               unsized
+              alt="photo représentant la vie étudiante et les projets étudiants"
             />
           </span>
         </div>
