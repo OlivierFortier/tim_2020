@@ -32,6 +32,7 @@ export default function ModalPhoto({ infoPhoto, ouvert, fermerModal }) {
               layout="fill"
               unsized
               quality={75}
+              alt={`photo étudiante`}
               className={styles.image}
             />
           )}

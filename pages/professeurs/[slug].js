@@ -46,6 +46,7 @@ export default function PageUnProfesseur(leProf) {
             layout="fill"
             unsized
             quality={1}
+            alt={`photo de ${leProf.nom}`}
             // width={453}
             // height={620}
           />

@@ -22,7 +22,7 @@ export default function CarteProf({ prof }) {
             src="/images/cam.jpg"
             loading="lazy"
             className={styles.imgProf}
-            alt={`photo de ${prof.nom}`}
+            alt={`photo de ${"placeholder"}`}
           />
         )}
         <h3 className={styles.nomProf}>{prof.nom}</h3>

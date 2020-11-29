@@ -47,6 +47,7 @@ export default function unFutur(leFutur) {
           src={leFutur.image.url}
           unsized="true"
           quality={25}
+          alt="représentation d'étude et de travail"
           // width={625}
           // height={464}
         />
