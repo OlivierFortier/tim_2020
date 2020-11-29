@@ -16,12 +16,20 @@ export default function Futur() {
     >
       <Head>
         <title>TIM | Futur</title>
-        <meta charset="UTF-8"></meta>
         <meta
           name="Description"
-          content="Page qui décrit les opportunités après le DEC: Les stages, les perspectives d'emplois et les universités."
+          content="Page qui décrit les opportunités après le DEC: Les stages, les perspectives d'emplois et les universités, aux Techniques d'Intégration Multimédia du Collège Maisonneuve"
         ></meta>
         <link rel="canonical" href="https://tim-2020.vercel.app/futur"></link>
+        <meta
+          property="og:title"
+          content="Futur | TIM Maisonneuve"
+        />
+        <meta property="og:url" content="https://tim-2020.vercel.app/futur" />
+        <meta
+          property="og:description"
+          content="Page qui décrit les opportunités après le DEC: Les stages, les perspectives d'emplois et les universités, aux Techniques d'Intégration Multimédia du Collège Maisonneuve"
+        />
       </Head>
       <div className={styles.fondTexte}>
         <h6>ÉTUDIER DANS L’INDUSTRIE C’EST BIEN PLUS</h6>

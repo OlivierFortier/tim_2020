@@ -3,6 +3,7 @@ import Image from "next/image";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function PageUnProjet(leProjet) {
   return (
@@ -10,25 +11,44 @@ export default function PageUnProjet(leProjet) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{duration: 0.75}}
+      transition={{ duration: 0.75 }}
       className={styles.conteneurPage}
       key="pageUnProjet"
     >
+      <Head>
+        <title>TIM | {leProjet.titreDuProjet}</title>
+        <meta
+          name="Description"
+          content={`${leProjet.titreDuProjet} projet étudiant des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
+        ></meta>
+        <link
+          rel="canonical"
+          href={`https://tim-2020.vercel.app/etudiants/${leProjet.slug}`}
+        ></link>
+        <meta property="og:title" content={`${leProjet.titreDuProjet} | TIM Maisonneuve`} />
+        <meta
+          property="og:url"
+          content={`https://tim-2020.vercel.app/etudiants/${leProjet.slug}`}
+        />
+        <meta
+          property="og:description"
+          content={`${leProjet.titreDuProjet} projet étudiant des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
+        />
+      </Head>
       <h1 className={styles.nomPage}>Projets étudiants</h1>
       <section className={styles.sectionPrincipale}>
         <span className={styles.conteneurImage}>
-        <Image
-          unsized
-          layout="fill"
-          src={leProjet?.captureDcran?.url}
-          loading="eager"
-          quality={75}
-          className={styles.image}
-          alt={`photo de ${leProjet.titreDuProjet}`}
-        />
+          <Image
+            unsized
+            layout="fill"
+            src={leProjet?.captureDcran?.url}
+            loading="eager"
+            quality={75}
+            className={styles.image}
+            alt={`photo de ${leProjet.titreDuProjet}`}
+          />
         </span>
         <span className={styles.infoProjet}>
-          
           <h1>{leProjet.typeDuProjet}</h1>
           <h2>{leProjet.titreDuProjet}</h2>
         </span>
@@ -45,6 +65,7 @@ export async function getStaticProps({ params }) {
           titreDuProjet
           typeDuProjet
           lienExterne
+          slug
           captureDcran {
             url
           }

@@ -79,7 +79,7 @@ export default function Introduction() {
         <title>TIM | Introduction</title>
         <meta
           name="Description"
-          content="Page d'introduction de la technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page d'introduction des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         ></meta>
         <link
           rel="canonical"
@@ -89,7 +89,7 @@ export default function Introduction() {
         <meta property="og:url" content="https://tim-2020.vercel.app/introduction" />
         <meta
           property="og:description"
-          content="Page d'introduction des Technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page d'introduction des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
 

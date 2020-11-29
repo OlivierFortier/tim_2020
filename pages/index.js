@@ -37,14 +37,14 @@ export default function Home() {
         />
         <meta
           name="Description"
-          content="Page d'acceuil des Technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page d'acceuil des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         ></meta>
         <link rel="canonical" href="https://tim-2020.vercel.app/"></link>
         <meta property="og:title" content="Accueil | TIM Maisonneuve" />
         <meta property="og:url" content="https://tim-2020.vercel.app/" />
         <meta
           property="og:description"
-          content="Page d'acceuil des Technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page d'acceuil des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
       <div style={{ all: "inherit" }}>
