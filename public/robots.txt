@@ -1,1 +1,2 @@
-e
+User-agent: * Disallow: 
+Sitemap: https://tim-2020.vercel.app/sitemap.xml

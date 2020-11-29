@@ -17,6 +17,7 @@ export default function PageUnProjet(leProjet) {
     >
       <Head>
         <title>TIM | {leProjet.titreDuProjet}</title>
+        <meta name="robots" content="noindex" />
         <meta
           name="Description"
           content={`${leProjet.titreDuProjet} projet étudiant des Techniques d'Intégration Multimédia du Collège Maisonneuve`}

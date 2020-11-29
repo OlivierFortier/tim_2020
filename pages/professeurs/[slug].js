@@ -19,6 +19,7 @@ export default function PageUnProfesseur(leProf) {
     >
       <Head>
         <title>TIM | {leProf.nom}</title>
+        <meta name="robots" content="noindex" />
         <meta
           name="Description"
           content={`Page de ${leProf.nom} professeur des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
