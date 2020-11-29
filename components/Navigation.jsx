@@ -8,7 +8,7 @@ import { etatMenu } from "./etat_global/EtatMenu";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import { motion } from "framer-motion";
 import { usePage } from "../hooks/usePage";
-import {MdNavigateNext , MdNavigateBefore} from "react-icons/md";
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 
 export default function Navigation() {
   // gestion du theme
@@ -77,9 +77,9 @@ export default function Navigation() {
   }, [router]);
 
   const { page, pagePrecedente, pageSuivante } = usePage();
-  console.log(page)
-  console.log(pagePrecedente)
-  console.log(pageSuivante)
+  console.log(page);
+  console.log(pagePrecedente);
+  console.log(pageSuivante);
 
   // gestion hover et click du menu secondaire
 
@@ -90,11 +90,11 @@ export default function Navigation() {
         style={{ marginTop: margesDessus }}
         className={styles.conteneurNavigation}
       >
-        {/* <h3 style={{display : touche}} className={styles.pageActuelle}>{page}</h3> */}
         <span className={styles.barreNavigation}>
           <Link href={pagePrecedente}>
-          <MdNavigateBefore color={lesStyles.couleurNav}  className={styles.pageAv}/>
-            {/* <a className={styles.pageAv}>{"<"}</a> */}
+            <a className={styles.pageAv}>
+              <MdNavigateBefore color={lesStyles.couleurNav} />
+            </a>
           </Link>
 
           <Link href="/">
@@ -154,8 +154,9 @@ export default function Navigation() {
             </button>
           </Link>
           <Link href={pageSuivante}>
-            <MdNavigateNext color={lesStyles.couleurNav} className={styles.pageSuiv}/>
-            {/* <a className={styles.pageSuiv}>{">"}</a> */}
+            <a className={styles.pageSuiv}>
+              <MdNavigateNext color={lesStyles.couleurNav} />
+            </a>
           </Link>
           <motion.span
             layout

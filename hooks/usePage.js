@@ -4,20 +4,20 @@ import { useRouter } from "next/router";
 export function usePage() {
   const router = useRouter();
 
-  const [page, setPage] = useState("accueil");
-  const [pagePrecedente, setPagePrecedente] = useState("accueil");
-  const [pageSuivante, setPageSuivante] = useState("accueil");
+  const [page, setPage] = useState("/");
+  const [pagePrecedente, setPagePrecedente] = useState("/");
+  const [pageSuivante, setPageSuivante] = useState("/");
 
   useEffect(() => {
     if (router.pathname === "/") {
-      setPage("/accueil");
-      setPagePrecedente("/accueil");
+      setPage("/");
+      setPagePrecedente("/");
       setPageSuivante("/introduction");
     }
 
     if (router.pathname === "/introduction") {
       setPage("/introduction");
-      setPagePrecedente("/accueil");
+      setPagePrecedente("/");
       setPageSuivante("/cours");
     }
 
