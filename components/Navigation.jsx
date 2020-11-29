@@ -94,7 +94,7 @@ export default function Navigation() {
     if (pageSuivante == page) {
       setFlechesActives({ precedent: true, suivant: false });
     }
-  }, [page, router]);
+  }, [pagePrecedente, pageSuivante, page, router]);
 
   return (
     !snapShot.menuEstOuvert && (
