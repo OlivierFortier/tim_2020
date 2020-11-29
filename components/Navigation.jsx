@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { useProxy } from "valtio";
 import { etatMenu } from "./etat_global/EtatMenu";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
+import {motion} from "framer-motion";
 
 export default function Navigation() {
   // gestion du theme
@@ -49,7 +50,7 @@ export default function Navigation() {
   // ajuster le progres de la barre selon la page ou nous sommes + ajuster marge de la barre
   useEffect(() => {
     setMargeDessus("");
-    if (router.pathname === "") {
+    if (router.pathname === "/") {
       setProgresBarre("0%");
       if (ecranMobile) setMargeDessus("-10%");
       if (ecranTablette) setMargeDessus("-10%");
@@ -137,10 +138,13 @@ export default function Navigation() {
               07
             </button>
           </Link>
-          <span
+          <motion.span
+          layout
             style={{ width: progresBarre, borderColor: lesStyles.couleurNav }}
             className={styles.ligneProgres}
-          ></span>
+          >
+          </motion.span>
+          <span className={styles.ligneFond}></span>
         </span>
       </footer>
     )
