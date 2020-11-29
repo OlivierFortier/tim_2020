@@ -76,10 +76,12 @@ export default function Navigation() {
     if (router.pathname === "/inscription") setProgresBarre("100%");
   }, [router]);
 
-  const { page } = usePage();
+  const { page, pagePrecedente, pageSuivante } = usePage();
+  console.log(page)
+  console.log(pagePrecedente)
+  console.log(pageSuivante)
 
   // gestion hover et click du menu secondaire
-  const [touche, setTouche] = useState("");
 
   return (
     !snapShot.menuEstOuvert && (

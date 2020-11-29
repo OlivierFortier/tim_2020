@@ -39,7 +39,7 @@
   display: grid;
   grid-template:
     ". . b2 b3 b4 b5 b6 . ." 2vh
-    "av b1 lg lg lg lg lg b7 sv" 6vh
+    "av b1 lg lg lg lg lg b7 sv" 4vh
     / auto auto auto auto auto auto auto auto auto;
 }
 
@@ -94,7 +94,7 @@
 .ligneFond {
   position: absolute;
     content: "";
-    top: 55%;
+    top: 60%;
     z-index: -1;
     left: 67.5px;
     width: 195px;
