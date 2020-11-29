@@ -76,11 +76,9 @@ export default function Navigation() {
     if (router.pathname === "/inscription") setProgresBarre("100%");
   }, [router]);
 
+  
+  // gestion des flèches pour avancer ou reculer
   const { page, pagePrecedente, pageSuivante } = usePage();
-
-  console.log(page);
-  console.log(pagePrecedente);
-  console.log(pageSuivante);
 
   const [flechesActives, setFlechesActives] = useState({
     precedent: true,
@@ -97,8 +95,6 @@ export default function Navigation() {
       setFlechesActives({ precedent: true, suivant: false });
     }
   }, [page, router]);
-
-  // gestion hover et click du menu secondaire
 
   return (
     !snapShot.menuEstOuvert && (

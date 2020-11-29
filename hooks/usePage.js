@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
+// hook personnalisé qui donne la page actuelle, la page précédente, et la prochaine page
 export function usePage() {
   const router = useRouter();
 
