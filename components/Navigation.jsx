@@ -92,7 +92,7 @@ export default function Navigation() {
       >
         {/* <h3 style={{display : touche}} className={styles.pageActuelle}>{page}</h3> */}
         <span className={styles.barreNavigation}>
-          <Link href="/">
+          <Link href={pagePrecedente}>
           <MdNavigateBefore color={lesStyles.couleurNav}  className={styles.pageAv}/>
             {/* <a className={styles.pageAv}>{"<"}</a> */}
           </Link>
@@ -153,7 +153,7 @@ export default function Navigation() {
               07
             </button>
           </Link>
-          <Link href="/">
+          <Link href={pageSuivante}>
             <MdNavigateNext color={lesStyles.couleurNav} className={styles.pageSuiv}/>
             {/* <a className={styles.pageSuiv}>{">"}</a> */}
           </Link>
