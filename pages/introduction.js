@@ -125,7 +125,7 @@ export default function Introduction() {
       </p>
 
       <Link href="/cours">
-        <a style={{backgroundColor: lesStyles.couleurTexte}} className={styles.lienCours}>LISTE DES COURS</a>
+        <a style={{color: lesStyles.couleurTexte}} className={styles.lienCours}>LISTE DES COURS</a>
       </Link>
 
       <Link href="/cours">

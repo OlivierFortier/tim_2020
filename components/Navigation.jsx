@@ -6,6 +6,9 @@ import { useEffect, useState } from "react";
 import { useProxy } from "valtio";
 import { etatMenu } from "./etat_global/EtatMenu";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
+import { motion } from "framer-motion";
+import { usePage } from "../hooks/usePage";
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 
 export default function Navigation() {
   // gestion du theme
@@ -49,7 +52,7 @@ export default function Navigation() {
   // ajuster le progres de la barre selon la page ou nous sommes + ajuster marge de la barre
   useEffect(() => {
     setMargeDessus("");
-    if (router.pathname === "") {
+    if (router.pathname === "/") {
       setProgresBarre("0%");
       if (ecranMobile) setMargeDessus("-10%");
       if (ecranTablette) setMargeDessus("-10%");
@@ -73,6 +76,26 @@ export default function Navigation() {
     if (router.pathname === "/inscription") setProgresBarre("100%");
   }, [router]);
 
+  
+  // gestion des flèches pour avancer ou reculer
+  const { page, pagePrecedente, pageSuivante } = usePage();
+
+  const [flechesActives, setFlechesActives] = useState({
+    precedent: true,
+    suivant: true,
+  });
+
+  useEffect(() => {
+    setFlechesActives({ precedent: true, suivant: true });
+
+    if (pagePrecedente == page) {
+      setFlechesActives({ precedent: false, suivant: true });
+    }
+    if (pageSuivante == page) {
+      setFlechesActives({ precedent: true, suivant: false });
+    }
+  }, [page, router]);
+
   return (
     !snapShot.menuEstOuvert && (
       <footer
@@ -81,6 +104,16 @@ export default function Navigation() {
         className={styles.conteneurNavigation}
       >
         <span className={styles.barreNavigation}>
+          <Link href={pagePrecedente}>
+            <a
+              className={`${styles.pageAv} ${
+                flechesActives.precedent ? "" : styles.pageInactif
+              }`}
+            >
+              <MdNavigateBefore color={lesStyles.couleurNav} />
+            </a>
+          </Link>
+
           <Link href="/">
             <button
               style={{ color: lesStyles.couleurNav }}
@@ -137,10 +170,21 @@ export default function Navigation() {
               07
             </button>
           </Link>
-          <span
+          <Link href={pageSuivante}>
+            <a
+              className={`${styles.pageSuiv} ${
+                flechesActives.suivant ? "" : styles.pageInactif
+              }`}
+            >
+              <MdNavigateNext color={lesStyles.couleurNav} />
+            </a>
+          </Link>
+          <motion.span
+            layout
             style={{ width: progresBarre, borderColor: lesStyles.couleurNav }}
             className={styles.ligneProgres}
-          ></span>
+          ></motion.span>
+          <span className={styles.ligneFond}></span>
         </span>
       </footer>
     )

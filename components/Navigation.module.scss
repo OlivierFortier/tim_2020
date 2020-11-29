@@ -1,9 +1,11 @@
 .conteneurNavigation {
+  position: relative;
   z-index: 3;
   flex-shrink: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 2%;
   margin-top: 2%;
 
@@ -33,11 +35,31 @@
 }
 
 .barreNavigation {
+  position: relative;
   display: grid;
   grid-template:
-    ". b2 b3 b4 b5 b6 ." 2vh
-    "b1 lg lg lg lg lg b7" 3vh
-    / auto auto auto auto auto auto auto;
+    ". . b2 b3 b4 b5 b6 . ." 2vh
+    "av b1 lg lg lg lg lg b7 sv" 4vh
+    / auto auto auto auto auto auto auto auto auto;
+}
+
+.pageAv, .pageSuiv {
+  // all: unset;
+  font-size: 2.5rem;
+  width: auto;
+}
+
+.pageInactif {
+  filter: brightness(0.5);
+  pointer-events: none;
+}
+
+.pageAv {
+  grid-area: av;
+}
+
+.pageSuiv {
+  grid-area: sv;
 }
 
 .boutonUneSection {
@@ -46,10 +68,16 @@
   cursor: pointer;
 
   @for $i from 1 through 7 {
-    &:nth-child(#{$i}) {
+    &:nth-of-type(#{$i}) {
       grid-area: b + #{$i};
     }
   }
+}
+
+
+.pageActuelle {
+  display: none;
+  margin: 0.5%;
 }
 
 .ligneProgres {
@@ -57,16 +85,8 @@
   position: relative;
   border-bottom: 2px solid white;
   margin-bottom: 4%;
-  height: 50%;
-  &::before {
-    position: absolute;
-    content: "";
-    top: 100%;
-    z-index: -1;
-    left: 0;
-    width: 195px;
-    border-bottom: 1px solid gray;
-  }
+  height: 40%;
+
   &::after {
     z-index: -1;
     top: 0;
@@ -76,20 +96,40 @@
   }
 }
 
+.ligneFond {
+  position: absolute;
+    content: "";
+    top: 60%;
+    z-index: -1;
+    left: 67.5px;
+    width: 195px;
+    border-bottom: 1px solid gray;
+}
+
 /*==================MOBILE==================*/
 @media (min-width: 310px) and (max-width: 424px) {
   .conteneurNavigation {
     margin-top: 10%;
     // margin-bottom: 10%;
   }
+
+  .pageActuelle {
+    display: block;
+  }
 }
 
 /*==================TABLETTE==================*/
 @media (min-width: 425px) and (max-width: 767px) {
+  .pageActuelle {
+    display: block;
+  }
 }
 
 /**================GROSSE TABLETTE==================*/
 @media (min-width: 768px) and (max-width: 1024px) {
+  .pageActuelle {
+    display: block;
+  }
 }
 
 /*==================LAPTOP==========================*/

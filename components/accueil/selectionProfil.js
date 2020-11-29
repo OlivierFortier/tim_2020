@@ -116,7 +116,7 @@ export default function SelectionProfil({ changerEtape }) {
             className={styles.code}
           >
             <h2>
-              Pirate <br /> Informatique
+              Logique
             </h2>
           </motion.span>
           <motion.span
