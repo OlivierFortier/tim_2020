@@ -21,7 +21,7 @@ export default function PageUnProfesseur(leProf) {
         <title>TIM | {leProf.nom}</title>
         <meta
           name="Description"
-          content={`Page de ${leProf.nom} professeur des Technique d'Intégration Multimédia du collège Maisonneuve`}
+          content={`Page de ${leProf.nom} professeur des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
         ></meta>
         <link
           rel="canonical"
@@ -34,7 +34,7 @@ export default function PageUnProfesseur(leProf) {
         />
         <meta
           property="og:description"
-          content={`Page de ${leProf.nom} professeur des Technique d'Intégration Multimédia du collège Maisonneuve`}
+          content={`Page de ${leProf.nom} professeur des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
         />
       </Head>
       <section>

@@ -18,15 +18,21 @@ export default function Inscription() {
         <meta charset="UTF-8"></meta>
         <meta
           name="Description"
-          content="Page d'inscription de la technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page d'inscription des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         ></meta>
         <link
           rel="canonical"
           href="https://tim-2020.vercel.app/inscription"
         ></link>
+         <meta property="og:title" content="Inscription | TIM Maisonneuve" />
+        <meta property="og:url" content="https://tim-2020.vercel.app/inscription" />
+        <meta
+          property="og:description"
+          content="Page d'inscription des Technique d'Intégration Multimédia du Collège Maisonneuve"
+        />
       </Head>
       <h1>Qu'est-ce que tu attends ?</h1>
-      <Link href="https://admission.sram.qc.ca/">
+      <Link href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/">
         <a>Soumettre ma demande d'admission.</a>
       </Link>
     </motion.main>

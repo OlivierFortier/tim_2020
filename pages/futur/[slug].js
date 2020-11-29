@@ -4,6 +4,7 @@ import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Markdown from "markdown-to-jsx";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function unFutur(leFutur) {
   return (
@@ -15,6 +16,26 @@ export default function unFutur(leFutur) {
       className={styles.conteneurPage}
       key="pageUnFutur"
     >
+      <Head>
+      <title>TIM | {leFutur.titre}</title>
+        <meta
+          name="Description"
+          content={`${leFutur.titre} : Opportunités des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
+        ></meta>
+        <link
+          rel="canonical"
+          href={`https://tim-2020.vercel.app/futur/${leFutur.slug}`}
+        ></link>
+        <meta property="og:title" content={`${leFutur.titre} | TIM Maisonneuve`} />
+        <meta
+          property="og:url"
+          content={`https://tim-2020.vercel.app/futur/${leFutur.slug}`}
+        />
+        <meta
+          property="og:description"
+          content={`${leFutur.titre} : Opportunités des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
+        />
+      </Head>
       <h1>{leFutur.titre}</h1>
       <section className={styles.conteneurSection}>
         <Image
@@ -44,6 +65,7 @@ export async function getStaticProps({ params }) {
           titre
           enTte
           contenu
+          slug
           image {
             url
           }

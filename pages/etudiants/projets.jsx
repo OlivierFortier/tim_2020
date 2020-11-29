@@ -15,19 +15,30 @@ export default function projets(lesProjets) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{duration: 0.75}}
+      transition={{ duration: 0.75 }}
       className={styles.conteneurPage}
       key="grilleProjets"
     >
-    <Head>
-    <title>TIM | Projets étudiants</title>
-        <meta charset="UTF-8"></meta>
+      <Head>
+        <title>TIM | Projets étudiants</title>
         <meta
           name="Description"
-          content="Page des projets étudiants de la Technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page des projets étudiants des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         ></meta>
-        <link rel="canonical" href="https://tim-2020.vercel.app/étudiants/projets"></link>
-    </Head>
+        <link
+          rel="canonical"
+          href="https://tim-2020.vercel.app/étudiants/projets"
+        ></link>
+        <meta
+          property="og:title"
+          content="Projets étudiants | TIM Maisonneuve"
+        />
+        <meta property="og:url" content="https://tim-2020.vercel.app/projets" />
+        <meta
+          property="og:description"
+          content="Page des projets étudiants des Techniques d'Intégration Multimédia du Collège Maisonneuve"
+        />
+      </Head>
       <h1 className={styles.nomPage}>Projets étudiants</h1>
       <main className={styles.conteneurSwiper}>
         <Swiper
@@ -45,7 +56,7 @@ export default function projets(lesProjets) {
               slidesPerColumn: 3,
               slidesPerView: 2,
             },
-  
+
             425: {
               spaceBetween: 30,
               slidesPerColumn: 3,
@@ -56,7 +67,7 @@ export default function projets(lesProjets) {
               slidesPerColumn: 3,
               slidesPerView: 3,
             },
-  
+
             1025: {
               spaceBetween: 30,
               slidesPerColumn: 2,

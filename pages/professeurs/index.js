@@ -71,7 +71,7 @@ export default function Professeurs({ items }) {
         <title>TIM | Professeurs</title>
         <meta
           name="Description"
-          content="Page des professeurs de la Technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page des professeurs des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         ></meta>
         <link
           rel="canonical"
@@ -81,7 +81,7 @@ export default function Professeurs({ items }) {
         <meta property="og:url" content="https://tim-2020.vercel.app/professeurs" />
         <meta
           property="og:description"
-          content="Page des professeurs des Technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page des professeurs des Technique d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
       <div className={styles.sectionLesProfs}>

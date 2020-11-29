@@ -54,15 +54,20 @@ export default function index() {
     >
       <Head>
         <title>TIM | Étudiants</title>
-        <meta charset="UTF-8"></meta>
         <meta
           name="Description"
-          content="Page de la vie étudiante de la technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Page de la vie étudiante des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         ></meta>
         <link
           rel="canonical"
           href="https://tim-2020.vercel.app/etudiants"
         ></link>
+        <meta property="og:title" content="Vie étudiante | TIM Maisonneuve" />
+        <meta property="og:url" content="https://tim-2020.vercel.app/etudiants" />
+        <meta
+          property="og:description"
+          content="Page de la vie étudiante des Techniques d'Intégration Multimédia du Collège Maisonneuve"
+        />
       </Head>
 
       <main className={styles.wrapperContenu}>
