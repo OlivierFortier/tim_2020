@@ -5,6 +5,7 @@ import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Markdown from "markdown-to-jsx";
 import { motion } from "framer-motion";
 import { MdArrowDropDown } from "react-icons/md";
+import Head from "next/head";
 
 export default function PageUnProfesseur(leProf) {
   return (
@@ -13,9 +14,29 @@ export default function PageUnProfesseur(leProf) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className={styles.conteneurPage}
-      transition={{duration: 0.75}}
+      transition={{ duration: 0.75 }}
       key="pageUnProf"
     >
+      <Head>
+        <title>TIM | {leProf.nom}</title>
+        <meta
+          name="Description"
+          content={`Page de ${leProf.nom} professeur des Technique d'Intégration Multimédia du collège Maisonneuve`}
+        ></meta>
+        <link
+          rel="canonical"
+          href={`https://tim-2020.vercel.app/professeurs/${leProf.slug}`}
+        ></link>
+        <meta property="og:title" content={`${leProf.nom} | TIM Maisonneuve` }/>
+        <meta
+          property="og:url"
+          content={`https://tim-2020.vercel.app/professeurs/${leProf.slug}`}
+        />
+        <meta
+          property="og:description"
+          content={`Page de ${leProf.nom} professeur des Technique d'Intégration Multimédia du collège Maisonneuve`}
+        />
+      </Head>
       <section>
         <div className={styles.unProf}>
           <Image

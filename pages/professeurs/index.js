@@ -69,7 +69,6 @@ export default function Professeurs({ items }) {
     >
       <Head>
         <title>TIM | Professeurs</title>
-        <meta charset="UTF-8"></meta>
         <meta
           name="Description"
           content="Page des professeurs de la Technique d'Intégration Multimédia du collège Maisonneuve"
@@ -78,6 +77,12 @@ export default function Professeurs({ items }) {
           rel="canonical"
           href="https://tim-2020.vercel.app/professeurs"
         ></link>
+        <meta property="og:title" content="Professeurs | TIM Maisonneuve" />
+        <meta property="og:url" content="https://tim-2020.vercel.app/professeurs" />
+        <meta
+          property="og:description"
+          content="Page des professeurs des Technique d'Intégration Multimédia du collège Maisonneuve"
+        />
       </Head>
       <div className={styles.sectionLesProfs}>
         <Link href="professeurs/grille">
