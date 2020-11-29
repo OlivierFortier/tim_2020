@@ -12,12 +12,12 @@ export default function unFutur(leFutur) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{duration: 0.75}}
+      transition={{ duration: 0.75 }}
       className={styles.conteneurPage}
       key="pageUnFutur"
     >
       <Head>
-      <title>TIM | {leFutur.titre}</title>
+        <title>TIM | {leFutur.titre}</title>
         <meta
           name="Description"
           content={`${leFutur.titre} : Opportunités des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
@@ -26,7 +26,10 @@ export default function unFutur(leFutur) {
           rel="canonical"
           href={`https://tim-2020.vercel.app/futur/${leFutur.slug}`}
         ></link>
-        <meta property="og:title" content={`${leFutur.titre} | TIM Maisonneuve`} />
+        <meta
+          property="og:title"
+          content={`${leFutur.titre} | TIM Maisonneuve`}
+        />
         <meta
           property="og:url"
           content={`https://tim-2020.vercel.app/futur/${leFutur.slug}`}
@@ -50,7 +53,10 @@ export default function unFutur(leFutur) {
         <article>
           {leFutur.enTte && <h2>{leFutur.enTte}</h2>}
 
-          <Markdown className={styles.contenu}>{leFutur.contenu}</Markdown>
+          <Markdown className={styles.contenu}
+          >
+            {leFutur.contenu}
+          </Markdown>
         </article>
       </section>
     </motion.main>

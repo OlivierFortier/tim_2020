@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   font-size: 16px;
+  height: 100%;
 
   h2 {
     display: flex;
@@ -20,12 +21,13 @@
       cursor: pointer;
     }
   }
-
 }
 
 .contenuDetailCours {
+  height: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
 
   .conteneurTitre {
     display: flex;
@@ -57,21 +59,12 @@
     width: 50%;
     max-width: 550px;
     overflow-y: auto;
-    max-height: 420px;
-    min-height: 420px;
-    height: 100%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
 
-  ::-webkit-scrollbar {
-    width: 0px;
-    display: none;
+    max-height: 40vh;
   }
 
   .fleche {
     position: relative;
-    // width: 100%;
 
     .flecheDescriptionCours {
       position: absolute;
@@ -104,6 +97,10 @@
         font-size: 15px;
         line-height: 22px;
         margin-bottom: 0;
+      }
+
+      .conteneurIcones {
+        margin-top: 4%;
       }
     }
     .descriptionCours {
@@ -150,6 +147,10 @@
         line-height: 22px;
         margin-bottom: 0;
       }
+
+      .conteneurIcones {
+        margin-top: 4%;
+      }
     }
     .descriptionCours {
       width: 90%;
@@ -174,7 +175,7 @@
 
 /**================GROSSE TABLETTE==================*/
 @media (min-width: 768px) and (max-width: 1024px) {
-  .detailCours { 
+  .detailCours {
     height: 100%;
     h2 {
       font-size: 27px;
@@ -199,7 +200,6 @@
       .conteneurIcones {
         margin: 2%;
       }
-
     }
     .descriptionCours {
       width: 100%;
@@ -218,5 +218,4 @@
 
 /*==================LAPTOP==========================*/
 @media (min-width: 1025px) and (max-width: 1439px) {
-  
 }
