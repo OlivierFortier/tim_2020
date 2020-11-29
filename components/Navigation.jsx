@@ -7,7 +7,8 @@ import { useProxy } from "valtio";
 import { etatMenu } from "./etat_global/EtatMenu";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import { motion } from "framer-motion";
-import {usePage} from "../hooks/usePage";
+import { usePage } from "../hooks/usePage";
+import {MdNavigateNext , MdNavigateBefore} from "react-icons/md";
 
 export default function Navigation() {
   // gestion du theme
@@ -75,11 +76,10 @@ export default function Navigation() {
     if (router.pathname === "/inscription") setProgresBarre("100%");
   }, [router]);
 
-
   const { page } = usePage();
 
   // gestion hover et click du menu secondaire
-  // const []
+  const [touche, setTouche] = useState("");
 
   return (
     !snapShot.menuEstOuvert && (
@@ -88,8 +88,13 @@ export default function Navigation() {
         style={{ marginTop: margesDessus }}
         className={styles.conteneurNavigation}
       >
-        <h3 className={styles.pageActuelle}>{page}</h3>
+        {/* <h3 style={{display : touche}} className={styles.pageActuelle}>{page}</h3> */}
         <span className={styles.barreNavigation}>
+          <Link href="/">
+          <MdNavigateBefore color={lesStyles.couleurNav}  className={styles.pageAv}/>
+            {/* <a className={styles.pageAv}>{"<"}</a> */}
+          </Link>
+
           <Link href="/">
             <button
               style={{ color: lesStyles.couleurNav }}
@@ -145,6 +150,10 @@ export default function Navigation() {
             >
               07
             </button>
+          </Link>
+          <Link href="/">
+            <MdNavigateNext color={lesStyles.couleurNav} className={styles.pageSuiv}/>
+            {/* <a className={styles.pageSuiv}>{">"}</a> */}
           </Link>
           <motion.span
             layout
