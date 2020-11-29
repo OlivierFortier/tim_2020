@@ -103,12 +103,17 @@ export default function Cours({ listeCours }) {
     >
       <Head>
         <title>TIM | Cours</title>
-        <meta charset="UTF-8"></meta>
         <meta
           name="Description"
           content="Page des cours de la Technique d'Intégration Multimédia du collège Maisonneuve"
         ></meta>
         <link rel="canonical" href="https://tim-2020.vercel.app/cours"></link>
+        <meta property="og:title" content="Cours | TIM Maisonneuve" />
+        <meta property="og:url" content="https://tim-2020.vercel.app/cours" />
+        <meta
+          property="og:description"
+          content="Page des cours des Technique d'Intégration Multimédia du collège Maisonneuve"
+        />
       </Head>
       <div className={styles.conteneurTitre}>
         <h1 className={styles.titreCours}>LA LISTE DES COURS</h1>

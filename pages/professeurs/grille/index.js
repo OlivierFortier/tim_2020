@@ -21,12 +21,18 @@ export default function Grille({ listeProfs }) {
         <title>TIM | Grille des professeurs</title>
         <meta
           name="Description"
-          content="Grilles des proffesseurs de la Technique d'Intégration Multimédia du collège Maisonneuve"
+          content="Grille des professeurs de la Technique d'Intégration Multimédia du collège Maisonneuve"
         ></meta>
         <link
           rel="canonical"
           href="https://tim-2020.vercel.app/professeurs/grille"
         ></link>
+        <meta property="og:title" content="Cours | TIM Maisonneuve" />
+        <meta property="og:url" content="https://tim-2020.vercel.app/professeurs/grille" />
+        <meta
+          property="og:description"
+          content="Grille des professeurs des Technique d'Intégration Multimédia du collège Maisonneuve"
+        />
       </Head>
      <SwiperProfs listeProfs={listeProfs}/>
     </motion.div>
