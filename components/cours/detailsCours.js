@@ -48,9 +48,9 @@ export default function DetailsCours({ infoCours, afficherCours, couleurIcones }
           <Markdown className={styles.paragrapheCours}>{infoCours.description}</Markdown>
         </span>
         <div className={styles.fleche}>
-          <MdArrowDropDown
+          {/* <MdArrowDropDown
             className={styles.flecheDescriptionCours}
-          ></MdArrowDropDown>
+          ></MdArrowDropDown> */}
         </div>
       </div>
 
