@@ -14,7 +14,15 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="fr">
-        <Head ></Head>
+        <Head>
+          <meta charset="UTF-8"></meta>
+          <meta property="og:image" content="/images/Logo_TIM.png" />
+          <meta property="og:locale" content="fr_FR" />
+          <meta
+            property="og:site_name"
+            content="Techniques d'Intégration Multimédia | Collège Maisonneuve"
+          />
+        </Head>
         <body>
           <Main />
           <NextScript />

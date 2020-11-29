@@ -26,18 +26,26 @@ export default function Home() {
       exit={{ x: "-50vw", transition: { duration: 0.75 }, opacity: 0 }}
       className={styles.conteneurPage}
       key="accueil"
-      transition={{duration: 0.75}}
+      transition={{ duration: 0.75 }}
       suppressHydrationWarning={true}
     >
       <Head>
         <title>TIM | Accueil</title>
-        <meta charset="UTF-8"></meta>
-        <meta name="google-site-verification" content="8wSuECvx0LPPYY0CdAZ4O9RjbK3j3qlzEB72E37TlW8" />
+        <meta
+          name="google-site-verification"
+          content="8wSuECvx0LPPYY0CdAZ4O9RjbK3j3qlzEB72E37TlW8"
+        />
         <meta
           name="Description"
           content="Page d'acceuil des Technique d'Intégration Multimédia du collège Maisonneuve"
         ></meta>
         <link rel="canonical" href="https://tim-2020.vercel.app/"></link>
+        <meta property="og:title" content="Accueil | TIM Maisonneuve" />
+        <meta property="og:url" content="https://tim-2020.vercel.app/" />
+        <meta
+          property="og:description"
+          content="Page d'acceuil des Technique d'Intégration Multimédia du collège Maisonneuve"
+        />
       </Head>
       <div style={{ all: "inherit" }}>
         <AnimateSharedLayout>
