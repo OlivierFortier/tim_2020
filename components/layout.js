@@ -4,6 +4,7 @@ import EnTete from "./header/enTete";
 import styles from "./layout.module.scss";
 import { useRouter } from "next/router";
 import Navigation from "./Navigation";
+import Link from "next/link"
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -58,6 +59,19 @@ export default function Layout({ children }) {
 
   return (
     <>
+    <Link href="/"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/introduction"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/cours"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/professeurs"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/professeurs/grille"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/etudiants"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/etudiants/gallerie"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/etudiants/projets"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/futur"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/futur/perspectives-universitaires"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/futur/stages"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/futur/perspectives-demplois"><a style={{display: "none"}}>accueil</a></Link>
+    <Link href="/inscription"><a style={{display: "none"}}>accueil</a></Link>
       <div
         id="racine"
         className={`${styles.racine} ${themeStyles.grain ? styles.grain : ""}`}
