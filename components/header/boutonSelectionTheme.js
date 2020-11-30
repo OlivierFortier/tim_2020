@@ -28,7 +28,6 @@ export default function BoutonSelectionTheme() {
 
   function mettreAjourTheme() {
     if (indexTableau > 2) {
-      // setIndexTableau((ancienIndex) => ancienIndex + 1);
       setIndexTableau(0);
     } 
     changerTheme(tableauTheme[indexTableau]);
