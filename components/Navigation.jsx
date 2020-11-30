@@ -105,79 +105,81 @@ export default function Navigation() {
       >
         <span className={styles.barreNavigation}>
           <Link href={pagePrecedente}>
-            <a
+            <motion.a
+            whileHover={{scale: 1.2}}
+            whileTap={{scale: 1.5}}
               className={`${styles.pageAv} ${
                 flechesActives.precedent ? "" : styles.pageInactif
               }`}
             >
               <MdNavigateBefore color={lesStyles.couleurNav} />
-            </a>
+            </motion.a>
           </Link>
 
           <Link href="/">
-            <button
+            <motion.button whileHover={{scale: 1.2}} whileTap={{scale: 1.5}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
               01
-            </button>
+            </motion.button>
           </Link>
           <Link href="/introduction">
-            <button
+            <motion.button whileHover={{scale: 1.2}} whileTap={{scale: 1.5}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
               02
-            </button>
+            </motion.button>
           </Link>
           <Link href="/cours">
-            <button
+            <motion.button whileHover={{scale: 1.2}} whileTap={{scale: 1.5}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
               03
-            </button>
+            </motion.button>
           </Link>
           <Link href="/professeurs">
-            <button
+            <motion.button whileHover={{scale: 1.2}} whileTap={{scale: 1.5}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
               04
-            </button>
+            </motion.button>
           </Link>
           <Link href="/etudiants">
-            <button
+            <motion.button whileHover={{scale: 1.2}} whileTap={{scale: 1.5}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
               05
-            </button>
+            </motion.button>
           </Link>
           <Link href="/futur">
-            <button
+            <motion.button whileHover={{scale: 1.2}} whileTap={{scale: 1.5}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
               06
-            </button>
+            </motion.button>
           </Link>
           <Link href="/inscription">
-            <button
+            <motion.button whileHover={{scale: 1.2}} whileTap={{scale: 1.5}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
               07
-            </button>
+            </motion.button>
           </Link>
           <Link href={pageSuivante}>
-            <a
+            <motion.a whileHover={{scale: 1.2}} whileTap={{scale: 1.5}}
               className={`${styles.pageSuiv} ${
                 flechesActives.suivant ? "" : styles.pageInactif
               }`}
             >
               <MdNavigateNext color={lesStyles.couleurNav} />
-            </a>
+            </motion.a>
           </Link>
           <motion.span
             layout

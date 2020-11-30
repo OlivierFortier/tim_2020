@@ -6,7 +6,7 @@ import {
 } from "../../hooks/contexteTheme";
 import styles from "./boutonSelectionTheme.module.scss";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {motion} from "framer-motion"
 
 export default function BoutonSelectionTheme() {
@@ -20,12 +20,16 @@ export default function BoutonSelectionTheme() {
 
   const [indexTableau, setIndexTableau] = useState(tableauTheme.indexOf(theme));
 
+  useEffect(()=>{
+    
+    mettreAjourTheme();
+
+  },[indexTableau])
+
   function mettreAjourTheme() {
-    if (indexTableau < 2) {
-      setIndexTableau((ancienIndex) => ancienIndex + 1);
-    } else {
+    if (indexTableau > 2) {
       setIndexTableau(0);
-    }
+    } 
     changerTheme(tableauTheme[indexTableau]);
     removeCookie("profil", { path: "/", maxAge: 2592000 });
     setCookie("profil", tableauTheme[indexTableau], {
@@ -36,12 +40,7 @@ export default function BoutonSelectionTheme() {
 
   return (
     <>
-      {/* <select className={styles.boutonSelect} value={theme} onChange={(e)=> mettreAjourTheme(e)} aria-label="Changer theme">
-        <option value={listeThemes.art}>artiste</option>
-        <option value={listeThemes.code}>hacker</option>
-        <option value={listeThemes.parent}>parent</option>
-      </select> */}
-      <motion.div whileHover={{scale: 1.1}} onClick={() => mettreAjourTheme()} >
+      <motion.div whileHover={{scale: 1.1}} onClick={() => setIndexTableau(aI => aI + 1)} >
         <Image
           src="/images/Logo_TIM.png"
           width={57}
