@@ -119,7 +119,8 @@ export default function Cours({ listeCours }) {
         <h1 className={styles.titreCours}>LA LISTE DES COURS</h1>
         <h2 className={styles.titreChoix}>
           J'aime bien &nbsp;
-          <select
+          <motion.select
+          whileHover={{x: 10}}
             onChange={(evenement) => filtrerCours(evenement)}
             className={styles.selecteur}
             onClick={() => setCoursAffiche(null)}
@@ -134,7 +135,7 @@ export default function Cours({ listeCours }) {
             <option value="Vidéo et Audio">la vidéo</option>
             <option value="Intégration">l'intégration</option>
             <option value="Profession">la profession</option>
-          </select>
+          </motion.select>
         </h2>
         <h3>Sessions</h3>
       </div>
@@ -147,10 +148,10 @@ export default function Cours({ listeCours }) {
         <TabList className={styles.leTabList} style={{borderColor: lesStyles.couleurBorder}}>
           <AnimateSharedLayout>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <span className={styles.conteneurNomNbSession}>
+              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>1</h4>
-              </span>
+              </motion.span>
               <motion.div layout>
                 {tabActuel === 0 && (
                   <motion.div className={styles.conteneurFleche} layoutId="fleche">
@@ -162,10 +163,10 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <span className={styles.conteneurNomNbSession}>
+              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>2</h4>
-              </span>
+              </motion.span>
               <motion.div layout>
                 {tabActuel === 1 && (
                   <motion.div className={styles.conteneurFleche} layoutId="fleche">
@@ -177,10 +178,10 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <span className={styles.conteneurNomNbSession}>
+              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>3</h4>
-              </span>
+              </motion.span>
               <motion.div layout>
                 {tabActuel === 2 && (
                   <motion.div className={styles.conteneurFleche} layoutId="fleche">
@@ -192,10 +193,10 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <span className={styles.conteneurNomNbSession}>
+              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>4</h4>
-              </span>
+              </motion.span>
               <motion.div layout>
                 {tabActuel === 3 && (
                   <motion.div className={styles.conteneurFleche} layoutId="fleche">
@@ -207,10 +208,10 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <span className={styles.conteneurNomNbSession}>
+              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>5</h4>
-              </span>
+              </motion.span>
               <motion.div layout>
                 {tabActuel === 4 && (
                   <motion.div className={styles.conteneurFleche} layoutId="fleche">
@@ -222,10 +223,10 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <span className={styles.conteneurNomNbSession}>
+              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>6</h4>
-              </span>
+              </motion.span>
               <motion.div layout>
                 {tabActuel === 5 && (
                   <motion.div className={styles.conteneurFleche} layoutId="fleche">

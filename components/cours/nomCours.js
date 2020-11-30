@@ -12,6 +12,7 @@ export default function NomCours({ infoCours, afficherCours, couleurBordure }) {
       initial={{ x: 7, opacity: 0, transition:{ ease: "linear"}}}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: -0.5, opacity: 0 }}
+      whileHover={{x : -10}}
       onClick={afficherCours}
       className={styles.cours}
       style={{borderColor: couleurBordure}}
