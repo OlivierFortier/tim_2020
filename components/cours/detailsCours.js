@@ -15,10 +15,10 @@ export default function DetailsCours({ infoCours, afficherCours, couleurIcones }
       layout
       initial={{opacity: 0, transition:{ ease: "easeInOut"}}}
       animate={{ x: 0, opacity: 1 }}
-      exit={{ x: -500, opacity: 0 }}
+      exit={{  opacity: 0 }}
       className={styles.detailCours}
     >
-      <h2 onClick={afficherCours}>Retour</h2>
+      <motion.h2 whileHover={{x: 5}} whileTap={{x: 10}} onClick={afficherCours}>Retour</motion.h2>
 
       <div className={styles.contenuDetailCours}>
         <div className={styles.conteneurTitre}>

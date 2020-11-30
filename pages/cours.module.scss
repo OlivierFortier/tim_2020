@@ -36,6 +36,7 @@
 }
 
 .selecteur {
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
   // color: white;
   border: 0px;
@@ -56,6 +57,7 @@
 
   option {
     color: black;
+    cursor: pointer;
   }
 }
 
