@@ -1,9 +1,8 @@
 import SwiperCore, { Pagination } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import CarteProf from "./CarteProf";
 import styles from "./SwiperProf.module.scss";
+import {motion} from "framer-motion";
 
 SwiperCore.use([Pagination]);
 
@@ -53,7 +52,7 @@ export default function SwiperProfs({ listeProfs }) {
           );
         })}
 
-        <div id="lesPoints" className={styles.points}></div>
+        <motion.div id="lesPoints" whileHover={{scale: 1.2}} className={styles.points}></motion.div>
       </Swiper>
     </main>
   );

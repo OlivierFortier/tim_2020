@@ -84,14 +84,14 @@ export default function Professeurs({ items }) {
           content="Page des professeurs des Technique d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
-      <div className={styles.sectionLesProfs}>
+      <motion.div className={styles.sectionLesProfs} whileHover={{x: 5}} whileTap={{scale: 0.7}}>
         <Link href="professeurs/grille">
           <h1>LES PROFESSEURS</h1>
         </Link>
         <Link href="professeurs/grille">
           <h3>QUI SONT-ILS?</h3>
         </Link>
-      </div>
+      </motion.div>
       <div className={styles.sectionImages}>
         <span>
           <Link href="/professeurs/grille">
@@ -101,6 +101,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "0%", y: "0%", scale: 0.8 }}
+              whileHover={{rotate:5}}
+              whileTap={{scale: 2}}
             >
               <Image
                 className={styles.imgProf}
@@ -120,6 +122,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "100%", y: "-10%", scale: 1.4 }}
+              whileHover={{rotate:-5}}
+              whileTap={{scale: 2}}
             >
               <Image
                 className={styles.imgProf}
@@ -139,6 +143,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "-10%", y: "140%" }}
+              whileHover={{rotate:5}}
+              whileTap={{scale: 2}}
             >
               <Image
                 className={styles.imgProf}
@@ -160,6 +166,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, scale: 3.6, y: "70%" }}
+              whileHover={{rotate:-5}}
+              whileTap={{scale: 2}}
             >
               <Image
                 className={styles.imgProf}
@@ -186,6 +194,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "20%", y: "-90%", scale: 0.9 }}
+              whileHover={{rotate:5}}
+              whileTap={{scale: 2}}
             >
               <Image
                 className={styles.imgProf}
@@ -205,6 +215,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "145%", y: "-140%" }}
+              whileHover={{rotate:-5}}
+              whileTap={{scale: 2}}
             >
               <Image
                 className={styles.imgProf}
@@ -225,6 +237,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "10%", y: "40%" }}
+              whileHover={{rotate:5}}
+              whileTap={{scale: 2}}
             >
               <Image
                 className={styles.imgProf}
@@ -244,6 +258,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "-260%", y: "150%", scale: 1.4 }}
+              whileHover={{rotate:-5}}
+              whileTap={{scale: 2}}
             >
               <Image
                 className={styles.imgProf}
@@ -263,6 +279,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "-300%", y: "340%", scale: 2 }}
+              whileHover={{rotate:5}}
+              whileTap={{scale: 2}}
             >
               <Image
                 className={styles.imgProf}
@@ -279,10 +297,10 @@ export default function Professeurs({ items }) {
       </div>
       <div className={styles.sectionTexte}>
         <Link href="professeurs/grille">
-          <h2>
+          <motion.h2 whileHover={{x: 5}} whileTap={{scale: 0.7}}>
             PLUS<b>++</b>DE <b>25 ANS</b> D'EXPÉRIENCE DANS LE DOMAINE POUR VOUS
             DONNER <b>LA MEILLEURE ÉDUCATION</b>
-          </h2>
+          </motion.h2>
         </Link>
       </div>
     </motion.div>

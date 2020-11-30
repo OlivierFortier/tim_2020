@@ -82,7 +82,7 @@
 
         height: 55%;
 
-        width: 120%;
+        // width: 120%;
         margin-top: 10%;
         z-index: 3;
 
@@ -94,20 +94,7 @@
           color: unset;
         }
 
-        // div > * {
-        // }
-
-        // p {
-        //   position: absolute;
-        //   left: -10%;
-        //   margin: 0;
-        // }
         
-      }
-
-      ::-webkit-scrollbar {
-        width: 0px;
-        display: none;
       }
 
       .fleche {
