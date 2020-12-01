@@ -15,8 +15,9 @@ class MyDocument extends Document {
     return (
       <Html lang="fr">
         <Head>
-          <meta charset="UTF-8"></meta>
-          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta charSet="UTF-8"></meta>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta property="og:image" content="/images/Logo_TIM.png" />
           <meta property="og:locale" content="fr_FR" />
           <meta
