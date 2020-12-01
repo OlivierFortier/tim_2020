@@ -76,6 +76,8 @@ export default function index() {
             <motion.h1
               className={styles.projets}
               onHoverStart={() => setImageSurvol("projet.png")}
+              whileHover={{x: 5}}
+              whileTap={{x: 5}}
             >
               Projets étudiants
             </motion.h1>
@@ -85,6 +87,8 @@ export default function index() {
             <motion.h1
               className={styles.vie}
               onHoverStart={() => setImageSurvol("ETUDIANT.png")}
+              whileHover={{x: -5}}
+              whileTap={{x: -5}}
             >
               Vie étudiante
             </motion.h1>

@@ -7,7 +7,7 @@ import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Modal from "react-modal";
 import ModalPhoto from "../../components/etudiants/ModalPhoto";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimateSharedLayout } from "framer-motion";
 import Head from "next/head";
 
 SwiperCore.use([Pagination]);
@@ -53,62 +53,65 @@ export default function gallerie(lesPhotos) {
           content="Page de la gallerie de photos qui montre les étudiants des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
     </Head>
-      <ModalPhoto
-        infoPhoto={photoActuelle}
-        ouvert={modalOuvert}
-        fermerModal={fermerModal}
-      ></ModalPhoto>
-      <h1 className={styles.nomPage}>Vie étudiante</h1>
-
-      <main className={styles.conteneurSwiper}>
-        <Swiper
-          pagination={{
-            clickable: true,
-            el: "#lesPoints",
-          }}
-          spaceBetween={30}
-          slidesPerView={3}
-          slidesPerColumn={2}
-          slidesPerColumnFill="row"
-          breakpoints={{
-            310: {
-              spaceBetween: 30,
-              slidesPerColumn: 3,
-              slidesPerView: 2,
-            },
+    <AnimateSharedLayout>
+      
+        <ModalPhoto
+          infoPhoto={photoActuelle}
+          ouvert={modalOuvert}
+          fermerModal={fermerModal}
+        ></ModalPhoto>
+        <h1 className={styles.nomPage}>Vie étudiante</h1>
   
-            425: {
-              spaceBetween: 30,
-              slidesPerColumn: 3,
-              slidesPerView: 2,
-            },
-            768: {
-              spaceBetween: 30,
-              slidesPerColumn: 3,
-              slidesPerView: 3,
-            },
+        <main className={styles.conteneurSwiper}>
+          <Swiper
+            pagination={{
+              clickable: true,
+              el: "#lesPoints",
+            }}
+            spaceBetween={30}
+            slidesPerView={3}
+            slidesPerColumn={2}
+            slidesPerColumnFill="row"
+            breakpoints={{
+              310: {
+                spaceBetween: 30,
+                slidesPerColumn: 3,
+                slidesPerView: 2,
+              },
+    
+              425: {
+                spaceBetween: 30,
+                slidesPerColumn: 3,
+                slidesPerView: 2,
+              },
+              768: {
+                spaceBetween: 30,
+                slidesPerColumn: 3,
+                slidesPerView: 3,
+              },
+    
+              1025: {
+                spaceBetween: 30,
+                slidesPerColumn: 2,
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {lesPhotos.items.map((photo, index) => {
+              return (
+                <SwiperSlide className={styles.uneSlide} key={index}>
+                  <CarteEtudiant
+                    infoCarte={photo}
+                    ouvrirModal={ouvrirModalPhotoActuelle}
+                  />
+                </SwiperSlide>
+              );
+            })}
   
-            1025: {
-              spaceBetween: 30,
-              slidesPerColumn: 2,
-              slidesPerView: 3,
-            },
-          }}
-        >
-          {lesPhotos.items.map((photo, index) => {
-            return (
-              <SwiperSlide className={styles.uneSlide} key={index}>
-                <CarteEtudiant
-                  infoCarte={photo}
-                  ouvrirModal={ouvrirModalPhotoActuelle}
-                />
-              </SwiperSlide>
-            );
-          })}
-
-          <div id="lesPoints" className={styles.points}></div>
-        </Swiper>
-      </main>
+            <div id="lesPoints" className={styles.points}></div>
+          </Swiper>
+        </main>
+    </AnimateSharedLayout>
     </motion.div>
   );
 }

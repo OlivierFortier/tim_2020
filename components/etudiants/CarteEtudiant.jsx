@@ -1,10 +1,10 @@
 import styles from "./Carte.module.scss";
 import Image from "next/image";
-import Link from "next/link";
+import {motion} from "framer-motion";
 
 export default function CarteProf({ infoCarte, ouvrirModal }) {
   return (
-    <div className={styles.unInfo} onClick={() => ouvrirModal(infoCarte)}>
+    <motion.div layout layoutId="photo" whileHover={{scale: 0.9}} whileTap={{scale: 0.9}} className={styles.unInfo} onClick={() => ouvrirModal(infoCarte)}>
       {infoCarte?.photo?.url ? (
         <Image
           unsized
@@ -28,7 +28,7 @@ export default function CarteProf({ infoCarte, ouvrirModal }) {
           />
         </span>
       )}
-    </div>
+    </motion.div>
     // <Link href={`/etudiants/${"yeet"}`}>
     // </Link>
   );
