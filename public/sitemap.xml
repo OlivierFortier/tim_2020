@@ -9,68 +9,173 @@
 
 <url>
   <loc>https://tim-2020.vercel.app/</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/introduction</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/cours</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/professeurs</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/professeurs/grille</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/etudiants</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/etudiants/gallerie</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/etudiants/projets</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/futur</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/futur/perspectives-universitaires</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/futur/stages</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/futur/perspectives-demplois</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://tim-2020.vercel.app/inscription</loc>
-  <lastmod>2020-11-29T02:29:31+00:00</lastmod>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/ahmed-boudjani</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/sebastien-emmanuel-fortin</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/david-ross</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/manon-bertrand</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/martin-st-pierre</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/dominic-girard</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/gregory-bony</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/denis-pellerin</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/caroline-martin</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/vahik-toroussian</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/mathieu-dionne</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/johanne-masse</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/eddy-martin</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/vincent-leblanc</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/professeurs/camille-semaan</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/etudiants/projet-web-multimedia-cooool</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/etudiants/projet-jeu-endless-nightmare</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/etudiants/projet-web-engagement-etudiant-par-olivier-dube-pauze</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/etudiants/projet-design-sad-bot</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/etudiants/fruits-contre-attaquent</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://tim-2020.vercel.app/etudiants/projet-3d-vehicule-dans-un-desert</loc>
+  <lastmod>2020-12-01T04:52:33+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
