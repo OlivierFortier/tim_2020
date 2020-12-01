@@ -7,7 +7,7 @@ import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Modal from "react-modal";
 import ModalPhoto from "../../components/etudiants/ModalPhoto";
 import { useState, useEffect } from "react";
-import { motion, AnimateSharedLayout } from "framer-motion";
+import { motion } from "framer-motion";
 import Head from "next/head";
 
 SwiperCore.use([Pagination]);
@@ -53,7 +53,7 @@ export default function gallerie(lesPhotos) {
           content="Page de la gallerie de photos qui montre les étudiants des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
     </Head>
-    <AnimateSharedLayout>
+   
       
         <ModalPhoto
           infoPhoto={photoActuelle}
@@ -111,7 +111,7 @@ export default function gallerie(lesPhotos) {
             <div id="lesPoints" className={styles.points}></div>
           </Swiper>
         </main>
-    </AnimateSharedLayout>
+    
     </motion.div>
   );
 }
