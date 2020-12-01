@@ -23,6 +23,8 @@
 }
 
 .image {
+  object-fit: cover;
+  object-position: top;
   width: 40vw;
   height: 60vh;
 }
@@ -33,108 +35,109 @@
   margin-bottom: 7%;
 }
 
+.lienProjet {
+    color: unset;
+}
 
 /*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px){
+@media (min-width: 310px) and (max-width: 424px) {
+  .conteneurPage {
+    margin-top: 5%;
+  }
 
-    .conteneurPage {
-        margin-top: 5%;
-    }
+  .nomPage {
+    font-size: 1.5rem;
+    margin-bottom: 7%;
+  }
 
-    .nomPage {
-        font-size: 1.5rem;
-        margin-bottom: 7%;
-    }
+  .sectionPrincipale {
+    flex-direction: column;
+  }
 
-    .sectionPrincipale {
-        flex-direction: column;
-    }
+  .image {
+    width: 80vw;
+    height: 40vh;
+    object-fit: fill;
+  }
 
-    .image {
-        width: 80vw;
-        height: 40vh;
-        object-fit: fill;
+  .infoProjet {
+    align-self: flex-start;
+    width: 100%;
+    h1 {
+      font-size: 2rem;
     }
-
-    .infoProjet {
-        align-self: flex-start;
-        width: 100%;
-        h1 {
-            font-size: 2rem;
-        }
-        h2 {
-            font-size: 1rem;
-        }
+    h2 {
+      font-size: 1rem;
     }
+  }
 }
 
 /*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px){
-    .conteneurPage {
-        margin-top: 5%;
-    }
+@media (min-width: 425px) and (max-width: 767px) {
+  .conteneurPage {
+    margin-top: 5%;
+  }
 
-    .nomPage {
-        font-size: 1.5rem;
-        margin-bottom: 7%;
-    }
+  .nomPage {
+    font-size: 1.5rem;
+    margin-bottom: 7%;
+  }
 
-    .sectionPrincipale {
-        flex-direction: column;
-    }
+  .sectionPrincipale {
+    flex-direction: column;
+  }
 
-    .image {
-        width: 80vw;
-        height: 40vh;
-        object-fit: fill;
-    }
+  .image {
+    width: 80vw;
+    height: 40vh;
+    object-fit: fill;
+  }
 
-    .infoProjet {
-        align-self: flex-start;
-        width: 100%;
-        h1 {
-            font-size: 2rem;
-        }
-        h2 {
-            font-size: 1rem;
-        }
+  .infoProjet {
+    align-self: flex-start;
+    width: 100%;
+    h1 {
+      font-size: 2rem;
     }
+    h2 {
+      font-size: 1rem;
+    }
+  }
 }
 
 /**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px){
-    .conteneurPage {
-        margin-top: 5%;
-    }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .conteneurPage {
+    margin-top: 5%;
+  }
 
-    .nomPage {
-        font-size: 1.5rem;
-        margin-bottom: 7%;
-    }
+  .nomPage {
+    font-size: 1.5rem;
+    margin-bottom: 7%;
+  }
 
-    .sectionPrincipale {
-        flex-direction: column;
-    }
+  .sectionPrincipale {
+    flex-direction: column;
+  }
 
-    .image {
-        width: 80vw;
-        height: 45vh;
-        object-fit: cover;
-    }
+  .image {
+    width: 80vw;
+    height: 45vh;
+    object-fit: cover;
+  }
 
-    .infoProjet {
-        align-self: flex-start;
-        width: 100%;
-        h1 {
-            font-size: 3rem;
-        }
-        h2 {
-            font-size: 1.5rem;
-        }
+  .infoProjet {
+    align-self: flex-start;
+    width: 100%;
+    h1 {
+      font-size: 3rem;
     }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 /*==================LAPTOP==========================*/
 @media (min-width: 1025px) and (max-width: 1439px) {
-  
 }
