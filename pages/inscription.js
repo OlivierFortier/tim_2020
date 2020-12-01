@@ -1,13 +1,12 @@
 import styles from "./inscription.module.scss";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Head from "next/head";
 
 export default function Inscription() {
   return (
     <motion.main
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.75 }}
       key="inscription"
@@ -34,7 +33,7 @@ export default function Inscription() {
           content="Page d'inscription des Technique d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
-      <h1>Qu'est-ce que tu attends ?</h1>
+      <motion.h1 initial={{y: -100}} animate={{y: 0}} transition={{duration: 0.75}}>Qu'est-ce que tu attends ?</motion.h1>
 
       <a
         href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/"

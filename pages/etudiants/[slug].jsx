@@ -17,7 +17,6 @@ export default function PageUnProjet(leProjet) {
     >
       <Head>
         <title>TIM | {leProjet.titreDuProjet}</title>
-        <meta name="robots" content="noindex" />
         <meta
           name="Description"
           content={`${leProjet.titreDuProjet} projet étudiant des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
@@ -38,7 +37,7 @@ export default function PageUnProjet(leProjet) {
       </Head>
       <h1 className={styles.nomPage}>Projets étudiants</h1>
       <section className={styles.sectionPrincipale}>
-        <span className={styles.conteneurImage}>
+        <motion.span initial={{opacity:0, y: 100}} animate={{opacity: 1 ,y: 0}} transition={{duration: 0.75}} className={styles.conteneurImage}>
           <Image
             unsized
             layout="fill"
@@ -48,11 +47,12 @@ export default function PageUnProjet(leProjet) {
             className={styles.image}
             alt={`photo de ${leProjet.titreDuProjet}`}
           />
-        </span>
-        <span className={styles.infoProjet}>
+        </motion.span>
+        <motion.span initial={{opacity:0, x: 100}} animate={{opacity: 1 ,x: 0}} transition={{duration: 0.75}} className={styles.infoProjet}>
           <h1>{leProjet.typeDuProjet}</h1>
           <h2>{leProjet.titreDuProjet}</h2>
-        </span>
+          <a target="_blank" href={leProjet.lienExterne} className={styles.lienProjet}>Consulter le projet</a>
+        </motion.span>
       </section>
     </motion.main>
   );

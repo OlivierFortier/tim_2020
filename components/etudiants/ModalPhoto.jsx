@@ -1,6 +1,7 @@
 import Modal from "react-modal";
 import Image from "next/image";
 import styles from "./ModalPhoto.module.scss";
+import {motion} from "framer-motion";
 
 export default function ModalPhoto({ infoPhoto, ouvert, fermerModal }) {
   return (
@@ -15,7 +16,9 @@ export default function ModalPhoto({ infoPhoto, ouvert, fermerModal }) {
       isOpen={ouvert}
       onRequestClose={fermerModal}
     >
-      <div
+      <motion.div
+      initial={{scale: 0.5}}
+      animate={{scale: 1}}
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -37,7 +40,7 @@ export default function ModalPhoto({ infoPhoto, ouvert, fermerModal }) {
             />
           )}
         </div>
-      </div>
+      </motion.div>
     </Modal>
   );
 }

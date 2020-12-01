@@ -1,11 +1,12 @@
 import styles from "./Carte.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import {motion} from "framer-motion";
 
 export default function CarteProf({ infoCarte }) {
   return (
     <Link href={`/etudiants/${infoCarte.slug}`}>
-      <div className={styles.unInfo}>
+      <motion.div whileHover={{scale: 0.9}} whileTap={{scale: 0.9}} className={styles.unInfo}>
         {infoCarte?.captureDcran?.url ? (
           <Image
             layout="fill"
@@ -29,7 +30,7 @@ export default function CarteProf({ infoCarte }) {
             />
           </span>
         )}
-      </div>
+      </motion.div>
     </Link>
   );
 }

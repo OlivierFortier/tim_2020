@@ -40,7 +40,7 @@ export default function unFutur(leFutur) {
         />
       </Head>
       <h1>{leFutur.titre}</h1>
-      <section className={styles.conteneurSection}>
+      <motion.section initial={{x: -100, opacity: 0}} animate={{x:0, opacity: 1}} transition={{duration: 0.75}} className={styles.conteneurSection}>
         <Image
           className={styles.image}
           layout="fill"
@@ -51,15 +51,15 @@ export default function unFutur(leFutur) {
           // width={625}
           // height={464}
         />
-        <article>
+        <motion.article initial={{y: 100, opacity: 0}} animate={{y:0, opacity: 1}} transition={{delay: 0.50, duration: 0.75}}>
           {leFutur.enTte && <h2>{leFutur.enTte}</h2>}
 
           <Markdown className={styles.contenu}
           >
             {leFutur.contenu}
           </Markdown>
-        </article>
-      </section>
+        </motion.article>
+      </motion.section>
     </motion.main>
   );
 }

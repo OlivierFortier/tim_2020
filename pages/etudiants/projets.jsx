@@ -83,7 +83,7 @@ export default function projets(lesProjets) {
             );
           })}
 
-          <div id="lesPoints" className={styles.points}></div>
+          <motion.div whileHover={{scale: 1.2}} id="lesPoints" className={styles.points}></motion.div>
         </Swiper>
       </main>
     </motion.div>
