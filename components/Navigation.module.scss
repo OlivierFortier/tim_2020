@@ -44,6 +44,8 @@
   left: 1%;
   bottom: 1%;
   filter: grayscale(1);
+  font-size: 1.3rem;
+  align-items: center;
 }
 
 .texteLogoCollege {
@@ -63,7 +65,8 @@
     / auto auto auto auto auto auto auto auto auto;
 }
 
-.pageAv, .pageSuiv {
+.pageAv,
+.pageSuiv {
   // all: unset;
   font-size: 2.5rem;
   width: auto;
@@ -95,7 +98,6 @@
   }
 }
 
-
 .pageActuelle {
   display: none;
   margin: 0.5%;
@@ -119,12 +121,12 @@
 
 .ligneFond {
   position: absolute;
-    content: "";
-    top: 60%;
-    z-index: -1;
-    left: 67.5px;
-    width: 195px;
-    border-bottom: 1px solid gray;
+  content: "";
+  top: 60%;
+  z-index: -1;
+  left: 67.5px;
+  width: 195px;
+  border-bottom: 1px solid gray;
 }
 
 /*==================MOBILE==================*/
@@ -137,12 +139,20 @@
   .pageActuelle {
     display: block;
   }
+
+  .conteneurLogo {
+    display: none;
+  }
 }
 
 /*==================TABLETTE==================*/
 @media (min-width: 425px) and (max-width: 767px) {
   .pageActuelle {
     display: block;
+  }
+
+  .conteneurLogo {
+    display: none;
   }
 }
 
