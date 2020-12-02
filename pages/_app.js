@@ -6,6 +6,7 @@ import "../styles/styles.scss";
 import Layout from "../components/layout";
 import { FournisseurTheme } from "../hooks/contexteTheme";
 import { AnimatePresence } from "framer-motion";
+import Head from "next/head";
 
 import Router from "next/router";
 
@@ -32,6 +33,9 @@ function MyApp({ Component, pageProps, router }) {
     <FournisseurTheme>
         <Layout>
           <AnimatePresence exitBeforeEnter>
+            <Head>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+            </Head>
             <Component {...pageProps} key={router.route + Math.random() * 100} />
           </AnimatePresence>
         </Layout>

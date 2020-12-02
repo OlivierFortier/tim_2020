@@ -6,6 +6,30 @@
   font-size: 3.5rem;
 }
 
+.conteneurImage {
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  align-items: center;
+  // margin-right: 5%;
+  font-family: "NeueMontreal";
+  text-align: right;
+  bottom: 5%;
+  right: 5%;
+  filter: grayscale(1);
+}
+
+.texteLogo {
+  margin: 0;
+  width: 50%;
+  margin-right: 2%;
+}
+
+.logoCollege {
+  height: 50px;
+  width: 50px;
+}
+
 .conteneurMenu {
   z-index: 6;
 
@@ -27,7 +51,7 @@
     width: 100%;
     display: grid;
     grid-template:
-      ". pages" auto
+      "img pages" 60vh
       "contact pages" auto
       "contact ." auto
       / 50% 50%;
@@ -154,6 +178,14 @@
     font-size: 3rem;
   }
 
+  .conteneurImage {
+    font-size: 1.3rem;
+    bottom: 1%;
+  }
+
+  .texteLogo {
+  }
+
   .cancel {
     font-size: 3rem;
   }
@@ -229,6 +261,11 @@
 
   .cancel {
     font-size: 3rem;
+  }
+
+  .conteneurImage {
+    font-size: 1.3rem;
+    bottom: 1%;
   }
 
   .conteneurMenu {

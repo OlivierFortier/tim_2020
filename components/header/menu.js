@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
@@ -126,6 +127,11 @@ export default function Menu() {
                     transition: { duration: 1, ease: "easeInOut" },
                   }}
                 >
+                  <span className={styles.conteneurImage}>
+                  <h6 className={styles.texteLogo}>Collège de Maisonneuve</h6>
+                  <Image layout="fill" unsized src={"/images/logo-maisonneuve.webp"} className={styles.logoCollege} />
+                  
+                  </span>
                   <motion.div
                     key="liensPages"
                     className={styles.conteneurListePages}

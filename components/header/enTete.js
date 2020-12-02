@@ -8,7 +8,7 @@ export default function EnTete() {
   return (
     <>
       <header id="header-site" className={styles.enTete}>
-        <span>
+        <span className={styles.conteneurEntete}>
           <BoutonSelectionTheme />
           <h1 className={styles.titre}>
             Techniques d'intégration multimédia
