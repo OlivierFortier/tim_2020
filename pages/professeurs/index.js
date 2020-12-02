@@ -13,32 +13,37 @@ export default function Professeurs({ items }) {
   const theme = useTheme();
   const listeTheme = useListeThemes();
   const [lesStyles, setLesStyles] = useState({
-    couleurCercle: "#f3f1f1",
+    couleurGenerale: "#f3f1f1",
+    couleurHover: "#F16242"
   });
 
   useEffect(() => {
     switch (theme) {
       case "art":
         setLesStyles({
-          couleurCercle: "#f3f1f1",
+          couleurGenerale: "#f3f1f1",
+          couleurHover: "#F16242"
         });
         break;
 
       case "code":
         setLesStyles({
-          couleurCercle: "#f3f1f1",
+          couleurGenerale: "#f3f1f1",
+           couleurHover: "#24DC48"
         });
         break;
 
       case "parent":
         setLesStyles({
-          couleurCercle: "black",
+          couleurGenerale: "black",
+           couleurHover: "#4363CA"
         });
         break;
 
       default:
         setLesStyles({
-          couleurCercle: "#f3f1f1",
+          couleurGenerale: "#f3f1f1",
+           couleurHover: "#F16242"
         });
         break;
     }
@@ -89,7 +94,7 @@ export default function Professeurs({ items }) {
           <h1>LES PROFESSEURS</h1>
         </Link>
         <Link href="professeurs/grille">
-          <h3>QUI SONT-ILS?</h3>
+          <motion.h3 initial={{color: lesStyles.couleurGenerale }} animate={{color: lesStyles.couleurGenerale}} whileHover={{color: lesStyles.couleurHover}}>QUI SONT-ILS?</motion.h3>
         </Link>
       </motion.div>
       <div className={styles.sectionImages}>
@@ -183,7 +188,7 @@ export default function Professeurs({ items }) {
         </span>
         <span>
           <motion.div
-            style={{borderColor : lesStyles.couleurCercle}}
+            style={{borderColor : lesStyles.couleurGenerale}}
             animate={{ x: "-40%", y: "-20%" }}
             className={styles.cercle}
           ></motion.div>

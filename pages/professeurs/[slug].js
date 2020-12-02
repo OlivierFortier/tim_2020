@@ -61,11 +61,11 @@ export default function PageUnProfesseur(leProf) {
               {leProf.description}
             </Markdown>
           </div>
-          <div className={styles.fleche}>
+          {/* <div className={styles.fleche}>
             <MdArrowDropDown
               className={styles.flecheDescriptionCours}
             ></MdArrowDropDown>
-          </div>
+          </div> */}
         </article>
       </section>
     </motion.main>
