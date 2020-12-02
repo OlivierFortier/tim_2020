@@ -74,7 +74,7 @@ export default function Layout({ children }) {
     <Link href="/inscription"><a style={{display: "none"}}>accueil</a></Link>
       <div
         id="racine"
-        className={`${styles.racine} ${themeStyles.grain ? styles.grain : ""}`}
+        className={`${styles.racine} ${styles.grain} ${themeStyles.grain ? "" : styles.grainBlanc}`}
         style={{ backgroundColor: themeStyles.couleurBg, color: themeStyles.couleurTexte }}
       >
         <div className={styles.conteneurTout}>
