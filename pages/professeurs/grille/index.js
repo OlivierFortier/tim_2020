@@ -5,15 +5,13 @@ import { faireRequeteGql } from "../../../libs/requetesDonnes";
 import Head from "next/head";
 import SwiperProfs from "../../../components/profs/SwiperProfs";
 
-
-
 export default function Grille({ listeProfs }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{duration: 0.75}}
+      transition={{ duration: 0.75 }}
       className={styles.conteneurPage}
       key="grilleProfs"
     >
@@ -27,14 +25,20 @@ export default function Grille({ listeProfs }) {
           rel="canonical"
           href="https://tim-2020.vercel.app/professeurs/grille"
         ></link>
-        <meta property="og:title" content="Grille des profs | TIM Maisonneuve" />
-        <meta property="og:url" content="https://tim-2020.vercel.app/professeurs/grille" />
+        <meta
+          property="og:title"
+          content="Grille des profs | TIM Maisonneuve"
+        />
+        <meta
+          property="og:url"
+          content="https://tim-2020.vercel.app/professeurs/grille"
+        />
         <meta
           property="og:description"
           content="Grille des professeurs des Technique d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
-     <SwiperProfs listeProfs={listeProfs}/>
+      <SwiperProfs listeProfs={listeProfs}  />
     </motion.div>
   );
 }

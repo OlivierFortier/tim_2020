@@ -38,6 +38,76 @@
     filter: opacity(0.5) contrast(0.6) saturate(3) brightness(1);
   }
 }
+
+.unProfArt {
+  font-size: 0;
+  background-color: #ff7100d6;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  margin: 0 0 5% 0;
+  position: relative;
+  width: fit-content;
+
+  img {
+    filter: grayscale(100%) contrast(1) blur(var(--blur));
+    mix-blend-mode: var(--bg-blend);
+    object-fit: cover;
+    opacity: var(--opacity);
+    position: relative;
+  }
+
+   div::before  {
+    background-color: #5241ff;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    mix-blend-mode: var(--fg-blend);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    filter: opacity(0.4) contrast(0.8) saturate(0.5) brightness(1);
+  }
+}
+
+.unProfCode {
+  font-size: 0;
+  background-color: #4ed051;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  margin: 0 0 5% 0;
+  position: relative;
+  width: fit-content;
+
+  img {
+    filter: grayscale(100%) contrast(0.6) blur(var(--blur));
+    mix-blend-mode: color-burn;
+    object-fit: cover;
+    opacity: var(--opacity);
+    position: relative;
+  }
+
+   div::before  {
+    background-color: #387954;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    filter:opacity(2) contrast(1) saturate(1) brightness(0.6);
+  }
+}
 .nomProf, .specialisationProf {
   margin: 0;
   background-color: transparent;
