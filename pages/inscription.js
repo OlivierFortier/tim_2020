@@ -1,8 +1,51 @@
 import styles from "./inscription.module.scss";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import {useState, useEffect} from "react";
+import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 
 export default function Inscription() {
+
+  const theme = useTheme();
+  const listeTheme = useListeThemes();
+
+  const [lesStyles, setLesStyles] = useState({
+    couleurHover: "#F16242",
+    couleurInitiale : "#f3f1f1"
+  });
+
+  useEffect(() => {
+    switch (theme) {
+      case listeTheme.art:
+        setLesStyles({
+          couleurHover: "#F16242",
+          couleurInitiale : "#f3f1f1"
+        });
+        break;
+
+      case listeTheme.code:
+        setLesStyles({
+          couleurHover: "#24DC48",
+          couleurInitiale : "#f3f1f1"
+        });
+        break;
+
+      case listeTheme.parent:
+        setLesStyles({
+          couleurHover: "#4363CA",
+          couleurInitiale : "#000000"
+        });
+        break;
+
+      default:
+        setLesStyles({
+          couleurHover: "#F16242",
+          couleurInitiale : "#f3f1f1"
+        });
+        break;
+    }
+  }, [theme]);
+
   return (
     <motion.main
       initial={{ opacity: 0, y: 50 }}
@@ -35,12 +78,15 @@ export default function Inscription() {
       </Head>
       <motion.h1 initial={{y: -100}} animate={{y: 0}} transition={{duration: 0.75}}>Qu'est-ce que tu attends ?</motion.h1>
 
-      <a
+      <motion.a
+       initial={{color : lesStyles.couleurInitiale}}
+       animate={{color : lesStyles.couleurInitiale}}
+         whileHover={{ color: lesStyles.couleurHover }}
         href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/"
         target="_blank"
       >
         Soumettre ma demande d'admission.
-      </a>
+      </motion.a>
     </motion.main>
   );
 }
