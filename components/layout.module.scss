@@ -18,13 +18,20 @@
 .grain {
   &::after {
     content: "";
-    width: 300%;
-    height: 300%;
-    background-image: url("/images/grain.webp");
-    background-size: auto;
-    opacity: 0.228;
+    width: 120%;
+    height: 120%;
+    background-image: url("/images/grain-statique.webp");
+    background-size: cover;
+    opacity: 0.5;
     position: fixed;
     z-index: 2;
+    top: -1%;
+  }
+}
+
+.grainBlanc {
+  &::after {
+    filter: invert(1);
   }
 }
 

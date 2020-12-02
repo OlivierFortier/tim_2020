@@ -75,8 +75,8 @@ export default function Accueil() {
         document.documentElement.style.setProperty("--bgAcceuil", "#110c12");
         setStylesTheme({
           couleurBordure: "black",
-          couleurBouton: "black",
-          couleurTexteBouton: "#f3f1f1",
+          couleurBouton: "transparent",
+          couleurTexteBouton: "black",
         });
         break;
 
@@ -168,7 +168,9 @@ export default function Accueil() {
               >
                 <source src={videoSource} type="video/webm" />
               </motion.video>
+              
             )}
+            
           </div>
           <div className={styles.conteneurBouton}>
             <Link href="/introduction">

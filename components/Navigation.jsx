@@ -104,10 +104,10 @@ export default function Navigation() {
         style={{ marginTop: margesDessus }}
         className={styles.conteneurNavigation}
       >
-          <div className={styles.conteneurLogo}> 
+          {/* <div className={styles.conteneurLogo}> 
             <Image height={50} width={50} src={"/images/logo-maisonneuve.webp"} className={styles.logoCollege}/>
             <h6 className={styles.texteLogoCollege}>Collège de Maisonneuve</h6>
-          </div>
+          </div> */}
         <span className={styles.barreNavigation}>
           <Link href={pagePrecedente}>
             <motion.a
