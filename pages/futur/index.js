@@ -36,21 +36,21 @@ export default function Futur() {
       </div>
 
       <Link href="/futur/perspectives-universitaires">
-        <motion.section whileHover={{x: 50, y: 20}} whileTap={{scale: 0.9}} className={styles.sectionUni}>
+        <motion.section whileHover={{ color: "#4F638D"}} whileTap={{scale: 0.9}} className={styles.sectionUni}>
           <h1>Perspective universitaire</h1>
           <h3>Poursuivre ses études et approfondir ses connaissances.</h3>
         </motion.section>
       </Link>
 
       <Link href="/futur/stages">
-        <motion.section whileHover={{x: -50, y: 20}} whileTap={{scale: 0.9}} className={styles.sectionStage}>
+        <motion.section whileHover={{color: "#4F638D"}} whileTap={{scale: 0.9}} className={styles.sectionStage}>
           <h1>Stages</h1>
           <h3>Mettre en pratique ses apprentissages.</h3>
         </motion.section>
       </Link>
 
       <Link href="/futur/perspectives-demplois">
-        <motion.section whileHover={{ y: -20}} whileTap={{scale: 0.9}} className={styles.sectionEmploi}>
+        <motion.section whileHover={{color: "#4F638D"}} whileTap={{scale: 0.9}} className={styles.sectionEmploi}>
           <h1>Perspectives d'emploi</h1>
           <h3>Devenir un professionnel dans le domaine.</h3>
         </motion.section>

@@ -32,7 +32,7 @@ export default function Layout({ children }) {
 
       case listeThemes.code:
         setThemeStyles({
-          couleurBg: "#110c12",
+          couleurBg: "black",
           couleurTexte: "#f3f1f1",
           grain : true
         });

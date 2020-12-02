@@ -24,8 +24,8 @@ export default function Introduction() {
         setLesStyles({
           couleurCube: "#f3f1f1",
           couleurTexte: "#f3f1f1",
-          couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "black",
+          couleurBouton: "transparent",
+          couleurTexteBouton: "#f3f1f1",
         });
         break;
 
@@ -42,8 +42,8 @@ export default function Introduction() {
         setLesStyles({
           couleurCube: "black",
           couleurTexte: "black",
-          couleurBouton: "black",
-          couleurTexteBouton: "#f3f1f1",
+          couleurBouton: "transparent",
+          couleurTexteBouton: "black",
         });
         break;
 

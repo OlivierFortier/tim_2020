@@ -56,36 +56,37 @@ export default function Cours({ listeCours }) {
   const theme = useTheme()
   const listeThemes = useListeThemes()
   const [lesStyles, setLesStyles] = useState({
-    
+    couleurGenerale: "#279728",
     couleurBorder: "#f3f1f1",
+    couleurAccent: "#0C639A"
   });
 
   useEffect(() => {
     switch (theme) {
       case listeThemes.art:
         setLesStyles({
-          
+          couleurGenerale: "#f18163",
           couleurBorder: "#f3f1f1",
         });
         break;
 
       case listeThemes.code:
         setLesStyles({
-         
+          couleurGenerale: "#279728",
           couleurBorder: "#f3f1f1",
         });
         break;
 
       case listeThemes.parent:
         setLesStyles({
-          
+          couleurGenerale: "#4F638D",
           couleurBorder: "black",
         });
         break;
 
       default:
         setLesStyles({
-         
+          couleurGenerale: "#279728",
           couleurBorder: "#f3f1f1",
         });
         break;
@@ -124,7 +125,7 @@ export default function Cours({ listeCours }) {
             onChange={(evenement) => filtrerCours(evenement)}
             className={styles.selecteur}
             onClick={() => setCoursAffiche(null)}
-            style={{borderColor: lesStyles.couleurBorder, color: lesStyles.couleurBorder}}
+            style={{borderColor: lesStyles.couleurBorder, color: lesStyles.couleurGenerale}}
           >
             <option value="">de tout</option>
             <option value="Jeux">les jeux</option>
