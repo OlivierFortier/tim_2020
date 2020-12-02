@@ -34,6 +34,26 @@
   }
 }
 
+.conteneurConteneur {
+  position: relative;
+}
+
+.conteneurLogo {
+  display: flex;
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  filter: grayscale(1);
+}
+
+.texteLogoCollege {
+  margin-left: 1%;
+}
+
+.logoCollege {
+  // position: absolute;
+}
+
 .barreNavigation {
   position: relative;
   display: grid;

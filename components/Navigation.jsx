@@ -1,5 +1,6 @@
 import styles from "./Navigation.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -103,6 +104,10 @@ export default function Navigation() {
         style={{ marginTop: margesDessus }}
         className={styles.conteneurNavigation}
       >
+          <div className={styles.conteneurLogo}> 
+            <Image height={50} width={50} src={"/images/logo-maisonneuve.webp"} className={styles.logoCollege}/>
+            <h6 className={styles.texteLogoCollege}>Collège de Maisonneuve</h6>
+          </div>
         <span className={styles.barreNavigation}>
           <Link href={pagePrecedente}>
             <motion.a

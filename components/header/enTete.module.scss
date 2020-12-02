@@ -12,7 +12,7 @@
   padding: 2rem 2rem 1rem;
   margin-bottom: 1%;
 
-  span {
+  .conteneurEntete {
     display: flex;
     z-index: 7;
     width: 100%;
@@ -38,7 +38,7 @@
     height: 75px;
     margin-bottom: 5%;
 
-    span {
+    .conteneurEntete {
       height: 45px;
       flex-direction: column;
       overflow: visible;
@@ -61,7 +61,7 @@
     height: 75px;
     margin-bottom: 0;
 
-    span {
+    .conteneurEntete {
       // overflow: visible;
     }
 
