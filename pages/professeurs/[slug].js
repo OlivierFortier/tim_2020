@@ -6,8 +6,48 @@ import Markdown from "markdown-to-jsx";
 import { motion } from "framer-motion";
 import { MdArrowDropDown } from "react-icons/md";
 import Head from "next/head";
+import {useState, useEffect} from "react";
+import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 
 export default function PageUnProfesseur(leProf) {
+
+  
+   // gestion des couleurs selont le thème
+   const theme = useTheme();
+   const listeThemes = useListeThemes();
+ 
+   const [lesStyles, setLesStyles] = useState({
+     classeFiltre: styles.unProfArt,
+   });
+ 
+   useEffect(() => {
+     switch (theme) {
+       case listeThemes.art:
+         setLesStyles({
+           classeFiltre: styles.unProfArt,
+         });
+         break;
+ 
+       case listeThemes.code:
+         setLesStyles({
+           classeFiltre: styles.unProfCode,
+         });
+         break;
+ 
+       case listeThemes.parent:
+         setLesStyles({
+           classeFiltre: styles.unProf,
+         });
+         break;
+ 
+       default:
+         setLesStyles({
+           classeFiltre: styles.unProfArt,
+         });
+         break;
+     }
+   }, [theme]);
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -38,7 +78,7 @@ export default function PageUnProfesseur(leProf) {
         />
       </Head>
       <section>
-        <div className={styles.unProf}>
+        <div className={lesStyles.classeFiltre}>
           <Image
             className={styles.imgProf}
             src={leProf?.photo?.url ? leProf.photo.url : "/images/cam.jpg"}
