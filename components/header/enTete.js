@@ -16,13 +16,13 @@ export default function EnTete() {
     switch (leTheme) {
       case listeThemes.art:
         setLesStyles({
-          couleurTexte: "#F04E2A",
+          couleurTexte: "#F3f1f1",
         });
         break;
 
       case listeThemes.code:
         setLesStyles({
-          couleurTexte: "green",
+          couleurTexte: "#f3f1f1",
         });
         break;
 
@@ -34,7 +34,7 @@ export default function EnTete() {
 
       default:
         setLesStyles({
-          couleurTexte: "#F04E2A",
+          couleurTexte: "#f3f1f1",
         });
         break;
     }
