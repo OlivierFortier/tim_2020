@@ -13,31 +13,38 @@ export default function index() {
   const listeThemes = useListeThemes();
   const [lesStyles, setLesStyles] = useState({
     couleurLigne: "#f3f1f1",
+    classeFiltre : styles.conteneurEffetImageArt
   });
+
+
 
   useEffect(() => {
     switch (theme) {
       case listeThemes.art:
         setLesStyles({
           couleurLigne: "#f3f1f1",
+          classeFiltre : styles.conteneurEffetImageArt
         });
         break;
 
       case listeThemes.code:
         setLesStyles({
           couleurLigne: "#f3f1f1",
+          classeFiltre : styles.conteneurEffetImageCode
         });
         break;
 
       case listeThemes.parent:
         setLesStyles({
           couleurLigne: "black",
+          classeFiltre : styles.conteneurEffetImage
         });
         break;
 
       default:
         setLesStyles({
           couleurLigne: "#f3f1f1",
+          classeFiltre : styles.conteneurEffetImageArt
         });
         break;
     }
@@ -95,7 +102,7 @@ export default function index() {
           </Link>
         </section>
         <div className={styles.conteneurImage}>
-          <span className={styles.conteneurEffetImage}>
+          <span className={lesStyles.classeFiltre}>
             <Image
               src={`/images/${imageSurvol}`}
               loading="eager"

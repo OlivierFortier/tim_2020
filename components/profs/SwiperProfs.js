@@ -47,7 +47,7 @@ export default function SwiperProfs({ listeProfs }) {
         {listeProfs.map((infoProf) => {
           return (
             <SwiperSlide className={styles.uneSlide} key={infoProf.nom}>
-              <CarteProf prof={infoProf} />
+              <CarteProf prof={infoProf}  />
             </SwiperSlide>
           );
         })}

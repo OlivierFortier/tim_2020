@@ -11,34 +11,43 @@ import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 export default function Professeurs({ items }) {
   // gestion du theme de couleur
   const theme = useTheme();
-  const listeTheme = useListeThemes();
   const [lesStyles, setLesStyles] = useState({
-    couleurCercle: "#f3f1f1",
+    couleurGenerale: "#f3f1f1",
+    couleurHover: "#F16242",
+    classeFiltreImg: styles.conteneurImgArt
   });
 
   useEffect(() => {
     switch (theme) {
       case "art":
         setLesStyles({
-          couleurCercle: "#f3f1f1",
+          couleurGenerale: "#f3f1f1",
+          couleurHover: "#F16242",
+          classeFiltreImg: styles.conteneurImgArt
         });
         break;
 
       case "code":
         setLesStyles({
-          couleurCercle: "#f3f1f1",
+          couleurGenerale: "#f3f1f1",
+           couleurHover: "#24DC48",
+           classeFiltreImg: styles.conteneurImgCode
         });
         break;
 
       case "parent":
         setLesStyles({
-          couleurCercle: "black",
+          couleurGenerale: "#000000",
+           couleurHover: "#4363CA",
+           classeFiltreImg: styles.conteneurImg
         });
         break;
 
       default:
         setLesStyles({
-          couleurCercle: "#f3f1f1",
+          couleurGenerale: "#f3f1f1",
+           couleurHover: "#F16242",
+           classeFiltreImg: styles.conteneurImgArt
         });
         break;
     }
@@ -89,14 +98,14 @@ export default function Professeurs({ items }) {
           <h1>LES PROFESSEURS</h1>
         </Link>
         <Link href="professeurs/grille">
-          <h3>QUI SONT-ILS?</h3>
+          <motion.h3 initial={{color: lesStyles.couleurGenerale }} animate={{color: lesStyles.couleurGenerale}} whileHover={{color: lesStyles.couleurHover}}>QUI SONT-ILS?</motion.h3>
         </Link>
       </motion.div>
       <div className={styles.sectionImages}>
         <span>
           <Link href="/professeurs/grille">
             <motion.div
-              className={styles.conteneurImg}
+              className={lesStyles.classeFiltreImg}
               initial={{
                 opacity: 0,
               }}
@@ -117,7 +126,7 @@ export default function Professeurs({ items }) {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
-              className={styles.conteneurImg}
+              className={lesStyles.classeFiltreImg}
               initial={{
                 opacity: 0,
               }}
@@ -138,7 +147,7 @@ export default function Professeurs({ items }) {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
-              className={styles.conteneurImg}
+              className={lesStyles.classeFiltreImg}
               initial={{
                 opacity: 0,
               }}
@@ -161,7 +170,7 @@ export default function Professeurs({ items }) {
         <span>
           <Link href="/professeurs/grille">
             <motion.div
-              className={styles.conteneurImg}
+              className={lesStyles.classeFiltreImg}
               initial={{
                 opacity: 0,
               }}
@@ -183,13 +192,13 @@ export default function Professeurs({ items }) {
         </span>
         <span>
           <motion.div
-            style={{borderColor : lesStyles.couleurCercle}}
+            style={{borderColor : lesStyles.couleurGenerale}}
             animate={{ x: "-40%", y: "-20%" }}
             className={styles.cercle}
           ></motion.div>
           <Link href="/professeurs/grille">
             <motion.div
-              className={styles.conteneurImg}
+              className={lesStyles.classeFiltreImg}
               initial={{
                 opacity: 0,
               }}
@@ -210,7 +219,7 @@ export default function Professeurs({ items }) {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
-              className={styles.conteneurImg}
+              className={lesStyles.classeFiltreImg}
               initial={{
                 opacity: 0,
               }}
@@ -231,7 +240,7 @@ export default function Professeurs({ items }) {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
-              className={styles.conteneurImg}
+              className={lesStyles.classeFiltreImg}
               style={{ zIndex: -1 }}
               initial={{
                 opacity: 0,
@@ -253,7 +262,7 @@ export default function Professeurs({ items }) {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
-              className={styles.conteneurImg}
+              className={lesStyles.classeFiltreImg}
               initial={{
                 opacity: 0,
               }}
@@ -274,7 +283,7 @@ export default function Professeurs({ items }) {
           </Link>
           <Link href="/professeurs/grille">
             <motion.div
-              className={styles.conteneurImg}
+              className={lesStyles.classeFiltreImg}
               initial={{
                 opacity: 0,
               }}

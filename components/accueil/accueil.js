@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./accueil.module.scss";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTheme, useListeThemes } from "../../hooks/contexteTheme";
@@ -12,19 +13,26 @@ export default function Accueil() {
   // configurations des animations vidéos
   const [videoSource, setVideoSource] = useState("");
   const [videoIsHovered, setVideoIsHovered] = useState(false);
+  const [videoFutSurvolee, setVideoFutSurvolee] = useState(false);
+
+  useEffect(()=> {
+   if(videoIsHovered) setVideoFutSurvolee(true);
+  },[videoIsHovered])
 
   const setHoverState = (value) => {
     setVideoIsHovered((currentValue) => value);
   };
   const animationVideo = {
     open: {
-      scaleX: 4,
+      scaleX: 2,
+      scaleY: 1.1,
       opacity: 1,
       x: 0,
       transition: { duration: 1, ease: "easeInOut" },
     },
     closed: {
-      scaleX: 1,
+      scaleX: videoFutSurvolee ? 1.5 : 1,
+      scaleY: 1,
       opacity: 1,
       x: 0,
       transition: { duration: 1, ease: "easeInOut" },
@@ -35,7 +43,8 @@ export default function Accueil() {
   const [stylesTheme, setStylesTheme] = useState({
     couleurBordure: "#f3f1f1",
     couleurBouton: "#f3f1f1",
-    couleurTexteBouton: "black",
+    couleurTexteBouton: "#000000",
+    couleurAccent : "#F16242"
   });
 
   // ajustement des styles selon le thème choisi
@@ -53,7 +62,8 @@ export default function Accueil() {
         setStylesTheme({
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "black",
+          couleurTexteBouton: "#000000",
+          couleurAccent : "#F16242"
         });
         break;
 
@@ -66,7 +76,8 @@ export default function Accueil() {
         setStylesTheme({
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "black",
+          couleurTexteBouton: "#000000",
+          couleurAccent : "#24DC48"
         });
         break;
 
@@ -74,9 +85,10 @@ export default function Accueil() {
         setVideoSource("");
         document.documentElement.style.setProperty("--bgAcceuil", "#110c12");
         setStylesTheme({
-          couleurBordure: "black",
-          couleurBouton: "transparent",
-          couleurTexteBouton: "black",
+          couleurBordure: "#000000",
+          couleurBouton: "#000000",
+          couleurTexteBouton: "#F3F1F1",
+          couleurAccent : "#F16242"
         });
         break;
 
@@ -86,6 +98,12 @@ export default function Accueil() {
           "--bgAcceuil",
           'url("/images/art_moment.webp")'
         );
+        setStylesTheme({
+          couleurBordure: "#f3f1f1",
+          couleurBouton: "#f3f1f1",
+          couleurTexteBouton: "#000000",
+          couleurAccent : "#F16242"
+        });
         break;
     }
   }, [videoSource, theme]);
@@ -168,9 +186,11 @@ export default function Accueil() {
               >
                 <source src={videoSource} type="video/webm" />
               </motion.video>
-              
             )}
-            
+
+            {!videoSource && (
+              <Image src={"/images/parent.jpeg"} width={451} height={684} className={styles.imgParent} />
+            )}
           </div>
           <div className={styles.conteneurBouton}>
             <Link href="/introduction">

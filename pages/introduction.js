@@ -15,7 +15,8 @@ export default function Introduction() {
     couleurCube: "#f3f1f1",
     couleurTexte: "#f3f1f1",
     couleurBouton: "#f3f1f1",
-    couleurTexteBouton: "black",
+    couleurTexteBouton: "#000000",
+    couleurHover: "#F04E2A",
   });
 
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function Introduction() {
           couleurTexte: "#f3f1f1",
           couleurBouton: "transparent",
           couleurTexteBouton: "#f3f1f1",
+          couleurHover: "#F16242",
         });
         break;
 
@@ -33,17 +35,19 @@ export default function Introduction() {
         setLesStyles({
           couleurCube: "#f3f1f1",
           couleurTexte: "#f3f1f1",
-          couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "black",
+          couleurBouton: "transparent",
+          couleurTexteBouton: "#FFFFFF",
+          couleurHover: "#24DC48",
         });
         break;
 
       case listeThemes.parent:
         setLesStyles({
           couleurCube: "black",
-          couleurTexte: "black",
+          couleurTexte: "#000000",
           couleurBouton: "transparent",
-          couleurTexteBouton: "black",
+          couleurTexteBouton: "#000000",
+          couleurHover: "#4363CA",
         });
         break;
 
@@ -51,8 +55,9 @@ export default function Introduction() {
         setLesStyles({
           couleurCube: "#f3f1f1",
           couleurTexte: "#f3f1f1",
-          couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "black",
+          couleurBouton: "transparent",
+          couleurTexteBouton: "#000000",
+          couleurHover: "#F04E2A",
         });
         break;
     }
@@ -65,7 +70,7 @@ export default function Introduction() {
         opacity: 0,
         transition: { ease: "easeInOut", duration: 0.5 },
       }}
-      transition={{duration: 0.75}}
+      transition={{ duration: 0.75 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{
         x: -40,
@@ -86,16 +91,27 @@ export default function Introduction() {
           href="https://tim-2020.vercel.app/introduction"
         ></link>
         <meta property="og:title" content="Introduction | TIM Maisonneuve" />
-        <meta property="og:url" content="https://tim-2020.vercel.app/introduction" />
+        <meta
+          property="og:url"
+          content="https://tim-2020.vercel.app/introduction"
+        />
         <meta
           property="og:description"
           content="Page d'introduction des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
 
-      <h1 className={styles.headerPage}>
-        Envie d'étudier le <b>multimédia ?</b>
-      </h1>
+      <Link href="/cours">
+        <h1 className={styles.headerPage}>
+          Envie d'étudier le{" "}
+          <motion.b
+            animate={{ color: lesStyles.couleurTexte }}
+            whileHover={{ color: lesStyles.couleurHover }}
+          >
+            multimédia ?
+          </motion.b>
+        </h1>
+      </Link>
       <motion.div
         initial={{ opacity: 0, x: 5, y: -5 }}
         animate={{
@@ -125,14 +141,26 @@ export default function Introduction() {
       </p>
 
       <Link href="/cours">
-        <a style={{color: lesStyles.couleurTexte}} className={styles.lienCours}>LISTE DES COURS</a>
+        <a
+          style={{ color: lesStyles.couleurTexte }}
+          className={styles.lienCours}
+        >
+          LISTE DES COURS
+        </a>
       </Link>
 
       <Link href="/cours">
         <motion.button
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.1 , color: lesStyles.couleurHover, borderColor: lesStyles.couleurHover}}
           className={styles.boutonCours}
-          style={{backgroundColor: lesStyles.couleurBouton, color: lesStyles.couleurTexteBouton}}
+          style={{
+            backgroundColor: lesStyles.couleurBouton,
+           
+          }}
+
+          animate={{ color: lesStyles.couleurTexteBouton, borderColor: lesStyles.couleurTexteBouton}}
+
+          
         >
           LISTE DES COURS
         </motion.button>
