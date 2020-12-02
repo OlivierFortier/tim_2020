@@ -33,8 +33,8 @@ export default function Introduction() {
         setLesStyles({
           couleurCube: "#f3f1f1",
           couleurTexte: "#f3f1f1",
-          couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "black",
+          couleurBouton: "transparent",
+          couleurTexteBouton: "white",
         });
         break;
 
@@ -93,9 +93,11 @@ export default function Introduction() {
         />
       </Head>
 
-      <h1 className={styles.headerPage}>
-        Envie d'étudier le <b>multimédia ?</b>
-      </h1>
+      <Link href="/cours">
+        <h1 className={styles.headerPage}>
+          Envie d'étudier le <motion.b whileHover={{color: "#F04E2A"}}>multimédia ?</motion.b>
+        </h1>
+      </Link>
       <motion.div
         initial={{ opacity: 0, x: 5, y: -5 }}
         animate={{
