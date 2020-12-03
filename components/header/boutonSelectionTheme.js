@@ -81,6 +81,7 @@ export default function BoutonSelectionTheme() {
       <motion.div
         whileHover={{ scale: 1.1 }}
         onClick={() => setIndexTableau((aI) => aI + 1)}
+        style={{cursor: "pointer"}}
       >
         <Image
           src="/images/Logo_TIM.png"

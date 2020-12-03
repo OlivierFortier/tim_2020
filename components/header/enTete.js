@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 import { useProxy } from "valtio";
 import { etatMenu } from "../etat_global/EtatMenu";
+import Link from "next/link";
 
 export default function EnTete() {
   const [lesStyles, setLesStyles] = useState({
@@ -51,12 +52,14 @@ export default function EnTete() {
       <header id="header-site" className={styles.enTete}>
         <span className={styles.conteneurEntete}>
           <BoutonSelectionTheme />
-          <h1
-            className={styles.titre}
-            style={{ color: lesStyles.couleurTexte }}
-          >
-            Techniques d'intégration multimédia
-          </h1>
+          <Link href="/">
+            <h1
+              className={styles.titre}
+              style={{ color: lesStyles.couleurTexte }}
+            >
+              <a>Techniques d'intégration multimédia</a>
+            </h1>
+          </Link>
         </span>
         <Menu />
       </header>
