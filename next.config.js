@@ -3,4 +3,7 @@ module.exports = {
   images: {
     domains: ['assets.vercel.com', 'images.ctfassets.net', 'ctfassets.net']
   },
+  experimental : {
+    optimizeFonts: true
+  }
 };
