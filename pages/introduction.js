@@ -66,16 +66,16 @@ export default function Introduction() {
   return (
     <motion.div
       initial={{
-        x: 5,
+        x: 25,
         opacity: 0,
         transition: { ease: "easeInOut", duration: 0.5 },
       }}
       transition={{ duration: 0.75 }}
-      animate={{ x: 0, opacity: 1 }}
+      animate={{ y: 0, opacity: 1 }}
       exit={{
-        x: -40,
+        y: -100,
         opacity: 0,
-        transition: { ease: "linear", duration: 0.5 },
+        transition: { ease: "linear", duration: 0.4 },
       }}
       className={styles.conteneur}
       key="introduction"
