@@ -1,7 +1,7 @@
 /*=============== Neue Montreal================= */
 @font-face {
     font-family: "NeueMontreal";
-    src: url("/fonts/NeueMontreal/NeueMontreal-Light.otf");
+    src: url("/fonts/NeueMontreal/NeueMontreal-Light.woff2");
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -9,7 +9,7 @@
   
   @font-face {
     font-family: "NeueMontreal";
-    src: url("/fonts/NeueMontreal/NeueMontreal-Bold.otf");
+    src: url("/fonts/NeueMontreal/NeueMontreal-Bold.woff2");
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -17,7 +17,7 @@
   
   @font-face {
     font-family: "NeueMontreal";
-    src: url("/fonts/NeueMontreal/NeueMontreal-BoldItalic.otf");
+    src: url("/fonts/NeueMontreal/NeueMontreal-BoldItalic.woff2");
     font-style: italic;
     font-weight: 700;
     font-display: swap;
@@ -27,7 +27,7 @@
   
   @font-face {
     font-family: "Montserrat";
-    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-Regular.woff2");
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -35,7 +35,7 @@
   
   @font-face {
     font-family: "Montserrat";
-    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-Medium.woff2");
     font-style: normal;
     font-weight: 500;
     font-display: swap;
@@ -43,7 +43,7 @@
   
   @font-face {
     font-family: "Montserrat";
-    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-Bold.woff2");
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -51,7 +51,7 @@
   
   @font-face {
     font-family: "Montserrat";
-    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-ExtraBold.woff2");
     font-style: normal;
     font-weight: 800;
     font-display: swap;
