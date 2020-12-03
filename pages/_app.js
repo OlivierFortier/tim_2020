@@ -7,6 +7,8 @@ import Layout from "../components/layout";
 import { FournisseurTheme } from "../hooks/contexteTheme";
 import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
+import TagManager from 'react-gtm-module';
+import {useEffect} from "react";
 
 import Router from "next/router";
 
@@ -29,6 +31,11 @@ import Router from "next/router";
    Router.events.on("routeChangeStart", routeChange );
 
 function MyApp({ Component, pageProps, router }) {
+
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-M6GWCH6' });
+  }, []);
+
   return (
     <FournisseurTheme>
         <Layout>
