@@ -30,7 +30,7 @@ export default function Home() {
       suppressHydrationWarning={true}
     >
       <Head>
-        <title>TIM | Accueil</title>
+        <title>Accueil | TIM | Techniques d'Intégration Multimédia du Collège Maisonneuve</title>
         <meta
           name="google-site-verification"
           content="8wSuECvx0LPPYY0CdAZ4O9RjbK3j3qlzEB72E37TlW8"
@@ -40,7 +40,7 @@ export default function Home() {
           content="Techniques d'Intégration Multimédia du Collège Maisonneuve. Une éducation à la fine pointe de l'industrie. Apprenez le design web, la programmation, le développement de jeux, la modélisation 3D, et bien plus encore!"
         ></meta>
         <link rel="canonical" href="https://tim-2020.vercel.app/"></link>
-        <meta property="og:title" content="Accueil | TIM Maisonneuve" />
+        <meta property="og:title" content="Accueil | TIM | Techniques d'Intégration Multimédia du Collège Maisonneuve" />
         <meta property="og:url" content="https://tim-2020.vercel.app/" />
         <meta
           property="og:description"
