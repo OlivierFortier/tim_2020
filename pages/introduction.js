@@ -102,7 +102,10 @@ export default function Introduction() {
       </Head>
 
       <Link href="/cours">
-        <h1 className={styles.headerPage}>
+        <motion.h1 
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0, transition: { duration: 0.9 } }}
+        className={styles.headerPage}>
           Envie d'étudier le{" "}
           <motion.b
             animate={{ color: lesStyles.couleurTexte }}
@@ -110,7 +113,7 @@ export default function Introduction() {
           >
             multimédia ?
           </motion.b>
-        </h1>
+        </motion.h1>
       </Link>
       <motion.div
         initial={{ opacity: 0, x: 5, y: -5 }}
@@ -133,12 +136,15 @@ export default function Introduction() {
         </Canvas>
       </motion.div>
 
-      <p className={styles.textePage}>
+      <motion.p 
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0, transition: { duration: 0.9, delay : 0.9} }}
+      className={styles.textePage}>
         Le TIM c’est l’endroit parfait pour étudier les nouvelles technologies
         de l’industrie. On fait de la programmation, des jeux, de la vidéo, de
         la VR, de la photographie, des sites internets, de l’animation et de la
         3D.
-      </p>
+      </motion.p>
 
       <Link href="/cours">
         <a
