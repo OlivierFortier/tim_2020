@@ -65,6 +65,7 @@ export default function Menu() {
       layoutId="bouton"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      exit={{opacity: 0}}
     >
       <RiMenu3Line
         className={styles.barresMenu}
@@ -127,11 +128,11 @@ export default function Menu() {
                     transition: { duration: 1, ease: "easeInOut" },
                   }}
                 >
-                  <span className={styles.conteneurImage}>
+                  <motion.span initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration : 0.6, delay: 0.3}} className={styles.conteneurImage}>
                   <h6 className={styles.texteLogo}>Collège de Maisonneuve</h6>
                   <Image layout="fill" unsized src={"/images/logo-maisonneuve.webp"} className={styles.logoCollege} />
                   
-                  </span>
+                  </motion.span>
                   <motion.div
                     key="liensPages"
                     className={styles.conteneurListePages}
