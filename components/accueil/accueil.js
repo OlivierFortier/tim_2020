@@ -44,12 +44,12 @@ export default function Accueil() {
     couleurBordure: "#f3f1f1",
     couleurBouton: "#f3f1f1",
     couleurTexteBouton: "#000000",
-    couleurAccent : "#F16242"
+    couleurAccent : "#F16242",
   });
 
   // ajustement des styles selon le thème choisi
   useEffect(() => {
-    document.querySelector("#navSecondaire").style.display = "flex";
+    // document.querySelector("#navSecondaire").style.display = "flex";
     document.querySelector("#header-site").style.display = "flex";
 
     switch (theme) {
@@ -63,7 +63,7 @@ export default function Accueil() {
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
           couleurTexteBouton: "#000000",
-          couleurAccent : "#F16242"
+          couleurAccent : "#F16242",
         });
         break;
 
@@ -77,7 +77,7 @@ export default function Accueil() {
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
           couleurTexteBouton: "#000000",
-          couleurAccent : "#24DC48"
+          couleurAccent : "#24DC48",
         });
         break;
 
@@ -88,7 +88,7 @@ export default function Accueil() {
           couleurBordure: "#000000",
           couleurBouton: "#000000",
           couleurTexteBouton: "#F3F1F1",
-          couleurAccent : "#F16242"
+          couleurAccent : "#F16242",
         });
         break;
 
@@ -102,7 +102,7 @@ export default function Accueil() {
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
           couleurTexteBouton: "#000000",
-          couleurAccent : "#F16242"
+          couleurAccent : "#F16242",
         });
         break;
     }
@@ -163,7 +163,7 @@ export default function Accueil() {
               className={styles.cercleInterractif}
             ></motion.div>
           </span>
-          <div className={styles.conteneurImage}>
+          <div className={`${styles.conteneurImage} ${videoSource == "" ? styles.imageParent : ""}`}>
             {videoSource && (
               <motion.video
                 initial={{ opacity: 1 }}
@@ -188,7 +188,7 @@ export default function Accueil() {
               </motion.video>
             )}
 
-            {!videoSource && (
+            {videoSource == "" && (
               <Image src={"/images/parent.jpeg"} width={451} height={684} className={styles.imgParent} />
             )}
           </div>
