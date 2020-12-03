@@ -65,6 +65,7 @@ export default function Menu() {
       layoutId="bouton"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      exit={{opacity: 0}}
     >
       <RiMenu3Line
         className={styles.barresMenu}
