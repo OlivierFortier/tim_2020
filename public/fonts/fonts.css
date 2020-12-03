@@ -1,0 +1,59 @@
+/*=============== Neue Montreal================= */
+@font-face {
+    font-family: "NeueMontreal";
+    src: url("/fonts/NeueMontreal/NeueMontreal-Light.otf");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "NeueMontreal";
+    src: url("/fonts/NeueMontreal/NeueMontreal-Bold.otf");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "NeueMontreal";
+    src: url("/fonts/NeueMontreal/NeueMontreal-BoldItalic.otf");
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+  }
+  
+  /*=============== Montserrat ================= */
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"), url("/fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+  }
+  
