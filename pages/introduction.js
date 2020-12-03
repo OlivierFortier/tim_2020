@@ -138,7 +138,7 @@ export default function Introduction() {
 
       <motion.p 
       initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0, transition: { duration: 0.9, delay : 0.9} }}
+      animate={{ opacity: 1, x: 0, transition: { duration: 0.9, delay : 0.6} }}
       className={styles.textePage}>
         Le TIM c’est l’endroit parfait pour étudier les nouvelles technologies
         de l’industrie. On fait de la programmation, des jeux, de la vidéo, de
@@ -157,7 +157,7 @@ export default function Introduction() {
 
       <Link href="/cours">
         <motion.button
-          whileHover={{ scale: 1.1 , color: lesStyles.couleurHover, borderColor: lesStyles.couleurHover}}
+          whileHover={{ scale: 1.05, transition: { duration: 0.3 } , color: lesStyles.couleurHover, borderColor: lesStyles.couleurHover}}
           className={styles.boutonCours}
           style={{
             backgroundColor: lesStyles.couleurBouton,
