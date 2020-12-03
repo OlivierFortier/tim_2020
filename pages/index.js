@@ -37,17 +37,42 @@ export default function Home() {
         />
         <meta
           name="Description"
-          content="Page d'acceuil des Techniques d'Intégration Multimédia du Collège Maisonneuve"
+          content="Techniques d'Intégration Multimédia du Collège Maisonneuve. Une éducation à la fine pointe de l'industrie. Apprenez le design web, la programmation, le développement de jeux, la modélisation 3D, et bien plus encore!"
         ></meta>
         <link rel="canonical" href="https://tim-2020.vercel.app/"></link>
         <meta property="og:title" content="Accueil | TIM Maisonneuve" />
         <meta property="og:url" content="https://tim-2020.vercel.app/" />
         <meta
           property="og:description"
-          content="Page d'acceuil des Techniques d'Intégration Multimédia du Collège Maisonneuve"
+          content="Techniques d'Intégration Multimédia du Collège Maisonneuve. Une éducation à la fine pointe de l'industrie. Apprenez le design web, la programmation, le développement de jeux, la modélisation 3D, et bien plus encore!"
         />
       </Head>
       <div style={{ all: "inherit" }}>
+        <span style={{ display: "none" }}>
+          <h1>Techniques d'Intégration Multimédia du Collège Maisonneuve</h1>
+          <h2>
+            Apprenez le Design graphique , le Développement de jeux, la
+            programmation web, la modélisation 3D, et bien plus encore !
+          </h2>
+          <p>
+            Au collège Maisonneuve, vous serez bien entouré par des professeurs
+            chaleureux et compétents, ainsi qu'une communauté merveilleuse.
+          </p>
+          <h3>
+            La Juxtaposition du Logique et du Créatif, c'est ce qui défini le
+            profil d'un étudiant au TIM.
+          </h3>
+          <p>
+            La formation qu'on offre est complète et permet d'accéder directment
+            au marché du travail, car vous apprendrez les techniques qui sont
+            utilisées profesionnellement dans l'industrie.
+          </p>
+          <p>
+            Que vous soyez en recherche d'un programme d'études, ou que vous
+            voulez simplement connaitre le profil de sortie des étudiants, tout
+            se trouve sur ce site
+          </p>
+        </span>
         <AnimateSharedLayout>
           <AnimatePresence exitBeforeEnter>
             {etapePage === "intro" && (
