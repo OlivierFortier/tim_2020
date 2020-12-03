@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 /* NE PAS TOUCHER SVP 
 NE PAS TOUCHER SVP 
 NE PAS TOUCHER SVP 
-NE PAS TOUCHER SVP 
+NE PAS TOUCHER SVP fusion de branche mise a niveau
 */
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
