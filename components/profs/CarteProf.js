@@ -48,8 +48,7 @@ export default function CarteProf({ prof }) {
     <Link href={`/professeurs/${prof.slug}`}>
       <a>
         <motion.div
-          whileHover={{ scale: 0.9 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.005 }}
           className={lesStyles.classeFiltre}
         >
           {prof?.photo?.url ? (

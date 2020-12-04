@@ -52,7 +52,7 @@ export default function SwiperProfs({ listeProfs }) {
           );
         })}
 
-        <motion.div id="lesPoints" whileHover={{scale: 1.2}} className={styles.points}></motion.div>
+        <div id="lesPoints" className={styles.points}></div>
       </Swiper>
     </main>
   );

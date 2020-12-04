@@ -5,8 +5,15 @@ import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Markdown from "markdown-to-jsx";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import { useMediaQuery } from "react-responsive";
 
 export default function unFutur(leFutur) {
+
+
+  const large = useMediaQuery({minWidth : 1024});
+
+  console.log(large)
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -46,7 +53,7 @@ export default function unFutur(leFutur) {
           layout="fill"
           src={leFutur.image.url}
           unsized="true"
-          quality={25}
+          quality={100}
           alt="représentation d'étude et de travail"
           // width={625}
           // height={464}

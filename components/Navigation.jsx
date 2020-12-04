@@ -111,8 +111,8 @@ export default function Navigation() {
         <span className={styles.barreNavigation}>
           <Link href={pagePrecedente}>
             <motion.a
-            initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.2 , color: lesStyles.couleurHover}}
-            whileTap={{scale: 1.5}}
+            initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.05 , color: lesStyles.couleurHover}}
+            whileTap={{scale: 1.2}}
               className={`${styles.pageAv} ${
                 flechesActives.precedent ? "" : styles.pageInactif
               }`}
@@ -122,7 +122,7 @@ export default function Navigation() {
           </Link>
 
           <Link href="/">
-            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.2 , color: lesStyles.couleurHover}} whileTap={{scale: 1.5}}
+            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{color: lesStyles.couleurHover}} whileTap={{scale: 1.2}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
@@ -130,7 +130,7 @@ export default function Navigation() {
             </motion.button>
           </Link>
           <Link href="/introduction">
-            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.2 , color: lesStyles.couleurHover}} whileTap={{scale: 1.5}}
+            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.05 , color: lesStyles.couleurHover}} whileTap={{scale: 1.2}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
@@ -138,7 +138,7 @@ export default function Navigation() {
             </motion.button>
           </Link>
           <Link href="/cours">
-            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.2 , color: lesStyles.couleurHover}} whileTap={{scale: 1.5}}
+            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.05 , color: lesStyles.couleurHover}} whileTap={{scale: 1.2}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
@@ -146,7 +146,7 @@ export default function Navigation() {
             </motion.button>
           </Link>
           <Link href="/professeurs">
-            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.2 , color: lesStyles.couleurHover}} whileTap={{scale: 1.5}}
+            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.05 , color: lesStyles.couleurHover}} whileTap={{scale: 1.2}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
@@ -154,7 +154,7 @@ export default function Navigation() {
             </motion.button>
           </Link>
           <Link href="/etudiants">
-            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.2 , color: lesStyles.couleurHover}} whileTap={{scale: 1.5}}
+            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.05 , color: lesStyles.couleurHover}} whileTap={{scale: 1.2}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
@@ -162,7 +162,7 @@ export default function Navigation() {
             </motion.button>
           </Link>
           <Link href="/futur">
-            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.2 , color: lesStyles.couleurHover}} whileTap={{scale: 1.5}}
+            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.05 , color: lesStyles.couleurHover}} whileTap={{scale: 1.2}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
@@ -170,7 +170,7 @@ export default function Navigation() {
             </motion.button>
           </Link>
           <Link href="/inscription">
-            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.2 , color: lesStyles.couleurHover}} whileTap={{scale: 1.5}}
+            <motion.button initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.05 , color: lesStyles.couleurHover}} whileTap={{scale: 1.2}}
               style={{ color: lesStyles.couleurNav }}
               className={styles.boutonUneSection}
             >
@@ -178,7 +178,7 @@ export default function Navigation() {
             </motion.button>
           </Link>
           <Link href={pageSuivante}>
-            <motion.a initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.2 , color: lesStyles.couleurHover}} whileTap={{scale: 1.5}}
+            <motion.a initial={{color : lesStyles.couleurNav}} animate={{color : lesStyles.couleurNav}} whileHover={{scale: 1.05 , color: lesStyles.couleurHover}} whileTap={{scale: 1.2}}
               className={`${styles.pageSuiv} ${
                 flechesActives.suivant ? "" : styles.pageInactif
               }`}
