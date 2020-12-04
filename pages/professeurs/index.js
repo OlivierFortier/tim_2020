@@ -6,7 +6,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import {  useTheme } from "../../hooks/contexteTheme";
+import { useTheme } from "../../hooks/contexteTheme";
 
 export default function Professeurs({ items }) {
   // gestion du theme de couleur
@@ -14,7 +14,7 @@ export default function Professeurs({ items }) {
   const [lesStyles, setLesStyles] = useState({
     couleurGenerale: "#f3f1f1",
     couleurHover: "#F16242",
-    classeFiltreImg: styles.conteneurImgArt
+    classeFiltreImg: styles.conteneurImgArt,
   });
 
   useEffect(() => {
@@ -23,31 +23,31 @@ export default function Professeurs({ items }) {
         setLesStyles({
           couleurGenerale: "#f3f1f1",
           couleurHover: "#F16242",
-          classeFiltreImg: styles.conteneurImgArt
+          classeFiltreImg: styles.conteneurImgArt,
         });
         break;
 
       case "code":
         setLesStyles({
           couleurGenerale: "#f3f1f1",
-           couleurHover: "#24DC48",
-           classeFiltreImg: styles.conteneurImgCode
+          couleurHover: "#24DC48",
+          classeFiltreImg: styles.conteneurImgCode,
         });
         break;
 
       case "parent":
         setLesStyles({
           couleurGenerale: "#000000",
-           couleurHover: "#4363CA",
-           classeFiltreImg: styles.conteneurImg
+          couleurHover: "#4363CA",
+          classeFiltreImg: styles.conteneurImg,
         });
         break;
 
       default:
         setLesStyles({
           couleurGenerale: "#f3f1f1",
-           couleurHover: "#F16242",
-           classeFiltreImg: styles.conteneurImgArt
+          couleurHover: "#F16242",
+          classeFiltreImg: styles.conteneurImgArt,
         });
         break;
     }
@@ -69,10 +69,13 @@ export default function Professeurs({ items }) {
 
   return (
     <motion.div
-      initial={{opacity: 0}}
-      animate={{opacity: 1, transition: { duration: 1.5, stiffness: 90, ease : "easeInOut"} }}
-      exit={{y:-200, opacity: 0, transition: { duration: 0.5} }}
-      transition={{duration: 5.75}}
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { duration: 1.5, stiffness: 90, ease: "easeInOut" },
+      }}
+      exit={{ y: -200, opacity: 0, transition: { duration: 0.5 } }}
+      transition={{ duration: 0.75 }}
       className={styles.conteneur}
       key="professeurs"
     >
@@ -87,23 +90,35 @@ export default function Professeurs({ items }) {
           href="https://tim-2020.vercel.app/professeurs"
         ></link>
         <meta property="og:title" content="Professeurs | TIM Maisonneuve" />
-        <meta property="og:url" content="https://tim-2020.vercel.app/professeurs" />
+        <meta
+          property="og:url"
+          content="https://tim-2020.vercel.app/professeurs"
+        />
         <meta
           property="og:description"
           content="Page des professeurs des Technique d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
-      <motion.div 
-      initial={{ opacity: 0}}
-      animate={{ opacity: 1, x: 0, transition: { duration: 0.9, delay : 0.2} }}
-      className={styles.sectionLesProfs} 
-      whileTap={{scale: 1}
-      }>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.9, delay: 0.2 },
+        }}
+        className={styles.sectionLesProfs}
+      >
         <Link href="professeurs/grille">
           <h1>LES PROFESSEURS</h1>
         </Link>
         <Link href="professeurs/grille">
-          <motion.h3 initial={{color: lesStyles.couleurGenerale }} animate={{color: lesStyles.couleurGenerale}} whileHover={{color: lesStyles.couleurHover}}>QUI SONT-ILS?</motion.h3>
+          <motion.h3
+            initial={{ color: lesStyles.couleurGenerale }}
+            animate={{ color: lesStyles.couleurGenerale }}
+            whileHover={{ color: lesStyles.couleurHover }}
+          >
+            QUI SONT-ILS?
+          </motion.h3>
         </Link>
       </motion.div>
       <div className={styles.sectionImages}>
@@ -114,9 +129,15 @@ export default function Professeurs({ items }) {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "0%", y: "0%", scale: 1, duration: 0.5}}
-              whileHover={{rotate:5}}
-              whileTap={{scale: 2}}
+              animate={{
+                opacity: 1,
+                x: "0%",
+                y: "0%",
+                scale: 1,
+                duration: 0.5,
+              }}
+              whileHover={{ rotate: 5 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -136,8 +157,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "100%", y: "-10%", scale: 1.4 }}
-              whileHover={{rotate:-5}}
-              whileTap={{scale: 1.010}}
+              whileHover={{ rotate: -5 }}
+              
             >
               <Image
                 className={styles.imgProf}
@@ -157,8 +178,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "-10%", y: "140%" }}
-              whileHover={{rotate:5}}
-              whileTap={{scale: 2}}
+              whileHover={{ rotate: 5 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -180,8 +201,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, scale: 3.6, y: "70%" }}
-              whileHover={{rotate:-5}}
-              whileTap={{scale: 2}}
+              whileHover={{ rotate: -5 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -197,7 +218,7 @@ export default function Professeurs({ items }) {
         </span>
         <span>
           <motion.div
-            style={{borderColor : lesStyles.couleurGenerale}}
+            style={{ borderColor: lesStyles.couleurGenerale }}
             animate={{ x: "-40%", y: "-20%" }}
             className={styles.cercle}
           ></motion.div>
@@ -208,8 +229,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "20%", y: "-90%", scale: 0.9 }}
-              whileHover={{rotate:5}}
-              whileTap={{scale: 2}}
+              whileHover={{ rotate: 5 }}
+              
             >
               <Image
                 className={styles.imgProf}
@@ -229,8 +250,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "145%", y: "-140%" }}
-              whileHover={{rotate:-5}}
-              whileTap={{scale: 2}}
+              whileHover={{ rotate: -5 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -251,8 +272,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "10%", y: "40%" }}
-              whileHover={{rotate:5}}
-              whileTap={{scale: 2}}
+              whileHover={{ rotate: 5 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -272,8 +293,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "-260%", y: "150%", scale: 1.4 }}
-              whileHover={{rotate:-5}}
-              whileTap={{scale: 2}}
+              whileHover={{ rotate: -5 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -293,8 +314,8 @@ export default function Professeurs({ items }) {
                 opacity: 0,
               }}
               animate={{ opacity: 1, x: "-300%", y: "340%", scale: 2 }}
-              whileHover={{rotate:5}}
-              whileTap={{scale: 2}}
+              whileHover={{ rotate: 5 }}
+              
             >
               <Image
                 className={styles.imgProf}
@@ -311,10 +332,15 @@ export default function Professeurs({ items }) {
       </div>
       <div className={styles.sectionTexte}>
         <Link href="professeurs/grille">
-          <motion.h2 
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0, transition: { duration: 0.9, delay : 0.3} }}
-          whileTap={{scale: 1.05}}>
+          <motion.h2
+            initial={{ opacity: 0, x: -100 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.9, delay: 0.3 },
+            }}
+            whileTap={{ scale: 1.05 }}
+          >
             PLUS<b>++</b>DE <b>25 ANS</b> D'EXPÉRIENCE DANS LE DOMAINE POUR VOUS
             DONNER <b>LA MEILLEURE ÉDUCATION</b>
           </motion.h2>
