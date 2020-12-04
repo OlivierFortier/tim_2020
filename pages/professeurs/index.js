@@ -137,7 +137,7 @@ export default function Professeurs({ items }) {
                 duration: 0.5,
               }}
               whileHover={{ rotate: 5 }}
-              whileTap={{ scale: 2 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -158,7 +158,7 @@ export default function Professeurs({ items }) {
               }}
               animate={{ opacity: 1, x: "100%", y: "-10%", scale: 1.4 }}
               whileHover={{ rotate: -5 }}
-              whileTap={{ scale: 1.01 }}
+              
             >
               <Image
                 className={styles.imgProf}
@@ -179,7 +179,7 @@ export default function Professeurs({ items }) {
               }}
               animate={{ opacity: 1, x: "-10%", y: "140%" }}
               whileHover={{ rotate: 5 }}
-              whileTap={{ scale: 2 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -202,7 +202,7 @@ export default function Professeurs({ items }) {
               }}
               animate={{ opacity: 1, scale: 3.6, y: "70%" }}
               whileHover={{ rotate: -5 }}
-              whileTap={{ scale: 2 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -230,7 +230,7 @@ export default function Professeurs({ items }) {
               }}
               animate={{ opacity: 1, x: "20%", y: "-90%", scale: 0.9 }}
               whileHover={{ rotate: 5 }}
-              whileTap={{ scale: 2 }}
+              
             >
               <Image
                 className={styles.imgProf}
@@ -251,7 +251,7 @@ export default function Professeurs({ items }) {
               }}
               animate={{ opacity: 1, x: "145%", y: "-140%" }}
               whileHover={{ rotate: -5 }}
-              whileTap={{ scale: 2 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -273,7 +273,7 @@ export default function Professeurs({ items }) {
               }}
               animate={{ opacity: 1, x: "10%", y: "40%" }}
               whileHover={{ rotate: 5 }}
-              whileTap={{ scale: 2 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -294,7 +294,7 @@ export default function Professeurs({ items }) {
               }}
               animate={{ opacity: 1, x: "-260%", y: "150%", scale: 1.4 }}
               whileHover={{ rotate: -5 }}
-              whileTap={{ scale: 2 }}
+             
             >
               <Image
                 className={styles.imgProf}
@@ -315,7 +315,7 @@ export default function Professeurs({ items }) {
               }}
               animate={{ opacity: 1, x: "-300%", y: "340%", scale: 2 }}
               whileHover={{ rotate: 5 }}
-              whileTap={{ scale: 2 }}
+              
             >
               <Image
                 className={styles.imgProf}
