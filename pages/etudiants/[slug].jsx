@@ -34,6 +34,7 @@ export default function PageUnProjet(leProjet) {
           property="og:description"
           content={`${leProjet.titreDuProjet} projet étudiant des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
         />
+        <meta name="robots" content="noindex" />
       </Head>
       <h1 className={styles.nomPage}>Projets étudiants</h1>
       <section className={styles.sectionPrincipale}>
