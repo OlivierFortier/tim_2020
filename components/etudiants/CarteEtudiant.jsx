@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 
 export default function CarteProf({ infoCarte, ouvrirModal }) {
   return (
-    <motion.div layout layoutId="photo" whileHover={{scale: 0.9}} whileTap={{scale: 0.9}} className={styles.unInfo} onClick={() => ouvrirModal(infoCarte)}>
+    <motion.div layout layoutId="photo" whileHover={{scale: 1.013}} whileTap={{scale: 1.010}} className={styles.unInfo} onClick={() => ouvrirModal(infoCarte)}>
       {infoCarte?.photo?.url ? (
         <Image
           unsized

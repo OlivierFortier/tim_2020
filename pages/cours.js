@@ -95,11 +95,11 @@ export default function Cours({ listeCours }) {
 
   return (
     <motion.div
-      initial={{ x: "-50vw", opacity: 0, }}
-      animate={{ x: 0, opacity: 1, transition:{ ease: "easeInOut", duration: 0.5}}}
-      exit={{y : "50vh", opacity: 0, transition:{ ease: "easeInOut", duration: 0.5}}}
+      initial={{ y: "10vw", opacity: 0, }}
+      animate={{ y: 0, x: 0, opacity: 1, transition:{ ease: "easeInOut", duration: 0.7}}}
+      exit={{y : "-50vh", opacity: 0, transition:{ ease: "easeInOut", duration: 0.5}}}
       className={styles.conteneurCours}
-      transition={{duration: 0.75}}
+      transition={{duration: 0.8}}
       key="cours"
     >
       <Head>
@@ -121,7 +121,6 @@ export default function Cours({ listeCours }) {
         <h2 className={styles.titreChoix}>
           J'aime bien &nbsp;
           <motion.select
-          whileHover={{x: 10}}
             onChange={(evenement) => filtrerCours(evenement)}
             className={styles.selecteur}
             onClick={() => setCoursAffiche(null)}
@@ -149,7 +148,7 @@ export default function Cours({ listeCours }) {
         <TabList className={styles.leTabList} style={{borderColor: lesStyles.couleurBorder}}>
           <AnimateSharedLayout>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
+              <motion.span whileTap={{scale: 1.05}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>1</h4>
               </motion.span>
@@ -164,7 +163,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
+              <motion.span whileTap={{scale: 1.05}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>2</h4>
               </motion.span>
@@ -179,7 +178,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
+              <motion.span whileTap={{scale: 1.05}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>3</h4>
               </motion.span>
@@ -194,7 +193,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
+              <motion.span whileTap={{scale: 1.05}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>4</h4>
               </motion.span>
@@ -209,7 +208,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
+              <motion.span whileTap={{scale: 1.05}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>5</h4>
               </motion.span>
@@ -224,7 +223,7 @@ export default function Cours({ listeCours }) {
               </motion.div>
             </Tab>
             <Tab onClick={() => setCoursAffiche(null)}>
-              <motion.span whileHover={{y : -5}} whileTap={{scale: 1.2}} className={styles.conteneurNomNbSession}>
+              <motion.span whileTap={{scale: 1.05}} className={styles.conteneurNomNbSession}>
                 <h4 className={styles.motSession}>Session</h4>
                 <h4 className={styles.nbSession}>6</h4>
               </motion.span>

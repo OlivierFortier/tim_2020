@@ -166,7 +166,7 @@ export default function Accueil() {
           <div className={`${styles.conteneurImage} ${videoSource == "" ? styles.imageParent : ""}`}>
             {videoSource && (
               <motion.video
-                initial={{ opacity: 1 }}
+                initial={{ opacity: 1, transition: {ease: "easeIn", duration: 0.5 }}}
                 animate={videoIsHovered ? "open" : "closed"}
                 onHoverStart={(e) => {
                   setHoverState(true);
@@ -202,7 +202,8 @@ export default function Accueil() {
                 }}
                 aria-label="explorer"
                 whileHover={{
-                  scale: 1.05,
+                  scale: 1.05, 
+                  transition: { duration: 0.3 }
                 }}
               >
                 EXPLOREZ

@@ -48,10 +48,12 @@ export default function Futur() {
 
   return (
     <motion.main
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.75 }}
+      initial={{y: -200, opacity: 0 }}
+      animate={{y: 0 , opacity: 1, transition: {duration: 0.8, ease: "easeInOut"}}}
+      exit={{
+        y: 300,
+        opacity: 0,
+        transition: {duration: 0.7, ease: "easeInOut"}}}
       key="lesFuturs"
       className={styles.conteneurPage}
     >
@@ -78,7 +80,7 @@ export default function Futur() {
         initial={{color : lesStyles.couleurInitiale}}
         animate={{color : lesStyles.couleurInitiale}}
           whileHover={{ color: lesStyles.couleurHover }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 1.010,}}
           className={styles.sectionUni}
         >
           <h1>Perspective universitaire</h1>
@@ -91,7 +93,7 @@ export default function Futur() {
         initial={{color : lesStyles.couleurInitiale}}
         animate={{color : lesStyles.couleurInitiale}}
           whileHover={{ color: lesStyles.couleurHover }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 1.010 }}
           className={styles.sectionStage}
         >
           <h1>Stages</h1>
@@ -104,7 +106,7 @@ export default function Futur() {
         initial={{color : lesStyles.couleurInitiale}}
         animate={{color : lesStyles.couleurInitiale}}
           whileHover={{ color: lesStyles.couleurHover }}
-          whileTap={{ scale: 0.9 }}
+          whileTap={{ scale: 1.010 }}
           className={styles.sectionEmploi}
         >
           <h1>Perspectives d'emploi</h1>

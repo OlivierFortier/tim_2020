@@ -53,10 +53,12 @@ export default function index() {
   return (
     <motion.div
       className={styles.conteneurPage}
-      exit={{ opacity: 0 }}
-      initial={{ x: "100vw", opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{duration: 0.75}}
+      initial={{opacity: 0 }}
+      animate={{opacity: 1, transition:{ ease: "easeInOut", duration: 0.7}}}
+      exit={{
+        opacity: 0,
+          transition: {duration: 0.7, ease: "easeInOut"}
+      }}
       key="etudiants"
     >
       <Head>

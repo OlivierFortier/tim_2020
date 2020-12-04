@@ -69,9 +69,9 @@ export default function Professeurs({ items }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5, stiffness: 90 } }}
-      exit={{ y: -1000, opacity: 0, transition: { duration: 0.7 } }}
+      initial={{opacity: 0}}
+      animate={{opacity: 1, transition: { duration: 1.5, stiffness: 90, ease : "easeInOut"} }}
+      exit={{y:-200, opacity: 0, transition: { duration: 0.5} }}
       transition={{duration: 5.75}}
       className={styles.conteneur}
       key="professeurs"
@@ -93,7 +93,12 @@ export default function Professeurs({ items }) {
           content="Page des professeurs des Technique d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
-      <motion.div className={styles.sectionLesProfs} whileHover={{x: 5}} whileTap={{scale: 0.7}}>
+      <motion.div 
+      initial={{ opacity: 0}}
+      animate={{ opacity: 1, x: 0, transition: { duration: 0.9, delay : 0.2} }}
+      className={styles.sectionLesProfs} 
+      whileTap={{scale: 1}
+      }>
         <Link href="professeurs/grille">
           <h1>LES PROFESSEURS</h1>
         </Link>
@@ -109,7 +114,7 @@ export default function Professeurs({ items }) {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "0%", y: "0%", scale: 0.8 }}
+              animate={{ opacity: 1, x: "0%", y: "0%", scale: 1, duration: 0.5}}
               whileHover={{rotate:5}}
               whileTap={{scale: 2}}
             >
@@ -132,7 +137,7 @@ export default function Professeurs({ items }) {
               }}
               animate={{ opacity: 1, x: "100%", y: "-10%", scale: 1.4 }}
               whileHover={{rotate:-5}}
-              whileTap={{scale: 2}}
+              whileTap={{scale: 1.010}}
             >
               <Image
                 className={styles.imgProf}
@@ -306,7 +311,10 @@ export default function Professeurs({ items }) {
       </div>
       <div className={styles.sectionTexte}>
         <Link href="professeurs/grille">
-          <motion.h2 whileHover={{x: 5}} whileTap={{scale: 0.7}}>
+          <motion.h2 
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0, transition: { duration: 0.9, delay : 0.3} }}
+          whileTap={{scale: 1.05}}>
             PLUS<b>++</b>DE <b>25 ANS</b> D'EXPÉRIENCE DANS LE DOMAINE POUR VOUS
             DONNER <b>LA MEILLEURE ÉDUCATION</b>
           </motion.h2>

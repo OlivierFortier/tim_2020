@@ -17,8 +17,8 @@ export default function ModalPhoto({ infoPhoto, ouvert, fermerModal }) {
       onRequestClose={fermerModal}
     >
       <motion.div
-      initial={{scale: 0.5}}
-      animate={{scale: 1}}
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
