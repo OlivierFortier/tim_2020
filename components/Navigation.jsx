@@ -69,9 +69,10 @@ export default function Navigation() {
     }
     if (router.pathname.includes("/etudiants")) {
       setProgresBarre("70%");
-      setMargeDessus("2%");
-      if (ecranMobile) setMargeDessus("-10%");
-      if (ecranTablette) setMargeDessus("-10%");
+      if(router.pathname === "/etudiants/gallerie" || router.pathname === "/etudiants/projets") {
+        if(ecranMobile) setMargeDessus("22%");
+        if (ecranTablette) setMargeDessus("22%");
+      }
     }
     if (router.pathname.includes("/futur")) setProgresBarre("90%");
     if (router.pathname === "/inscription") setProgresBarre("100%");
