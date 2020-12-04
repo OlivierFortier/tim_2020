@@ -108,7 +108,7 @@ export default function gallerie(lesPhotos) {
               );
             })}
   
-            <motion.div whileHover={{scale: 1.2}} id="lesPoints" className={styles.points}></motion.div>
+            <div id="lesPoints" className={styles.points}></div>
           </Swiper>
         </main>
     

@@ -71,7 +71,7 @@ export default function Professeurs({ items }) {
     <motion.div
       initial={{opacity: 0}}
       animate={{opacity: 1, transition: { duration: 1.5, stiffness: 90, ease : "easeInOut"} }}
-      exit={{ y: -1000, opacity: 0, transition: { duration: 0.6 } }}
+      exit={{y:-200, opacity: 0, transition: { duration: 0.5} }}
       transition={{duration: 5.75}}
       className={styles.conteneur}
       key="professeurs"
