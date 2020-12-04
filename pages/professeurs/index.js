@@ -6,7 +6,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
+import {  useTheme } from "../../hooks/contexteTheme";
 
 export default function Professeurs({ items }) {
   // gestion du theme de couleur
