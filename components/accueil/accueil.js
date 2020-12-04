@@ -166,7 +166,7 @@ export default function Accueil() {
           <div className={`${styles.conteneurImage} ${videoSource == "" ? styles.imageParent : ""}`}>
             {videoSource && (
               <motion.video
-                initial={{ opacity: 1, transition: {ease: "easeIn", duration: 0.5 }}}
+                initial={{ x:"10vw" , opacity: 0, transition: {ease: "easeIn", duration: 0.5 }}}
                 animate={videoIsHovered ? "open" : "closed"}
                 onHoverStart={(e) => {
                   setHoverState(true);
@@ -189,7 +189,10 @@ export default function Accueil() {
             )}
 
             {videoSource == "" && (
-              <Image src={"/images/parent.jpeg"} width={451} height={684} className={styles.imgParent} />
+              <motion.div  initial={{ x: "10vw", opacity: 0, transition: {ease: "easeIn", duration: 0.5 }}}
+              animate={{opacity : 1, x: 0, transition : { duration: 1, ease: "easeInOut"}}} >
+                <Image src={"/images/parent.jpeg"} loading="eager" width={451} height={684} className={styles.imgParent} />
+              </motion.div>
             )}
           </div>
           <div className={styles.conteneurBouton}>
