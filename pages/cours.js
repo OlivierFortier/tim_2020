@@ -1,12 +1,12 @@
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Tab, Tabs, TabList, TabPanel, resetIdCounter } from "react-tabs";
 import NomCours from "../components/cours/nomCours";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../libs/requetesDonnes";
-import { resetIdCounter } from "react-tabs";
 import { useState, useEffect } from "react";
 import DetailsCours from "../components/cours/detailsCours";
 import styles from "./cours.module.scss";
 import { MdArrowDropDown } from "react-icons/md";
+import {RiArrowDropDownLine} from "react-icons/ri";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useOrdreListeCours } from "../hooks/useCours";
 import Head from "next/head";
@@ -56,9 +56,8 @@ export default function Cours({ listeCours }) {
   const theme = useTheme()
   const listeThemes = useListeThemes()
   const [lesStyles, setLesStyles] = useState({
-    couleurGenerale: "#279728",
+    couleurGenerale: "#f18163",
     couleurBorder: "#f3f1f1",
-    couleurAccent: "#0C639A"
   });
 
   useEffect(() => {
@@ -80,13 +79,13 @@ export default function Cours({ listeCours }) {
       case listeThemes.parent:
         setLesStyles({
           couleurGenerale: "#4F638D",
-          couleurBorder: "black",
+          couleurBorder: "#000000",
         });
         break;
 
       default:
         setLesStyles({
-          couleurGenerale: "#279728",
+          couleurGenerale: "#f18163",
           couleurBorder: "#f3f1f1",
         });
         break;
@@ -120,22 +119,25 @@ export default function Cours({ listeCours }) {
         <h1 className={styles.titreCours}>LA LISTE DES COURS</h1>
         <h2 className={styles.titreChoix}>
           J'aime bien &nbsp;
-          <motion.select
-            onChange={(evenement) => filtrerCours(evenement)}
-            className={styles.selecteur}
-            onClick={() => setCoursAffiche(null)}
-            style={{borderColor: lesStyles.couleurBorder, color: lesStyles.couleurGenerale}}
-          >
-            <option value="">de tout</option>
-            <option value="Jeux">les jeux</option>
-            <option value="Web">le web</option>
-            <option value="Design">le design</option>
-            <option value="3D">la 3D</option>
-            <option value="Programmation">la programmation</option>
-            <option value="Vidéo et Audio">la vidéo</option>
-            <option value="Intégration">l'intégration</option>
-            <option value="Profession">la profession</option>
-          </motion.select>
+          <span style={{position:"relative"}}>
+            <select
+              onChange={(evenement) => filtrerCours(evenement)}
+              className={styles.selecteur}
+              onClick={() => setCoursAffiche(null)}
+              style={{borderColor: lesStyles.couleurBorder, color: lesStyles.couleurGenerale}}
+            >
+              <option value="">de tout</option>
+              <option value="Jeux">les jeux</option>
+              <option value="Web">le web</option>
+              <option value="Design">le design</option>
+              <option value="3D">la 3D</option>
+              <option value="Programmation">la programmation</option>
+              <option value="Vidéo et Audio">la vidéo</option>
+              <option value="Intégration">l'intégration</option>
+              <option value="Profession">la profession</option>
+            </select>
+            <RiArrowDropDownLine color={lesStyles.couleurGenerale} style={{position:"absolute",right: "0%", top:"9%" }}/>
+          </span>
         </h2>
         <h3>Sessions</h3>
       </div>
