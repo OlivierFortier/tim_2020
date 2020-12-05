@@ -1,7 +1,7 @@
 .conteneurPage {
   height: 70vh;
   margin: 0 15%;
-  overflow: hidden;
+  // overflow: hidden;
 
   section {
     display: flex;
@@ -20,6 +20,11 @@
       padding: var(--spacing);
       position: relative;
       margin-top: 2%;
+      width: fit-content;
+
+      div {
+        width: fit-content;
+      }
 
       img {
         filter: grayscale(100%) contrast(1) blur(var(--blur));
@@ -53,6 +58,11 @@
       padding: var(--spacing);
       position: relative;
       margin-top: 2%;
+      width: fit-content;
+
+      div {
+        width: fit-content;
+      }
 
       img {
         filter: grayscale(100%) contrast(1) blur(var(--blur));
@@ -86,6 +96,11 @@
       padding: var(--spacing);
       position: relative;
       margin-top: 2%;
+      width: fit-content;
+
+      div {
+        width: fit-content;
+      }
 
       img {
         filter: grayscale(100%) contrast(0.6) blur(var(--blur));
@@ -184,10 +199,12 @@
     section {
       flex-direction: column;
       .imgProf {
-        width: 100%;
+        width: 70vw;
         height: 30vh;
       }
-      .unProf {
+      .unProf, .unProfArt, .unProfCode {
+        margin: 0 auto;
+        margin-top: 1%;
         img {
           object-fit: cover;
           object-position: 0% 20%;
@@ -210,7 +227,7 @@
           margin-top: 0;
           margin-left: 0;
           width: 100%;
-          height: 35vh;
+          height: 30vh;
           font-size: medium;
         }
       }
@@ -225,10 +242,12 @@
     section {
       flex-direction: column;
       .imgProf {
-        width: 100%;
+        width: 60vw;
         height: 30vh;
       }
-      .unProf {
+      .unProf, .unProfArt, .unProfCode {
+        margin: 0 auto;
+        margin-top: 1%;
         img {
           object-fit: cover;
           object-position: 0% 20%;
@@ -266,10 +285,12 @@
     section {
       flex-direction: column;
       .imgProf {
-        width: 100%;
+        width: 70vw;
         height: 40vh;
       }
-      .unProf {
+      .unProf,  .unProfArt, .unProfCode {
+        margin: 0 auto;
+        margin-top: 1%;
         img {
           object-fit: cover;
           object-position: 0% 20%;
