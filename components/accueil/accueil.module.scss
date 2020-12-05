@@ -279,11 +279,13 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh !important;
+    height: 105vh !important;
     z-index: -1;
+    padding-right: 0;
   }
   .imageParent {
     display: none;
+    padding-right: 0;
   }
   .conteneurAccueil {
     padding: 0;

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTheme, useListeThemes } from "../../hooks/contexteTheme";
+import { useMediaQuery } from "react-responsive";
 
 export default function Accueil() {
   // hook qui nous permet d'aller chercher le thème actuel utilisé
@@ -15,23 +16,26 @@ export default function Accueil() {
   const [videoIsHovered, setVideoIsHovered] = useState(false);
   const [videoFutSurvolee, setVideoFutSurvolee] = useState(false);
 
-  useEffect(()=> {
-   if(videoIsHovered) setVideoFutSurvolee(true);
-  },[videoIsHovered])
+  useEffect(() => {
+    if (!tablette) {
+      if (videoIsHovered) setVideoFutSurvolee(true);
+    }
+    if (tablette) setVideoFutSurvolee(false);
+  }, [videoIsHovered]);
 
   const setHoverState = (value) => {
     setVideoIsHovered((currentValue) => value);
   };
   const animationVideo = {
     open: {
-      scaleX: 2,
-      scaleY: 1.1,
+      scaleX: !tablette ? 2 : 1,
+      scaleY: !tablette ? 1.1 : 1,
       opacity: 1,
       x: 0,
       transition: { duration: 1, ease: "easeInOut" },
     },
     closed: {
-      scaleX: videoFutSurvolee ? 1.5 : 1,
+      scaleX: !tablette ? (videoFutSurvolee ? 1.5 : 1) : 1,
       scaleY: 1,
       opacity: 1,
       x: 0,
@@ -39,12 +43,14 @@ export default function Accueil() {
     },
   };
 
+  const tablette = useMediaQuery({ minWidth: 768, maxWidth: 1025 });
+
   // définition des styles du thème de base
   const [stylesTheme, setStylesTheme] = useState({
     couleurBordure: "#f3f1f1",
     couleurBouton: "#f3f1f1",
     couleurTexteBouton: "#000000",
-    couleurAccent : "#F16242",
+    couleurAccent: "#F16242",
   });
 
   // ajustement des styles selon le thème choisi
@@ -63,7 +69,7 @@ export default function Accueil() {
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
           couleurTexteBouton: "#000000",
-          couleurAccent : "#F16242",
+          couleurAccent: "#F16242",
         });
         break;
 
@@ -77,7 +83,7 @@ export default function Accueil() {
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
           couleurTexteBouton: "#000000",
-          couleurAccent : "#24DC48",
+          couleurAccent: "#24DC48",
         });
         break;
 
@@ -88,7 +94,7 @@ export default function Accueil() {
           couleurBordure: "#000000",
           couleurBouton: "#000000",
           couleurTexteBouton: "#F3F1F1",
-          couleurAccent : "#F16242",
+          couleurAccent: "#F16242",
         });
         break;
 
@@ -102,7 +108,7 @@ export default function Accueil() {
           couleurBordure: "#f3f1f1",
           couleurBouton: "#f3f1f1",
           couleurTexteBouton: "#000000",
-          couleurAccent : "#F16242",
+          couleurAccent: "#F16242",
         });
         break;
     }
@@ -163,10 +169,18 @@ export default function Accueil() {
               className={styles.cercleInterractif}
             ></motion.div>
           </span>
-          <div className={`${styles.conteneurImage} ${videoSource == "" ? styles.imageParent : ""}`}>
+          <div
+            className={`${styles.conteneurImage} ${
+              videoSource == "" ? styles.imageParent : ""
+            }`}
+          >
             {videoSource && (
               <motion.video
-                initial={{ x:"10vw" , opacity: 0, transition: {ease: "easeIn", duration: 0.5 }}}
+                initial={{
+                  x: "10vw",
+                  opacity: 0,
+                  transition: { ease: "easeIn", duration: 0.5 },
+                }}
                 animate={videoIsHovered ? "open" : "closed"}
                 onHoverStart={(e) => {
                   setHoverState(true);
@@ -189,9 +203,26 @@ export default function Accueil() {
             )}
 
             {videoSource == "" && (
-              <motion.div  initial={{ x: "10vw", opacity: 0, transition: {ease: "easeIn", duration: 0.5 }}}
-              animate={{opacity : 1, x: 0, transition : { duration: 1, ease: "easeInOut"}}} >
-                <Image src={"/images/parent.jpeg"} quality={50} layout="fill" loading="eager" unsized className={styles.imgParent} />
+              <motion.div
+                initial={{
+                  x: "10vw",
+                  opacity: 0,
+                  transition: { ease: "easeIn", duration: 0.5 },
+                }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 1, ease: "easeInOut" },
+                }}
+              >
+                <Image
+                  src={"/images/parent.jpeg"}
+                  quality={50}
+                  layout="fill"
+                  loading="eager"
+                  unsized
+                  className={styles.imgParent}
+                />
               </motion.div>
             )}
           </div>
@@ -205,8 +236,8 @@ export default function Accueil() {
                 }}
                 aria-label="explorer"
                 whileHover={{
-                  scale: 1.05, 
-                  transition: { duration: 0.3 }
+                  scale: 1.05,
+                  transition: { duration: 0.3 },
                 }}
               >
                 EXPLOREZ
