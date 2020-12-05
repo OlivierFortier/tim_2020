@@ -191,7 +191,7 @@ export default function Accueil() {
             {videoSource == "" && (
               <motion.div  initial={{ x: "10vw", opacity: 0, transition: {ease: "easeIn", duration: 0.5 }}}
               animate={{opacity : 1, x: 0, transition : { duration: 1, ease: "easeInOut"}}} >
-                <Image src={"/images/parent.jpeg"} loading="eager" width={451} height={684} className={styles.imgParent} />
+                <Image src={"/images/parent.jpeg"} quality={50} layout="fill" loading="eager" unsized className={styles.imgParent} />
               </motion.div>
             )}
           </div>

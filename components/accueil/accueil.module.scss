@@ -11,6 +11,9 @@
 
 .conteneurImage {
   height: 100%;
+   div {
+    height: 100%;
+  }
 }
 
 .imageHero {
@@ -96,6 +99,12 @@
       z-index: 3;
     }
   }
+}
+
+.imgParent {
+  height: 100%!important;
+  // width: 100%;
+  padding-right: 7%;
 }
 
 .conteneurBouton {
