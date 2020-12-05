@@ -65,7 +65,7 @@ export default function Menu() {
       layoutId="bouton"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{opacity: 0}}
+      exit={{ opacity: 0 }}
     >
       <RiMenu3Line
         className={styles.barresMenu}
@@ -128,10 +128,20 @@ export default function Menu() {
                     transition: { duration: 1, ease: "easeInOut" },
                   }}
                 >
-                  <motion.span initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration : 0.6, delay: 0.3}} className={styles.conteneurImage}>
-                  <h6 className={styles.texteLogo}>Collège de Maisonneuve</h6>
-                  <Image layout="fill" unsized src={"/images/logo-maisonneuve.webp"} className={styles.logoCollege} />
-                  
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className={styles.conteneurImage}
+                  >
+                    <h6 className={styles.texteLogo}>Collège de Maisonneuve</h6>
+                    <Image
+                      layout="fill"
+                      unsized
+                      src={"/images/logo-maisonneuve.webp"}
+                      className={styles.logoCollege}
+                    />
                   </motion.span>
                   <motion.div
                     key="liensPages"
@@ -149,12 +159,16 @@ export default function Menu() {
                         <Link href="/" as="/">
                           <div className={styles.wrapLien}>
                             <a onClick={fermerMenu}>Accueil </a>
-                            {router.pathname === "/" ||
-                              (router.pathname === "/introduction" && (
-                                <div className={styles.wrapPagination}>
-                                  <span></span>
-                                </div>
-                              ))}
+                            {router.pathname === "/" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
+                            {router.pathname === "/introduction" && (
+                              <div className={styles.wrapPagination}>
+                                <span></span>
+                              </div>
+                            )}
                           </div>
                         </Link>
                       </li>
