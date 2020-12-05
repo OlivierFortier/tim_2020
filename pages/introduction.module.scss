@@ -116,8 +116,8 @@
     grid-area: lienCours;
     display: block;
     margin: 0 auto;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    // margin-top: 10%;
+    // margin-bottom: 10%;
     &:visited, &:link, &:focus, &:active {
       color: white;
       text-decoration: underline;
@@ -172,7 +172,7 @@
     grid-area: lienCours;
     display: block;
     margin: 0 auto;
-    margin-top: 10%;
+    // margin-top: 10%;
     &:visited, &:link, &:focus, &:active {
       color: white;
       text-decoration: underline;
