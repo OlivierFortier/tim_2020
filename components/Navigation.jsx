@@ -55,23 +55,23 @@ export default function Navigation() {
     setMargeDessus("");
     if (router.pathname === "/") {
       setProgresBarre("0%");
-      if (ecranMobile) setMargeDessus("-10%");
-      if (ecranTablette) setMargeDessus("-10%");
+      // if (ecranMobile) setMargeDessus("-10%");
+      // if (ecranTablette) setMargeDessus("-10%");
     }
     if (router.pathname === "/introduction") {
-      setMargeDessus("-25% !important");
+      // setMargeDessus("-25% !important");
       setProgresBarre("10%");
     }
     if (router.pathname === "/cours") setProgresBarre("30%");
     if (router.pathname.includes("/professeurs")) {
       setProgresBarre("50%");
-      setMargeDessus("-2%");
+      // setMargeDessus("-2%");
     }
     if (router.pathname.includes("/etudiants")) {
       setProgresBarre("70%");
       if(router.pathname === "/etudiants/gallerie" || router.pathname === "/etudiants/projets") {
-        if(ecranMobile) setMargeDessus("22%");
-        if (ecranTablette) setMargeDessus("22%");
+        // if(ecranMobile) setMargeDessus("22%");
+        // if (ecranTablette) setMargeDessus("22%");
       }
     }
     if (router.pathname.includes("/futur")) setProgresBarre("90%");
