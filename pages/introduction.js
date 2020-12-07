@@ -6,6 +6,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
+import Canvas3D from "../components/3d/Canvas3D";
 
 export default function Introduction() {
   // changer couleur selon theme
@@ -125,15 +126,7 @@ export default function Introduction() {
         }}
         className={styles.conteneurCube}
       >
-        <Canvas className={styles.canvas3D}>
-          <ambientLight />
-          <pointLight position={[10, 10, 10]} />
-          <CubeTransparent
-            couleur3D={lesStyles.couleurCube}
-            position={[0, 0, 0]}
-            scale={[3, 3, 3]}
-          />
-        </Canvas>
+        <Canvas3D classeCanvas={styles.Canvas3D} couleurDuCube={lesStyles.couleurCube}/>
       </motion.div>
 
       <motion.p 
