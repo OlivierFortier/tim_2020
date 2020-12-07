@@ -4,14 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
-import dynamic from "next/dynamic";
-import Chargement from "../components/Chargement";
-
-// charger le cube 3D dynamiquement pour réduire le temps de chargement de la page
-const CanvasDynamique = dynamic(() => import("../components/3d/Canvas3D"), {
-  ssr: false,
-  loading: () => <Chargement />,
-});
+import Canvas3D from "../components/3d/Canvas3D";
 
 export default function Introduction() {
   // changer couleur selon theme
@@ -132,10 +125,8 @@ export default function Introduction() {
         }}
         className={styles.conteneurCube}
       >
-        <CanvasDynamique
-          classeCanvas={styles.canvas3D}
-          couleurDuMesh={lesStyles.couleurCube}
-        />
+        <Canvas3D classeCanvas={styles.canvas3D}
+          couleurDuMesh={lesStyles.couleurCube}/>
       </motion.div>
 
       <motion.p
