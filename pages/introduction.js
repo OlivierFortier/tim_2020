@@ -4,7 +4,6 @@ import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
-import Canvas3D from "../components/3d/Canvas3D";
 import dynamic from "next/dynamic";
 import Chargement from "../components/Chargement";
 

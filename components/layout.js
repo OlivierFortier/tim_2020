@@ -5,6 +5,13 @@ import styles from "./layout.module.scss";
 import { useRouter } from "next/router";
 import Navigation from "./Navigation";
 import Link from "next/link"
+import dynamic from "next/dynamic";
+import Chargement from "./Chargement";
+
+const NavDynamique = dynamic(() => import("./Navigation"), {
+  ssr: false,
+  loading: () => <Chargement/>,
+});
 
 export default function Layout({ children }) {
   const router = useRouter();
@@ -87,7 +94,8 @@ export default function Layout({ children }) {
             {children}
           </div>
         </div>
-        <Navigation/>
+        {/* <Navigation/> */}
+        <NavDynamique/>
       </div>
     </>
   );
