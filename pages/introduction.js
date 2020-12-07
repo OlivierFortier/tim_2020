@@ -134,7 +134,7 @@ export default function Introduction() {
         className={styles.conteneurCube}
       >
         <CanvasDynamique
-          classeCanvas={styles.Canvas3D}
+          classeCanvas={styles.canvas3D}
           couleurDuMesh={lesStyles.couleurCube}
         />
       </motion.div>
