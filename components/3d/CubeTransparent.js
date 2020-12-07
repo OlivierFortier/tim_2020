@@ -1,7 +1,6 @@
 import { useFrame } from "react-three-fiber";
-import { useRef, useMemo, useEffect, useState } from "react";
+import { useRef, useMemo } from "react";
 import * as THREE from "three";
-import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 
 export default function CubeTransparent(props) {
   
