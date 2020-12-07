@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
-import { Canvas } from "react-three-fiber";
-import CubeTransparent from "../components/3d/CubeTransparent";
 import styles from "./introduction.module.scss";
 import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 import Canvas3D from "../components/3d/Canvas3D";
+import dynamic from 'next/dynamic';
+import Chargement from "../components/Chargement";
+
+const CanvasDynamique = dynamic(() => import("../components/3d/Canvas3D"), {ssr: false, loading: ()=> <Chargement/>});
 
 export default function Introduction() {
   // changer couleur selon theme
@@ -126,7 +128,9 @@ export default function Introduction() {
         }}
         className={styles.conteneurCube}
       >
-        <Canvas3D classeCanvas={styles.Canvas3D} couleurDuCube={lesStyles.couleurCube}/>
+        {/* <Canvas3D classeCanvas={styles.Canvas3D} couleurDuMesh={lesStyles.couleurCube}/> */}
+        {/* <CanvasDynamique classeCanvas={styles.Canvas3D} couleurDuMesh={lesStyles.couleurCube}/> */}
+        <Chargement/>
       </motion.div>
 
       <motion.p 
