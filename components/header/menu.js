@@ -103,7 +103,7 @@ export default function Menu() {
     <>
       <div className={styles.conteneurMenu} style={{ color: "white" }}>
         <AnimateSharedLayout type="crossfade">
-          <AnimatePresence exitBeforeEnter>{menuBouton}</AnimatePresence>
+          {menuBouton}
           <AnimatePresence exitBeforeEnter>
             {snapShot.menuEstOuvert && (
               <motion.div

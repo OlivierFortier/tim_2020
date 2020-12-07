@@ -1,7 +1,7 @@
-export default function Chargement() {
+export default function Chargement(props) {
   return (
     <>
-      <div className="lds-ring">
+      <div className="lds-ring" {...props}>
         <div></div>
         <div></div>
         <div></div>

@@ -6,6 +6,13 @@ import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 import { useProxy } from "valtio";
 import { etatMenu } from "../etat_global/EtatMenu";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import Chargement from "../Chargement";
+
+const MenuDynamique = dynamic(() => import("./menu"), {
+  ssr: false,
+  loading: () => <Chargement/>,
+});
 
 export default function EnTete() {
   const [lesStyles, setLesStyles] = useState({
@@ -61,7 +68,8 @@ export default function EnTete() {
             </h1>
           </Link>
         </span>
-        <Menu />
+        {/* <Menu /> */}
+        <MenuDynamique/>
       </header>
     </>
   );

@@ -10,35 +10,39 @@ import Head from "next/head";
 
 import Router from "next/router";
 
-    const routeChange = () => {
-      // Temporary fix to avoid flash of unstyled content
-      // during route transitions. Keep an eye on this
-      // issue and remove this code when resolved:
-      // https://github.com/vercel/next.js/issues/17464
+const routeChange = () => {
+  // Temporary fix to avoid flash of unstyled content
+  // during route transitions. Keep an eye on this
+  // issue and remove this code when resolved:
+  // https://github.com/vercel/next.js/issues/17464
 
-      const tempFix = () => {
-        const allStyleElems = document.querySelectorAll('style[media="x"]');
-        allStyleElems.forEach((elem) => {
-          elem.removeAttribute("media");
-        });
-      };
-      tempFix();
-    };
+  const tempFix = () => {
+    const allStyleElems = document.querySelectorAll('style[media="x"]');
+    allStyleElems.forEach((elem) => {
+      elem.removeAttribute("media");
+    });
+  };
+  tempFix();
+};
 
-   Router.events.on("routeChangeComplete", routeChange );
-   Router.events.on("routeChangeStart", routeChange );
+Router.events.on("routeChangeComplete", routeChange);
+Router.events.on("routeChangeStart", routeChange);
 
 function MyApp({ Component, pageProps, router }) {
   return (
     <FournisseurTheme>
-        <Layout>
-          <AnimatePresence exitBeforeEnter>
-            <Head>
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
-            </Head>
-            <Component {...pageProps} key={router.route + Math.random() * 100} />
-          </AnimatePresence>
-        </Layout>
+      <Layout>
+        <Head>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+            key="viewport"
+          />
+        </Head>
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.route + Math.random() * 100} />
+        </AnimatePresence>
+      </Layout>
     </FournisseurTheme>
   );
 }
