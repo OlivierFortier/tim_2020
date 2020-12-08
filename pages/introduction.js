@@ -1,12 +1,16 @@
 import { motion } from 'framer-motion';
+import { gql } from 'graphql-request';
 import Link from 'next/link';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import { faireRequeteGql } from '../libs/requetesDonnes';
 import styles from './introduction.module.scss';
 import { useListeThemes, useTheme } from '../hooks/contexteTheme';
 import Canvas3D from '../components/3d/Canvas3D';
 
-export default function Introduction() {
+export default function Introduction({typeForme}) {
+
+
   // changer couleur selon theme
   const theme = useTheme();
   const listeThemes = useListeThemes();
@@ -125,6 +129,7 @@ export default function Introduction() {
         <Canvas3D
           classeCanvas={styles.canvas3D}
           couleurDuMesh={lesStyles.couleurCube}
+          typeForme={typeForme}
         />
       </motion.div>
 
@@ -174,4 +179,32 @@ export default function Introduction() {
       </Link>
     </motion.div>
   );
+}
+
+// on va chercher nos données du CMS dans cette fonction pour les passer en props
+export async function getStaticProps() {
+  // fonction à appeler pour le tab, puisqu'on utilise un framework react isomorphe (rendu serveur & client)
+
+  // je prépare ma requete graphQl pour avoir la liste des noms et des slugs de tous les cours
+  const requeteTypeForme = gql`
+    {
+      forme3DCollection {
+        items {
+          typeDeForme
+        }
+      }
+    }
+  `;
+
+  // je fais ma requete
+  const res = await faireRequeteGql(requeteTypeForme);
+  const typeForme = res.forme3DCollection.items[0];
+
+  // je retourne la liste des cours, et je revalide à chaque seconde
+  return {
+    props: {
+      typeForme,
+    },
+    revalidate: 1,
+  };
 }

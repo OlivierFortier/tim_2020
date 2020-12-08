@@ -26,10 +26,10 @@ export default function Accueil() {
     if (tablette) setVideoFutSurvolee(false);
   }, [tablette, videoEstSurvolee]);
 
-  const setHoverState = (value) => {
+  const setEtatSurvol = (value) => {
     setVideoEstSurvolee(value);
   };
-  
+
   const animationVideo = {
     ouvert: {
       scaleX: !tablette ? 2 : 1,
@@ -173,7 +173,7 @@ export default function Accueil() {
           </span>
           <div
             className={`${styles.conteneurImage} ${
-              videoSource == '' ? styles.imageParent : ''
+              videoSource === '' ? styles.imageParent : ''
             }`}
           >
             {videoSource && (
@@ -184,11 +184,11 @@ export default function Accueil() {
                   transition: { ease: 'easeIn', duration: 0.5 },
                 }}
                 animate={videoEstSurvolee ? 'ouvert' : 'fermer'}
-                onHoverStart={(e) => {
-                  setHoverState(true);
+                onHoverStart={() => {
+                  setEtatSurvol(true);
                 }}
-                onHoverEnd={(e) => {
-                  setHoverState(false);
+                onHoverEnd={() => {
+                  setEtatSurvol(false);
                 }}
                 variants={animationVideo}
                 key={videoSource}
@@ -204,7 +204,7 @@ export default function Accueil() {
               </motion.video>
             )}
 
-            {videoSource == '' && (
+            {videoSource === '' && (
               <motion.div
                 initial={{
                   x: '10vw',
