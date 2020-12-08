@@ -32,8 +32,6 @@ export default function SelectionProfil({ changerEtape }) {
     return Math.random() * (max - min) + min;
   }
 
-  //TODO : animer les ronds
-
   return (
     <>
       <motion.div

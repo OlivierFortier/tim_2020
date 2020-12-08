@@ -59,6 +59,7 @@ export default function Layout({ children }) {
 
   return (
     <>
+    {/* liens invisibles pour améliorer le SEO */}
     <Link href="/"><a style={{display: "none"}}>accueil</a></Link>
     <Link href="/introduction"><a style={{display: "none"}}>accueil</a></Link>
     <Link href="/cours"><a style={{display: "none"}}>accueil</a></Link>

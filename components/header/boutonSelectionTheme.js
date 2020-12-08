@@ -20,6 +20,7 @@ export default function BoutonSelectionTheme() {
 
   const tableauTheme = [listeThemes.art, listeThemes.code, listeThemes.parent];
 
+  // gestions de changement de thèmes (passer d'un thème à l'autre)
   const [indexTableau, setIndexTableau] = useState(tableauTheme.indexOf(theme));
 
   useEffect(() => {
@@ -38,11 +39,10 @@ export default function BoutonSelectionTheme() {
     });
   }
 
-  // gestion couleurs themes
-
   // obtenir l'état du menu pour rendre la couleur du bouton visible
   const snapShot = useProxy(etatMenu);
 
+  // gestion couleurs themes
   const [couleursTheme, setCouleurThemes] = useState({
     classeInverser: styles.inverser,
   });

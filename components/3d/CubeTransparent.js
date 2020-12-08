@@ -3,7 +3,7 @@ import { useRef, useMemo } from "react";
 import * as THREE from "three";
 
 export default function CubeTransparent(props) {
-  
+  // expression déclarative d'un cube 3D  grace à react-three-fiber et Three.js
 
   //créer une référence au mesh
   const mesh = useRef();

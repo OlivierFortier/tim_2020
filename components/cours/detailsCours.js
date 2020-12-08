@@ -2,13 +2,11 @@ import styles from "./detailsCours.module.scss";
 import { motion } from "framer-motion";
 import { useIconeTechnos } from "../../hooks/useIcone";
 import Markdown from "markdown-to-jsx";
-import { MdArrowDropDown } from "react-icons/md";
 
 export default function DetailsCours({ infoCours, afficherCours, couleurIcones }) {
-
-  const Icones =
-    infoCours.logicielsEtTechnologies &&
-    useIconeTechnos(infoCours.logicielsEtTechnologies);
+  
+  // hook d'icones qui nous donne une icone selon les technologies utilisées
+  const Icones = infoCours.logicielsEtTechnologies && useIconeTechnos(infoCours.logicielsEtTechnologies);
 
   return (
     <motion.div
@@ -27,7 +25,6 @@ export default function DetailsCours({ infoCours, afficherCours, couleurIcones }
             {Icones &&
               Icones.map((Icone, index) => (
                 <Icone
-                
                   key={index}
                   style={{
                     color: couleurIcones,
@@ -39,22 +36,14 @@ export default function DetailsCours({ infoCours, afficherCours, couleurIcones }
               ))}
           </div>
         </div>
-
-        {/* ================================================================ */}
-
         <span
           className={styles.descriptionCours}
         >
           <Markdown className={styles.paragrapheCours}>{infoCours.description}</Markdown>
         </span>
         <div className={styles.fleche}>
-          {/* <MdArrowDropDown
-            className={styles.flecheDescriptionCours}
-          ></MdArrowDropDown> */}
         </div>
       </div>
-
-      {/* À revoir ------------------------------ */}
     </motion.div>
   );
 }

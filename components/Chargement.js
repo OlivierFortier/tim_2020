@@ -1,4 +1,5 @@
 export default function Chargement(props) {
+  // simple composant de chargement placeholder
   return (
     <>
       <div className="lds-ring" {...props}>
