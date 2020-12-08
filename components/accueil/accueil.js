@@ -16,28 +16,29 @@ export default function Accueil() {
 
   // configurations et gestion des animations vidéos
   const [videoSource, setVideoSource] = useState('');
-  const [videoIsHovered, setVideoIsHovered] = useState(false);
+  const [videoEstSurvolee, setVideoEstSurvolee] = useState(false);
   const [videoFutSurvolee, setVideoFutSurvolee] = useState(false);
 
   useEffect(() => {
     if (!tablette) {
-      if (videoIsHovered) setVideoFutSurvolee(true);
+      if (videoEstSurvolee) setVideoFutSurvolee(true);
     }
     if (tablette) setVideoFutSurvolee(false);
-  }, [tablette, videoIsHovered]);
+  }, [tablette, videoEstSurvolee]);
 
   const setHoverState = (value) => {
-    setVideoIsHovered(value);
+    setVideoEstSurvolee(value);
   };
+  
   const animationVideo = {
-    open: {
+    ouvert: {
       scaleX: !tablette ? 2 : 1,
       scaleY: !tablette ? 1.1 : 1,
       opacity: 1,
       x: 0,
       transition: { duration: 1, ease: 'easeInOut' },
     },
-    closed: {
+    fermer: {
       scaleX: !tablette ? (videoFutSurvolee ? 1.5 : 1) : 1,
       scaleY: 1,
       opacity: 1,
@@ -182,7 +183,7 @@ export default function Accueil() {
                   opacity: 0,
                   transition: { ease: 'easeIn', duration: 0.5 },
                 }}
-                animate={videoIsHovered ? 'open' : 'closed'}
+                animate={videoEstSurvolee ? 'ouvert' : 'fermer'}
                 onHoverStart={(e) => {
                   setHoverState(true);
                 }}
