@@ -48,8 +48,10 @@ export default function Cours({ listeCours }) {
     setTousLesCours(coursFiltres);
   }
 
+  // controller l'affichage d'un cours à la fois
   const [coursAffiche, setCoursAffiche] = useState("");
 
+  // le tab de la session actuellement sélectionnée
   const [tabActuel, setTabActuel] = useState(0);
 
   // gestion du theme

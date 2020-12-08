@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Futur() {
+  // gestion des couleurs selon le thème
   const theme = useTheme();
   const listeTheme = useListeThemes();
 

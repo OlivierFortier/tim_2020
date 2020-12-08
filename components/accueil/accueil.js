@@ -7,6 +7,10 @@ import { useTheme, useListeThemes } from "../../hooks/contexteTheme";
 import { useMediaQuery } from "react-responsive";
 
 export default function Accueil() {
+
+  // hook qui permet de savoir si on est en mode tablette
+  const tablette = useMediaQuery({ minWidth: 768, maxWidth: 1025 });
+
   // hook qui nous permet d'aller chercher le thème actuel utilisé
   const theme = useTheme();
   const listeThemes = useListeThemes();
@@ -42,8 +46,6 @@ export default function Accueil() {
       transition: { duration: 1, ease: "easeInOut" },
     },
   };
-
-  const tablette = useMediaQuery({ minWidth: 768, maxWidth: 1025 });
 
   // définition des styles du thème de base
   const [stylesTheme, setStylesTheme] = useState({
