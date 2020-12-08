@@ -13,6 +13,15 @@ export default function CubeTransparent(props) {
 
   // créer un cube de facon impérative, sinon ca bug avec les edges
   const cube = useMemo(() => new THREE.BoxBufferGeometry(1, 1, 1));
+  // const forme = useMemo(()=> new THREE.DodecahedronBufferGeometry());
+  // const sphere = useMemo(
+  //   () =>
+  //     new THREE.SphereBufferGeometry(
+  //       Math.random() * 2,
+  //       Math.random() * 3,
+  //       Math.random() * 3
+  //     )
+  // );
 
   return (
     <mesh {...props} ref={mesh}>
