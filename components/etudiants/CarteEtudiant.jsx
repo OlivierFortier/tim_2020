@@ -29,7 +29,5 @@ export default function CarteProf({ infoCarte, ouvrirModal }) {
         </span>
       )}
     </motion.div>
-    // <Link href={`/etudiants/${"yeet"}`}>
-    // </Link>
   );
 }

@@ -7,16 +7,17 @@ import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 import styles from "./etudiants.module.scss";
 
 export default function index() {
+
+  // gestion de l'état des images au survol
   const [imageSurvol, setImageSurvol] = useState("ETUDIANT.png");
 
+  // gestion des couleurs selon le thème
   const theme = useTheme();
   const listeThemes = useListeThemes();
   const [lesStyles, setLesStyles] = useState({
     couleurLigne: "#f3f1f1",
     classeFiltre : styles.conteneurEffetImageArt
   });
-
-
 
   useEffect(() => {
     switch (theme) {

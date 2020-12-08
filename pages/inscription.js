@@ -6,6 +6,7 @@ import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 
 export default function Inscription() {
 
+  // gestion du thème de couleurs
   const theme = useTheme();
   const listeTheme = useListeThemes();
 

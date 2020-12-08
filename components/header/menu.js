@@ -11,12 +11,13 @@ import { etatMenu } from "../etat_global/EtatMenu";
 import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
 
 export default function Menu() {
+
+  //gestion du theme de couleurs
   const [lesStyles, setLesStyles] = useState({ couleurIconeMenu: "#f3f1f1" });
 
   const theme = useTheme();
   const listeThemes = useListeThemes();
 
-  //gestion du theme de couleurs
   useEffect(() => {
     switch (theme) {
       case listeThemes.art:
@@ -48,7 +49,6 @@ export default function Menu() {
   //gérer l'état du menu, ouvert - oui ou non ?
   const snapShot = useProxy(etatMenu);
 
-  //fonction "wrapper" pour la passer au onClick pour fermer le menu lorsqu'on clique sur un bouton du menu
   function fermerMenu() {
     etatMenu.menuEstOuvert = false;
   }

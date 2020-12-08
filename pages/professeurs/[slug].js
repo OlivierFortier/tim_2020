@@ -4,7 +4,6 @@ import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import Markdown from "markdown-to-jsx";
 import { motion } from "framer-motion";
-import { MdArrowDropDown } from "react-icons/md";
 import Head from "next/head";
 import {useState, useEffect} from "react";
 import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
@@ -86,8 +85,6 @@ export default function PageUnProfesseur(leProf) {
             unsized
             quality={1}
             alt={`photo de ${leProf.nom}`}
-            // width={453}
-            // height={620}
           />
         </div>
         <article>
@@ -101,11 +98,6 @@ export default function PageUnProfesseur(leProf) {
               {leProf.description}
             </Markdown>
           </div>
-          {/* <div className={styles.fleche}>
-            <MdArrowDropDown
-              className={styles.flecheDescriptionCours}
-            ></MdArrowDropDown>
-          </div> */}
         </article>
       </section>
     </motion.main>

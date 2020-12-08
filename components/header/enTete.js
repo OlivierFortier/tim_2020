@@ -8,6 +8,8 @@ import { etatMenu } from "../etat_global/EtatMenu";
 import Link from "next/link";
 
 export default function EnTete() {
+
+  // gestion des couleurs selon le thème
   const [lesStyles, setLesStyles] = useState({
     couleurTexte: "#F04E2A",
   });

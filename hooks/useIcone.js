@@ -23,6 +23,7 @@ import {
   SiCsharp,
   SiMysql,
   SiPhp,
+  SiAutodesk
 } from "react-icons/si";
 
 //hook pour les icones du sujet
@@ -73,6 +74,7 @@ export function useIconeSujet(sujet) {
   }
 }
 
+//on retourne une icone différente selon les technologies du cours
 export function useIconeTechnos(technologies) {
   return technologies.map((techno) => {
     switch (techno) {
@@ -151,7 +153,7 @@ export function useIconeTechnos(technologies) {
         break;
 
       case "Maya":
-        return (props) => <FaLaughSquint {...props}></FaLaughSquint>;
+        return (props) => <SiAutodesk {...props}></SiAutodesk>;
         break;
 
       default:

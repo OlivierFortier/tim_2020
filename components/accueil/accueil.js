@@ -7,11 +7,14 @@ import { useTheme, useListeThemes } from "../../hooks/contexteTheme";
 import { useMediaQuery } from "react-responsive";
 
 export default function Accueil() {
+  // hook qui permet de savoir si on est en mode tablette
+  const tablette = useMediaQuery({ minWidth: 768, maxWidth: 1025 });
+
   // hook qui nous permet d'aller chercher le thème actuel utilisé
   const theme = useTheme();
   const listeThemes = useListeThemes();
 
-  // configurations des animations vidéos
+  // configurations et gestion des animations vidéos
   const [videoSource, setVideoSource] = useState("");
   const [videoIsHovered, setVideoIsHovered] = useState(false);
   const [videoFutSurvolee, setVideoFutSurvolee] = useState(false);
@@ -43,8 +46,6 @@ export default function Accueil() {
     },
   };
 
-  const tablette = useMediaQuery({ minWidth: 768, maxWidth: 1025 });
-
   // définition des styles du thème de base
   const [stylesTheme, setStylesTheme] = useState({
     couleurBordure: "#f3f1f1",
@@ -55,7 +56,6 @@ export default function Accueil() {
 
   // ajustement des styles selon le thème choisi
   useEffect(() => {
-    // document.querySelector("#navSecondaire").style.display = "flex";
     document.querySelector("#header-site").style.display = "flex";
 
     switch (theme) {

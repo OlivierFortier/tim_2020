@@ -1,8 +1,8 @@
-
 import { Canvas } from "react-three-fiber";
 import CubeTransparent from "./CubeTransparent";
 
 export default function Canvas3D({classeCanvas, couleurDuMesh}) {
+  // expression déclarative d'une scène dans un canvas en 3D, grace à react-three-fiber et Three.js
     return (
         <Canvas className={classeCanvas}>
           <ambientLight />
