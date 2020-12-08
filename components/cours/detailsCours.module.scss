@@ -8,7 +8,6 @@
     display: flex;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
-    // color: white;
     border: 0px;
     font-size: 1.5rem;
     font-weight: bold;
@@ -90,7 +89,6 @@
     flex-direction: column;
     align-items: center;
     height: 80%;
-    // justify-content: unset;
     .conteneurTitre {
       width: 100%;
       h3 {
@@ -139,7 +137,7 @@
     flex-direction: column;
     align-items: center;
     height: 80%;
-    // justify-content: unset;
+
     .conteneurTitre {
       width: 100%;
       h3 {
@@ -180,7 +178,7 @@
     h2 {
       font-size: 27px;
       margin-top: 5%;
-      // line-height: 15px;
+ 
     }
   }
 
@@ -188,12 +186,12 @@
     flex-direction: column;
     align-items: center;
     height: 80%;
-    // justify-content: unset;
+ 
     .conteneurTitre {
       width: 100%;
       h3 {
         font-size: 30px;
-        // line-height: 22px;
+  
         margin-bottom: 0;
       }
 
@@ -216,6 +214,3 @@
   }
 }
 
-/*==================LAPTOP==========================*/
-@media (min-width: 1025px) and (max-width: 1439px) {
-}

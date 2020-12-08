@@ -2,16 +2,10 @@
   background-color: #110c12;
   height: 100vh;
   display: flex;
-  // justify-content: center;
-  // align-items: flex-start;
   overflow: hidden;
   overflow-y: auto;
   z-index: 1;
   flex-direction: column;
-
- 
-
-  // padding-bottom: 1rem;
   
 }
 
@@ -38,10 +32,8 @@
 .conteneurTout {
   flex-grow: 1;
   width: 100%;
-  // max-width: 1370px;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
 
   z-index: 3;
 
@@ -111,7 +103,3 @@
 
 }
 
-/*==================LAPTOP==========================*/
-@media (min-width: 1025px) and (max-width: 1439px) {
-  
-}

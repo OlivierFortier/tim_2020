@@ -1,11 +1,9 @@
 .conteneurCours {
-  // max-width: 1300px;
   width: 85vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   font-family: NeueMontreal;
-  // margin-top: 2%;
 }
 
 .conteneurTitre {
@@ -38,7 +36,6 @@
 .selecteur {
   cursor: pointer;
   background-color: transparent;
-  // color: white;
   border: 0px;
   border-bottom: 1px solid white;
   outline: none;
@@ -68,7 +65,6 @@
 }
 
 .lesTabs {
-  // margin-top: 2%;
   padding: 0 2%;
 }
 
@@ -142,7 +138,6 @@
       margin: 0;
 
       margin: auto;
-      // margin-top: 5%;
       margin-bottom: 2%;
 
       text-align: center;

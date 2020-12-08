@@ -1,11 +1,10 @@
 @import "styles/variables";
 
 .conteneurProfils {
-  // color: white;
   border-left: 5px solid white;
   padding-left: 2rem;
   width: 100vw;
-  // max-width: 1300px;
+
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -120,7 +119,7 @@
         right: auto;
         left: auto;
         bottom: auto;
-        // margin: 25% 0;
+       
         h2 {
           font-size: 18px;
           line-height: 22px;
@@ -275,7 +274,7 @@
         right: auto;
         left: auto;
         bottom: auto;
-        // margin: 25% 0;
+       
         h2 {
           font-size: 30px;
           line-height: 22px;
@@ -313,10 +312,6 @@
       display: none;
     }
   }
-}
-
-/*==================LAPTOP==========================*/
-@media (min-width: 1025px) and (max-width: 1439px) {
 }
 
 // ANIMATIONS
