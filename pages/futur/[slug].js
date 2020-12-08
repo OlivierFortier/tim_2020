@@ -1,13 +1,12 @@
-import styles from "./pageUnFutur.module.scss";
-import Image from "next/image";
-import { gql } from "graphql-request";
-import { faireRequeteGql } from "../../libs/requetesDonnes";
-import Markdown from "markdown-to-jsx";
-import { motion } from "framer-motion";
-import Head from "next/head";
+import Image from 'next/image';
+import { gql } from 'graphql-request';
+import Markdown from 'markdown-to-jsx';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import { faireRequeteGql } from '../../libs/requetesDonnes';
+import styles from './pageUnFutur.module.scss';
 
 export default function unFutur(leFutur) {
-
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -22,11 +21,11 @@ export default function unFutur(leFutur) {
         <meta
           name="Description"
           content={`${leFutur.titre} : Opportunités des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
-        ></meta>
+        />
         <link
           rel="canonical"
           href={`https://tim-2020.vercel.app/futur/${leFutur.slug}`}
-        ></link>
+        />
         <meta
           property="og:title"
           content={`${leFutur.titre} | TIM Maisonneuve`}
@@ -41,7 +40,12 @@ export default function unFutur(leFutur) {
         />
       </Head>
       <h1>{leFutur.titre}</h1>
-      <motion.section initial={{x: -100, opacity: 0}} animate={{x:0, opacity: 1}} transition={{duration: 0.75}} className={styles.conteneurSection}>
+      <motion.section
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.75 }}
+        className={styles.conteneurSection}
+      >
         <Image
           className={styles.image}
           layout="fill"
@@ -50,13 +54,14 @@ export default function unFutur(leFutur) {
           quality={100}
           alt="représentation d'étude et de travail"
         />
-        <motion.article initial={{y: 100, opacity: 0}} animate={{y:0, opacity: 1}} transition={{delay: 0.50, duration: 0.75}}>
+        <motion.article
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.75 }}
+        >
           {leFutur.enTte && <h2>{leFutur.enTte}</h2>}
 
-          <Markdown className={styles.contenu}
-          >
-            {leFutur.contenu}
-          </Markdown>
+          <Markdown className={styles.contenu}>{leFutur.contenu}</Markdown>
         </motion.article>
       </motion.section>
     </motion.main>

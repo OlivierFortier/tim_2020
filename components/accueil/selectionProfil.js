@@ -1,31 +1,29 @@
-import { useCookies } from "react-cookie";
-import { useListeThemes, useThemeMiseAJour } from "../../hooks/contexteTheme";
-import styles from "./selectionProfil.module.scss";
-import { motion } from "framer-motion";
-import {useEffect} from "react"
+import { useCookies } from 'react-cookie';
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useListeThemes, useThemeMiseAJour } from '../../hooks/contexteTheme';
+import styles from './selectionProfil.module.scss';
 
 export default function SelectionProfil({ changerEtape }) {
-
   useEffect(() => {
-    document.querySelector("#header-site").style.display = "flex";
-    document.querySelector("#racine").style.overflowY = "auto";
+    document.querySelector('#header-site').style.display = 'flex';
+    document.querySelector('#racine').style.overflowY = 'auto';
   }, []);
 
-
-  //aller chercher les valeurs du thème et pour mettre à jour le thème dans les contextes
+  // aller chercher les valeurs du thème et pour mettre à jour le thème dans les contextes
   const changerTheme = useThemeMiseAJour();
   const listeThemes = useListeThemes();
 
-  //utiliser le hook des cookies pour mettre le profil dans un cookie
-  const [cookies, setCookie, removeCookie] = useCookies(["profil"]);
+  // utiliser le hook des cookies pour mettre le profil dans un cookie
+  const [cookies, setCookie, removeCookie] = useCookies(['profil']);
 
-  //changer le thème et passer à la prochaine étape
+  // changer le thème et passer à la prochaine étape
   function choisirTheme(choix) {
     changerTheme(choix);
-    //créer le cookie avec le choix du profil
-    removeCookie("profil", { path: "/", maxAge: 2592000 });
-    setCookie("profil", choix, { path: "/", maxAge: 2592000 });
-    changerEtape("accueil");
+    // créer le cookie avec le choix du profil
+    removeCookie('profil', { path: '/', maxAge: 2592000 });
+    setCookie('profil', choix, { path: '/', maxAge: 2592000 });
+    changerEtape('accueil');
   }
 
   function numAlea(min, max) {
@@ -39,17 +37,17 @@ export default function SelectionProfil({ changerEtape }) {
         initial={{
           x: 200,
           opacity: 0,
-          transition:{ ease: "easeIn"}
+          transition: { ease: 'easeIn' },
         }}
         animate={{
           x: 0,
           opacity: 1,
-          transition:{ duration: 0.5, ease: "easeInOut"}
+          transition: { duration: 0.5, ease: 'easeInOut' },
         }}
         exit={{
           opacity: 0,
           x: -20,
-          transition: { duration: 0.4, ease: "linear"}
+          transition: { duration: 0.4, ease: 'linear' },
         }}
         className={styles.conteneurProfils}
       >
@@ -57,7 +55,7 @@ export default function SelectionProfil({ changerEtape }) {
         <div className={styles.grilleProfils}>
           <motion.span
             initial={{
-              filter: "hue-rotate(0deg)",
+              filter: 'hue-rotate(0deg)',
             }}
             animate={{
               filter: [
@@ -67,9 +65,9 @@ export default function SelectionProfil({ changerEtape }) {
                 `hue-rotate(${numAlea(200, 300)}deg)`,
               ],
               transition: {
-                repeat: "Infinity",
+                repeat: 'Infinity',
                 repeatDelay: 0.1,
-                repeatType: "mirror",
+                repeatType: 'mirror',
                 duration: 4,
                 damping: 200,
               },
@@ -78,7 +76,7 @@ export default function SelectionProfil({ changerEtape }) {
               scale: 1.05,
               x: 5,
               y: 5,
-              transition: {duration: 0.2},
+              transition: { duration: 0.2 },
             }}
             onClick={() => choisirTheme(listeThemes.art)}
             className={styles.art}
@@ -87,7 +85,7 @@ export default function SelectionProfil({ changerEtape }) {
           </motion.span>
           <motion.span
             initial={{
-              filter: "hue-rotate(0deg)",
+              filter: 'hue-rotate(0deg)',
             }}
             animate={{
               filter: [
@@ -97,9 +95,9 @@ export default function SelectionProfil({ changerEtape }) {
                 `hue-rotate(${numAlea(200, 300)}deg)`,
               ],
               transition: {
-                repeat: "Infinity",
+                repeat: 'Infinity',
                 repeatDelay: 0.1,
-                repeatType: "mirror",
+                repeatType: 'mirror',
                 duration: 4,
                 damping: 200,
               },
@@ -108,18 +106,16 @@ export default function SelectionProfil({ changerEtape }) {
               scale: 1.05,
               x: 5,
               y: 5,
-              transition: {duration: 0.2},
+              transition: { duration: 0.2 },
             }}
             onClick={() => choisirTheme(listeThemes.code)}
             className={styles.code}
           >
-            <h2>
-              Logique
-            </h2>
+            <h2>Logique</h2>
           </motion.span>
           <motion.span
             initial={{
-              filter: "hue-rotate(0deg)",
+              filter: 'hue-rotate(0deg)',
             }}
             animate={{
               filter: [
@@ -129,9 +125,9 @@ export default function SelectionProfil({ changerEtape }) {
                 `hue-rotate(${numAlea(200, 300)}deg)`,
               ],
               transition: {
-                repeat: "Infinity",
+                repeat: 'Infinity',
                 repeatDelay: 0.05,
-                repeatType: "mirror",
+                repeatType: 'mirror',
                 duration: 4,
                 damping: 200,
               },
@@ -140,7 +136,7 @@ export default function SelectionProfil({ changerEtape }) {
               scale: 1.05,
               x: 5,
               y: 5,
-              transition: {duration: 0.2},
+              transition: { duration: 0.2 },
             }}
             onClick={() => choisirTheme(listeThemes.parent)}
             className={styles.parent}

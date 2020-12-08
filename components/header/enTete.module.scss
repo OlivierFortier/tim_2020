@@ -1,5 +1,3 @@
-// @import "styles/variables";
-
 .enTete {
   display: flex;
   position: sticky;
@@ -10,14 +8,12 @@
   align-items: center;
   height: auto;
   padding: 2rem 2rem 1rem;
-  // margin-bottom: 1%;
 
   .conteneurEntete {
     display: flex;
     z-index: 7;
     width: 100%;
   }
-  // color: #ffffff;
   .titre {
     width: 100%;
     margin: 0;
@@ -37,20 +33,16 @@
   .enTete {
     padding: 0% 6%;
     height: 75px;
-    // margin-bottom: 5%;
 
     .conteneurEntete {
-      // height: 45px;
       flex-direction: column;
       overflow: visible;
       margin-top: 5%;
     }
 
     .titre {
-      // margin-top: 5%;
       font-size: 13px;
       line-height: 16px;
-      // max-width: 75%;
     }
   }
 }
@@ -59,12 +51,7 @@
 @media (min-width: 425px) and (max-width: 767px) {
   .enTete {
     padding: 0% 6%;
-    // height: 75px;
     margin-bottom: 0;
-
-    .conteneurEntete {
-      // overflow: visible;
-    }
 
     .titre {
       font-size: 13px;

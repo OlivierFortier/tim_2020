@@ -1,7 +1,6 @@
 .conteneurPage {
   height: 70vh;
   margin: 0 15%;
-  // overflow: hidden;
 
   section {
     display: flex;
@@ -163,7 +162,7 @@
 
         height: 55%;
 
-        // width: 120%;
+      
         margin-top: 10%;
         z-index: 3;
 
@@ -321,6 +320,3 @@
   }
 }
 
-/*==================LAPTOP==========================*/
-@media (min-width: 1025px) and (max-width: 1439px) {
-}

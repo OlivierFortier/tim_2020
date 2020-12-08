@@ -156,13 +156,6 @@
   .conteneurSection {
     flex-direction: column;
 
-    //possible solution pour l'image en tablette
-    // > div > :first-child {
-    //   height: 30vh !important;
-    //   width: 70vw !important;
-    //   padding-bottom: 0 !important;
-    // }
-
     .image {
       padding: 0 12%;
       width: 75%;
@@ -190,6 +183,3 @@
   }
 }
 
-/*==================LAPTOP==========================*/
-@media (min-width: 1025px) and (max-width: 1439px) {
-}

@@ -1,30 +1,29 @@
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Custom404() {
-
-    // styles de la page, puisqu'elle est pas importante on n'a pas jugé que c'était nécéssaire de créer un fichier css à part
+  // styles de la page, puisqu'elle est pas importante on n'a pas jugé que c'était nécéssaire de créer un fichier css à part
   const mainStyle = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: "0 auto",
-    maxWidth: "90%",
-    textAlign: "center",
-    minHeight: "70vh",
-    fontFamily: "NeueMontreal",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 auto',
+    maxWidth: '90%',
+    textAlign: 'center',
+    minHeight: '70vh',
+    fontFamily: 'NeueMontreal',
   };
 
   const hStyle = {
-    textTransform: "uppercase",
+    textTransform: 'uppercase',
   };
 
   const aStyle = {
-    color: "unset",
-    margin: "1%",
-    fontSize: "1.5rem",
-    textTransform: "uppercase",
+    color: 'unset',
+    margin: '1%',
+    fontSize: '1.5rem',
+    textTransform: 'uppercase',
   };
 
   return (

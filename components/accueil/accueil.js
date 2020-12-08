@@ -1,10 +1,10 @@
-import Link from "next/link";
-import styles from "./accueil.module.scss";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useTheme, useListeThemes } from "../../hooks/contexteTheme";
-import { useMediaQuery } from "react-responsive";
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { useTheme, useListeThemes } from '../../hooks/contexteTheme';
+import styles from './accueil.module.scss';
 
 export default function Accueil() {
   // hook qui permet de savoir si on est en mode tablette
@@ -15,7 +15,7 @@ export default function Accueil() {
   const listeThemes = useListeThemes();
 
   // configurations et gestion des animations vidéos
-  const [videoSource, setVideoSource] = useState("");
+  const [videoSource, setVideoSource] = useState('');
   const [videoIsHovered, setVideoIsHovered] = useState(false);
   const [videoFutSurvolee, setVideoFutSurvolee] = useState(false);
 
@@ -24,10 +24,10 @@ export default function Accueil() {
       if (videoIsHovered) setVideoFutSurvolee(true);
     }
     if (tablette) setVideoFutSurvolee(false);
-  }, [videoIsHovered]);
+  }, [tablette, videoIsHovered]);
 
   const setHoverState = (value) => {
-    setVideoIsHovered((currentValue) => value);
+    setVideoIsHovered(value);
   };
   const animationVideo = {
     open: {
@@ -35,80 +35,80 @@ export default function Accueil() {
       scaleY: !tablette ? 1.1 : 1,
       opacity: 1,
       x: 0,
-      transition: { duration: 1, ease: "easeInOut" },
+      transition: { duration: 1, ease: 'easeInOut' },
     },
     closed: {
       scaleX: !tablette ? (videoFutSurvolee ? 1.5 : 1) : 1,
       scaleY: 1,
       opacity: 1,
       x: 0,
-      transition: { duration: 1, ease: "easeInOut" },
+      transition: { duration: 1, ease: 'easeInOut' },
     },
   };
 
   // définition des styles du thème de base
   const [stylesTheme, setStylesTheme] = useState({
-    couleurBordure: "#f3f1f1",
-    couleurBouton: "#f3f1f1",
-    couleurTexteBouton: "#000000",
-    couleurAccent: "#F16242",
+    couleurBordure: '#f3f1f1',
+    couleurBouton: '#f3f1f1',
+    couleurTexteBouton: '#000000',
+    couleurAccent: '#F16242',
   });
 
   // ajustement des styles selon le thème choisi
   useEffect(() => {
-    document.querySelector("#header-site").style.display = "flex";
+    document.querySelector('#header-site').style.display = 'flex';
 
     switch (theme) {
       case listeThemes.art:
-        setVideoSource("/images/art.webm");
+        setVideoSource('/images/art.webm');
         document.documentElement.style.setProperty(
-          "--bgAcceuil",
+          '--bgAcceuil',
           'url("/images/art_moment.webp")'
         );
         setStylesTheme({
-          couleurBordure: "#f3f1f1",
-          couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "#000000",
-          couleurAccent: "#F16242",
+          couleurBordure: '#f3f1f1',
+          couleurBouton: '#f3f1f1',
+          couleurTexteBouton: '#000000',
+          couleurAccent: '#F16242',
         });
         break;
 
       case listeThemes.code:
-        setVideoSource("/images/code.webm");
+        setVideoSource('/images/code.webm');
         document.documentElement.style.setProperty(
-          "--bgAcceuil",
+          '--bgAcceuil',
           'url("/images/code_moment.webp")'
         );
         setStylesTheme({
-          couleurBordure: "#f3f1f1",
-          couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "#000000",
-          couleurAccent: "#24DC48",
+          couleurBordure: '#f3f1f1',
+          couleurBouton: '#f3f1f1',
+          couleurTexteBouton: '#000000',
+          couleurAccent: '#24DC48',
         });
         break;
 
       case listeThemes.parent:
-        setVideoSource("");
-        document.documentElement.style.setProperty("--bgAcceuil", "#110c12");
+        setVideoSource('');
+        document.documentElement.style.setProperty('--bgAcceuil', '#110c12');
         setStylesTheme({
-          couleurBordure: "#000000",
-          couleurBouton: "#000000",
-          couleurTexteBouton: "#F3F1F1",
-          couleurAccent: "#F16242",
+          couleurBordure: '#000000',
+          couleurBouton: '#000000',
+          couleurTexteBouton: '#F3F1F1',
+          couleurAccent: '#F16242',
         });
         break;
 
       default:
-        setVideoSource("/images/art.webm");
+        setVideoSource('/images/art.webm');
         document.documentElement.style.setProperty(
-          "--bgAcceuil",
+          '--bgAcceuil',
           'url("/images/art_moment.webp")'
         );
         setStylesTheme({
-          couleurBordure: "#f3f1f1",
-          couleurBouton: "#f3f1f1",
-          couleurTexteBouton: "#000000",
-          couleurAccent: "#F16242",
+          couleurBordure: '#f3f1f1',
+          couleurBouton: '#f3f1f1',
+          couleurTexteBouton: '#000000',
+          couleurAccent: '#F16242',
         });
         break;
     }
@@ -127,7 +127,7 @@ export default function Accueil() {
         }}
         exit={{
           opacity: 0,
-          transition: { duration: 1, ease: "easeIn" },
+          transition: { duration: 1, ease: 'easeIn' },
         }}
         className={styles.conteneurAccueil}
       >
@@ -138,8 +138,9 @@ export default function Accueil() {
           style={{ borderColor: stylesTheme.couleurBordure }}
         >
           <h1 className={styles.titreIntro}>
-            La<br></br> juxtaposition du <br></br>
-            <strong>logique</strong> et du <br></br>
+            La
+            <br /> juxtaposition du <br />
+            <strong>logique</strong> et du <br />
             <strong>créatif +</strong>
           </h1>
           <h2 className={styles.nomCollege}>Collège de Maisonneuve</h2>
@@ -162,26 +163,26 @@ export default function Accueil() {
                 transition: {
                   repeat: Infinity,
                   duration: 5,
-                  repeatType: "mirror",
+                  repeatType: 'mirror',
                 },
               }}
               style={{ borderColor: stylesTheme.couleurBordure }}
               className={styles.cercleInterractif}
-            ></motion.div>
+            />
           </span>
           <div
             className={`${styles.conteneurImage} ${
-              videoSource == "" ? styles.imageParent : ""
+              videoSource == '' ? styles.imageParent : ''
             }`}
           >
             {videoSource && (
               <motion.video
                 initial={{
-                  x: "10vw",
+                  x: '10vw',
                   opacity: 0,
-                  transition: { ease: "easeIn", duration: 0.5 },
+                  transition: { ease: 'easeIn', duration: 0.5 },
                 }}
-                animate={videoIsHovered ? "open" : "closed"}
+                animate={videoIsHovered ? 'open' : 'closed'}
                 onHoverStart={(e) => {
                   setHoverState(true);
                 }}
@@ -190,11 +191,11 @@ export default function Accueil() {
                 }}
                 variants={animationVideo}
                 key={videoSource}
-                loop={true}
+                loop
                 className={styles.imageHero}
                 width={451}
                 height={684}
-                autoPlay={true}
+                autoPlay
                 muted
                 playsInline
               >
@@ -202,21 +203,21 @@ export default function Accueil() {
               </motion.video>
             )}
 
-            {videoSource == "" && (
+            {videoSource == '' && (
               <motion.div
                 initial={{
-                  x: "10vw",
+                  x: '10vw',
                   opacity: 0,
-                  transition: { ease: "easeIn", duration: 0.5 },
+                  transition: { ease: 'easeIn', duration: 0.5 },
                 }}
                 animate={{
                   opacity: 1,
                   x: 0,
-                  transition: { duration: 1, ease: "easeInOut" },
+                  transition: { duration: 1, ease: 'easeInOut' },
                 }}
               >
                 <Image
-                  src={"/images/parent.jpeg"}
+                  src="/images/parent.jpeg"
                   quality={50}
                   layout="fill"
                   loading="eager"

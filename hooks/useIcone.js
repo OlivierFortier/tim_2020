@@ -1,6 +1,6 @@
-import { IoIosGlobe, IoMdCube, IoLogoGameControllerB } from "react-icons/io";
-import { HiCode } from "react-icons/hi";
-import { MdPalette, MdPerson } from "react-icons/md";
+import { IoIosGlobe, IoMdCube, IoLogoGameControllerB } from 'react-icons/io';
+import { HiCode } from 'react-icons/hi';
+import { MdPalette, MdPerson } from 'react-icons/md';
 import {
   FaCamera,
   FaCss3Alt,
@@ -11,8 +11,8 @@ import {
   FaReact,
   FaUnity,
   FaWordpress,
-} from "react-icons/fa";
-import { GrIntegration } from "react-icons/gr";
+} from 'react-icons/fa';
+import { GrIntegration } from 'react-icons/gr';
 import {
   SiAdobeaftereffects,
   SiAdobeaudition,
@@ -23,141 +23,137 @@ import {
   SiCsharp,
   SiMysql,
   SiPhp,
-  SiAutodesk
-} from "react-icons/si";
+  SiAutodesk,
+} from 'react-icons/si';
 
-//hook pour les icones du sujet
+// hook pour les icones du sujet
 export function useIconeSujet(sujet) {
-  //on retourne une icone différente selon le sujet du cours
+  // on retourne une icone différente selon le sujet du cours
   switch (sujet) {
-    case "Programmation":
-      return (props) => <HiCode {...props}></HiCode>;
+    case 'Programmation':
+      return (props) => <HiCode {...props} />;
       break;
 
-    case "Design":
-      return (props) => <MdPalette {...props}></MdPalette>;
+    case 'Design':
+      return (props) => <MdPalette {...props} />;
       break;
 
-    case "3D":
-      return (props) => <IoMdCube {...props}></IoMdCube>;
+    case '3D':
+      return (props) => <IoMdCube {...props} />;
       break;
 
-    case "Jeux":
-      return (props) => (
-        <IoLogoGameControllerB {...props}></IoLogoGameControllerB>
-      );
+    case 'Jeux':
+      return (props) => <IoLogoGameControllerB {...props} />;
       break;
 
-    case "Web":
-      return (props) => <IoIosGlobe {...props}></IoIosGlobe>;
+    case 'Web':
+      return (props) => <IoIosGlobe {...props} />;
       break;
 
-    case "Vidéo et Audio":
-      return (props) => <FaCamera {...props}></FaCamera>;
+    case 'Vidéo et Audio':
+      return (props) => <FaCamera {...props} />;
       break;
 
-    case "Animation":
-      return (props) => <FaLaughSquint {...props}></FaLaughSquint>;
+    case 'Animation':
+      return (props) => <FaLaughSquint {...props} />;
       break;
 
-    case "Profession":
-      return (props) => <MdPerson {...props}></MdPerson>;
+    case 'Profession':
+      return (props) => <MdPerson {...props} />;
       break;
 
-    case "Intégration":
-      return (props) => <GrIntegration {...props}></GrIntegration>;
+    case 'Intégration':
+      return (props) => <GrIntegration {...props} />;
       break;
 
     default:
-      return (props) => <IoIosGlobe {...props}></IoIosGlobe>;
+      return (props) => <IoIosGlobe {...props} />;
       break;
   }
 }
 
-//on retourne une icone différente selon les technologies du cours
+// on retourne une icone différente selon les technologies du cours
 export function useIconeTechnos(technologies) {
   return technologies.map((techno) => {
     switch (techno) {
-      case "HTML":
-        return (props) => <FaHtml5 {...props}></FaHtml5>;
+      case 'HTML':
+        return (props) => <FaHtml5 {...props} />;
         break;
 
-      case "CSS":
-        return (props) => <FaCss3Alt {...props}></FaCss3Alt>;
+      case 'CSS':
+        return (props) => <FaCss3Alt {...props} />;
         break;
 
-      case "JavaScript":
-        return (props) => <FaJs {...props}></FaJs>;
+      case 'JavaScript':
+        return (props) => <FaJs {...props} />;
         break;
 
-      case "React":
-        return (props) => <FaReact {...props}></FaReact>;
+      case 'React':
+        return (props) => <FaReact {...props} />;
         break;
 
-      case "PHP":
-        return (props) => <SiPhp {...props}></SiPhp>;
+      case 'PHP':
+        return (props) => <SiPhp {...props} />;
         break;
 
-      case "SQL":
-        return (props) => <SiMysql {...props}></SiMysql>;
+      case 'SQL':
+        return (props) => <SiMysql {...props} />;
         break;
 
-      case "Wordpress":
-        return (props) => <FaWordpress {...props}></FaWordpress>;
+      case 'Wordpress':
+        return (props) => <FaWordpress {...props} />;
         break;
 
-      case "C#":
-        return (props) => <SiCsharp {...props}></SiCsharp>;
+      case 'C#':
+        return (props) => <SiCsharp {...props} />;
         break;
 
-      case "Unity":
-        return (props) => <FaUnity {...props}></FaUnity>;
+      case 'Unity':
+        return (props) => <FaUnity {...props} />;
         break;
 
-      case "Git":
-        return (props) => <FaGitAlt {...props}></FaGitAlt>;
+      case 'Git':
+        return (props) => <FaGitAlt {...props} />;
         break;
 
-      case "Photoshop":
-        return (props) => <SiAdobephotoshop {...props}></SiAdobephotoshop>;
+      case 'Photoshop':
+        return (props) => <SiAdobephotoshop {...props} />;
         break;
 
-      case "Illustrator":
-        return (props) => <SiAdobeillustrator {...props}></SiAdobeillustrator>;
+      case 'Illustrator':
+        return (props) => <SiAdobeillustrator {...props} />;
         break;
 
-      case "XD":
-        return (props) => <SiAdobexd {...props}></SiAdobexd>;
+      case 'XD':
+        return (props) => <SiAdobexd {...props} />;
         break;
 
-      case "Premiere Pro":
-        return (props) => <SiAdobepremiere {...props}></SiAdobepremiere>;
+      case 'Premiere Pro':
+        return (props) => <SiAdobepremiere {...props} />;
         break;
 
-      case "After Effects":
-        return (props) => (
-          <SiAdobeaftereffects {...props}></SiAdobeaftereffects>
-        );
+      case 'After Effects':
+        return (props) => <SiAdobeaftereffects {...props} />;
         break;
 
-      case "Animate":
-        return (props) => <FaLaughSquint {...props}></FaLaughSquint>;
+      case 'Animate':
+        return (props) => <FaLaughSquint {...props} />;
         break;
 
-      case "Audition":
-        return (props) => <SiAdobeaudition {...props}></SiAdobeaudition>;
+      case 'Audition':
+        return (props) => <SiAdobeaudition {...props} />;
         break;
 
-      case "Logic Pro":
-        return (props) => <FaLaughSquint {...props}></FaLaughSquint>;
+      case 'Logic Pro':
+        return (props) => <FaLaughSquint {...props} />;
         break;
 
-      case "Maya":
-        return (props) => <SiAutodesk {...props}></SiAutodesk>;
+      case 'Maya':
+        return (props) => <SiAutodesk {...props} />;
         break;
 
       default:
-        return (props) => <FaLaughSquint {...props}></FaLaughSquint>;
+        return (props) => <FaLaughSquint {...props} />;
         break;
     }
   });
