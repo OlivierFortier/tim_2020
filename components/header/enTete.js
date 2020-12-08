@@ -1,17 +1,16 @@
-import Menu from "./menu";
-import BoutonSelectionTheme from "./boutonSelectionTheme";
-import styles from "./enTete.module.scss";
-import { useState, useEffect } from "react";
-import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
-import { useProxy } from "valtio";
-import { etatMenu } from "../etat_global/EtatMenu";
-import Link from "next/link";
+import { useState, useEffect } from 'react';
+import { useProxy } from 'valtio';
+import Link from 'next/link';
+import Menu from './menu';
+import BoutonSelectionTheme from './boutonSelectionTheme';
+import styles from './enTete.module.scss';
+import { useListeThemes, useTheme } from '../../hooks/contexteTheme';
+import { etatMenu } from '../etat_global/EtatMenu';
 
 export default function EnTete() {
-
   // gestion des couleurs selon le thème
   const [lesStyles, setLesStyles] = useState({
-    couleurTexte: "#F04E2A",
+    couleurTexte: '#F04E2A',
   });
 
   // obtenir l'état du menu pour rendre la couleur du texte visible
@@ -24,26 +23,26 @@ export default function EnTete() {
     switch (leTheme) {
       case listeThemes.art:
         setLesStyles({
-          couleurTexte: "#F3f1f1",
+          couleurTexte: '#F3f1f1',
         });
         break;
 
       case listeThemes.code:
         setLesStyles({
-          couleurTexte: "#f3f1f1",
+          couleurTexte: '#f3f1f1',
         });
         break;
 
       case listeThemes.parent:
         setLesStyles({
-          couleurTexte: "#000000",
+          couleurTexte: '#000000',
         });
-        if (snapShot.menuEstOuvert) setLesStyles({ couleurTexte: "#f3f1f1" });
+        if (snapShot.menuEstOuvert) setLesStyles({ couleurTexte: '#f3f1f1' });
         break;
 
       default:
         setLesStyles({
-          couleurTexte: "#f3f1f1",
+          couleurTexte: '#f3f1f1',
         });
         break;
     }

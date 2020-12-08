@@ -1,22 +1,22 @@
-import { useCookies } from "react-cookie";
+import { useCookies } from 'react-cookie';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useProxy } from 'valtio';
+import styles from './boutonSelectionTheme.module.scss';
 import {
   useListeThemes,
   useTheme,
   useThemeMiseAJour,
-} from "../../hooks/contexteTheme";
-import styles from "./boutonSelectionTheme.module.scss";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { useProxy } from "valtio";
-import { etatMenu } from "../etat_global/EtatMenu";
+} from '../../hooks/contexteTheme';
+import { etatMenu } from '../etat_global/EtatMenu';
 
 export default function BoutonSelectionTheme() {
   const changerTheme = useThemeMiseAJour();
   const listeThemes = useListeThemes();
   const theme = useTheme();
 
-  const [cookies, setCookie, removeCookie] = useCookies(["profil"]);
+  const [cookies, setCookie, removeCookie] = useCookies(['profil']);
 
   const tableauTheme = [listeThemes.art, listeThemes.code, listeThemes.parent];
 
@@ -32,9 +32,9 @@ export default function BoutonSelectionTheme() {
       setIndexTableau(0);
     }
     changerTheme(tableauTheme[indexTableau]);
-    removeCookie("profil", { path: "/", maxAge: 2592000 });
-    setCookie("profil", tableauTheme[indexTableau], {
-      path: "/",
+    removeCookie('profil', { path: '/', maxAge: 2592000 });
+    setCookie('profil', tableauTheme[indexTableau], {
+      path: '/',
       maxAge: 2592000,
     });
   }
@@ -63,9 +63,10 @@ export default function BoutonSelectionTheme() {
 
       case listeThemes.parent:
         setCouleurThemes({
-          classeInverser: "",
+          classeInverser: '',
         });
-        if(snapShot.menuEstOuvert) setCouleurThemes({classeInverser: styles.inverser})
+        if (snapShot.menuEstOuvert)
+          setCouleurThemes({ classeInverser: styles.inverser });
         break;
 
       default:
@@ -81,7 +82,7 @@ export default function BoutonSelectionTheme() {
       <motion.div
         whileHover={{ scale: 1.1 }}
         onClick={() => setIndexTableau((aI) => aI + 1)}
-        style={{cursor: "pointer"}}
+        style={{ cursor: 'pointer' }}
       >
         <Image
           src="/images/Logo_TIM.png"

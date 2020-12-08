@@ -1,14 +1,14 @@
-import "normalize.css";
-import "react-tabs/style/react-tabs.css";
-import "swiper/swiper.scss";
-import "swiper/components/pagination/pagination.scss";
-import "../styles/styles.scss";
-import Layout from "../components/layout";
-import { FournisseurTheme } from "../hooks/contexteTheme";
-import { AnimatePresence } from "framer-motion";
-import Head from "next/head";
+import 'normalize.css';
+import 'react-tabs/style/react-tabs.css';
+import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
+import '../styles/styles.scss';
+import { AnimatePresence } from 'framer-motion';
+import Head from 'next/head';
 
-import Router from "next/router";
+import Router from 'next/router';
+import { FournisseurTheme } from '../hooks/contexteTheme';
+import Layout from '../components/layout';
 
 const routeChange = () => {
   // Temporary fix to avoid flash of unstyled content
@@ -19,14 +19,14 @@ const routeChange = () => {
   const tempFix = () => {
     const allStyleElems = document.querySelectorAll('style[media="x"]');
     allStyleElems.forEach((elem) => {
-      elem.removeAttribute("media");
+      elem.removeAttribute('media');
     });
   };
   tempFix();
 };
 
-Router.events.on("routeChangeComplete", routeChange);
-Router.events.on("routeChangeStart", routeChange);
+Router.events.on('routeChangeComplete', routeChange);
+Router.events.on('routeChangeStart', routeChange);
 
 function MyApp({ Component, pageProps, router }) {
   return (

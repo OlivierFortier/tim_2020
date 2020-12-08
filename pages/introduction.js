@@ -1,62 +1,62 @@
-import { motion } from "framer-motion";
-import styles from "./introduction.module.scss";
-import Link from "next/link";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import { useListeThemes, useTheme } from "../hooks/contexteTheme";
-import Canvas3D from "../components/3d/Canvas3D";
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import styles from './introduction.module.scss';
+import { useListeThemes, useTheme } from '../hooks/contexteTheme';
+import Canvas3D from '../components/3d/Canvas3D';
 
 export default function Introduction() {
   // changer couleur selon theme
   const theme = useTheme();
   const listeThemes = useListeThemes();
   const [lesStyles, setLesStyles] = useState({
-    couleurCube: "#f3f1f1",
-    couleurTexte: "#f3f1f1",
-    couleurBouton: "#f3f1f1",
-    couleurTexteBouton: "#000000",
-    couleurHover: "#F04E2A",
+    couleurCube: '#f3f1f1',
+    couleurTexte: '#f3f1f1',
+    couleurBouton: '#f3f1f1',
+    couleurTexteBouton: '#000000',
+    couleurHover: '#F04E2A',
   });
 
   useEffect(() => {
     switch (theme) {
       case listeThemes.art:
         setLesStyles({
-          couleurCube: "#f3f1f1",
-          couleurTexte: "#f3f1f1",
-          couleurBouton: "transparent",
-          couleurTexteBouton: "#f3f1f1",
-          couleurHover: "#F16242",
+          couleurCube: '#f3f1f1',
+          couleurTexte: '#f3f1f1',
+          couleurBouton: 'transparent',
+          couleurTexteBouton: '#f3f1f1',
+          couleurHover: '#F16242',
         });
         break;
 
       case listeThemes.code:
         setLesStyles({
-          couleurCube: "#f3f1f1",
-          couleurTexte: "#f3f1f1",
-          couleurBouton: "transparent",
-          couleurTexteBouton: "#FFFFFF",
-          couleurHover: "#24DC48",
+          couleurCube: '#f3f1f1',
+          couleurTexte: '#f3f1f1',
+          couleurBouton: 'transparent',
+          couleurTexteBouton: '#FFFFFF',
+          couleurHover: '#24DC48',
         });
         break;
 
       case listeThemes.parent:
         setLesStyles({
-          couleurCube: "black",
-          couleurTexte: "#000000",
-          couleurBouton: "transparent",
-          couleurTexteBouton: "#000000",
-          couleurHover: "#4363CA",
+          couleurCube: 'black',
+          couleurTexte: '#000000',
+          couleurBouton: 'transparent',
+          couleurTexteBouton: '#000000',
+          couleurHover: '#4363CA',
         });
         break;
 
       default:
         setLesStyles({
-          couleurCube: "#f3f1f1",
-          couleurTexte: "#f3f1f1",
-          couleurBouton: "transparent",
-          couleurTexteBouton: "#000000",
-          couleurHover: "#F04E2A",
+          couleurCube: '#f3f1f1',
+          couleurTexte: '#f3f1f1',
+          couleurBouton: 'transparent',
+          couleurTexteBouton: '#000000',
+          couleurHover: '#F04E2A',
         });
         break;
     }
@@ -67,14 +67,14 @@ export default function Introduction() {
       initial={{
         x: 25,
         opacity: 0,
-        transition: { ease: "easeInOut", duration: 0.5 },
+        transition: { ease: 'easeInOut', duration: 0.5 },
       }}
       transition={{ duration: 0.75 }}
       animate={{ x: 0, y: 0, opacity: 1 }}
       exit={{
         y: -100,
         opacity: 0,
-        transition: { ease: "linear", duration: 0.4 },
+        transition: { ease: 'linear', duration: 0.4 },
       }}
       className={styles.conteneur}
       key="introduction"
@@ -84,11 +84,8 @@ export default function Introduction() {
         <meta
           name="Description"
           content="Page d'introduction des Techniques d'Intégration Multimédia du Collège Maisonneuve"
-        ></meta>
-        <link
-          rel="canonical"
-          href="https://tim-2020.vercel.app/introduction"
-        ></link>
+        />
+        <link rel="canonical" href="https://tim-2020.vercel.app/introduction" />
         <meta property="og:title" content="Introduction | TIM Maisonneuve" />
         <meta
           property="og:url"
@@ -106,7 +103,7 @@ export default function Introduction() {
           animate={{ opacity: 1, x: 0, transition: { duration: 0.9 } }}
           className={styles.headerPage}
         >
-          Envie d'étudier le{" "}
+          Envie d'étudier le{' '}
           <motion.b
             animate={{ color: lesStyles.couleurTexte }}
             whileHover={{ color: lesStyles.couleurHover }}
@@ -121,12 +118,14 @@ export default function Introduction() {
           opacity: 1,
           x: 0,
           y: 0,
-          transition: { duration: 2, ease: "linear" },
+          transition: { duration: 2, ease: 'linear' },
         }}
         className={styles.conteneurCube}
       >
-        <Canvas3D classeCanvas={styles.canvas3D}
-          couleurDuMesh={lesStyles.couleurCube}/>
+        <Canvas3D
+          classeCanvas={styles.canvas3D}
+          couleurDuMesh={lesStyles.couleurCube}
+        />
       </motion.div>
 
       <motion.p

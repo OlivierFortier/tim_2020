@@ -1,17 +1,17 @@
-import { useFrame } from "react-three-fiber";
-import { useRef, useMemo } from "react";
-import * as THREE from "three";
+import { useFrame } from 'react-three-fiber';
+import { useRef, useMemo } from 'react';
+import * as THREE from 'three';
 
 export default function CubeTransparent(props) {
   // expression déclarative d'un cube 3D  grace à react-three-fiber et Three.js
 
-  //créer une référence au mesh
+  // créer une référence au mesh
   const mesh = useRef();
 
-  //avec ce hook, on anime le cube en dehors du cycle de vie de react, pour la performance
+  // avec ce hook, on anime le cube en dehors du cycle de vie de react, pour la performance
   useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
 
-  //créer un cube de facon impérative, sinon ca bug avec les edges
+  // créer un cube de facon impérative, sinon ca bug avec les edges
   const cube = useMemo(() => new THREE.BoxBufferGeometry(1, 1, 1));
 
   return (

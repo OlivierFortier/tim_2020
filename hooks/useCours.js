@@ -1,13 +1,11 @@
-
 export function useOrdreListeCours(listeCours) {
-
-    //on extrait la liste des cours et on la sépare par session
+  // on extrait la liste des cours et on la sépare par session
   const coursSession1 = listeCours.filter((cours) => cours.session === 1);
   const coursSession2 = listeCours.filter((cours) => cours.session === 2);
   const coursSession3 = listeCours.filter((cours) => cours.session === 3);
   const coursSession6 = listeCours.filter((cours) => cours.session === 6);
 
-  //on trie les session qui ont des choix de cours
+  // on trie les session qui ont des choix de cours
   const coursSession4 = listeCours.filter((cours) => cours.session === 4);
   const coursSession4Tries = [...coursSession4].sort(
     (a, b) => a.auChoix - b.auChoix
@@ -17,7 +15,7 @@ export function useOrdreListeCours(listeCours) {
     (a, b) => a.auChoix - b.auChoix
   );
 
-  //on regroupe dans un array tous les cours de toutes les sessions
+  // on regroupe dans un array tous les cours de toutes les sessions
   const listeTousLesCours = [
     coursSession1,
     coursSession2,
@@ -27,8 +25,6 @@ export function useOrdreListeCours(listeCours) {
     coursSession6,
   ];
 
-  //on retourne la liste bien ordonnée des cours
+  // on retourne la liste bien ordonnée des cours
   return listeTousLesCours;
-
-  
 }

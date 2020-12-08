@@ -1,8 +1,8 @@
-import SwiperCore, { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import CarteProf from "./CarteProf";
-import styles from "./SwiperProf.module.scss";
-import {motion} from "framer-motion";
+import SwiperCore, { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { motion } from 'framer-motion';
+import CarteProf from './CarteProf';
+import styles from './SwiperProf.module.scss';
 
 SwiperCore.use([Pagination]);
 
@@ -12,7 +12,7 @@ export default function SwiperProfs({ listeProfs }) {
       <Swiper
         pagination={{
           clickable: true,
-          el: "#lesPoints",
+          el: '#lesPoints',
         }}
         spaceBetween={0}
         slidesPerView={4}
@@ -44,15 +44,13 @@ export default function SwiperProfs({ listeProfs }) {
         slidesPerColumnFill="row"
         observer="true"
       >
-        {listeProfs.map((infoProf) => {
-          return (
-            <SwiperSlide className={styles.uneSlide} key={infoProf.nom}>
-              <CarteProf prof={infoProf}  />
-            </SwiperSlide>
-          );
-        })}
+        {listeProfs.map((infoProf) => (
+          <SwiperSlide className={styles.uneSlide} key={infoProf.nom}>
+            <CarteProf prof={infoProf} />
+          </SwiperSlide>
+        ))}
 
-        <div id="lesPoints" className={styles.points}></div>
+        <div id="lesPoints" className={styles.points} />
       </Swiper>
     </main>
   );

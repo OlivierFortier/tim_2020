@@ -1,52 +1,52 @@
-import { motion } from "framer-motion";
-import { gql } from "graphql-request";
-import { faireRequeteGql } from "../../libs/requetesDonnes";
-import styles from "./professeurs.module.scss";
-import Link from "next/link";
-import Head from "next/head";
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { useTheme } from "../../hooks/contexteTheme";
+import { motion } from 'framer-motion';
+import { gql } from 'graphql-request';
+import Link from 'next/link';
+import Head from 'next/head';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import styles from './professeurs.module.scss';
+import { faireRequeteGql } from '../../libs/requetesDonnes';
+import { useTheme } from '../../hooks/contexteTheme';
 
 export default function Professeurs({ items }) {
   // gestion du theme de couleur
   const theme = useTheme();
   const [lesStyles, setLesStyles] = useState({
-    couleurGenerale: "#f3f1f1",
-    couleurHover: "#F16242",
+    couleurGenerale: '#f3f1f1',
+    couleurHover: '#F16242',
     classeFiltreImg: styles.conteneurImgArt,
   });
 
   useEffect(() => {
     switch (theme) {
-      case "art":
+      case 'art':
         setLesStyles({
-          couleurGenerale: "#f3f1f1",
-          couleurHover: "#F16242",
+          couleurGenerale: '#f3f1f1',
+          couleurHover: '#F16242',
           classeFiltreImg: styles.conteneurImgArt,
         });
         break;
 
-      case "code":
+      case 'code':
         setLesStyles({
-          couleurGenerale: "#f3f1f1",
-          couleurHover: "#24DC48",
+          couleurGenerale: '#f3f1f1',
+          couleurHover: '#24DC48',
           classeFiltreImg: styles.conteneurImgCode,
         });
         break;
 
-      case "parent":
+      case 'parent':
         setLesStyles({
-          couleurGenerale: "#000000",
-          couleurHover: "#4363CA",
+          couleurGenerale: '#000000',
+          couleurHover: '#4363CA',
           classeFiltreImg: styles.conteneurImg,
         });
         break;
 
       default:
         setLesStyles({
-          couleurGenerale: "#f3f1f1",
-          couleurHover: "#F16242",
+          couleurGenerale: '#f3f1f1',
+          couleurHover: '#F16242',
           classeFiltreImg: styles.conteneurImgArt,
         });
         break;
@@ -72,7 +72,7 @@ export default function Professeurs({ items }) {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { duration: 1.5, stiffness: 90, ease: "easeInOut" },
+        transition: { duration: 1.5, stiffness: 90, ease: 'easeInOut' },
       }}
       exit={{ y: -200, opacity: 0, transition: { duration: 0.5 } }}
       transition={{ duration: 0.75 }}
@@ -84,11 +84,8 @@ export default function Professeurs({ items }) {
         <meta
           name="Description"
           content="Page des professeurs des Techniques d'Intégration Multimédia du Collège Maisonneuve"
-        ></meta>
-        <link
-          rel="canonical"
-          href="https://tim-2020.vercel.app/professeurs"
-        ></link>
+        />
+        <link rel="canonical" href="https://tim-2020.vercel.app/professeurs" />
         <meta property="og:title" content="Professeurs | TIM Maisonneuve" />
         <meta
           property="og:url"
@@ -131,13 +128,12 @@ export default function Professeurs({ items }) {
               }}
               animate={{
                 opacity: 1,
-                x: "0%",
-                y: "0%",
+                x: '0%',
+                y: '0%',
                 scale: 1,
                 duration: 0.5,
               }}
               whileHover={{ rotate: 5 }}
-             
             >
               <Image
                 className={styles.imgProf}
@@ -156,9 +152,8 @@ export default function Professeurs({ items }) {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "100%", y: "-10%", scale: 1.4 }}
+              animate={{ opacity: 1, x: '100%', y: '-10%', scale: 1.4 }}
               whileHover={{ rotate: -5 }}
-              
             >
               <Image
                 className={styles.imgProf}
@@ -177,9 +172,8 @@ export default function Professeurs({ items }) {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "-10%", y: "140%" }}
+              animate={{ opacity: 1, x: '-10%', y: '140%' }}
               whileHover={{ rotate: 5 }}
-             
             >
               <Image
                 className={styles.imgProf}
@@ -200,9 +194,8 @@ export default function Professeurs({ items }) {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, scale: 3.6, y: "70%" }}
+              animate={{ opacity: 1, scale: 3.6, y: '70%' }}
               whileHover={{ rotate: -5 }}
-             
             >
               <Image
                 className={styles.imgProf}
@@ -219,18 +212,17 @@ export default function Professeurs({ items }) {
         <span>
           <motion.div
             style={{ borderColor: lesStyles.couleurGenerale }}
-            animate={{ x: "-40%", y: "-20%" }}
+            animate={{ x: '-40%', y: '-20%' }}
             className={styles.cercle}
-          ></motion.div>
+          />
           <Link href="/professeurs/grille">
             <motion.div
               className={lesStyles.classeFiltreImg}
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "20%", y: "-90%", scale: 0.9 }}
+              animate={{ opacity: 1, x: '20%', y: '-90%', scale: 0.9 }}
               whileHover={{ rotate: 5 }}
-              
             >
               <Image
                 className={styles.imgProf}
@@ -249,9 +241,8 @@ export default function Professeurs({ items }) {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "145%", y: "-140%" }}
+              animate={{ opacity: 1, x: '145%', y: '-140%' }}
               whileHover={{ rotate: -5 }}
-             
             >
               <Image
                 className={styles.imgProf}
@@ -271,9 +262,8 @@ export default function Professeurs({ items }) {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "10%", y: "40%" }}
+              animate={{ opacity: 1, x: '10%', y: '40%' }}
               whileHover={{ rotate: 5 }}
-             
             >
               <Image
                 className={styles.imgProf}
@@ -292,9 +282,8 @@ export default function Professeurs({ items }) {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "-260%", y: "150%", scale: 1.4 }}
+              animate={{ opacity: 1, x: '-260%', y: '150%', scale: 1.4 }}
               whileHover={{ rotate: -5 }}
-             
             >
               <Image
                 className={styles.imgProf}
@@ -313,9 +302,8 @@ export default function Professeurs({ items }) {
               initial={{
                 opacity: 0,
               }}
-              animate={{ opacity: 1, x: "-300%", y: "340%", scale: 2 }}
+              animate={{ opacity: 1, x: '-300%', y: '340%', scale: 2 }}
               whileHover={{ rotate: 5 }}
-              
             >
               <Image
                 className={styles.imgProf}

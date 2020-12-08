@@ -1,9 +1,9 @@
-import { motion } from "framer-motion";
-import styles from "./grille.module.scss";
-import { gql } from "graphql-request";
-import { faireRequeteGql } from "../../../libs/requetesDonnes";
-import Head from "next/head";
-import SwiperProfs from "../../../components/profs/SwiperProfs";
+import { motion } from 'framer-motion';
+import { gql } from 'graphql-request';
+import Head from 'next/head';
+import styles from './grille.module.scss';
+import { faireRequeteGql } from '../../../libs/requetesDonnes';
+import SwiperProfs from '../../../components/profs/SwiperProfs';
 
 export default function Grille({ listeProfs }) {
   return (
@@ -20,11 +20,11 @@ export default function Grille({ listeProfs }) {
         <meta
           name="Description"
           content="Grille des professeurs des Techniques d'Intégration Multimédia du Collège Maisonneuve"
-        ></meta>
+        />
         <link
           rel="canonical"
           href="https://tim-2020.vercel.app/professeurs/grille"
-        ></link>
+        />
         <meta
           property="og:title"
           content="Grille des profs | TIM Maisonneuve"
@@ -38,7 +38,7 @@ export default function Grille({ listeProfs }) {
           content="Grille des professeurs des Technique d'Intégration Multimédia du Collège Maisonneuve"
         />
       </Head>
-      <SwiperProfs listeProfs={listeProfs}  />
+      <SwiperProfs listeProfs={listeProfs} />
     </motion.div>
   );
 }
@@ -61,7 +61,7 @@ export async function getStaticProps() {
     }
   `;
 
-  //je fais ma requete
+  // je fais ma requete
   const res = await faireRequeteGql(requeteListeProfs);
   const listeProfs = res.professeurCollection.items;
 

@@ -1,9 +1,9 @@
-import styles from "./futur.module.scss";
-import { motion } from "framer-motion";
-import Head from "next/head";
-import { useTheme, useListeThemes } from "../../hooks/contexteTheme";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { useTheme, useListeThemes } from '../../hooks/contexteTheme';
+import styles from './futur.module.scss';
 
 export default function Futur() {
   // gestion des couleurs selon le thème
@@ -11,37 +11,37 @@ export default function Futur() {
   const listeTheme = useListeThemes();
 
   const [lesStyles, setLesStyles] = useState({
-    couleurHover: "#F16242",
-    couleurInitiale : "#f3f1f1"
+    couleurHover: '#F16242',
+    couleurInitiale: '#f3f1f1',
   });
 
   useEffect(() => {
     switch (theme) {
       case listeTheme.art:
         setLesStyles({
-          couleurHover: "#F16242",
-          couleurInitiale : "#f3f1f1"
+          couleurHover: '#F16242',
+          couleurInitiale: '#f3f1f1',
         });
         break;
 
       case listeTheme.code:
         setLesStyles({
-          couleurHover: "#24DC48",
-          couleurInitiale : "#f3f1f1"
+          couleurHover: '#24DC48',
+          couleurInitiale: '#f3f1f1',
         });
         break;
 
       case listeTheme.parent:
         setLesStyles({
-          couleurHover: "#4363CA",
-          couleurInitiale : "#000000"
+          couleurHover: '#4363CA',
+          couleurInitiale: '#000000',
         });
         break;
 
       default:
         setLesStyles({
-          couleurHover: "#F16242",
-          couleurInitiale : "#f3f1f1"
+          couleurHover: '#F16242',
+          couleurInitiale: '#f3f1f1',
         });
         break;
     }
@@ -49,12 +49,17 @@ export default function Futur() {
 
   return (
     <motion.main
-      initial={{y: -200, opacity: 0 }}
-      animate={{y: 0 , opacity: 1, transition: {duration: 0.8, ease: "easeInOut"}}}
+      initial={{ y: -200, opacity: 0 }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        transition: { duration: 0.8, ease: 'easeInOut' },
+      }}
       exit={{
         y: 300,
         opacity: 0,
-        transition: {duration: 0.7, ease: "easeInOut"}}}
+        transition: { duration: 0.7, ease: 'easeInOut' },
+      }}
       key="lesFuturs"
       className={styles.conteneurPage}
     >
@@ -63,8 +68,8 @@ export default function Futur() {
         <meta
           name="Description"
           content="Page qui décrit les opportunités après le DEC: Les stages, les perspectives d'emplois et les universités, aux Techniques d'Intégration Multimédia du Collège Maisonneuve"
-        ></meta>
-        <link rel="canonical" href="https://tim-2020.vercel.app/futur"></link>
+        />
+        <link rel="canonical" href="https://tim-2020.vercel.app/futur" />
         <meta property="og:title" content="Futur | TIM Maisonneuve" />
         <meta property="og:url" content="https://tim-2020.vercel.app/futur" />
         <meta
@@ -78,10 +83,10 @@ export default function Futur() {
 
       <Link href="/futur/perspectives-universitaires">
         <motion.section
-        initial={{color : lesStyles.couleurInitiale}}
-        animate={{color : lesStyles.couleurInitiale}}
+          initial={{ color: lesStyles.couleurInitiale }}
+          animate={{ color: lesStyles.couleurInitiale }}
           whileHover={{ color: lesStyles.couleurHover }}
-          whileTap={{ scale: 1.010,}}
+          whileTap={{ scale: 1.01 }}
           className={styles.sectionUni}
         >
           <h1>Perspective universitaire</h1>
@@ -91,10 +96,10 @@ export default function Futur() {
 
       <Link href="/futur/stages">
         <motion.section
-        initial={{color : lesStyles.couleurInitiale}}
-        animate={{color : lesStyles.couleurInitiale}}
+          initial={{ color: lesStyles.couleurInitiale }}
+          animate={{ color: lesStyles.couleurInitiale }}
           whileHover={{ color: lesStyles.couleurHover }}
-          whileTap={{ scale: 1.010 }}
+          whileTap={{ scale: 1.01 }}
           className={styles.sectionStage}
         >
           <h1>Stages</h1>
@@ -104,10 +109,10 @@ export default function Futur() {
 
       <Link href="/futur/perspectives-demplois">
         <motion.section
-        initial={{color : lesStyles.couleurInitiale}}
-        animate={{color : lesStyles.couleurInitiale}}
+          initial={{ color: lesStyles.couleurInitiale }}
+          animate={{ color: lesStyles.couleurInitiale }}
           whileHover={{ color: lesStyles.couleurHover }}
-          whileTap={{ scale: 1.010 }}
+          whileTap={{ scale: 1.01 }}
           className={styles.sectionEmploi}
         >
           <h1>Perspectives d'emploi</h1>

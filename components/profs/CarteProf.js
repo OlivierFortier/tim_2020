@@ -1,48 +1,46 @@
-import styles from "./CarteProf.module.scss";
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {useState, useEffect} from "react";
-import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import styles from './CarteProf.module.scss';
+import { useListeThemes, useTheme } from '../../hooks/contexteTheme';
 
 export default function CarteProf({ prof }) {
+  // gestion des couleurs selont le thème
+  const theme = useTheme();
+  const listeThemes = useListeThemes();
 
+  const [lesStyles, setLesStyles] = useState({
+    classeFiltre: styles.unProfArt,
+  });
 
-   // gestion des couleurs selont le thème
-   const theme = useTheme();
-   const listeThemes = useListeThemes();
- 
-   const [lesStyles, setLesStyles] = useState({
-     classeFiltre: styles.unProfArt,
-   });
- 
-   useEffect(() => {
-     switch (theme) {
-       case listeThemes.art:
-         setLesStyles({
-           classeFiltre: styles.unProfArt,
-         });
-         break;
- 
-       case listeThemes.code:
-         setLesStyles({
-           classeFiltre: styles.unProfCode,
-         });
-         break;
- 
-       case listeThemes.parent:
-         setLesStyles({
-           classeFiltre: styles.unProf,
-         });
-         break;
- 
-       default:
-         setLesStyles({
-           classeFiltre: styles.unProfArt,
-         });
-         break;
-     }
-   }, [theme]);
+  useEffect(() => {
+    switch (theme) {
+      case listeThemes.art:
+        setLesStyles({
+          classeFiltre: styles.unProfArt,
+        });
+        break;
+
+      case listeThemes.code:
+        setLesStyles({
+          classeFiltre: styles.unProfCode,
+        });
+        break;
+
+      case listeThemes.parent:
+        setLesStyles({
+          classeFiltre: styles.unProf,
+        });
+        break;
+
+      default:
+        setLesStyles({
+          classeFiltre: styles.unProfArt,
+        });
+        break;
+    }
+  }, [theme]);
 
   return (
     <Link href={`/professeurs/${prof.slug}`}>
@@ -67,7 +65,7 @@ export default function CarteProf({ prof }) {
               src="/images/cam.jpg"
               loading="lazy"
               className={styles.imgProf}
-              alt={`photo de ${"placeholder"}`}
+              alt={`photo de ${'placeholder'}`}
             />
           )}
           <h3 className={styles.nomProf}>{prof.nom}</h3>

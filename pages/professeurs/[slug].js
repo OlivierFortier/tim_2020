@@ -1,51 +1,49 @@
-import styles from "./pageUnProf.module.scss";
-import Image from "next/image";
-import { gql } from "graphql-request";
-import { faireRequeteGql } from "../../libs/requetesDonnes";
-import Markdown from "markdown-to-jsx";
-import { motion } from "framer-motion";
-import Head from "next/head";
-import {useState, useEffect} from "react";
-import { useListeThemes, useTheme } from "../../hooks/contexteTheme";
+import Image from 'next/image';
+import { gql } from 'graphql-request';
+import Markdown from 'markdown-to-jsx';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { faireRequeteGql } from '../../libs/requetesDonnes';
+import styles from './pageUnProf.module.scss';
+import { useListeThemes, useTheme } from '../../hooks/contexteTheme';
 
 export default function PageUnProfesseur(leProf) {
+  // gestion des couleurs selont le thème
+  const theme = useTheme();
+  const listeThemes = useListeThemes();
 
-  
-   // gestion des couleurs selont le thème
-   const theme = useTheme();
-   const listeThemes = useListeThemes();
- 
-   const [lesStyles, setLesStyles] = useState({
-     classeFiltre: styles.unProfArt,
-   });
- 
-   useEffect(() => {
-     switch (theme) {
-       case listeThemes.art:
-         setLesStyles({
-           classeFiltre: styles.unProfArt,
-         });
-         break;
- 
-       case listeThemes.code:
-         setLesStyles({
-           classeFiltre: styles.unProfCode,
-         });
-         break;
- 
-       case listeThemes.parent:
-         setLesStyles({
-           classeFiltre: styles.unProf,
-         });
-         break;
- 
-       default:
-         setLesStyles({
-           classeFiltre: styles.unProfArt,
-         });
-         break;
-     }
-   }, [theme]);
+  const [lesStyles, setLesStyles] = useState({
+    classeFiltre: styles.unProfArt,
+  });
+
+  useEffect(() => {
+    switch (theme) {
+      case listeThemes.art:
+        setLesStyles({
+          classeFiltre: styles.unProfArt,
+        });
+        break;
+
+      case listeThemes.code:
+        setLesStyles({
+          classeFiltre: styles.unProfCode,
+        });
+        break;
+
+      case listeThemes.parent:
+        setLesStyles({
+          classeFiltre: styles.unProf,
+        });
+        break;
+
+      default:
+        setLesStyles({
+          classeFiltre: styles.unProfArt,
+        });
+        break;
+    }
+  }, [theme]);
 
   return (
     <motion.main
@@ -61,12 +59,12 @@ export default function PageUnProfesseur(leProf) {
         <meta
           name="Description"
           content={`Page de ${leProf.nom} professeur des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
-        ></meta>
+        />
         <link
           rel="canonical"
           href={`https://tim-2020.vercel.app/professeurs/${leProf.slug}`}
-        ></link>
-        <meta property="og:title" content={`${leProf.nom} | TIM Maisonneuve` }/>
+        />
+        <meta property="og:title" content={`${leProf.nom} | TIM Maisonneuve`} />
         <meta
           property="og:url"
           content={`https://tim-2020.vercel.app/professeurs/${leProf.slug}`}
@@ -80,7 +78,7 @@ export default function PageUnProfesseur(leProf) {
         <div className={lesStyles.classeFiltre}>
           <Image
             className={styles.imgProf}
-            src={leProf?.photo?.url ? leProf.photo.url : "/images/cam.jpg"}
+            src={leProf?.photo?.url ? leProf.photo.url : '/images/cam.jpg'}
             layout="fill"
             unsized
             quality={1}

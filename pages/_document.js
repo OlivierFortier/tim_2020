@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 /* NE PAS TOUCHER SVP 
 NE PAS TOUCHER SVP 
@@ -15,7 +15,7 @@ class MyDocument extends Document {
     return (
       <Html lang="fr">
         <Head>
-          <meta charSet="UTF-8"></meta>
+          <meta charSet="UTF-8" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta property="og:image" content="/images/Logo_TIM.png" />
           <meta property="og:locale" content="fr_FR" />
@@ -43,7 +43,7 @@ class MyDocument extends Document {
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
           <meta name="msapplication-TileColor" content="#2d89ef" />
-          <meta name="theme-color" content="#000000"></meta>
+          <meta name="theme-color" content="#000000" />
         </Head>
         <body>
           <Main />

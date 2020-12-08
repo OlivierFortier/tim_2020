@@ -3,14 +3,14 @@ export default function Chargement(props) {
   return (
     <>
       <div className="lds-ring" {...props}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div />
+        <div />
+        <div />
+        <div />
       </div>
       <style jsx>{`
         .lds-ring {
-            margin: 40%;
+          margin: 40%;
           display: inline-block;
           position: relative;
           width: 80px;
