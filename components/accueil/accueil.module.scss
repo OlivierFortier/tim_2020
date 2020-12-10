@@ -33,6 +33,7 @@
   flex-direction: column;
   justify-content: flex-end;
   z-index: 3;
+  white-space: nowrap;
   h1 {
     a {
       &:link,
@@ -48,10 +49,10 @@
 .titreIntro {
 
   font-family: NeueMontreal;
-  font-size: 3.5vw;
+  font-size: 5rem;
   font-weight: 300;
   text-transform: uppercase;
-  line-height: 4.5vw;
+  line-height: 6.5rem;
   margin: 0;
   padding-left: 55px;
   position: relative;
@@ -155,7 +156,7 @@
     height: 50vh;
     justify-content: center;
     border-left: 3px solid white;
-
+    white-space: unset;
     h1 {
       padding-left: 10%;
       width: 95%;
@@ -223,10 +224,11 @@
     height: 50vh;
     justify-content: center;
     border-left: 3px solid white;
-
+    white-space: unset;
     h1 {
       padding-left: 10%;
       width: 95%;
+      max-width: 60vw;
       br {
         display: none;
       }

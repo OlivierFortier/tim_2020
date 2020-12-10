@@ -8,9 +8,7 @@ import styles from './introduction.module.scss';
 import { useListeThemes, useTheme } from '../hooks/contexteTheme';
 import Canvas3D from '../components/3d/Canvas3D';
 
-export default function Introduction({typeForme}) {
-
-
+export default function Introduction({ typeForme }) {
   // changer couleur selon theme
   const theme = useTheme();
   const listeThemes = useListeThemes();
