@@ -58,6 +58,7 @@ export default function Accueil() {
   // ajustement des styles selon le thème choisi
   useEffect(() => {
     document.querySelector('#header-site').style.display = 'flex';
+    document.querySelector('#navSecondaire').style.display = 'flex';
 
     switch (theme) {
       case listeThemes.art:
