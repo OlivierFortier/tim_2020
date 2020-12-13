@@ -23,10 +23,6 @@ export default function BoutonSelectionTheme() {
   // gestions de changement de thèmes (passer d'un thème à l'autre)
   const [indexTableau, setIndexTableau] = useState(tableauTheme.indexOf(theme));
 
-  useEffect(() => {
-    mettreAjourTheme();
-  }, [indexTableau]);
-
   function mettreAjourTheme() {
     if (indexTableau > 2) {
       setIndexTableau(0);
@@ -38,6 +34,12 @@ export default function BoutonSelectionTheme() {
       maxAge: 2592000,
     });
   }
+
+  useEffect(() => {
+    if (Object.keys(cookies).length != 0) {
+      mettreAjourTheme();
+    }
+  }, [indexTableau]);
 
   // obtenir l'état du menu pour rendre la couleur du bouton visible
   const snapShot = useProxy(etatMenu);
