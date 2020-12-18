@@ -50,8 +50,8 @@ export default function PageUnProjet(leProjet) {
           />
         </motion.span>
         <motion.span initial={{opacity:0, x: 100}} animate={{opacity: 1 ,x: 0}} transition={{duration: 0.75}} className={styles.infoProjet}>
-          <h1>{leProjet.typeDuProjet}</h1>
-          <h2>{leProjet.titreDuProjet}</h2>
+         {leProjet.typeDuProjet && <h1>{leProjet.typeDuProjet}</h1>}
+        {leProjet.titreDuProjet &&  <h2>{leProjet.titreDuProjet}</h2>}
           {leProjet.lienExterne && <a target="_blank" href={leProjet.lienExterne} className={styles.lienProjet}>Consulter le projet</a>}
         </motion.span>
       </section>

@@ -61,7 +61,9 @@ export default function unFutur(leFutur) {
         >
           {leFutur.enTte && <h2>{leFutur.enTte}</h2>}
 
-          <Markdown className={styles.contenu}>{leFutur.contenu}</Markdown>
+          {leFutur.contenu && (
+            <Markdown className={styles.contenu}>{leFutur.contenu}</Markdown>
+          )}
         </motion.article>
       </motion.section>
     </motion.main>

@@ -89,7 +89,7 @@ export default function Futur() {
           whileTap={{ scale: 1.01 }}
           className={styles.sectionUni}
         >
-          <h1>Perspective universitaire</h1>
+          <h1>Perspectives universitaires</h1>
           <h3>Poursuivre ses études et approfondir ses connaissances.</h3>
         </motion.section>
       </Link>

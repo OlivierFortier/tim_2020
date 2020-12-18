@@ -91,13 +91,13 @@ export default function PageUnProfesseur(leProf) {
         </div>
         <article>
           <span className={styles.conteneurTitres}>
-           {leProf.nom && <h1>{leProf.nom}</h1>}
-           {leProf.specialisation && <h5>{leProf.specialisation}</h5>}
+            {leProf.nom && <h1>{leProf.nom}</h1>}
+            {leProf.specialisation && <h5>{leProf.specialisation}</h5>}
           </span>
 
           <div className={styles.contenuTexte}>
             <Markdown className={styles.descriptionProf}>
-             {leProf.description && leProf.description}
+              {leProf.description && leProf.description}
             </Markdown>
           </div>
         </article>

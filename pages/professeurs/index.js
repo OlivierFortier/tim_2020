@@ -141,7 +141,11 @@ export default function Professeurs({ items }) {
                 loading="lazy"
                 layout="fill"
                 unsized
-                src={profsAlea[0]?.photo?.url ? profsAlea[0].photo.url : "/images/cam.jpg"}
+                src={
+                  profsAlea[0]?.photo?.url
+                    ? profsAlea[0].photo.url
+                    : '/images/cam.jpg'
+                }
                 alt={profsAlea[0]?.nom ? profsAlea[0].nom : "image d'un prof"}
               />
             </motion.div>
@@ -161,7 +165,11 @@ export default function Professeurs({ items }) {
                 loading="lazy"
                 layout="fill"
                 unsized
-                src={profsAlea[1]?.photo?.url ? profsAlea[1].photo.url : "/images/cam.jpg"}
+                src={
+                  profsAlea[1]?.photo?.url
+                    ? profsAlea[1].photo.url
+                    : '/images/cam.jpg'
+                }
                 alt={profsAlea[1]?.nom ? profsAlea[1].nom : "image d'un prof"}
               />
             </motion.div>
@@ -181,7 +189,11 @@ export default function Professeurs({ items }) {
                 loading="lazy"
                 layout="fill"
                 unsized
-                src={profsAlea[2]?.photo?.url ? profsAlea[2].photo.url : "/images/cam.jpg"}
+                src={
+                  profsAlea[2]?.photo?.url
+                    ? profsAlea[2].photo.url
+                    : '/images/cam.jpg'
+                }
                 alt={profsAlea[2]?.nom ? profsAlea[2].nom : "image d'un prof"}
               />
             </motion.div>
@@ -203,7 +215,11 @@ export default function Professeurs({ items }) {
                 loading="lazy"
                 layout="fill"
                 unsized
-                src={profsAlea[3]?.photo?.url ? profsAlea[3].photo.url : "/images/cam.jpg"}
+                src={
+                  profsAlea[3]?.photo?.url
+                    ? profsAlea[3].photo.url
+                    : '/images/cam.jpg'
+                }
                 alt={profsAlea[3]?.nom ? profsAlea[3].nom : "image d'un prof"}
               />
             </motion.div>
@@ -230,7 +246,11 @@ export default function Professeurs({ items }) {
                 loading="lazy"
                 layout="fill"
                 unsized
-                src={profsAlea[4]?.photo?.url ? profsAlea[4].photo.url : "/images/cam.jpg"}
+                src={
+                  profsAlea[4]?.photo?.url
+                    ? profsAlea[4].photo.url
+                    : '/images/cam.jpg'
+                }
                 alt={profsAlea[4]?.nom ? profsAlea[4].nom : "image d'un prof"}
               />
             </motion.div>
@@ -250,7 +270,11 @@ export default function Professeurs({ items }) {
                 loading="lazy"
                 layout="fill"
                 unsized
-                src={profsAlea[5]?.photo?.url ? profsAlea[5].photo.url : "/images/cam.jpg"}
+                src={
+                  profsAlea[5]?.photo?.url
+                    ? profsAlea[5].photo.url
+                    : '/images/cam.jpg'
+                }
                 alt={profsAlea[5]?.nom ? profsAlea[5].nom : "image d'un prof"}
               />
             </motion.div>
@@ -271,7 +295,11 @@ export default function Professeurs({ items }) {
                 loading="lazy"
                 layout="fill"
                 unsized
-                src={profsAlea[6]?.photo?.url ? profsAlea[6].photo.url : "/images/cam.jpg"}
+                src={
+                  profsAlea[6]?.photo?.url
+                    ? profsAlea[6].photo.url
+                    : '/images/cam.jpg'
+                }
                 alt={profsAlea[6]?.nom ? profsAlea[6].nom : "image d'un prof"}
               />
             </motion.div>
@@ -291,7 +319,11 @@ export default function Professeurs({ items }) {
                 loading="lazy"
                 layout="fill"
                 unsized
-                src={profsAlea[7]?.photo?.url ? profsAlea[7].photo.url : "/images/cam.jpg"}
+                src={
+                  profsAlea[7]?.photo?.url
+                    ? profsAlea[7].photo.url
+                    : '/images/cam.jpg'
+                }
                 alt={profsAlea[7]?.nom ? profsAlea[7].nom : "image d'un prof"}
               />
             </motion.div>
@@ -311,7 +343,11 @@ export default function Professeurs({ items }) {
                 loading="lazy"
                 layout="fill"
                 unsized
-                src={profsAlea[8]?.photo?.url ? profsAlea[8].photo.url : "/images/cam.jpg"}
+                src={
+                  profsAlea[8]?.photo?.url
+                    ? profsAlea[8].photo.url
+                    : '/images/cam.jpg'
+                }
                 alt={profsAlea[8]?.nom ? profsAlea[8].nom : "image d'un prof"}
               />
             </motion.div>
