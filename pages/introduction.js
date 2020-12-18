@@ -127,7 +127,7 @@ export default function Introduction({ typeForme }) {
         <Canvas3D
           classeCanvas={styles.canvas3D}
           couleurDuMesh={lesStyles.couleurCube}
-          typeForme={typeForme}
+          typeForme={typeForme || 'Cube'}
         />
       </motion.div>
 
@@ -140,10 +140,10 @@ export default function Introduction({ typeForme }) {
         }}
         className={styles.textePage}
       >
-        Le TIM c’est l’endroit parfait pour étudier les nouvelles technologies
+        Le TIM, c’est l’endroit parfait pour étudier les nouvelles technologies
         de l’industrie. On fait de la programmation, des jeux, de la vidéo, de
-        la VR, de la photographie, des sites internets, de l’animation et de la
-        3D.
+        la VR, de la photographie, des sites web, de l’animation , de la 3D, et
+        bien plus encore !
       </motion.p>
 
       <Link href="/cours">

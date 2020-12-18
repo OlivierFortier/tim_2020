@@ -85,7 +85,7 @@ export default function Inscription() {
         initial={{ color: lesStyles.couleurInitiale }}
         animate={{ color: lesStyles.couleurInitiale }}
         whileHover={{ color: lesStyles.couleurHover }}
-        href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/"
+        href="https://admission.sram.qc.ca/"
         target="_blank"
       >
         Soumettre ma demande d'admission.
