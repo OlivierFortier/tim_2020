@@ -16,7 +16,7 @@ export default function CarteProf({ infoCarte }) {
               loading="lazy"
               quality={1}
               className={styles.imgInfo}
-              alt={`photo de ${"infoCarte.nom"}`}
+              alt={`photo de ${infoCarte.titreDuProjet}`}
             />
           ) : (
             <span className={styles.conteneurImage}>
@@ -27,7 +27,7 @@ export default function CarteProf({ infoCarte }) {
                 src="/images/cam.jpg"
                 loading="lazy"
                 className={styles.imgInfo}
-                alt={`photo de ${"yeet"}`}
+                alt={`photo de ${'projet'}`}
               />
             </span>
           )}
