@@ -49,7 +49,6 @@ export async function getStaticProps() {
       professeurCollection {
         items {
           nom
-          specialisation
           photo {
             url
             width

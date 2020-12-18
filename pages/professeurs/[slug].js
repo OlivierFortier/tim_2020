@@ -55,10 +55,12 @@ export default function PageUnProfesseur(leProf) {
       key="pageUnProf"
     >
       <Head>
-        <title>TIM | {leProf.nom}</title>
+        <title>TIM | {leProf.nom ? leProf.nom : 'un prof'}</title>
         <meta
           name="Description"
-          content={`Page de ${leProf.nom} professeur des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
+          content={`Page de ${
+            leProf.nom ? leProf.nom : 'un prof'
+          } professeur des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
         />
         <link
           rel="canonical"
@@ -71,7 +73,9 @@ export default function PageUnProfesseur(leProf) {
         />
         <meta
           property="og:description"
-          content={`Page de ${leProf.nom} professeur des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
+          content={`Page de ${
+            leProf.nom ? leProf.nom : 'un prof'
+          } professeur des Techniques d'Intégration Multimédia du Collège Maisonneuve`}
         />
       </Head>
       <section>
@@ -87,13 +91,13 @@ export default function PageUnProfesseur(leProf) {
         </div>
         <article>
           <span className={styles.conteneurTitres}>
-            <h1>{leProf.nom}</h1>
-            <h5>{leProf.specialisation}</h5>
+           {leProf.nom && <h1>{leProf.nom}</h1>}
+           {leProf.specialisation && <h5>{leProf.specialisation}</h5>}
           </span>
 
           <div className={styles.contenuTexte}>
             <Markdown className={styles.descriptionProf}>
-              {leProf.description}
+             {leProf.description && leProf.description}
             </Markdown>
           </div>
         </article>

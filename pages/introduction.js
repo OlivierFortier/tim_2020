@@ -127,7 +127,7 @@ export default function Introduction({ typeForme }) {
         <Canvas3D
           classeCanvas={styles.canvas3D}
           couleurDuMesh={lesStyles.couleurCube}
-          typeForme={typeForme}
+          typeForme={typeForme || 'Cube'}
         />
       </motion.div>
 

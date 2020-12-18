@@ -69,7 +69,6 @@ export default function CarteProf({ prof }) {
             />
           )}
           <h3 className={styles.nomProf}>{prof.nom}</h3>
-          {/* <h4 className={styles.specialisationProf}>{prof.specialisation}</h4> */}
         </motion.div>
       </a>
     </Link>
