@@ -7,6 +7,7 @@
 }
 
 .conteneurImage {
+  cursor: pointer;
   display: flex;
   position: absolute;
   justify-content: flex-end;
@@ -15,7 +16,7 @@
   text-align: right;
   bottom: 5%;
   right: 5%;
-  filter: grayscale(1);
+  
 }
 
 .texteLogo {
@@ -25,6 +26,7 @@
 }
 
 .logoCollege {
+  filter: grayscale(1);
   height: 50px;
   width: 50px;
 }

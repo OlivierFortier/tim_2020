@@ -127,21 +127,30 @@ export default function Menu() {
                     transition: { duration: 1, ease: 'easeInOut' },
                   }}
                 >
-                  <motion.span
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className={styles.conteneurImage}
-                  >
-                    <h6 className={styles.texteLogo}>Collège de Maisonneuve</h6>
-                    <Image
-                      layout="fill"
-                      unsized
-                      src="/images/logo-maisonneuve.webp"
-                      className={styles.logoCollege}
-                    />
-                  </motion.span>
+                  <Link href="https://www.cmaisonneuve.qc.ca/programme/integration-multimedia/">
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      whileHover={{
+                        color: '#FF7F50',
+                        transition: { delay: 0 },
+                      }}
+                      transition={{ duration: 0.6, delay: 0.3 }}
+                      className={styles.conteneurImage}
+                    >
+                      <h6 className={styles.texteLogo}>
+                        Collège de Maisonneuve
+                      </h6>
+
+                      <Image
+                        layout="fill"
+                        unsized
+                        src="/images/logo-maisonneuve.webp"
+                        className={styles.logoCollege}
+                      />
+                    </motion.span>
+                  </Link>
                   <motion.div
                     key="liensPages"
                     className={styles.conteneurListePages}
