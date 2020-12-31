@@ -9,7 +9,7 @@ import Head from 'next/head';
 // import Router from 'next/router';
 import { FournisseurTheme } from '../hooks/contexteTheme';
 import Layout from '../components/layout';
-import { useTransitionFix } from '../hooks/useTransitionFix.ts';
+import { useTransitionFix } from '../hooks/useTransitionFix';
 
 // const routeChange = () => {
 //   // Temporary fix to avoid flash of unstyled content
