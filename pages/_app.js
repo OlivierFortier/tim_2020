@@ -7,6 +7,7 @@ import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 
 // import Router from 'next/router';
+import { useState } from 'react';
 import { FournisseurTheme } from '../hooks/contexteTheme';
 import Layout from '../components/layout';
 import { useTransitionFix } from '../hooks/useTransitionFix';
@@ -30,6 +31,8 @@ import { useTransitionFix } from '../hooks/useTransitionFix';
 // Router.events.on('routeChangeStart', routeChange);
 
 function MyApp({ Component, pageProps, router }) {
+  // const [compteurPages, setCompteurPages] = useState(0);
+
   const transitionCallback = useTransitionFix();
 
   return (
