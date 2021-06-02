@@ -27,13 +27,13 @@ export default function projets(lesProjets) {
         ></meta>
         <link
           rel="canonical"
-          href="https://tim-2020.vercel.app/étudiants/projets"
+          href="https://tim.cmaisonneuve.qc.ca/étudiants/projets"
         ></link>
         <meta
           property="og:title"
           content="Projets étudiants | TIM Maisonneuve"
         />
-        <meta property="og:url" content="https://tim-2020.vercel.app/projets" />
+        <meta property="og:url" content="https://tim.cmaisonneuve.qc.ca/projets" />
         <meta
           property="og:description"
           content="Page des projets étudiants des Techniques d'Intégration Multimédia du Collège Maisonneuve"

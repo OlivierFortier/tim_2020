@@ -64,12 +64,12 @@ export default function PageUnProfesseur(leProf) {
         />
         <link
           rel="canonical"
-          href={`https://tim-2020.vercel.app/professeurs/${leProf.slug}`}
+          href={`https://tim.cmaisonneuve.qc.ca/professeurs/${leProf.slug}`}
         />
         <meta property="og:title" content={`${leProf.nom} | TIM Maisonneuve`} />
         <meta
           property="og:url"
-          content={`https://tim-2020.vercel.app/professeurs/${leProf.slug}`}
+          content={`https://tim.cmaisonneuve.qc.ca/professeurs/${leProf.slug}`}
         />
         <meta
           property="og:description"

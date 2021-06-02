@@ -87,11 +87,11 @@ export default function Introduction({ typeForme }) {
           name="Description"
           content="Page d'introduction des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
-        <link rel="canonical" href="https://tim-2020.vercel.app/introduction" />
+        <link rel="canonical" href="https://tim.cmaisonneuve.qc.ca/introduction" />
         <meta property="og:title" content="Introduction | TIM Maisonneuve" />
         <meta
           property="og:url"
-          content="https://tim-2020.vercel.app/introduction"
+          content="https://tim.cmaisonneuve.qc.ca/introduction"
         />
         <meta
           property="og:description"

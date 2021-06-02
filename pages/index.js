@@ -42,12 +42,12 @@ export default function Home() {
           name="Description"
           content="Techniques d'Intégration Multimédia du Collège Maisonneuve. Une éducation à la fine pointe de l'industrie. Apprenez le design web, la programmation, le développement de jeux, la modélisation 3D, et bien plus encore!"
         />
-        <link rel="canonical" href="https://tim-2020.vercel.app/" />
+        <link rel="canonical" href="https://tim.cmaisonneuve.qc.ca/" />
         <meta
           property="og:title"
           content="Accueil | TIM | Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
-        <meta property="og:url" content="https://tim-2020.vercel.app/" />
+        <meta property="og:url" content="https://tim.cmaisonneuve.qc.ca/" />
         <meta
           property="og:description"
           content="Techniques d'Intégration Multimédia du Collège Maisonneuve. Une éducation à la fine pointe de l'industrie. Apprenez le design web, la programmation, le développement de jeux, la modélisation 3D, et bien plus encore!"

@@ -62,11 +62,11 @@ export default function Inscription() {
           name="Description"
           content="Page d'inscription des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
-        <link rel="canonical" href="https://tim-2020.vercel.app/inscription" />
+        <link rel="canonical" href="https://tim.cmaisonneuve.qc.ca/inscription" />
         <meta property="og:title" content="Inscription | TIM Maisonneuve" />
         <meta
           property="og:url"
-          content="https://tim-2020.vercel.app/inscription"
+          content="https://tim.cmaisonneuve.qc.ca/inscription"
         />
         <meta
           property="og:description"

@@ -23,12 +23,12 @@ export default function PageUnProjet(leProjet) {
         ></meta>
         <link
           rel="canonical"
-          href={`https://tim-2020.vercel.app/etudiants/${leProjet.slug}`}
+          href={`https://tim.cmaisonneuve.qc.ca/etudiants/${leProjet.slug}`}
         ></link>
         <meta property="og:title" content={`${leProjet.titreDuProjet} | TIM Maisonneuve`} />
         <meta
           property="og:url"
-          content={`https://tim-2020.vercel.app/etudiants/${leProjet.slug}`}
+          content={`https://tim.cmaisonneuve.qc.ca/etudiants/${leProjet.slug}`}
         />
         <meta
           property="og:description"

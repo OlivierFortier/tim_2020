@@ -24,7 +24,7 @@ export default function unFutur(leFutur) {
         />
         <link
           rel="canonical"
-          href={`https://tim-2020.vercel.app/futur/${leFutur.slug}`}
+          href={`https://tim.cmaisonneuve.qc.ca/futur/${leFutur.slug}`}
         />
         <meta
           property="og:title"
@@ -32,7 +32,7 @@ export default function unFutur(leFutur) {
         />
         <meta
           property="og:url"
-          content={`https://tim-2020.vercel.app/futur/${leFutur.slug}`}
+          content={`https://tim.cmaisonneuve.qc.ca/futur/${leFutur.slug}`}
         />
         <meta
           property="og:description"

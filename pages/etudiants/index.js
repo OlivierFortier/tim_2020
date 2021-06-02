@@ -67,11 +67,11 @@ export default function index() {
           name="Description"
           content="Page de la vie étudiante des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
-        <link rel="canonical" href="https://tim-2020.vercel.app/etudiants" />
+        <link rel="canonical" href="https://tim.cmaisonneuve.qc.ca/etudiants" />
         <meta property="og:title" content="Vie étudiante | TIM Maisonneuve" />
         <meta
           property="og:url"
-          content="https://tim-2020.vercel.app/etudiants"
+          content="https://tim.cmaisonneuve.qc.ca/etudiants"
         />
         <meta
           property="og:description"

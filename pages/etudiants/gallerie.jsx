@@ -47,9 +47,9 @@ export default function gallerie(lesPhotos) {
           name="Description"
           content="Page de la gallerie de photos qui montre les étudiants des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         ></meta>
-        <link rel="canonical" href="https://tim-2020.vercel.app/etudiants/gallerie"></link>
+        <link rel="canonical" href="https://tim.cmaisonneuve.qc.ca/etudiants/gallerie"></link>
         <meta property="og:title" content="Gallerie Vie Étudiante | TIM Maisonneuve" />
-        <meta property="og:url" content="https://tim-2020.vercel.app/etudiants/gallerie" />
+        <meta property="og:url" content="https://tim.cmaisonneuve.qc.ca/etudiants/gallerie" />
         <meta
           property="og:description"
           content="Page de la gallerie de photos qui montre les étudiants des Techniques d'Intégration Multimédia du Collège Maisonneuve"
