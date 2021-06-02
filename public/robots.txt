@@ -2,4 +2,4 @@ User-agent: *
 Disallow: 
 Allow: /
 
-Sitemap: https://tim-2020.vercel.app/sitemap.xml
+Sitemap: https://tim.cmaisonneuve.qc.ca/sitemap.xml

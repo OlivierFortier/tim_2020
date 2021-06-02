@@ -69,9 +69,9 @@ export default function Futur() {
           name="Description"
           content="Page qui décrit les opportunités après le DEC: Les stages, les perspectives d'emplois et les universités, aux Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
-        <link rel="canonical" href="https://tim-2020.vercel.app/futur" />
+        <link rel="canonical" href="https://tim.cmaisonneuve.qc.ca/futur" />
         <meta property="og:title" content="Futur | TIM Maisonneuve" />
-        <meta property="og:url" content="https://tim-2020.vercel.app/futur" />
+        <meta property="og:url" content="https://tim.cmaisonneuve.qc.ca/futur" />
         <meta
           property="og:description"
           content="Page qui décrit les opportunités après le DEC: Les stages, les perspectives d'emplois et les universités, aux Techniques d'Intégration Multimédia du Collège Maisonneuve"

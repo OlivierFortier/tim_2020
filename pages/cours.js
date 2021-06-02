@@ -118,9 +118,9 @@ export default function Cours({ listeCours }) {
           name="Description"
           content="Page des cours des Techniques d'Intégration Multimédia du Collège Maisonneuve"
         />
-        <link rel="canonical" href="https://tim-2020.vercel.app/cours" />
+        <link rel="canonical" href="https://tim.cmaisonneuve.qc.ca/cours" />
         <meta property="og:title" content="Cours | TIM Maisonneuve" />
-        <meta property="og:url" content="https://tim-2020.vercel.app/cours" />
+        <meta property="og:url" content="https://tim.cmaisonneuve.qc.ca/cours" />
         <meta
           property="og:description"
           content="Page des cours des Techniques d'Intégration Multimédia du Collège Maisonneuve"

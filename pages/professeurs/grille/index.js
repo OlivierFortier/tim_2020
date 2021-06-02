@@ -23,7 +23,7 @@ export default function Grille({ listeProfs }) {
         />
         <link
           rel="canonical"
-          href="https://tim-2020.vercel.app/professeurs/grille"
+          href="https://tim.cmaisonneuve.qc.ca/professeurs/grille"
         />
         <meta
           property="og:title"
@@ -31,7 +31,7 @@ export default function Grille({ listeProfs }) {
         />
         <meta
           property="og:url"
-          content="https://tim-2020.vercel.app/professeurs/grille"
+          content="https://tim.cmaisonneuve.qc.ca/professeurs/grille"
         />
         <meta
           property="og:description"
