@@ -19,6 +19,7 @@ class MyDocument extends Document {
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta property="og:image" content="/images/Logo_TIM.png" />
           <meta property="og:locale" content="fr_FR" />
+          <meta name="robots" content="noindex" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
