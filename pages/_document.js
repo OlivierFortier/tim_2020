@@ -19,6 +19,22 @@ class MyDocument extends Document {
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta property="og:image" content="/images/Logo_TIM.png" />
           <meta property="og:locale" content="fr_FR" />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
           <meta
             property="og:site_name"
             content="Techniques d'Intégration Multimédia | Collège Maisonneuve"
