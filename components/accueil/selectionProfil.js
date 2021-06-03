@@ -81,7 +81,7 @@ export default function SelectionProfil({ changerEtape }) {
             onClick={() => choisirTheme(listeThemes.art)}
             className={styles.art}
           >
-            <h2>Artiste Digital</h2>
+            <h2>Artiste Numérique</h2>
           </motion.span>
           <motion.span
             initial={{
