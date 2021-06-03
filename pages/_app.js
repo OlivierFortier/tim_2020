@@ -7,6 +7,7 @@ import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import * as ga from '../libs/ga'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react';
 
 import Router from 'next/router';
 import { FournisseurTheme } from '../hooks/contexteTheme';
