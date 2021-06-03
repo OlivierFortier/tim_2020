@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: 
-Allow: /
+Disallow: /
+Allow: 
 
 Sitemap: https://tim.cmaisonneuve.qc.ca/sitemap.xml
