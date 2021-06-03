@@ -5,6 +5,7 @@ import 'swiper/components/pagination/pagination.scss';
 import '../styles/styles.scss';
 import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
+import * as ga from '../libs/ga'
 
 import Router from 'next/router';
 import { FournisseurTheme } from '../hooks/contexteTheme';
@@ -29,6 +30,22 @@ Router.events.on('routeChangeComplete', routeChange);
 Router.events.on('routeChangeStart', routeChange);
 
 function MyApp({ Component, pageProps, router }) {
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url)
+    }
+    //When the component is mounted, subscribe to router changes
+    //and log those page views
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
   return (
     <FournisseurTheme>
       <Layout>
