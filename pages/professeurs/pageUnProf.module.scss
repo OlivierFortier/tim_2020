@@ -2,9 +2,40 @@
   height: 70vh;
   margin: 0 15%;
 
+  
+
   section {
     display: flex;
     height: inherit;
+    position: relative;
+
+    .lienRetour {
+      position : absolute;
+      bottom: -5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media (min-width: 310px) and (max-width: 359px) {
+        display: none;
+      }
+
+      @media (min-width: 360px) and (max-width: 424px) {
+        bottom: -13%;
+        width: 100%;
+      }
+
+      @media (min-width: 425px) and (max-width: 767px) {
+        bottom: -20%;
+        width: 100%;
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        bottom: -17%;
+        width: 100%;
+      }
+
+    }
 
     .imgProf {
       height: 65vh;
@@ -170,7 +201,7 @@
 
         overflow-y: scroll;
 
-         a {
+        a {
           color: unset;
         }
 

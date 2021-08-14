@@ -3,10 +3,12 @@ import { gql } from 'graphql-request';
 import Markdown from 'markdown-to-jsx';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { faireRequeteGql } from '../../libs/requetesDonnes';
 import styles from './pageUnProf.module.scss';
 import { useListeThemes, useTheme } from '../../hooks/contexteTheme';
+import {BiArrowBack} from 'react-icons/bi';
 
 export default function PageUnProfesseur(leProf) {
   // gestion des couleurs selont le thème
@@ -17,30 +19,36 @@ export default function PageUnProfesseur(leProf) {
     classeFiltre: styles.unProfArt,
   });
 
+  const [couleurLien, setCouleurLien] = useState('#fff');
+
   useEffect(() => {
     switch (theme) {
       case listeThemes.art:
         setLesStyles({
           classeFiltre: styles.unProfArt,
         });
+        setCouleurLien('#fff');
         break;
 
       case listeThemes.code:
         setLesStyles({
           classeFiltre: styles.unProfCode,
         });
+        setCouleurLien('#fff');
         break;
 
       case listeThemes.parent:
         setLesStyles({
           classeFiltre: styles.unProf,
         });
+        setCouleurLien('#000');
         break;
 
       default:
         setLesStyles({
           classeFiltre: styles.unProfArt,
         });
+        setCouleurLien('#fff');
         break;
     }
   }, [theme]);
@@ -101,6 +109,12 @@ export default function PageUnProfesseur(leProf) {
             </Markdown>
           </div>
         </article>
+        <Link href="/professeurs/grille">
+            <a className={styles.lienRetour} style={{color: couleurLien}}>
+              <BiArrowBack />
+              Retour à la liste des profs
+            </a>
+        </Link>
       </section>
     </motion.main>
   );
