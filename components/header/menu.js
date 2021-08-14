@@ -264,12 +264,6 @@ export default function Menu() {
                       </a>
                     </Link>
                     <ul className={styles.liensContact}>
-                      <Link href="">
-                        <a target="_blank" onClick={fermerMenu}>
-                          discord
-                        </a>
-                      </Link>
-
                       <Link href="https://www.instagram.com/maisonneuvetim/">
                         <a target="_blank" onClick={fermerMenu}>
                           instagram
