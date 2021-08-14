@@ -1,16 +1,16 @@
-import { Tab, Tabs, TabList, TabPanel, resetIdCounter } from 'react-tabs';
-import { gql } from 'graphql-request';
-import { useState, useEffect } from 'react';
-import { MdArrowDropDown } from 'react-icons/md';
-import { RiArrowDropDownLine } from 'react-icons/ri';
-import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
-import Head from 'next/head';
-import { useOrdreListeCours } from '../hooks/useCours';
-import styles from './cours.module.scss';
-import DetailsCours from '../components/cours/detailsCours';
-import { faireRequeteGql } from '../libs/requetesDonnes';
-import NomCours from '../components/cours/nomCours';
-import { useListeThemes, useTheme } from '../hooks/contexteTheme';
+import { Tab, Tabs, TabList, TabPanel, resetIdCounter } from "react-tabs";
+import { gql } from "graphql-request";
+import { useState, useEffect } from "react";
+import { MdArrowDropDown } from "react-icons/md";
+import { RiArrowDropDownLine } from "react-icons/ri";
+import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import Head from "next/head";
+import { useOrdreListeCours } from "../hooks/useCours";
+import styles from "./cours.module.scss";
+import DetailsCours from "../components/cours/detailsCours";
+import { faireRequeteGql } from "../libs/requetesDonnes";
+import NomCours from "../components/cours/nomCours";
+import { useListeThemes, useTheme } from "../hooks/contexteTheme";
 
 export default function Cours({ listeCours }) {
   // on arrange la liste des cours
@@ -26,7 +26,7 @@ export default function Cours({ listeCours }) {
       // on boucle avec la méthode filter pour prendre seulement les cours qui correspondent à notre filtre
       [...session].filter((cours) => {
         const sujetPrincipal = cours.sujetPrincipal.some((typeCours) =>
-          evenement.target.value !== ''
+          evenement.target.value !== ""
             ? typeCours === evenement.target.value
             : typeCours
         );
@@ -34,7 +34,7 @@ export default function Cours({ listeCours }) {
         const sujetsSecondaires =
           cours.sujetsSecondaires &&
           cours.sujetsSecondaires.some((typeCours) =>
-            evenement.target.value !== ''
+            evenement.target.value !== ""
               ? typeCours === evenement.target.value
               : typeCours
           );
@@ -49,7 +49,7 @@ export default function Cours({ listeCours }) {
   }
 
   // controller l'affichage d'un cours à la fois
-  const [coursAffiche, setCoursAffiche] = useState('');
+  const [coursAffiche, setCoursAffiche] = useState("");
 
   // le tab de la session actuellement sélectionnée
   const [tabActuel, setTabActuel] = useState(0);
@@ -58,37 +58,37 @@ export default function Cours({ listeCours }) {
   const theme = useTheme();
   const listeThemes = useListeThemes();
   const [lesStyles, setLesStyles] = useState({
-    couleurGenerale: '#f18163',
-    couleurBorder: '#f3f1f1',
+    couleurGenerale: "rgb(243, 241, 241)",
+    couleurBorder: "rgb(243, 241, 241)",
   });
 
   useEffect(() => {
     switch (theme) {
       case listeThemes.art:
         setLesStyles({
-          couleurGenerale: '#f18163',
-          couleurBorder: '#f3f1f1',
+          couleurGenerale: "rgb(243, 241, 241)",
+          couleurBorder: "rgb(243, 241, 241)",
         });
         break;
 
       case listeThemes.code:
         setLesStyles({
-          couleurGenerale: '#279728',
-          couleurBorder: '#f3f1f1',
+          couleurGenerale: "rgb(243, 241, 241)",
+          couleurBorder: "rgb(243, 241, 241)",
         });
         break;
 
       case listeThemes.parent:
         setLesStyles({
-          couleurGenerale: '#4F638D',
-          couleurBorder: '#000000',
+          couleurGenerale: "rgb(0,0,0)",
+          couleurBorder: "rgb(0,0,0)",
         });
         break;
 
       default:
         setLesStyles({
-          couleurGenerale: '#f18163',
-          couleurBorder: '#f3f1f1',
+          couleurGenerale: "#f18163",
+          couleurBorder: "#f3f1f1",
         });
         break;
     }
@@ -96,17 +96,17 @@ export default function Cours({ listeCours }) {
 
   return (
     <motion.div
-      initial={{ y: '10vw', opacity: 0 }}
+      initial={{ y: "10vw", opacity: 0 }}
       animate={{
         y: 0,
         x: 0,
         opacity: 1,
-        transition: { ease: 'easeInOut', duration: 0.7 },
+        transition: { ease: "easeInOut", duration: 0.7 },
       }}
       exit={{
-        y: '-50vh',
+        y: "-50vh",
         opacity: 0,
-        transition: { ease: 'easeInOut', duration: 0.5 },
+        transition: { ease: "easeInOut", duration: 0.5 },
       }}
       className={styles.conteneurCours}
       transition={{ duration: 0.8 }}
@@ -120,7 +120,10 @@ export default function Cours({ listeCours }) {
         />
         <link rel="canonical" href="https://tim.cmaisonneuve.qc.ca/cours" />
         <meta property="og:title" content="Cours | TIM Maisonneuve" />
-        <meta property="og:url" content="https://tim.cmaisonneuve.qc.ca/cours" />
+        <meta
+          property="og:url"
+          content="https://tim.cmaisonneuve.qc.ca/cours"
+        />
         <meta
           property="og:description"
           content="Page des cours des Techniques d'Intégration Multimédia du Collège Maisonneuve"
@@ -130,7 +133,7 @@ export default function Cours({ listeCours }) {
         <h1 className={styles.titreCours}>LA LISTE DES COURS</h1>
         <h2 className={styles.titreChoix}>
           J'aime bien &nbsp;
-          <span style={{ position: 'relative' }}>
+          <span style={{ position: "relative" }}>
             <select
               onChange={(evenement) => filtrerCours(evenement)}
               className={styles.selecteur}
@@ -140,7 +143,7 @@ export default function Cours({ listeCours }) {
                 color: lesStyles.couleurGenerale,
               }}
             >
-              <option value="">de tout</option>
+              <option value="">tout</option>
               <option value="Jeux">les jeux</option>
               <option value="Web">le web</option>
               <option value="Design">le design</option>
@@ -152,7 +155,12 @@ export default function Cours({ listeCours }) {
             </select>
             <RiArrowDropDownLine
               color={lesStyles.couleurGenerale}
-              style={{ position: 'absolute', right: '0%', top: '9%' }}
+              style={{
+                position: "absolute",
+                right: "0%",
+                top: "9%",
+                pointerEvents: "none",
+              }}
             />
           </span>
         </h2>

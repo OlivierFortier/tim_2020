@@ -142,7 +142,7 @@ export default function Introduction({ typeForme }) {
       >
         Le TIM, c’est l’endroit parfait pour étudier les nouvelles technologies
         de l’industrie. On fait de la programmation, des jeux, de la vidéo, de
-        la VR, de la photographie, des sites web, de l’animation , de la 3D, et
+        la réalité virtuelle, de la photographie, des sites web, de l’imagerie et de l’animation 2D et 3D, et
         bien plus encore !
       </motion.p>
 
