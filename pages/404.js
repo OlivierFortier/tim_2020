@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 export default function Custom404() {
-  // styles de la page, puisqu'elle est pas importante on n'a pas jugé que c'était nécéssaire de créer un fichier css à part
+  // styles de la page inline
   const mainStyle = {
     display: 'flex',
     flexDirection: 'column',
