@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  
 }
 
 .nomPage {
@@ -9,6 +10,10 @@
   margin: 0;
   margin: 0 auto;
   margin-bottom: 3%;
+  a {
+    color: var(--black);
+    font-size: 1.5rem;
+  }
 }
 
 .sectionPrincipale {
@@ -46,6 +51,9 @@
   .nomPage {
     font-size: 1.5rem;
     margin-bottom: 7%;
+    a {
+      display: none;
+    }
   }
 
   .sectionPrincipale {

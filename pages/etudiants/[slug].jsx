@@ -4,6 +4,7 @@ import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function PageUnProjet(leProjet) {
   return (
@@ -36,9 +37,15 @@ export default function PageUnProjet(leProjet) {
         />
         <meta name="robots" content="noindex" />
       </Head>
-      <h1 className={styles.nomPage}>Projets étudiants</h1>
+      <h1 className={styles.nomPage}>{leProjet.titreDuProjet}
+        <br />
+        <Link href="/etudiants/projets">
+            Retour
+        </Link>
+      </h1>
+      {/* add a next.js link to the /projets page */}
       <section className={styles.sectionPrincipale}>
-        <motion.span initial={{opacity:0, y: 100}} animate={{opacity: 1 ,y: 0}} transition={{duration: 0.75}} className={styles.conteneurImage}>
+        <motion.span initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }} className={styles.conteneurImage}>
           <Image
             unsized
             layout="fill"
@@ -49,9 +56,8 @@ export default function PageUnProjet(leProjet) {
             alt={`photo de ${leProjet.titreDuProjet}`}
           />
         </motion.span>
-        <motion.span initial={{opacity:0, x: 100}} animate={{opacity: 1 ,x: 0}} transition={{duration: 0.75}} className={styles.infoProjet}>
-         {leProjet.typeDuProjet && <h1>{leProjet.typeDuProjet}</h1>}
-        {leProjet.titreDuProjet &&  <h2>{leProjet.titreDuProjet}</h2>}
+        <motion.span initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.75 }} className={styles.infoProjet}>
+          <h2>{leProjet?.descriptionDuProjet || "Aucune description disponible"}</h2>
           {leProjet.lienExterne && <a target="_blank" href={leProjet.lienExterne} className={styles.lienProjet}>Consulter le projet</a>}
         </motion.span>
       </section>
