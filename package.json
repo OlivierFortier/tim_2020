@@ -2,6 +2,9 @@
   "name": "tim_2020",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node":"16.16.0"
+  },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
@@ -30,5 +33,8 @@
     "three": "^0.121.1",
     "valtio": "^0.4.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "volta": {
+    "node": "16.16.0"
+  }
 }
