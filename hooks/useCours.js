@@ -15,16 +15,13 @@ export function useOrdreListeCours(listeCours) {
     (a, b) => a.auChoix - b.auChoix
   );
 
-  // on regroupe dans un array tous les cours de toutes les sessions
-  const listeTousLesCours = [
+  // on retourne la liste bien ordonnée des cours
+  return [
     coursSession1,
     coursSession2,
     coursSession3,
     coursSession4Tries,
     coursSession5Tries,
-    coursSession6,
+    coursSession6
   ];
-
-  // on retourne la liste bien ordonnée des cours
-  return listeTousLesCours;
 }

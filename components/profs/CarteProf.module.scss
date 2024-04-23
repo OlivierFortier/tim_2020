@@ -8,10 +8,8 @@
   font-size: 0;
   background-color: var(--base);
   overflow: hidden;
-  position: relative;
   cursor: pointer;
-
-  margin: 0 0 5% 0;
+  margin: 0 0 5%;
   position: relative;
   width: fit-content;
 
@@ -23,16 +21,13 @@
     position: relative;
   }
 
-   div::before  {
+  div::before {
     background-color: var(--foreground);
-    bottom: 0;
+    inset: 0;
     content: "";
     height: 100%;
-    left: 0;
     mix-blend-mode: var(--fg-blend);
     position: absolute;
-    right: 0;
-    top: 0;
     width: 100%;
     z-index: 1;
     filter: opacity(0.5) contrast(0.6) saturate(3) brightness(1);
@@ -43,10 +38,8 @@
   font-size: 0;
   background-color: #ff7100d6;
   overflow: hidden;
-  position: relative;
   cursor: pointer;
-
-  margin: 0 0 5% 0;
+  margin: 0 0 5%;
   position: relative;
   width: fit-content;
 
@@ -58,16 +51,13 @@
     position: relative;
   }
 
-   div::before  {
+  div::before {
     background-color: #5241ff;
-    bottom: 0;
+    inset: 0;
     content: "";
     height: 100%;
-    left: 0;
     mix-blend-mode: var(--fg-blend);
     position: absolute;
-    right: 0;
-    top: 0;
     width: 100%;
     z-index: 1;
     filter: opacity(0.4) contrast(0.8) saturate(0.5) brightness(1);
@@ -78,10 +68,8 @@
   font-size: 0;
   background-color: #4ed051;
   overflow: hidden;
-  position: relative;
   cursor: pointer;
-
-  margin: 0 0 5% 0;
+  margin: 0 0 5%;
   position: relative;
   width: fit-content;
 
@@ -93,22 +81,21 @@
     position: relative;
   }
 
-   div::before  {
+  div::before {
     background-color: #387954;
-    bottom: 0;
+    inset: 0;
     content: "";
     height: 100%;
-    left: 0;
     mix-blend-mode: soft-light;
     position: absolute;
-    right: 0;
-    top: 0;
     width: 100%;
     z-index: 1;
-    filter:opacity(2) contrast(1) saturate(1) brightness(0.6);
+    filter: opacity(2) contrast(1) saturate(1) brightness(0.6);
   }
 }
-.nomProf, .specialisationProf {
+
+.nomProf,
+.specialisationProf {
   margin: 0;
   background-color: transparent;
 }
@@ -135,8 +122,8 @@
   cursor: pointer;
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .imgProf {
     width: 37vw;
     height: 20vh;
@@ -155,14 +142,13 @@
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .imgProf {
     width: 37vw;
     height: 20vh;
     object-position: 0 35%;
   }
-
 
   .nomProf {
     font-size: 0.8rem;
@@ -176,13 +162,12 @@
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
   .imgProf {
     width: 25vw;
     height: 22vh;
   }
-
 
   .nomProf {
     font-size: 1.1rem;
@@ -195,4 +180,3 @@
     top: 75%;
   }
 }
-

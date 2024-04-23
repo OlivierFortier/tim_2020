@@ -3,7 +3,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  font-family: NeueMontreal;
+  font-family: NeueMontreal, sans-serif;
 }
 
 .conteneurTitre {
@@ -19,8 +19,8 @@
     font-style: normal;
     font-weight: bold;
     line-height: 86px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
   .titreChoix {
@@ -36,19 +36,19 @@
 .selecteur {
   cursor: pointer;
   background-color: transparent;
-  border: 0px;
+  border: 0;
   border-bottom: 1px solid white;
   outline: none;
   appearance: none;
 
   :hover {
-    border: 0px;
+    border: 0;
     border-bottom: 1px solid white;
     outline: none;
   }
 
   :focus {
-    border: 0px;
+    border: 0;
     border-bottom: 1px solid white;
     outline: none;
   }
@@ -56,7 +56,6 @@
   &::after {
     color: unset;
   }
-  
 
   option {
     color: black;
@@ -75,9 +74,9 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 5px solid white;
-  margin: 0px;
+  margin: 0;
   padding-bottom: 1px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: normal;
 
@@ -93,12 +92,12 @@
   font-size: 24px;
   line-height: 29px;
   height: 55vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden auto;
 }
 
 .tabPanelSelection {
   height: 100%;
+
   :last-child {
     border-bottom: none;
   }
@@ -116,6 +115,7 @@
     display: block;
   }
 }
+
 .conteneurNomNbSession {
   display: flex;
 }
@@ -126,10 +126,8 @@
   font-weight: lighter;
 }
 
-
-
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .conteneurTitre {
     margin-top: 2%;
     flex-direction: column;
@@ -137,20 +135,20 @@
     h3 {
       display: flex;
       margin: 0;
-
       margin: auto;
       margin-bottom: 2%;
-
       text-align: center;
       font-style: normal;
       font-weight: bold;
       font-size: 14px;
       line-height: 17px;
     }
+
     .titreCours {
       font-size: 22px;
       line-height: 36px;
     }
+
     .titreChoix {
       font-size: 18px;
       line-height: 22px;
@@ -197,8 +195,8 @@
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .conteneurTitre {
     margin-top: 2%;
     flex-direction: column;
@@ -206,21 +204,21 @@
     h3 {
       display: flex;
       margin: 0;
-
       margin: auto;
       margin-top: 5%;
       margin-bottom: 2%;
-
       text-align: center;
       font-style: normal;
       font-weight: bold;
       font-size: 14px;
       line-height: 17px;
     }
+
     .titreCours {
       font-size: 30px;
       line-height: 36px;
     }
+
     .titreChoix {
       font-size: 18px;
       line-height: 22px;
@@ -267,8 +265,8 @@
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
   .conteneurTitre {
     margin-top: 2%;
     flex-direction: column;
@@ -276,21 +274,21 @@
     h3 {
       display: flex;
       margin: 0;
-
       margin: auto;
       margin-top: 5%;
       margin-bottom: 2%;
-
       text-align: center;
       font-style: normal;
       font-weight: bold;
       font-size: 28px;
       line-height: 17px;
     }
+
     .titreCours {
       font-size: 45px;
       line-height: 36px;
     }
+
     .titreChoix {
       font-size: 25px;
       line-height: 22px;
@@ -338,21 +336,20 @@
   }
 }
 
-/*==================LAPTOP==========================*/
-@media (min-width: 1025px) and (max-width: 1439px) {
-
+/* ==================LAPTOP========================== */
+@media (width >= 1025px) and (width <= 1439px) {
   .conteneurTitre {
     margin-top: 2%;
-    
+
     .titreCours {
       font-size: 45px;
       line-height: 36px;
     }
+
     .titreChoix {
       font-size: 25px;
       line-height: 22px;
       text-align: end;
     }
   }
-
 }

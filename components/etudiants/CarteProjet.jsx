@@ -1,13 +1,17 @@
 import styles from "./Carte.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
-export default function CarteProf({ infoCarte }) {
+export default function CarteProjet({ infoCarte }) {
   return (
     <Link href={`/etudiants/${infoCarte.slug}`}>
-      <a >
-        <motion.div whileHover={{scale: 1.013}} whileTap={{scale: 1.010}} className={styles.unInfo}>
+      <button>
+        <motion.div
+          whileHover={{ scale: 1.013 }}
+          whileTap={{ scale: 1.01 }}
+          className={styles.unInfo}
+        >
           {infoCarte?.captureDcran?.url ? (
             <Image
               layout="fill"
@@ -27,12 +31,12 @@ export default function CarteProf({ infoCarte }) {
                 src="/images/cam.jpg"
                 loading="lazy"
                 className={styles.imgInfo}
-                alt={`photo de ${'projet'}`}
+                alt={`photo de projet`}
               />
             </span>
           )}
         </motion.div>
-      </a>
+      </button>
     </Link>
   );
 }

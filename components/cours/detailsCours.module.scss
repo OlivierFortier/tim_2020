@@ -7,12 +7,12 @@
   h2 {
     display: flex;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0px;
+    background-color: rgb(0 0 0 / 0%);
+    border: 0;
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-top: 1%;
 
     .boutonFleche {
@@ -50,7 +50,7 @@
   }
 
   .descriptionCours {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -58,7 +58,6 @@
     width: 50%;
     max-width: 550px;
     overflow-y: auto;
-
     max-height: 40vh;
   }
 
@@ -74,10 +73,11 @@
   }
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .detailCours {
     height: 100%;
+
     h2 {
       font-size: 20px;
       margin-top: 5%;
@@ -89,8 +89,10 @@
     flex-direction: column;
     align-items: center;
     height: 80%;
+
     .conteneurTitre {
       width: 100%;
+
       h3 {
         font-size: 15px;
         line-height: 22px;
@@ -101,6 +103,7 @@
         margin-top: 4%;
       }
     }
+
     .descriptionCours {
       width: 90%;
       height: 60%;
@@ -117,15 +120,16 @@
 
   .fleche {
     .flecheDescriptionCours {
-      right: 0vw !important;
+      right: 0 !important;
     }
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .detailCours {
     height: 100%;
+
     h2 {
       font-size: 20px;
       margin-top: 5%;
@@ -140,6 +144,7 @@
 
     .conteneurTitre {
       width: 100%;
+
       h3 {
         font-size: 15px;
         line-height: 22px;
@@ -150,6 +155,7 @@
         margin-top: 4%;
       }
     }
+
     .descriptionCours {
       width: 90%;
       height: 60%;
@@ -166,19 +172,19 @@
 
   .fleche {
     .flecheDescriptionCours {
-      right: 0vw !important;
+      right: 0 !important;
     }
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
   .detailCours {
     height: 100%;
+
     h2 {
       font-size: 27px;
       margin-top: 5%;
- 
     }
   }
 
@@ -186,12 +192,12 @@
     flex-direction: column;
     align-items: center;
     height: 80%;
- 
+
     .conteneurTitre {
       width: 100%;
+
       h3 {
         font-size: 30px;
-  
         margin-bottom: 0;
       }
 
@@ -199,6 +205,7 @@
         margin: 2%;
       }
     }
+
     .descriptionCours {
       width: 100%;
       height: 60%;
@@ -213,4 +220,3 @@
     line-height: 30px;
   }
 }
-

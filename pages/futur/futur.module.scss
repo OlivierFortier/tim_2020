@@ -1,14 +1,12 @@
 .conteneurPage {
   position: relative;
-
   display: grid;
   grid-template:
     "uni . stage"
     " . emploi ." / 33% 33% 33%;
   height: 70vh;
   padding: 0 5%;
-
-  font-family: "NeueMontreal";
+  font-family: NeueMontreal, sans-serif;
 }
 
 .fondTexte {
@@ -16,13 +14,10 @@
   position: absolute;
   width: 100vw;
   height: 100%;
-
   opacity: 0.02;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-style: normal;
   font-weight: bold;
   font-size: 14vw;
@@ -48,7 +43,7 @@
   h1,
   h3 {
     margin: 0;
-    font-family: "NeueMontreal";
+    font-family: NeueMontreal, sans-serif;
     font-style: normal;
     white-space: nowrap;
   }
@@ -79,8 +74,8 @@
   grid-area: emploi;
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .conteneurPage {
     grid-template:
       "uni"
@@ -108,8 +103,8 @@
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .conteneurPage {
     grid-template:
       "uni"
@@ -137,8 +132,8 @@
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
   .conteneurPage {
     grid-template:
       "uni"
@@ -166,8 +161,8 @@
   }
 }
 
-/*==================LAPTOP==========================*/
-@media (min-width: 1025px) and (max-width: 1439px) {
+/* ==================LAPTOP========================== */
+@media (width >= 1025px) and (width <= 1439px) {
   .sectionUni,
   .sectionStage,
   .sectionEmploi {

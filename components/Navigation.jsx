@@ -2,9 +2,9 @@ import styles from "./Navigation.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { useProxy } from "valtio";
-import { etatMenu } from "./etat_global/EtatMenu";
-import { useListeThemes, useTheme } from "../hooks/contexteTheme";
+import { useSnapshot } from "valtio";
+import { etatMenu } from "../libs/etat_global/etatMenu";
+import { useListeThemes, useTheme } from "../hooks/ContexteTheme";
 import { motion } from "framer-motion";
 import { usePage } from "../hooks/usePage";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
@@ -15,7 +15,7 @@ export default function Navigation() {
   const listeThemes = useListeThemes();
   const [lesStyles, setLesStyles] = useState({
     couleurNav: "#f3f1f1",
-    couleurHover: "#F16242",
+    couleurHover: "#F16242"
   });
 
   useEffect(() => {
@@ -36,10 +36,10 @@ export default function Navigation() {
         setLesStyles({ couleurNav: "#f3f1f1", couleurHover: "#F16242" });
         break;
     }
-  }, [theme]);
+  }, [listeThemes.art, listeThemes.code, listeThemes.parent, theme]);
 
   // obtenir l'état du menu pour faire apparaitre ou disparaitre la nav secondaire
-  const snapShot = useProxy(etatMenu);
+  const snapShot = useSnapshot(etatMenu);
 
   // obtenir la section actuelle
   const router = useRouter();
@@ -63,11 +63,6 @@ export default function Navigation() {
     }
     if (router.pathname.includes("/etudiants")) {
       setProgresBarre("70%");
-      if (
-        router.pathname === "/etudiants/gallerie" ||
-        router.pathname === "/etudiants/projets"
-      ) {
-      }
     }
     if (router.pathname.includes("/futur")) setProgresBarre("90%");
     if (router.pathname === "/inscription") setProgresBarre("100%");
@@ -78,7 +73,7 @@ export default function Navigation() {
 
   const [flechesActives, setFlechesActives] = useState({
     precedent: true,
-    suivant: true,
+    suivant: true
   });
 
   useEffect(() => {
@@ -215,8 +210,8 @@ export default function Navigation() {
             layout
             style={{ width: progresBarre, borderColor: lesStyles.couleurNav }}
             className={styles.ligneProgres}
-          ></motion.span>
-          <span className={styles.ligneFond}></span>
+          />
+          <span className={styles.ligneFond} />
         </span>
       </footer>
     )

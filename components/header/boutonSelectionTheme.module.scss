@@ -1,19 +1,17 @@
 .boutonSelect {
-    appearance: none;
-    margin-right: 15px;
-    height: 24px;
-    width: 24px;
-    background-color: #EBEBEB;
-    border-radius: 50%;
+  appearance: none;
+  margin-right: 15px;
+  height: 24px;
+  width: 24px;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  font-size: 0;
 
-    font-size: 0;
-
-    option {
-      font-size: 1rem;
-    }
-
+  option {
+    font-size: 1rem;
   }
+}
 
-  .inverser {
-    filter: invert(1);
-  }
+.inverser {
+  filter: invert(1);
+}

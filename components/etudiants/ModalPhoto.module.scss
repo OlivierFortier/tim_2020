@@ -1,82 +1,81 @@
 .leModalFond {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    
-    z-index: 15;
-    background-color: rgba(171, 181, 190, 0.349);
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  background-color: rgb(171 181 190 / 34.9%);
 }
 
 .leModal {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-    
-    overflow: hidden;
-    outline: none;
+  position: absolute;
+  inset: 40px;
+  overflow: hidden;
+  outline: none;
 }
 
 .conteneurModal {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .conteneurImage {
-    height: auto;
-    max-width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & div {
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    & div {
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  }
 }
+
 .image {
-    width: auto;
-    height: 70vh;
-    max-height: 100%;
-    object-fit: contain;
+  width: auto;
+  height: 70vh;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px){
-   .image {
-       height: 40vh;
-   }
-   .leModal, .conteneurModal {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
+  .image {
+    height: 40vh;
+  }
+
+  .leModal,
+  .conteneurModal {
     overflow: auto;
-   }
+  }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px){
-    .image {
-        height: 40vh;
-    }
-    .leModal, .conteneurModal {
-        overflow: auto;
-       }
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
+  .image {
+    height: 40vh;
+  }
+
+  .leModal,
+  .conteneurModal {
+    overflow: auto;
+  }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px){
-    .image {
-        height: 50vh;
-    }
-    .leModal, .conteneurModal {
-        overflow: auto;
-       }
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
+  .image {
+    height: 50vh;
+  }
+
+  .leModal,
+  .conteneurModal {
+    overflow: auto;
+  }
 }

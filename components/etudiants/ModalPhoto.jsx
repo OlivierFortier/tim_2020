@@ -1,15 +1,15 @@
 import Modal from "react-modal";
 import Image from "next/image";
 import styles from "./ModalPhoto.module.scss";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function ModalPhoto({ infoPhoto, ouvert, fermerModal }) {
   return (
     <Modal
       style={{
         overlay: {
-          zIndex: 10,
-        },
+          zIndex: 10
+        }
       }}
       overlayClassName={styles.leModalFond}
       className={styles.leModal}
@@ -17,8 +17,8 @@ export default function ModalPhoto({ infoPhoto, ouvert, fermerModal }) {
       onRequestClose={fermerModal}
     >
       <motion.div
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();

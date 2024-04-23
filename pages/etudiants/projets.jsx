@@ -1,13 +1,11 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination } from "swiper";
+import { SwiperSlide, Swiper } from "swiper/react";
+import { Pagination } from "swiper/modules";
 import styles from "./gallerie.module.scss";
 import CarteProjet from "../../components/etudiants/CarteProjet";
 import { gql } from "graphql-request";
 import { faireRequeteGql } from "../../libs/requetesDonnes";
 import { motion } from "framer-motion";
 import Head from "next/head";
-
-SwiperCore.use([Pagination]);
 
 export default function projets(lesProjets) {
   return (
@@ -24,16 +22,19 @@ export default function projets(lesProjets) {
         <meta
           name="Description"
           content="Page des projets étudiants des Techniques d'Intégration Multimédia du Collège Maisonneuve"
-        ></meta>
+        />
         <link
           rel="canonical"
           href="https://tim.cmaisonneuve.qc.ca/étudiants/projets"
-        ></link>
+        />
         <meta
           property="og:title"
           content="Projets étudiants | TIM Maisonneuve"
         />
-        <meta property="og:url" content="https://tim.cmaisonneuve.qc.ca/projets" />
+        <meta
+          property="og:url"
+          content="https://tim.cmaisonneuve.qc.ca/projets"
+        />
         <meta
           property="og:description"
           content="Page des projets étudiants des Techniques d'Intégration Multimédia du Collège Maisonneuve"
@@ -44,7 +45,7 @@ export default function projets(lesProjets) {
         <Swiper
           pagination={{
             clickable: true,
-            el: "#lesPoints",
+            el: "#lesPoints"
           }}
           spaceBetween={30}
           slidesPerView={3}
@@ -54,25 +55,25 @@ export default function projets(lesProjets) {
             310: {
               spaceBetween: 30,
               slidesPerColumn: 3,
-              slidesPerView: 2,
+              slidesPerView: 2
             },
 
             425: {
               spaceBetween: 30,
               slidesPerColumn: 3,
-              slidesPerView: 2,
+              slidesPerView: 2
             },
             768: {
               spaceBetween: 30,
               slidesPerColumn: 3,
-              slidesPerView: 3,
+              slidesPerView: 3
             },
 
             1025: {
               spaceBetween: 30,
               slidesPerColumn: 2,
-              slidesPerView: 3,
-            },
+              slidesPerView: 3
+            }
           }}
         >
           {lesProjets.items.map((projet, index) => {
@@ -83,7 +84,7 @@ export default function projets(lesProjets) {
             );
           })}
 
-          <motion.div  id="lesPoints" className={styles.points}></motion.div>
+          <motion.div id="lesPoints" className={styles.points} />
         </Swiper>
       </main>
     </motion.div>

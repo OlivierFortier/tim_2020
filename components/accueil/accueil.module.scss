@@ -11,7 +11,8 @@
 
 .conteneurImage {
   height: 100%;
-   div {
+
+  div {
     height: 100%;
   }
 }
@@ -34,6 +35,7 @@
   justify-content: flex-end;
   z-index: 3;
   white-space: nowrap;
+
   h1 {
     a {
       &:link,
@@ -47,8 +49,7 @@
 }
 
 .titreIntro {
-
-  font-family: NeueMontreal;
+  font-family: NeueMontreal, sans-serif;
   font-size: 4.5vw;
   font-weight: 300;
   text-transform: uppercase;
@@ -57,6 +58,7 @@
   padding-left: 55px;
   position: relative;
   z-index: 2;
+
   strong {
     font-weight: 700;
     font-style: italic;
@@ -64,9 +66,8 @@
 }
 
 .nomCollege {
-
   font-size: 36px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-weight: normal;
   padding-left: 55px;
   position: relative;
@@ -79,6 +80,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+
   h2 {
     display: none;
   }
@@ -103,7 +105,8 @@
 }
 
 .imgParent {
-  height: 100%!important;
+  height: 100% !important;
+
   // width: 100%;
   padding-right: 7%;
 }
@@ -130,8 +133,8 @@
   cursor: pointer;
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .conteneurImage {
     display: none;
   }
@@ -157,9 +160,11 @@
     justify-content: center;
     border-left: 3px solid white;
     white-space: unset;
+
     h1 {
       padding-left: 10%;
       width: 95%;
+
       br {
         display: none;
       }
@@ -180,6 +185,7 @@
 
   .accueilAside {
     height: auto;
+
     h2 {
       display: block;
       margin-top: 20%;
@@ -189,6 +195,7 @@
       font-weight: normal;
       text-align: center;
     }
+
     span {
       display: none;
     }
@@ -199,11 +206,12 @@
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .conteneurImage {
     display: none;
   }
+
   .imageParent {
     display: none;
   }
@@ -225,10 +233,12 @@
     justify-content: center;
     border-left: 3px solid white;
     white-space: unset;
+
     h1 {
       padding-left: 10%;
       width: 95%;
       max-width: 60vw;
+
       br {
         display: none;
       }
@@ -247,6 +257,7 @@
 
   .accueilAside {
     height: auto;
+
     h2 {
       display: block;
       margin-top: 20%;
@@ -256,6 +267,7 @@
       font-weight: normal;
       text-align: center;
     }
+
     span {
       display: none;
     }
@@ -266,12 +278,9 @@
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
-
-
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
   .imageHero {
-
     position: absolute;
     top: 0;
     left: 0;
@@ -280,10 +289,12 @@
     z-index: -1;
     padding-right: 0;
   }
+
   .imageParent {
     display: none;
     padding-right: 0;
   }
+
   .conteneurAccueil {
     padding: 0;
     width: 80%;
@@ -309,12 +320,12 @@
   }
 
   .nomCollege {
-  
     margin-top: 20%;
   }
 
   .accueilAside {
     height: auto;
+
     h2 {
       display: block;
       margin-top: 20%;
@@ -324,6 +335,7 @@
       font-weight: normal;
       text-align: center;
     }
+
     span {
       display: none;
     }
@@ -333,4 +345,3 @@
     display: none;
   }
 }
-

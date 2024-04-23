@@ -6,7 +6,6 @@
   overflow-y: auto;
   z-index: 1;
   flex-direction: column;
-  
 }
 
 .grain {
@@ -34,7 +33,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-
   z-index: 3;
 
   :focus {
@@ -49,57 +47,50 @@
   z-index: 20;
 }
 
-
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px){
-
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .racine:global(#racine) {
     &::before {
       content: "";
-    width: 300%;
-    height: 300%;
-    background-image: var(--bgAcceuil);
-    background-size: auto;
-    opacity: 0.70;
-    position: fixed;
-    z-index: 1;
-    }
-  }
-
-}
-
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px){
-
-  .racine:global(#racine) {
-    &::before {
-      content: "";
-    width: 300%;
-    height: 300%;
-    background-image: var(--bgAcceuil);
-    background-size: auto;
-    opacity: 0.70;
-    position: fixed;
-    z-index: 1;
+      width: 300%;
+      height: 300%;
+      background-image: var(--bgAcceuil);
+      background-size: auto;
+      opacity: 0.7;
+      position: fixed;
+      z-index: 1;
     }
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px){
-
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .racine:global(#racine) {
     &::before {
       content: "";
-    width: 300%;
-    height: 300%;
-    background-image: var(--bgAcceuil);
-    background-size: auto;
-    opacity: 0.70;
-    position: fixed;
-    z-index: 1;
+      width: 300%;
+      height: 300%;
+      background-image: var(--bgAcceuil);
+      background-size: auto;
+      opacity: 0.7;
+      position: fixed;
+      z-index: 1;
     }
   }
-
 }
 
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
+  .racine:global(#racine) {
+    &::before {
+      content: "";
+      width: 300%;
+      height: 300%;
+      background-image: var(--bgAcceuil);
+      background-size: auto;
+      opacity: 0.7;
+      position: fixed;
+      z-index: 1;
+    }
+  }
+}

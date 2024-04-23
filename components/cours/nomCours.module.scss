@@ -7,14 +7,12 @@
   border-bottom: 2px solid white;
   height: 100%;
   padding: 0 2rem;
-
   font-size: 1rem !important;
 }
 
 .titreCours {
   font-size: 1.5rem;
-  margin-left: 2%;
-  margin: 0 0;
+  margin: 0 0 0 2%;
 }
 
 .listeTypes {
@@ -24,11 +22,10 @@
   li {
     margin-right: 10%;
   }
-
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .titreCours {
     font-size: 14px;
     line-height: 17px;
@@ -44,8 +41,8 @@
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .titreCours {
     font-size: 14px;
     line-height: 17px;
@@ -61,9 +58,8 @@
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
-
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
   .titreCours {
     font-size: 20px;
     line-height: 17px;

@@ -6,32 +6,26 @@
   cursor: pointer;
 }
 
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
+  .imgInfo {
+    width: 37vw;
+    height: 18vh;
+  }
+}
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
-    .imgInfo {
-      width: 37vw;
-      height: 18vh;
-    }
-  
-  
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
+  .imgInfo {
+    width: 37vw;
+    height: 20vh;
   }
-  
-  /*==================TABLETTE==================*/
-  @media (min-width: 425px) and (max-width: 767px) {
-    .imgInfo {
-      width: 37vw;
-      height: 20vh;
-    }
-  
+}
+
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
+  .imgInfo {
+    width: 25vw;
+    height: 22vh;
   }
-  
-  /**================GROSSE TABLETTE==================*/
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .imgInfo {
-      width: 25vw;
-      height: 22vh;
-      
-    }
-  }
-  
+}

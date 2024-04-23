@@ -1,33 +1,26 @@
 .conteneurPage {
-    margin: 0 auto;
-    width: 100%;
-    margin-top: -1.5%;
-    
+  margin: 0 auto;
+  width: 100%;
+  margin-top: -1.5%;
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px){
-
-    .conteneurPage {
-        margin-top: 2%;
-    }
-
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
+  .conteneurPage {
+    margin-top: 2%;
+  }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px){
-    .conteneurPage {
-        margin-top: 2%;
-    }
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
+  .conteneurPage {
+    margin-top: 2%;
+  }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px){
-    .conteneurPage {
-        margin-top: 2%;
-    }
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
+  .conteneurPage {
+    margin-top: 2%;
+  }
 }
-
-
-
-    

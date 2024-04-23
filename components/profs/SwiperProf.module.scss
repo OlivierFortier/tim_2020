@@ -27,34 +27,31 @@
 .uneSlide {
   display: flex;
   justify-content: center;
-  
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px){
-
-  .points {
-    margin-top: 7%;
-  }
-
-}
-
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px){
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .points {
     margin-top: 7%;
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1023px){
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .points {
     margin-top: 7%;
   }
 }
 
-/*==================LAPTOP==========================*/
-@media (min-width: 1024px) and (max-width: 1439px) {
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1023px) {
+  .points {
+    margin-top: 7%;
+  }
+}
+
+/* ==================LAPTOP========================== */
+@media (width >= 1024px) and (width <= 1439px) {
   .points {
     margin-top: 5%;
   }

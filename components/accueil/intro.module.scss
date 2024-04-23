@@ -6,7 +6,8 @@
   color: white;
   margin-top: 5%;
   height: 100vh;
-  margin: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 
   h1 {
     font-weight: normal;
@@ -15,7 +16,6 @@
 
   div {
     margin: 10% 0;
-  
   }
 
   .texteIntro {
@@ -24,7 +24,7 @@
   }
 
   .texteChargement {
-    font-family: "NeueMontreal";
+    font-family: NeueMontreal, sans-serif;
     font-weight: bold;
     font-size: 18px;
   }
@@ -35,28 +35,8 @@
   }
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
-  .introConteneur {
-    width: 85%;
-  
-    h1,
-    h2 {
-      text-align: center;
-    }
-    div {
-      width: 100%;
-      height: auto;
-      margin: 0;
-    }
-    h2 {
-      margin-top: 10%;
-    }
-  }
-}
-
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .introConteneur {
     width: 85%;
 
@@ -64,14 +44,37 @@
     h2 {
       text-align: center;
     }
+
     div {
       width: 100%;
       height: auto;
       margin: 0;
     }
+
     h2 {
       margin-top: 10%;
     }
   }
 }
 
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
+  .introConteneur {
+    width: 85%;
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    div {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    h2 {
+      margin-top: 10%;
+    }
+  }
+}

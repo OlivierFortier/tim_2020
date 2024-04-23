@@ -4,7 +4,6 @@
   border-left: 5px solid white;
   padding-left: 2rem;
   width: 100vw;
-
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -83,8 +82,8 @@
   }
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .conteneurProfils {
     padding: 0;
     margin: 0;
@@ -103,9 +102,7 @@
       grid-template:
         "art" 1fr
         "code" 1fr
-        "parent" 1fr
-        / 100%;
-
+        "parent" 1fr / 100%;
       width: 100%;
       height: 100%;
 
@@ -115,17 +112,15 @@
         width: 100%;
         height: auto;
         border: none;
-        top: auto;
-        right: auto;
-        left: auto;
-        bottom: auto;
-       
+        inset: auto;
+
         h2 {
           font-size: 18px;
           line-height: 22px;
           text-align: center;
           text-decoration-line: underline;
           width: 100%;
+
           br {
             display: none;
           }
@@ -160,8 +155,8 @@
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .conteneurProfils {
     padding: 0;
     margin: 0;
@@ -182,7 +177,6 @@
         "code" 1fr
         "parent" 1fr
         / 100%;
-
       width: 100%;
       height: 100%;
 
@@ -192,10 +186,8 @@
         width: 100%;
         height: auto;
         border: none;
-        top: auto;
-        right: auto;
-        left: auto;
-        bottom: auto;
+        inset: auto;
+
         // margin: 25% 0;
         h2 {
           font-size: 18px;
@@ -203,6 +195,7 @@
           text-align: center;
           text-decoration-line: underline;
           width: 100%;
+
           br {
             display: none;
           }
@@ -237,8 +230,8 @@
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
   .conteneurProfils {
     padding: 0;
     margin: 0;
@@ -259,7 +252,6 @@
         "code" 1fr
         "parent" 1fr
         / 100%;
-
       width: 100%;
       height: 100%;
 
@@ -270,17 +262,15 @@
         height: auto;
         border: none;
         border-radius: 0;
-        top: auto;
-        right: auto;
-        left: auto;
-        bottom: auto;
-       
+        inset: auto;
+
         h2 {
           font-size: 30px;
           line-height: 22px;
           text-align: center;
           text-decoration-line: underline;
           width: 100%;
+
           br {
             display: none;
           }
@@ -308,6 +298,7 @@
         }
       }
     }
+
     .rapide {
       display: none;
     }
@@ -320,52 +311,64 @@
   0% {
     color: red;
   }
+
   25% {
-    color: rgb(218, 25, 83);
+    color: rgb(218 25 83);
   }
+
   50% {
-    color: rgb(173, 18, 194);
+    color: rgb(173 18 194);
   }
+
   75% {
-    color: rgb(113, 25, 165);
+    color: rgb(113 25 165);
   }
+
   100% {
-    color: rgb(77, 23, 202);
+    color: rgb(77 23 202);
   }
 }
 
 @keyframes changerCouleurCode {
   0% {
-    color: rgb(48, 109, 42);
+    color: rgb(48 109 42);
   }
+
   25% {
-    color: rgb(78, 163, 39);
+    color: rgb(78 163 39);
   }
+
   50% {
-    color: rgb(43, 146, 60);
+    color: rgb(43 146 60);
   }
+
   75% {
-    color: rgb(141, 192, 24);
+    color: rgb(141 192 24);
   }
+
   100% {
-    color: rgb(40, 73, 51);
+    color: rgb(40 73 51);
   }
 }
 
 @keyframes changerCouleurParent {
   0% {
-    color: rgb(195, 172, 172);
+    color: rgb(195 172 172);
   }
+
   25% {
-    color: rgb(177, 118, 136);
+    color: rgb(177 118 136);
   }
+
   50% {
-    color: rgb(194, 135, 101);
+    color: rgb(194 135 101);
   }
+
   75% {
-    color: rgb(134, 95, 85);
+    color: rgb(134 95 85);
   }
+
   100% {
-    color: rgb(192, 160, 141);
+    color: rgb(192 160 141);
   }
 }

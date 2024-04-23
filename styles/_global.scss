@@ -1,17 +1,17 @@
-/*=================== styles globaux ===================*/
+/* =================== styles globaux =================== */
 :root {
-  --base:              #dc8cb9;
-  --bg-blend:          multiply;
-  --blur:              0px;
-  --fg-blend:          lighten;
-  --foreground:        #24587f;
-  --opacity:           1;
-  --spacing:           0px;
+  --base: #dc8cb9;
+  --bg-blend: multiply;
+  --blur: 0px;
+  --fg-blend: lighten;
+  --foreground: #24587f;
+  --opacity: 1;
+  --spacing: 0px;
   --bgAcceuil: none;
 }
 
 body {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   color: $couleur-texte;
   background-color: $couleur-background;
 }
@@ -20,32 +20,40 @@ body {
   width: 2px;
   height: 2px;
 }
+
 ::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #e1e1e1;
-  border: 0px none #ffffff;
+  border: 0 none #fff;
   border-radius: 50px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
+  background: #fff;
 }
+
 ::-webkit-scrollbar-thumb:active {
-  background: #000000;
+  background: #000;
 }
+
 ::-webkit-scrollbar-track {
-  background: #666666;
-  border: 0px none #ffffff;
+  background: #666;
+  border: 0 none #fff;
   border-radius: 50px;
 }
+
 ::-webkit-scrollbar-track:hover {
-  background: #666666;
+  background: #666;
 }
+
 ::-webkit-scrollbar-track:active {
-  background: #333333;
+  background: #333;
 }
+
 ::-webkit-scrollbar-corner {
   background: transparent;
 }

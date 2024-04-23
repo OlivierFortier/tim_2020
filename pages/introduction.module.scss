@@ -2,19 +2,17 @@
   display: grid;
   max-width: 85vw;
   margin: 0 auto;
-
   grid-template:
     "header cube" 40vh
     "texte ." 20vh
-    ". bouton" 1fr
-    / 50% 50%;
+    ". bouton" 1fr / 50% 50%;
 }
 
 .headerPage {
   cursor: pointer;
   grid-area: header;
   align-self: end;
-  font-family: "NeueMontreal";
+  font-family: NeueMontreal, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 72px;
@@ -28,11 +26,9 @@
 
 .conteneurCube {
   grid-area: cube;
-
   width: 50vw;
   height: 60vh;
-  justify-self: end;
-  align-self: center;
+  place-self: center end;
 
   .canvas3D {
     width: 100%;
@@ -43,7 +39,7 @@
 .textePage {
   grid-area: texte;
   width: 821px;
-  font-family: "NeueMontreal";
+  font-family: NeueMontreal, sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
@@ -56,7 +52,7 @@
   height: 144px;
   border-radius: 50%;
   justify-self: end;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 19px;
@@ -70,8 +66,8 @@
   z-index: 5;
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .conteneur {
     grid-template:
       "header" 15vh
@@ -91,6 +87,7 @@
     all: unset;
     position: relative;
     opacity: 0.4;
+
     .canvas3D {
       top: -10vh;
       position: absolute !important;
@@ -116,21 +113,24 @@
     grid-area: lienCours;
     display: block;
     margin: 0 auto;
-    &:visited, &:link, &:focus, &:active {
+
+    &:visited,
+    &:link,
+    &:focus,
+    &:active {
       color: white;
       text-decoration: underline;
-      
     }
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .conteneur {
     grid-template:
       "header" 20vh
       "cube"
-      "texte" 
+      "texte"
       "lienCours"
       / auto;
   }
@@ -145,6 +145,7 @@
     all: unset;
     position: relative;
     opacity: 0.4;
+
     .canvas3D {
       top: -10vh;
       position: absolute !important;
@@ -170,18 +171,20 @@
     grid-area: lienCours;
     display: block;
     margin: 0 auto;
-    // margin-top: 10%;
-    &:visited, &:link, &:focus, &:active {
+
+    // margin-top: 10%;margin-top
+    &:visited,
+    &:link,
+    &:focus,
+    &:active {
       color: white;
       text-decoration: underline;
-      
     }
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1023px) {
-
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1023px) {
   .conteneur {
     grid-template:
       "header" 30vh
@@ -200,6 +203,7 @@
     all: unset;
     position: relative;
     opacity: 0.4;
+
     .canvas3D {
       position: absolute !important;
       top: -20vh;
@@ -224,10 +228,13 @@
     display: block;
     margin: 0 auto;
     margin-top: 10%;
-    &:visited, &:link, &:focus, &:active {
+
+    &:visited,
+    &:link,
+    &:focus,
+    &:active {
       color: white;
       text-decoration: underline;
-      
     }
   }
 }

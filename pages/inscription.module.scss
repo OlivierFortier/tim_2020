@@ -4,8 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 50vh;
-
-  font-family: "NeueMontreal";
+  font-family: NeueMontreal, sans-serif;
   font-style: normal;
 
   h1 {
@@ -28,8 +27,8 @@
   }
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .conteneurPage {
     h1 {
       font-style: normal;
@@ -46,8 +45,8 @@
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .conteneurPage {
     h1 {
       font-style: normal;
@@ -64,8 +63,8 @@
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
   .conteneurPage {
     h1 {
       font-style: normal;

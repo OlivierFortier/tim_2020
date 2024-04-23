@@ -9,7 +9,6 @@
     .imgProf {
       height: 65vh;
       width: 50vh;
-      
     }
 
     .unProf {
@@ -36,14 +35,11 @@
 
       ::before {
         background-color: var(--foreground);
-        bottom: 0;
+        inset: 0;
         content: "";
         height: 100%;
-        left: 0;
         mix-blend-mode: var(--fg-blend);
         position: absolute;
-        right: 0;
-        top: 0;
         width: 100%;
         z-index: 1;
         filter: opacity(0.5) contrast(0.5) saturate(3) brightness(1);
@@ -52,7 +48,7 @@
 
     .unProfArt {
       font-size: 0;
-      background-color:#ff7100d6;
+      background-color: #ff7100d6;
       height: max-content;
       padding: var(--spacing);
       position: relative;
@@ -73,18 +69,15 @@
       }
 
       ::before {
-        background-color:  #5241ff;
-        bottom: 0;
+        background-color: #5241ff;
+        inset: 0;
         content: "";
         height: 100%;
-        left: 0;
         mix-blend-mode: var(--fg-blend);
         position: absolute;
-        right: 0;
-        top: 0;
         width: 100%;
         z-index: 1;
-        filter:  opacity(0.4) contrast(0.8) saturate(0.5) brightness(1);
+        filter: opacity(0.4) contrast(0.8) saturate(0.5) brightness(1);
       }
     }
 
@@ -112,14 +105,11 @@
 
       ::before {
         background-color: #387954;
-        bottom: 0;
+        inset: 0;
         content: "";
         height: 100%;
-        left: 0;
         mix-blend-mode: soft-light;
         position: absolute;
-        right: 0;
-        top: 0;
         width: 100%;
         z-index: 1;
         filter: opacity(2) contrast(1) saturate(1) brightness(0.6);
@@ -135,51 +125,44 @@
         margin-left: 10%;
 
         h1 {
-          font-family: "NeueMontreal";
+          font-family: NeueMontreal, sans-serif;
           font-style: normal;
           font-weight: bold;
           font-size: 64px;
           line-height: 77px;
           margin-bottom: 0;
         }
+
         h5 {
-          font-family: "NeueMontreal";
+          font-family: NeueMontreal, sans-serif;
           font-style: normal;
           font-weight: normal;
           font-size: 24px;
           line-height: 29px;
-
           margin: 0;
         }
       }
 
       .contenuTexte {
-        font-family: "NeueMontreal";
+        font-family: NeueMontreal, sans-serif;
         font-style: normal;
         font-weight: 300;
         font-size: 36px;
         line-height: 43px;
-
         height: 55%;
-
-      
         margin-top: 10%;
         z-index: 3;
-
         margin-left: -10%;
-
         overflow-y: scroll;
 
-         a {
+        a {
           color: unset;
         }
-
-        
       }
 
       .fleche {
         position: relative;
-    
+
         .flecheDescriptionCours {
           position: absolute;
           top: 100%;
@@ -191,37 +174,48 @@
   }
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 310px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 310px) and (width <= 424px) {
   .conteneurPage {
     margin: 0 10%;
+
     section {
       flex-direction: column;
+
       .imgProf {
         width: 70vw;
         height: 30vh;
       }
-      .unProf, .unProfArt, .unProfCode {
+
+      .unProf,
+      .unProfArt,
+      .unProfCode {
         margin: 0 auto;
         margin-top: 1%;
+
         img {
           object-fit: cover;
           object-position: 0% 20%;
         }
       }
+
       article {
         width: 100%;
+
         .conteneurTitres {
           margin-left: 0;
+
           h1 {
             font-size: 30px;
             line-height: 45px;
           }
+
           h5 {
             font-size: 25px;
             line-height: 30px;
           }
         }
+
         .contenuTexte {
           margin-top: 0;
           margin-left: 0;
@@ -234,37 +228,48 @@
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .conteneurPage {
     margin: 0 10%;
+
     section {
       flex-direction: column;
+
       .imgProf {
         width: 60vw;
         height: 30vh;
       }
-      .unProf, .unProfArt, .unProfCode {
+
+      .unProf,
+      .unProfArt,
+      .unProfCode {
         margin: 0 auto;
         margin-top: 1%;
+
         img {
           object-fit: cover;
           object-position: 0% 20%;
         }
       }
+
       article {
         width: 100%;
+
         .conteneurTitres {
           margin-left: 0;
+
           h1 {
             font-size: 30px;
             line-height: 45px;
           }
+
           h5 {
             font-size: 25px;
             line-height: 30px;
           }
         }
+
         .contenuTexte {
           margin-top: 0;
           margin-left: 0;
@@ -277,37 +282,48 @@
   }
 }
 
-/**================GROSSE TABLETTE==================*/
-@media (min-width: 768px) and (max-width: 1024px) {
+/**  ================GROSSE TABLETTE================== */
+@media (width >= 768px) and (width <= 1024px) {
   .conteneurPage {
     margin: 0 10%;
+
     section {
       flex-direction: column;
+
       .imgProf {
         width: 70vw;
         height: 40vh;
       }
-      .unProf,  .unProfArt, .unProfCode {
+
+      .unProf,
+      .unProfArt,
+      .unProfCode {
         margin: 0 auto;
         margin-top: 1%;
+
         img {
           object-fit: cover;
           object-position: 0% 20%;
         }
       }
+
       article {
         width: 100%;
+
         .conteneurTitres {
           margin-left: 0;
+
           h1 {
             font-size: 30px;
             line-height: 45px;
           }
+
           h5 {
             font-size: 25px;
             line-height: 30px;
           }
         }
+
         .contenuTexte {
           margin-top: 0;
           margin-left: 0;
@@ -319,4 +335,3 @@
     }
   }
 }
-

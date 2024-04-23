@@ -14,11 +14,12 @@
     z-index: 7;
     width: 100%;
   }
+
   .titre {
     width: 100%;
     margin: 0;
     margin-left: 1%;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -28,8 +29,8 @@
   }
 }
 
-/*==================MOBILE==================*/
-@media (min-width: 320px) and (max-width: 424px) {
+/* ==================MOBILE================== */
+@media (width >= 320px) and (width <= 424px) {
   .enTete {
     padding: 0% 6%;
     height: 75px;
@@ -47,8 +48,8 @@
   }
 }
 
-/*==================TABLETTE==================*/
-@media (min-width: 425px) and (max-width: 767px) {
+/* ==================TABLETTE================== */
+@media (width >= 425px) and (width <= 767px) {
   .enTete {
     padding: 0% 6%;
     margin-bottom: 0;
@@ -62,7 +63,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (width >= 768px) and (width <= 1024px) {
   .enTete {
     margin-bottom: 0;
   }

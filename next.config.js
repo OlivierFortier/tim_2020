@@ -1,13 +1,13 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+// @ts-check
+
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true"
 });
 
 module.exports = withBundleAnalyzer({
-  crossOrigin: 'anonymous',
+  crossOrigin: "anonymous",
   images: {
-    domains: ['assets.vercel.com', 'images.ctfassets.net', 'ctfassets.net'],
+    domains: ["assets.vercel.com", "images.ctfassets.net", "ctfassets.net"]
   },
-  experimental: {
-    optimizeFonts: true,
-  },
+  optimizeFonts: true
 });
